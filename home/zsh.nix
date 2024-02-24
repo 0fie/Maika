@@ -16,6 +16,7 @@
 
       # Modern yuunix, uwu <3
       # TODO: Find more modern and convinient replacements for legacy yuunix tools.
+      c = "clear";
       cat = "${pkgs.bat}/bin/bat $@";
       ls =  "${pkgs.eza}/bin/eza --git --icons $@";
       # find = "${pkgs.fd}/bin/fd $@";
