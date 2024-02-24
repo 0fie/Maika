@@ -1,3 +1,4 @@
+# TODO: Make GTK themes work. Maybe generate them from nix-colors?
 { config, pkgs, ... }:
 
 {

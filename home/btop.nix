@@ -1,8 +1,6 @@
+{ config, pkgs, ... }:
+
 {
-  config,
-  pkgs,
-  ...
-}: {
   xdg.configFile."btop/themes/catppuccin_mocha.theme".text = builtins.readFile (pkgs.fetchFromGitHub {
       owner = "catppuccin";
       repo = "btop";

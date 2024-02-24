@@ -1,9 +1,6 @@
-{
-  pkgs,
-  config,
-  ...
-}: let
+{ pkgs, config, ... }: 
 
+let
   workspaces = {
     format = "{icon}";
     format-icons = {

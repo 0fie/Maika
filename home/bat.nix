@@ -1,9 +1,6 @@
+{ config, pkgs, lib, ... }:
+
 {
-  config,
-  pkgs,
-  lib,
-  ...
-}: {
   home.activation.buildBatCache = "${lib.getExe pkgs.bat} cache --build";
   programs.bat = {
     enable = true;

@@ -1,9 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    rofi
-  ];
+  home.packages = with pkgs; [ rofi ];
 
   xdg.configFile."rofi/config.rasi".text = ''
     configuration{
@@ -17,7 +15,7 @@
       hide-scrollbar: true;
       display-drun: "   Apps ";
       display-run: "   Run ";
-      display-window: " 﩯  Window";
+      display-window: "   Window";
       display-Network: " 󰤨  Network";
       sidebar-mode: true;
     }

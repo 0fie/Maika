@@ -1,10 +1,6 @@
-{
-  pkgs,
-  config,
-  lib,
-  ...
-}: {
+{ pkgs, config, lib, ... }:
 
+{
   programs.lf = {
     enable = true;
     commands = {
@@ -18,7 +14,6 @@
             mk $DIR
         }}
       '';
-
 
       #on-cd = ''
       #  ''${{ }}
@@ -62,7 +57,6 @@
       ee = "editor-open";
       "e." = "edit-dir";
       V = ''''$${pkgs.bat}/bin/bat --paging=always "$f"'';
-
 
       "<C-d>" = "5j";
       "<C-u>" = "5k";

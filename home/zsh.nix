@@ -12,15 +12,15 @@
     # Aliases
     shellAliases = {
       rbs = "sudo nixos rebuild switch";
+      nv = "nvim";
 
-      # Modern unix, uwu
+      # Modern unix, uwu!
       cat = "${pkgs.bat}/bin/bat $@";
     };
 
     envExtra = ''
       export BAT_THEME="mocha"
     '';
-
 
     profileExtra = ''
       if [ "$(tty)" = "/dev/tty1" ]; then;

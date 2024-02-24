@@ -1,14 +1,9 @@
+{ configs, pkgs, lib, ... }:
+
 {
-  configs,
-  pkgs,
-  lib,
-  ...
-}: {
   xdg.configFile."cava/config".text = ''
     [color]
-
     gradient = 1
-
     gradient_color_1 = '#8bd5ca'
     gradient_color_2 = '#91d7e3'
     gradient_color_3 = '#7dc4e4'

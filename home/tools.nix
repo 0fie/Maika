@@ -9,18 +9,13 @@
     exiftool
     file
     gnome.nautilus
+    gnome-photos # TODO: Configure mime types - images should open using this tool.
     glow
-    grim
     keepassxc
     lf
-    networkmanagerapplet
     neofetch
-    nsxiv
-    slurp
-    swww
-    tree
-    which
-
     powerline-symbols
+    swww
+    which
   ];
 }
