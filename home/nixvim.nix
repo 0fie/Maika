@@ -29,9 +29,9 @@
         enable = true;
 	autoEnableSources = true;
 	sources = [
-	  { name = "nvim_lsp"; };
-	  { name = "path"; };
-	  { name = "buffer"; };
+	  { name = "nvim_lsp"; }
+	  { name = "path"; }
+	  { name = "buffer"; }
 	];
 	mapping = {
 	  "<CR>" = "cmp.mapping.confirm({ select= true })";
