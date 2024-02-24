@@ -15,6 +15,7 @@
     lf
     neofetch
     powerline-symbols
+    smile # Emoji picker
     which
   ];
 }
