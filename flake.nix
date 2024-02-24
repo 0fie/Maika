@@ -30,7 +30,11 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = { inherit inputs nixvim; };
+              extraSpecialArgs = {
+		inherit (inputs.nix-colors.lib-contrib) gtkThemeFromScheme
+		inputs
+		nixvim;
+	      };
               users.me = import ./home/home.nix;
             };
           }
