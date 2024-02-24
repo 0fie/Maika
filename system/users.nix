@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -9,6 +9,7 @@
       description = "Me";
       extraGroups = [ "networkmanager" "wheel" ];
       hashedPassword = "$y$j9T$RESLq/fRruOfj/mdwU7MQ/$Hf7riy3m/QEwAmzxU8UBvU1NASKqshloGjhXripIlg6";
+      shell = pkgs.zsh;
     };
   };
 }
