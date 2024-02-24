@@ -30,6 +30,7 @@
         enable = true;
 	ensureInstalled = [ "nix" "vim" "regex" "lua" "bash" "markdown" "markdown_inline" ];
 	indent= true;
+	grammarPackages = [ <derivation nix-grammar-0.0.0+rev=763168f> ];
       };
       
       nvim-cmp =  {
