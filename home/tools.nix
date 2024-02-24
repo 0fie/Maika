@@ -15,7 +15,6 @@
     lf
     neofetch
     powerline-symbols
-    swww
     which
   ];
 }
