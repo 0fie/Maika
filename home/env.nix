@@ -5,4 +5,4 @@
     GIT_EDITOR = "nvim";
     TERMINAL = "kitty";
   };
-};
+}
