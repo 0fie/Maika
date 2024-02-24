@@ -3,7 +3,7 @@
 {
   services = {
     gvfs.enable = true;
-    gnome.gnome-keyring = true;
+    gnome.gnome-keyring.enable = true;
     blueman.enable = true;
     fstrim.enable = true; # Trim SSDs in the background.
     devmon.enable = true;
