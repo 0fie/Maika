@@ -12,4 +12,7 @@
       shell = pkgs.zsh;
     };
   };
+
+  # This is required for ZSH to function properly for this user. Removing it might prevent the user from logging in.
+  programs.zsh.enable = true;
 }
