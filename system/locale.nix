@@ -18,6 +18,9 @@
     };
   };
 
-  # Set your time zone.
-  time.timeZone = "Africa/Harare";
+  # Configure your time settings.
+  time = {
+    timeZone = "Africa/Harare";
+    hardwareClockInLocalTime = true;
+  };
 }
