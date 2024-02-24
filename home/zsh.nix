@@ -19,7 +19,6 @@
       cat = "${pkgs.bat}/bin/bat $@";
       ls =  "${pkgs.eza}/bin/eza --git --icons $@";
       find = "${pkgs.fd}/bin/fd $@";
-      cat = "${pkgs.bat}/bin/bat $@";
       grep = "${pkgs.ripgrep}/bin/rg $@";
       df = "${pkgs.duf}/bin/duf $@";
     };
