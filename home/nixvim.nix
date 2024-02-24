@@ -10,6 +10,7 @@
       bufferline.enable = true;
       notify.enable = true;
       noice.enable = true;
+      nvim-autopairs = true;
 
       lsp = {
         enable = true;
@@ -30,7 +31,7 @@
         enable = true;
 	ensureInstalled = [ "nix" "vim" "regex" "lua" "bash" "markdown" "markdown_inline" ];
 	indent= true;
-	grammarPackages = [ <derivation nix-grammar-0.0.0+rev=763168f> ];
+	grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [ nix c lua vimdoc ];
       };
       
       nvim-cmp =  {
