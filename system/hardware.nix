@@ -30,7 +30,7 @@
   };
 
   # OpenGL
-  hardware.openGL = {
+  hardware.opengl = {
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
