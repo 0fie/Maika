@@ -10,7 +10,7 @@
       bufferline.enable = true;
       notify.enable = true;
       noice.enable = true;
-      nvim-autopairs = true;
+      nvim-autopairs.enable = true;
 
       lsp = {
         enable = true;
