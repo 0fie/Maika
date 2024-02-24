@@ -1,3 +1,4 @@
+# Improve OpenGL config.
 { config, lib, pkgs, modulesPath, ... }:
 
 {
@@ -26,5 +27,12 @@
   powerManagement = {
     enable = true;
     cpuFreqGovernor = "performance";
+  };
+
+  # OpenGL
+  hardware.openGL = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
   };
 }
