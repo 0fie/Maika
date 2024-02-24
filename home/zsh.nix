@@ -1,9 +1,6 @@
-# ZSH settings
-{ config
-, lib
-, pkgs
-, ...
-}: {
+{ config, lib, pkgs, ... }:
+
+{
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -14,33 +11,16 @@
 
     # Aliases
     shellAliases = {
-      # lg = "lazygit";
-      # nix-clean = "doas nix-collect-garbage";
-      # nix-switch = "doas nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos#selene";
-      # nix-rollback = "doas nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos#selene --rollback";
-      # cpf = "wl-copy <";
+      rbs = "sudo nixos rebuild switch";
 
-      # # Modern unix
-      # grep = "rg $@";
-      # find = "fd $@";
-      # df = "duf $@";
-      # ls = "exa --git --icons $@";
-      # cat = "bat $@";
-      # dig = "dog $@";
-      # sudo = "doas $@";
-      # curl = "curlie $@";
+      # Modern unix, uwu
+      cat = "${pkgs.bat}/bin/bat $@";
     };
 
     envExtra = ''
-      #export MCFLY_KEY_SCHEME=vim
-      #export MCFLY_DISABLE_MENU=TRUE
-      #export BAT_THEME="mocha"
+      export BAT_THEME="mocha"
     '';
 
-    initExtra = ''
-      #eval "$(mcfly init zsh)"
-      #eval "$(direnv hook zsh)"
-    '';
 
     profileExtra = ''
       if [ "$(tty)" = "/dev/tty1" ]; then;
@@ -50,15 +30,7 @@
 
     plugins = [
       {
-        name = "zsh-defer";
-        src = pkgs.fetchFromGitHub {
-          owner = "romkatv";
-          repo = "zsh-defer";
-          rev = "master";
-          sha256 = "/rcIS2AbTyGw2HjsLPkHtt50c2CrtAFDnLuV5wsHcLc=";
-        };
-      }
-      {
+        # What's this?
         name = "zsh-nix-shell";
         file = "share/zsh-nix-shell/nix-shell.plugin.zsh";
         src = pkgs.zsh-nix-shell;
