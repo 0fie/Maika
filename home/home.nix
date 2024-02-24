@@ -20,6 +20,7 @@
     ./starship.nix
     ./tools.nix
     ./waybar.nix
+    ./xdg.nix
     ./zathura.nix
     ./zsh.nix
     inputs.nix-colors.homeManagerModules.default
