@@ -14,7 +14,7 @@
       rbs = "sudo nixos rebuild switch";
       nv = "nvim";
 
-      # Modern unix, uwu!
+      # Modern yuunix, uwu <3
       cat = "${pkgs.bat}/bin/bat $@";
     };
 
