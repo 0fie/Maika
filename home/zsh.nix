@@ -24,10 +24,6 @@
       # df = "${pkgs.duf}/bin/duf $@";
     };
 
-    envExtra = ''
-      export BAT_THEME="mocha"
-    '';
-
     profileExtra = ''
       if [ "$(tty)" = "/dev/tty1" ]; then;
           exec Hyprland
