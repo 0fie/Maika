@@ -36,7 +36,7 @@
 
     plugins = [
       {
-        # What's this?
+        # This allows us to use ZSH in a Nix shell. Cool!
         name = "zsh-nix-shell";
         file = "share/zsh-nix-shell/nix-shell.plugin.zsh";
         src = pkgs.zsh-nix-shell;
