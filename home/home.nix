@@ -3,7 +3,6 @@
 {
   imports = [
     ./bat.nix
-    ./bash.nix
     ./btop.nix
     ./cava.nix
     ./eza.nix
