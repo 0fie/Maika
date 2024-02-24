@@ -6,7 +6,6 @@
     ./btop.nix
     ./cava.nix
     ./env.nix
-    ./eza.nix
     ./firefox.nix
     ./git.nix
     ./gtk.nix
