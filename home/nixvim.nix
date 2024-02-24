@@ -28,7 +28,7 @@
 
       treesitter = {
         enable = true;
-	ensure_installed = [ "nix" "vim" "regex" "lua" "bash" "markdown" "markdown_inline" ];
+	ensureInstalled = [ "nix" "vim" "regex" "lua" "bash" "markdown" "markdown_inline" ];
 	indent= true;
       };
       
