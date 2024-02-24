@@ -6,6 +6,7 @@
     aria2
     btop
     cava
+    emote # Emoji picker
     exiftool
     file
     gnome.nautilus
@@ -15,7 +16,6 @@
     lf
     neofetch
     powerline-symbols
-    smile # Emoji picker
     which
   ];
 }
