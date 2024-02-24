@@ -11,6 +11,13 @@
       notify.enable = true;
       noice.enable = true;
 
+      lsp = {
+        enable = true;
+        servers = {
+          nixd.enable = true;
+        };
+      };
+
       dashboard = {
         enable = true;
 	header = [ "Nixvim 🩵" ];
@@ -50,12 +57,6 @@
       transparentBackground= true;
     };
 
-    lsp = {
-      enable = true;
-      servers = {
-        nixd.enable = true;
-      };
-    };
 
     clipboard.providers.wl-copy.enable = true;
 
