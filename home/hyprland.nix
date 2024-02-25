@@ -1,12 +1,17 @@
 { config, pkgs, ... }:
 
-let currentWall = (pkgs.fetchFromGitHub {
-  owner = "0fie";
-  repo = "wallpapers";
-  rev = "main";
-  sha256 = "sha256-Q1PrQzlatP0hlVP9swz2sP+Tt6AWihvXlhgCz4Dk5NA=";
-} + "/images/winter-wall2.png");
+# let currentWall = (pkgs.fetchFromGitHub {
+#   owner = "0fie";
+#   repo = "wallpapers";
+#   rev = "main";
+#   sha256 = "sha256-Q1PrQzlatP0hlVP9swz2sP+Tt6AWihvXlhgCz4Dk5NA=";
+# } + "/images/winter-wall2.png");
 
+let
+  currentWall = pkgs.fetchurl {
+    url = "https://raw.githubusercontent.com/0fie/trash/main/wallpapers/images/winter-wall2.png";
+    sha256 = "sha256-Q1PrQzlatP0hlVP9swz2sP+Tt6AWihvXlhgCz4Dk5NA=";
+  };
 in
 {
   wayland.windowManager.hyprland = {
