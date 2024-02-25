@@ -3,6 +3,11 @@
 {
   programs.starship = {
     enable = true;
-    #settings = lib.importTOML ../confs/starship.toml;
+    settings = lib.importTOML (builtins.readfile (pkgs.fetchFromGitHub {
+      owner = "0fie";
+      repo = "trash";
+      rev = "main";
+      sha256 = "";
+    } + "starship.toml"));
   };
 }
