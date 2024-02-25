@@ -80,7 +80,7 @@
       bind = [
         # Launch apps
         "$mainMod,        r,     exec,     rofi -show drun -show-icons"
-	"$mainMod,        e,     exec,     emote"
+	"$mainMod,        e,     exec,     ${pkgs.emote}/bin/emote"
 	"$mainMod,        b,     exec,     firefox"
 	"$mainMod,        f,     exec,     nautilus"
 	"$mainMod,        s,     exec,     spotify"
