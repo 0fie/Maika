@@ -4,10 +4,10 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Mocha-Compact-Pink-Dark";
+      name = "Catppuccin-Mocha-Standard-Pink-Dark";
       package = pkgs.catppuccin-gtk.override {
         accents = [ "pink" ];
-        # size = "compact";
+        size = "standard";  # "compact";
         # tweaks = [ "rimless" "black" ];
         variant = "mocha";
       };
