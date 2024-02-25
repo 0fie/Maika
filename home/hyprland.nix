@@ -1,18 +1,5 @@
 { config, pkgs, ... }:
 
-# let currentWall = (pkgs.fetchFromGitHub {
-#   owner = "0fie";
-#   repo = "wallpapers";
-#   rev = "main";
-#   sha256 = "sha256-Q1PrQzlatP0hlVP9swz2sP+Tt6AWihvXlhgCz4Dk5NA=";
-# } + "/images/winter-wall2.png");
-
-let
-  currentWall = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/0fie/wallpapers/main/images/winter-wall2.png";
-    sha256 = "sha256-MG3s/EaBOV736ugT0OB0Zrm5x358J+HAppgPAaLvQWQ=";
-  };
-in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -154,8 +141,8 @@ in
 
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
-	 "hyprctl ${pkgs.hyprpaper}/bin/hyprpaper preload '${currentWall}'"
-	 "hyprctl ${pkgs.hyprpaper}/bin/hyprpaper wallpaper ',${currentWall}'"
+	 "hyprctl ${pkgs.hyprpaper}/bin/hyprpaper preload '${../images/wallpaper.png}'"
+	 "hyprctl ${pkgs.hyprpaper}/bin/hyprpaper wallpaper ',${../images/wallpaper.png}'"
         "${pkgs.waybar}/bin/waybar &"
 	"${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 & "
       ];
