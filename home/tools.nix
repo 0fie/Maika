@@ -6,6 +6,7 @@
     aria2
     btop
     cava
+    dde-polkit-agent
     emote # Emoji picker
     exiftool
     file
