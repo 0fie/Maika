@@ -20,6 +20,15 @@
   };
 
   outputs = { self, nixpkgs, home-manager, nixvim, ... }@inputs:
+  let
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {
+        allowUnfree = true;
+      };
+    };
+  in 
   {
     nixosConfigurations = {
       "NixOS" = nixpkgs.lib.nixosSystem {
@@ -30,11 +39,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {
-		inherit (inputs.nix-colors.lib-contrib) gtkThemeFromScheme
-		inputs
-		nixvim;
-	      };
+              extraSpecialArgs = { inherit inputs nixvim; };
               users.me = import ./home/home.nix;
             };
           }
