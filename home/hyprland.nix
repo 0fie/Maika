@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 
-let currentWall = (pkgs.fetchFromGitHub {
+let currentWall = builtins.readFile (pkgs.fetchFromGitHub {
   owner = "0fie";
   repo = "wallpapers";
   rev = "main";
