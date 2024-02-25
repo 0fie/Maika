@@ -1,4 +1,5 @@
 { config, pkgs, ... }:
+
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -13,7 +14,7 @@
       };
 
       env = [
-        "XCURSOR_SIZE,24"
+        "XCURSOR_SIZE,14"
       ];
 
       input = {
@@ -106,19 +107,9 @@
         "$mainMod, return, exec, kitty"
         "$mainMod, Q, killactive,"
         "$mainMod SHIFT, M, exit,"
-        "$mainMod SHIFT, F, togglefloating,"
+        "$mainMod SHIFT, f, togglefloating,"
         "$mainMod, F, fullscreen,"
-        "$mainMod, G, togglegroup,"
-        "$mainMod, bracketleft, changegroupactive, b"
-        "$mainMod, bracketright, changegroupactive, f"
-        "$mainMod, O, exec, wofi --show drun"
-        "$mainMod, S, exec, rofi -show drun -show-icons"
-        "$mainMod, P, pin, active"
-
-        "$mainMod, left, movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
+        "$mainMod, r, exec, rofi -show drun -show-icons"
 
         "$mainMod, h, movefocus, l"
         "$mainMod, l, movefocus, r"
@@ -129,10 +120,6 @@
         "$mainMod SHIFT, l, movewindow, r"
         "$mainMod SHIFT, k, movewindow, u"
         "$mainMod SHIFT, j, movewindow, d"
-
-        # Scroll through existing workspaces with mainMod + scroll
-        "bind = $mainMod, mouse_down, workspace, e+1"
-        "bind = $mainMod, mouse_up, workspace, e-1"
       ]
         ++ map (n: "$mainMod SHIFT, ${toString n}, movetoworkspace, ${toString (
           if n == 0
