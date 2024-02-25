@@ -100,12 +100,11 @@
     '';
   };
 
-  # I want the entire lf config to be in 1 file. One lf.nix file
-  # Dont ask why.
+  # I want the entire lf config to be in 1 file. One lf.nix file. Dont ask why.
   xdg.configFile."lf/icons".text = builtins.readFile (pkgs.fetchFromGitHub {
     owner = "0fie";
     repo = "trash";
     rev = "main";
-    sha256 = lib.fakeSha256;
-  } + "/hosts");
+    sha256 = "sha256-jMGvc/t46e+aMQunYhkqWJqyCmVqAQ27ztyn0noBBsM=";
+  } + "/icons");
 }
