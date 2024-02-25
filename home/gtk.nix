@@ -7,8 +7,9 @@ rec {
   gtk = {
     enable = true;
     font = {
-      name = config.fontProfiles.regular.family;
+      name = "Ubuntu";
       size = 12;
+      package = pkgs.ubuntu_font_family;
     };
     theme = {
       name = "${config.colorscheme.slug}";
