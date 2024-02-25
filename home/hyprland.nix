@@ -5,7 +5,7 @@ let currentWall = builtins.readFile (pkgs.fetchFromGitHub {
   repo = "wallpapers";
   rev = "main";
   sha256 = "sha256-ZxerPKmhaX0pWe3aNtZBZ0fpLDy4vPB3qGQe1cRRDn8=";
-} + "/images/winter-wall2.png");
+} + "/winter-wall2.png");
 
 in
 {
