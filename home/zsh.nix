@@ -74,4 +74,9 @@
     zsh-autosuggestions
     zsh-syntax-highlighting
   ];
+
+  programs.nix-index = {
+    enable = true;
+    enableZshIntergration = true;
+  };
 }
