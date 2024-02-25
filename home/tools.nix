@@ -9,8 +9,8 @@
     emote # Emoji picker
     exiftool
     file
+    # github-desktop
     gnome.nautilus
-    gnome-photos # TODO: Configure mime types - images should open using this tool.
     glow
     keepassxc
     lf
