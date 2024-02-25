@@ -6,8 +6,7 @@
     aria2
     btop
     cava
-    deepin.dde-polkit-agent
-    emote # Emoji picker
+    emote # Emoji picker - move this to ../home/hyprland.nix
     exiftool
     file
     # github-desktop
@@ -16,7 +15,6 @@
     keepassxc
     lf
     neofetch
-    polkit-gnome
     powerline-symbols
     which
   ];
