@@ -77,6 +77,6 @@
 
   programs.nix-index = {
     enable = true;
-    enableZshIntergration = true;
+    enableZshIntegration = true;
   };
 }
