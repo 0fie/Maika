@@ -1,11 +1,11 @@
 { config, pkgs, ... }:
 
-let currentWall = (pkgs.fetchFromGitHub {
+let currentWall = (pkgs.writeBinary (pkgs.fetchFromGitHub {
   owner = "0fie";
   repo = "wallpapers";
   rev = "main";
   sha256 = "sha256-Q1PrQzlatP0hlVP9swz2sP+Tt6AWihvXlhgCz4Dk5NA=";
-} + "/images/winter-wall2.png");
+} + "/images/winter-wall2.png"));
 
 in
 {
