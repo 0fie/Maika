@@ -79,6 +79,4 @@
     enable = true;
     enableZshIntegration = true;
   };
-
-  programs.command-not-found.enable = true;
 }
