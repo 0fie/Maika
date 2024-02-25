@@ -1,5 +1,15 @@
 { config, pkgs, ... }:
 
+let 
+  currentWallpaper = pkgs.fetchurl {
+    url = "https://raw.githubusercontent.com/0fie/wallpapers/main/images/winter-wall2.png";
+    sha256 = "";
+  };
+  hyprpaperConf = pkgs.writeText "hyprpaper.conf" ''
+    preload = ${currentWallpaper}
+    wallpaper = ,${currentWallpaper}
+  '';
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -141,8 +151,7 @@
 
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
-	 "hyprctl ${pkgs.hyprpaper}/bin/hyprpaper preload '${../images/wallpaper.png}'"
-	 "hyprctl ${pkgs.hyprpaper}/bin/hyprpaper wallpaper ',${../images/wallpaper.png}'"
+	"${pkgs.hyprpaper}/bin/hyprpaper -c ${hyprpaperConf}"
         "${pkgs.waybar}/bin/waybar &"
 	"${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 & "
       ];
