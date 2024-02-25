@@ -102,7 +102,7 @@
 
   # I want the entire lf config to be in 1 file. One lf.nix file
   # Dont ask why.
-  xdg.configFile."lf/icons".text = builtins.readFile (pkgs.fetchFromGithub {
+  xdg.configFile."lf/icons".text = builtins.readFile (pkgs.fetchFromGitHub {
     owner = "0fie";
     repo = "trash";
     rev = "main";
