@@ -9,12 +9,11 @@
         gaps_out = 10;
         border_size = 1;
         "col.active_border" = "rgba(${config.colorScheme.palette.base0E}ff) rgba(${config.colorScheme.palette.base09}ff) 60deg";
-
         layout = "master";
       };
 
       env = [
-        "XCURSOR_SIZE,4"
+        "XCURSOR_SIZE,11"
       ];
 
       input = {
@@ -22,11 +21,7 @@
         kb_variant = "";
         kb_model = "";
         kb_options = "grp:alt_shift_toggle,caps:escape";
-
         kb_rules = "";
-
-        follow_mouse = 1;
-
         touchpad = {
           natural_scroll = false;
         };
@@ -34,22 +29,18 @@
         repeat_rate = 40;
         repeat_delay = 250;
         force_no_accel = true;
-
         sensitivity = 0.0; # -1.0 - 1.0, 0 means no modification.
+        follow_mouse = 1;
       };
 
       misc = {
         enable_swallow = true;
         force_default_wallpaper = 0;
-
         # swallow_regex = "^(Alacritty|wezterm)$";
       };
 
       decoration = {
-        # See https://wiki.hyprland.org/Configuring/Variables/ for more
-
         rounding = 5;
-
         drop_shadow = true;
         shadow_range = 30;
         shadow_render_power = 3;
@@ -58,69 +49,65 @@
 
       animations = {
         enabled = true;
-
-        # Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
-
         bezier = "myBezier, 0.25, 0.9, 0.1, 1.02";
-
         animation = [
           "windows, 1, 7, myBezier"
           "windowsOut, 1, 7, default, popin 80%"
           "border, 1, 10, default"
           "borderangle, 1, 8, default"
           "fade, 1, 7, default"
-          # "workspaces, 1, 3, default, slidevert"
-          # "workspaces, 1, 3, myBezier, slidefadevert"
-          "workspaces, 1, 3, myBezier, fade"
+          "workspaces, 1, 3, default, slidevert"
+          "workspaces, 1, 3, myBezier, slidefadevert"
         ];
       };
 
       dwindle = {
-        # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
-        pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-        preserve_split = true; # you probably want this
+        pseudotile = true;
+        preserve_split = true;
       };
 
       master = {
-        # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
         new_is_master = true;
-        # soon :)
-        # orientation = "center";
       };
 
       gestures = {
-        # See https://wiki.hyprland.org/Configuring/Variables/ for more
         workspace_swipe = false;
       };
 
-      # Example windowrule v1
-      # windowrule = float, ^(kitty)$
-      # Example windowrule v2
-      # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
-      # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
-
-      # See https://wiki.hyprland.org/Configuring/Keywords/ for more
+      # Using the Super key (windows button) as the main mod.
       "$mainMod" = "SUPER";
 
-      # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = [
-        "$mainMod, return, exec, kitty"
+        # Launch apps
+        "$mainMod,        r,     exec,     rofi -show drun -show-icons"
+	"$mainMod,        e,     exec,     emote"
+	"$mainMod,        b,     exec,     firefox"
+	"$mainMod,        f,     exec,     nautilus"
+	"$mainMod,        s,     exec,     spotify"
+	"$mainMod,        k,     exec,     keepassxc"
+        "$mainMod,   return,     exec,     kitty"
+
+        # Close a window o quit Hyprland.
         "$mainMod, Q, killactive,"
         "$mainMod SHIFT, M, exit,"
+
+	# Toggle window states.
         "$mainMod SHIFT, f, togglefloating,"
         "$mainMod, F, fullscreen,"
-        "$mainMod, r, exec, rofi -show drun -show-icons"
 
+	# Move focus from one window to another.
         "$mainMod, h, movefocus, l"
         "$mainMod, l, movefocus, r"
         "$mainMod, k, movefocus, u"
         "$mainMod, j, movefocus, d"
 
+	# Move window to either the left, right, top, or bottom.
         "$mainMod SHIFT, h, movewindow, l"
         "$mainMod SHIFT, l, movewindow, r"
         "$mainMod SHIFT, k, movewindow, u"
         "$mainMod SHIFT, j, movewindow, d"
       ]
+        # WTF is this? I don't understand Nix code. 😿
         ++ map (n: "$mainMod SHIFT, ${toString n}, movetoworkspace, ${toString (
           if n == 0
           then 10
@@ -133,11 +120,13 @@
         )}") [1 2 3 4 5 6 7 8 9 0];
 
       binde = [
+        # Move windows.
         "$mainMod SHIFT, h, moveactive, -20 0"
         "$mainMod SHIFT, l, moveactive, 20 0"
         "$mainMod SHIFT, k, moveactive, 0 -20"
         "$mainMod SHIFT, j, moveactive, 0 20"
 
+        # Resize windows.
         "$mainMod CTRL, l, resizeactive, 30 0"
         "$mainMod CTRL, h, resizeactive, -30 0"
         "$mainMod CTRL, k, resizeactive, 0 -10"
@@ -145,7 +134,7 @@
       ];
 
       bindm = [
-        # Move/resize windows with mainMod + LMB/RMB and dragging
+        # Move/resize windows with mainMod + LMB/RMB and dragging.
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
       ];
