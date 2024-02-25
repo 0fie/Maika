@@ -53,13 +53,13 @@
       }
       {
         name = "catppuccin-zsh-syntax-hightlighting";
+        file = "themes/catppuccin_mocha-zsh-syntax-highlighting.zsh";
         src = pkgs.fetchFromGitHub {
           owner = "catppuccin";
           repo = "zsh-syntax-highlighting";
           rev = "dbb1ec93b30dbe8cd728cffe0974aa7fa1ac3298";
           sha256 = "0B7g0J6+ZCoe1eErsSEmqO0aNOBi+FB+///vXnuiels=";
         };
-        file = "themes/catppuccin_mocha-zsh-syntax-highlighting.zsh";
       }
       {
         name = "zsh-syntax-highlighting";
@@ -74,9 +74,4 @@
     zsh-autosuggestions
     zsh-syntax-highlighting
   ];
-
-  programs.nix-index = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 }
