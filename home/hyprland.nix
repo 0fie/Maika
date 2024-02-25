@@ -9,6 +9,7 @@ let currentWall = builtins.readFile (pkgs.fetchFromGitHub {
 
 in
 {
+  currentWallPaper = currentWall;
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
@@ -149,8 +150,8 @@ in
 
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
-	 "hyprctl ${pkgs.hyprpaper}/bin/hyprpaper preload '${currentWall}'"
-	 "hyprctl ${pkgs.hyprpaper}/bin/hyprpaper wallpaper ',${currentWall}'"
+	 "hyprctl ${pkgs.hyprpaper}/bin/hyprpaper preload '${currentWallPaper}'"
+	 "hyprctl ${pkgs.hyprpaper}/bin/hyprpaper wallpaper ',${currentWallPaper}'"
         "${pkgs.waybar}/bin/waybar &"
 	"${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 & "
       ];
