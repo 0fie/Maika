@@ -7,7 +7,7 @@
       owner = "0fie";
       repo = "trash";
       rev = "main";
-      sha256 = "sha256-wIFaeEiabfuRuuwJpT25sgfBdM0yYk2oZDh1KlFI8=";
+      sha256 = "";
     } + "/starship.toml");
   };
 }
