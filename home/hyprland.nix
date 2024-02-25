@@ -152,10 +152,8 @@
 
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "waybar"
-	"${pkgs.swww} init"
-	"sleep 2"
-	"${pkgs.swww} img ../assets/images/wallpaper.png"
+        "${pkgs.waybar}/bin/waybar"
+	"${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       ];
     };
   };
