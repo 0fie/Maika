@@ -9,7 +9,7 @@
       git
       neovim
       ntfs3g
-      polkit-gnome
+      polkit_gnome
     ];
 
     variables = {
