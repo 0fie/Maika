@@ -1,33 +1,23 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, ... }:
 
-let
-  inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) gtkThemeFromScheme;
-in
-rec {
+{
   gtk = {
     enable = true;
-    font = {
-      name = "Ubuntu";
-      size = 12;
-      package = pkgs.ubuntu_font_family;
-    };
     theme = {
-      name = "${config.colorscheme.slug}";
-      package = gtkThemeFromScheme { scheme = config.colorscheme; };
-    };
-    iconTheme = {
-      name = "Papirus";
-      package = pkgs.papirus-icon-theme;
-    };
-  };
-
-  services.xsettingsd = {
-    enable = true;
-    settings = {
-      "Net/ThemeName" = "${gtk.theme.name}";
-      "Net/IconThemeName" = "${gtk.iconTheme.name}";
+      name = "Catppuccin-Macchiato-Compact-Pink-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "pink" ];
+        size = "compact";
+        tweaks = [ "rimless" "black" ];
+        variant = "macchiato";
+      };
     };
   };
-
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 }
+
+# Now symlink the `~/.config/gtk-4.0/` folder declaratively:
+xdg.configFile = {
+  "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
+  "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
+  "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
+};
