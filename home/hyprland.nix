@@ -9,7 +9,7 @@
 
 let
   currentWall = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/0fie/trash/main/wallpapers/images/winter-wall2.png";
+    url = "https://raw.githubusercontent.com/0fie/wallpapers/main/images/winter-wall2.png";
     sha256 = "sha256-Q1PrQzlatP0hlVP9swz2sP+Tt6AWihvXlhgCz4Dk5NA=";
   };
 in
