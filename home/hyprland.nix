@@ -87,13 +87,13 @@ in
 
       bind = [
         # Launch apps
-        "$mainMod,        r,     exec,     rofi -show drun -show-icons"
-	"$mainMod,        e,     exec,     ${pkgs.emote}/bin/emote"
-	"$mainMod,        b,     exec,     firefox"
-	"$mainMod,        f,     exec,     nautilus"
-	"$mainMod,        s,     exec,     spotify"
-	"$mainMod,        k,     exec,     keepassxc"
-        "$mainMod,   return,     exec,     kitty"
+        "$mainMod,        r,   exec,   ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
+	"$mainMod,        e,   exec,   ${pkgs.emote}/bin/emote"
+	"$mainMod,        b,   exec,   ${pkgs.firefox}/bin/firefox"
+	"$mainMod,        f,   exec,   ${pkgs.nautilus}/bin/nautilus"
+	"$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
+	"$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
+        "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
 
         # Close a window o quit Hyprland.
         "$mainMod, Q, killactive,"
@@ -149,8 +149,8 @@ in
 
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
-	"hyprctl ${pkgs.hyprpaper}/bin/hyprpaper preload '${currentWall}'"
-	"hyprctl ${pkgs.hyprpaper}/bin/hyprpaper wallpaper ',${currentWall}'"
+	 "hyprctl ${pkgs.hyprpaper}/bin/hyprpaper preload '${currentWall}'"
+	 "hyprctl ${pkgs.hyprpaper}/bin/hyprpaper wallpaper ',${currentWall}'"
         "${pkgs.waybar}/bin/waybar &"
 	"${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 & "
       ];
