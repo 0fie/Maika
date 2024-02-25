@@ -9,6 +9,7 @@
       git
       neovim
       ntfs3g
+      udiskie
     ];
 
     variables = {
