@@ -1,5 +1,13 @@
 { config, pkgs, ... }:
 
+let currentWall = (pkgs.fetchFromGitHub {
+  owner = "0fie";
+  repo = "wallpapers";
+  rev = "main";
+  sha256 = "sha256-ZxerPKmhaX0pWe3aNtZBZ0fpLDy4vPB3qGQe1cRRDn8=";
+} + "/images/winter-wall2.png");
+
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -141,6 +149,8 @@
 
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
+	"hyprctl ${pkgs.hyprpaper}/bin/hyprpaper preload '${currentWall}'"
+	"hyprctl ${pkgs.hyprpaper}/bin/hyprpaper wallpaper ',${currentWall}'"
         "${pkgs.waybar}/bin/waybar &"
 	"${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 & "
       ];
