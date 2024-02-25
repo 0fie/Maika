@@ -16,6 +16,7 @@
     keepassxc
     lf
     neofetch
+    polkit-gnome
     powerline-symbols
     which
   ];
