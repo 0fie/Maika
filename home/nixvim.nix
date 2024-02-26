@@ -29,7 +29,7 @@
 
       dashboard = {
         enable = true;
-	header = [ "Nixvim 🩵" ];
+	header = [ ''Nixvim 🩵'' ];
 	footer = [ "To these types, complex software is the ideal." ];
 	hideTabline = true;
 	hideStatusline = true;
