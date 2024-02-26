@@ -5,8 +5,6 @@ To-DO
 
 >> Improve
 - home/firefox.nix - userChrome.css should be fetched from [0fie/trash](github.com/0fie/trash)
-- home/hyprland.nix - wallpaper should be fetched from [0fie/wallpapers](github.com/0fie/wallpapers)
 
 >> Configure
 - Waybar
-- Hyprland
