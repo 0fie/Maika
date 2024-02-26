@@ -13,7 +13,7 @@
           owner = "0fie";
           repo = "trash";
           rev = "main";
-          sha256 = "";
+          sha256 = "sha256-KWVe12znmNOFcYfDewxpZfh4T1Fz967W+yQJZbmKkNs=";
         } + "/userChrome.css");
       };
     };
