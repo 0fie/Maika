@@ -1,3 +1,4 @@
+# Add keybind to toggle tiling mode for a window
 { config, pkgs, ... }:
 
 let 
