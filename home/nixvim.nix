@@ -37,10 +37,10 @@
 
       treesitter = {
         enable = true;
-	ensureInstalled = [ "nix" "vim" "regex" "lua" "bash" "markdown" "markdown_inline" "c" "vimdoc" "python" "csharp"];
+	ensureInstalled = [ "nix" "vim" "regex" "lua" "bash" "markdown" "markdown_inline" "c" "vimdoc" "python" "c-sharp"];
 	indent= true;
 	grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-	  nix vim regex lua bash markdown markdown_inline c vimdoc python csharp
+	  nix vim regex lua bash markdown markdown_inline c vimdoc python c-sharp
 	];
       };
       

@@ -12,6 +12,7 @@
     gnome.nautilus
     keepassxc
     lf
+    mono
     neofetch
     which
   ];
