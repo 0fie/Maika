@@ -33,6 +33,6 @@
     stateVersion = "23.11";
   };
 
-  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
+  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-frappe;
   programs.home-manager.enable = true;
 }
