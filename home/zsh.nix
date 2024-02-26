@@ -11,8 +11,8 @@
 
     # Aliases
     shellAliases = {
-      rbs = "sudo nixos rebuild switch";
-      nv = "nvim";
+      rbs = "sudo nixos-rebuild switch";
+      n = "nvim";
 
       # Modern yuunix, uwu <3
       # TODO: Find more modern and convinient replacements for legacy yuunix tools.
