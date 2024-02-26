@@ -8,7 +8,7 @@
       package = pkgs.catppuccin-gtk.override {
         accents = [ "pink" ];
         size = "standard";
-        variant = "mocha";
+        variant = "macchiato";
       };
     };
   };
