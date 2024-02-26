@@ -5,8 +5,9 @@ To-DO
 
 >> Improve
 - home/firefox.nix - userChrome.css should be fetched from [0fie/trash](github.com/0fie/trash)
+- Waybar should not be compiled manually during installation.
 
 >> Configure
-- Waybar
+- Waybar 
 - SDDM
 - Plymouth
