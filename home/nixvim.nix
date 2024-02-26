@@ -92,17 +92,17 @@
       }
       {
 	mode = "n";
-	key = "A-l";
+	key = "Alt-l";
 	action = "<cmd>tabnext<CR>";
       }
       {
 	mode = "n";
-	key = "A-h";
+	key = "Alt-h";
 	action = "<cmd>tabprevious<CR>";
       }
       {
 	mode = "n";
-	key = "A-q";
+	key = "Alt-q";
 	action = "<cmd>q<CR>";
       }
     ];
