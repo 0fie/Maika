@@ -19,7 +19,7 @@
           nixd.enable = true;
 	  tsserver.enable = true;
 	  html.enable = true;
-	  ccsls.enable = true;
+	  cssls.enable = true;
 	  cmake.enable = true;
 	  csharp-ls.enable = true;
 	  jsonls.enable = true;
