@@ -1,3 +1,4 @@
+# TODO: Implement Aylur's keybindings. Add grammars for more languages.
 { config, pkgs, ... }:
 
 {
@@ -16,6 +17,13 @@
         enable = true;
         servers = {
           nixd.enable = true;
+	  tsserver.enable = true;
+	  html.enable = true;
+	  ccsls.enable = true;
+	  cmake.enable = true;
+	  csharp-ls.enable = true;
+	  jsonls.enable = true;
+	  pyright.enable = true;
         };
       };
 
@@ -29,9 +37,11 @@
 
       treesitter = {
         enable = true;
-	ensureInstalled = [ "nix" "vim" "regex" "lua" "bash" "markdown" "markdown_inline" "c" "vimdoc" ];
+	ensureInstalled = [ "nix" "vim" "regex" "lua" "bash" "markdown" "markdown_inline" "c" "vimdoc" "python" ];
 	indent= true;
-	grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [ nix vim regex lua bash markdown markdown_inline c vimdoc ];
+	grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+	  nix vim regex lua bash markdown markdown_inline c vimdoc python
+	];
       };
       
       nvim-cmp =  {
@@ -79,7 +89,7 @@
         mode = "n";
         key = "<leader>f";
         options.silent = false;
-        action = "<cmd>Neotree reveal right<CR>";
+        action = "<cmd>Neotree toggle<CR>";
       }
     ];
     globals.mapleader = " "; # Sets the leader key to space.

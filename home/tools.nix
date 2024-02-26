@@ -6,16 +6,13 @@
     aria2
     btop
     cava
-    emote # Emoji picker - move this to ../home/hyprland.nix
     exiftool
     file
-    # github-desktop
+    github-desktop
     gnome.nautilus
-    glow
     keepassxc
     lf
     neofetch
-    powerline-symbols
     which
   ];
 }

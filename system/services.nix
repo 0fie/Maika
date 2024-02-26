@@ -4,10 +4,10 @@
   services = {
     gvfs.enable = true; # Adds functionality to nautilus file manager.
     gnome.gnome-keyring.enable = true;
-    blueman.enable = true; # GUI Bluetooth manager.
-    fstrim.enable = true; # Trim SSDs in the background.
-    devmon.enable = true; # Monitor for new storage devices.
-    udisks2.enable = true; # Allow apps to query and manipulate storage devices.
+    blueman.enable = true;  # GUI Bluetooth manager.
+    fstrim.enable = true;   # Trim SSDs in the background.
+    devmon.enable = true;   # Monitor for new storage devices.
+    udisks2.enable = true;  # Allow apps to query and manipulate storage devices.
   };
 
   xdg.portal = {

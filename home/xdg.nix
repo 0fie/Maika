@@ -1,4 +1,4 @@
-# TODO: Add more mime types
+# TODO: Add more mime types. Make loupe the default image viewer using Aylurs solution.
 { config, lib, pkgs, ... }:
 
 {

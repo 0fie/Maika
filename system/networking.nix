@@ -6,7 +6,7 @@
     useDHCP = lib.mkDefault true;
     hostName = "NixOS";
     firewall = {
-      enable = false;
+      enable = true;
       allowedTCPPorts = [];
       allowedUDPPorts = [];
     };
