@@ -1,4 +1,4 @@
-# TODO: Implement Aylur's keybindings. Add grammars for more languages.
+# TODO: Implement Zaney's solution to stop "notify" from complaining about hex colors
 { config, pkgs, ... }:
 
 {
@@ -93,37 +93,17 @@
       {
 	mode = "n";
 	key = "A-l";
-	action = "vim.cmd.bnext";
+	action = "tabnext";
       }
       {
 	mode = "n";
 	key = "A-h";
-	action = "vim.cmd.bprev";
+	action = "tabprevious";
       }
       {
 	mode = "n";
 	key = "A-q";
-	action = "function() vim.cmd('bw'); end";
-      }
-
-      # Move selected lines up.
-      {
-	mode = "n";
-	key = "K";
-	action = ":m '<-2<CR>gv=gv";
-      }
-      # Move selected lines up.
-      {
-	mode = "n";
-	key = "K";
-	action = ":m '<-2<CR>gv=gv";
-      }
-
-      # Move selected lines down.
-      {
-	mode = "n";
-	key = "J";
-	action = ":m '>+1<CR>gv=gv";
+	action = "tabclose";
       }
     ];
     globals.mapleader = " "; # Sets the leader key to space.
