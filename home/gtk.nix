@@ -6,9 +6,9 @@
     theme = {
       name = "Catppuccin-Mocha-Standard-Pink-Dark";
       package = pkgs.catppuccin-gtk.override {
-        accents = [ "pink" ];
+        accents = [ "blue" ];
         size = "standard";
-        variant = "macchiato";
+        variant = "mocha";
       };
     };
   };
