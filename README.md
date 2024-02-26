@@ -8,3 +8,5 @@ To-DO
 
 >> Configure
 - Waybar
+- SDDM
+- Plymouth
