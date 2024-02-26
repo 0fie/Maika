@@ -72,10 +72,10 @@
     clipboard.providers.wl-copy.enable = true;
 
     options = rec {
-      number = true;         # Show line numbers
-      relativenumber = true; # Show relative line numbers
-      shiftwidth = 2;        # Tab width should be 2
-      clipboard = "unnamedplus";
+      number = true;             # Show line numbers
+      relativenumber = true;     # Show relative line numbers
+      shiftwidth = 2;            # Tab width should be 2
+      clipboard = "unnamedplus"; # Sync with OS clipboard
       softtabstop = shiftwidth;
       smartindent = true;
       swapfile = false;
@@ -88,23 +88,22 @@
       {
         mode = "n";
         key = "<leader>f";
-        # options.silent = false;
         action = "<cmd>Neotree toggle<CR>";
       }
       {
 	mode = "n";
 	key = "A-l";
-	action = "tabnext";
+	action = "<cmd>tabnext<CR>";
       }
       {
 	mode = "n";
 	key = "A-h";
-	action = "tabprevious";
+	action = "<cmd>tabprevious<CR>";
       }
       {
 	mode = "n";
 	key = "A-q";
-	action = "tabclose";
+	action = "<cmd>q<CR>";
       }
     ];
     globals.mapleader = " "; # Sets the leader key to space.
