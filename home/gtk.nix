@@ -6,7 +6,9 @@
     theme = {
       name = "Catppuccin-Mocha-Standard-Pink-Dark";
       package = pkgs.catppuccin-gtk.override {
+        accents = ["pink"];
         size = "standard";
+        variant = "mocha";
       };
     };
   };
@@ -18,4 +20,5 @@
     "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
 
+  home.file.".icons/default".source = "${pkgs.catppuccin-cursors.mochaPink}/share/icons/Catppuccin-Mocha-Pink-Cursors";
 }
