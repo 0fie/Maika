@@ -9,6 +9,7 @@
     ./nix-settings.nix
     ./locale.nix
     ./services.nix
+    ./systemd.nix
     ./sound.nix
     ./users.nix
   ];
