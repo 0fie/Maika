@@ -1,14 +1,14 @@
-# TODO: Make Firefox use a Catppuccin theme.
+# TODO: Make Firefox use a Catppuccin theme. Declare bookmarks & settings.
 { config, pkgs, lib, ... }:
 
 {
   programs.firefox = {
     enable = true;
     profiles = {
-      ff = {
+      me = {
         isDefault = true;
-        name = "ff";
-        path = "ff.default";
+        name = "me";
+        path = "me.default";
         # userChrome =  builtins.readFile (pkgs.fetchFromGitHub {
         #   owner = "0fie";
         #   repo = "trash";
