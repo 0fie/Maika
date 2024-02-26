@@ -4,7 +4,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Mocha-Standard-Rosewater-Dark";
+      name = "Catppuccin-Mocha-Standard-Pink-Dark";
       package = pkgs.catppuccin-gtk.override {
         size = "standard";
       };
@@ -18,5 +18,4 @@
     "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
 
-  home.file.".icons/default".source = "${pkgs.catppuccin-cursors.mochaLavender}/share/icons/Catppuccin-Mocha-Lavender-Cursors";
 }
