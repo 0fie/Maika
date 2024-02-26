@@ -81,6 +81,7 @@
       swapfile = false;
       backup = swapfile;
       scrolloff = 10;
+      cursorline = true;
     };
     
     keymaps = [
