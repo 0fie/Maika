@@ -105,6 +105,6 @@
     owner = "0fie";
     repo = "trash";
     rev = "main";
-    sha256 = "sha256-jMGvc/t46e+aMQunYhkqWJqyCmVqAQ27ztyn0noBBsM=";
+    sha256 = "sha256-USUb1b5LOo2n2kMzWgV/o6Xu+t9cnmH7+z/ci3vsrd0=";
   } + "/icons");
 }
