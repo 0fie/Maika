@@ -29,7 +29,7 @@
 
       dashboard = {
         enable = true;
-	header = [ ''Nixvim 🩵'' ];
+	header = [ "Nixvim 🩵" ];
 	footer = [ "To these types, complex software is the ideal." ];
 	hideTabline = true;
 	hideStatusline = true;
@@ -69,7 +69,6 @@
       transparentBackground= true;
     };
 
-
     clipboard.providers.wl-copy.enable = true;
 
     options = rec {
@@ -88,8 +87,43 @@
       {
         mode = "n";
         key = "<leader>f";
-        options.silent = false;
+        # options.silent = false;
         action = "<cmd>Neotree toggle<CR>";
+      }
+      {
+	mode = "n";
+	key = "A-l";
+	action = "vim.cmd.bnext";
+      }
+      {
+	mode = "n";
+	key = "A-h";
+	action = "vim.cmd.bprev";
+      }
+      {
+	mode = "n";
+	key = "A-q";
+	action = "function() vim.cmd('bw'); end";
+      }
+
+      # Move selected lines up.
+      {
+	mode = "n";
+	key = "K";
+	action = ":m '<-2<CR>gv=gv";
+      }
+      # Move selected lines up.
+      {
+	mode = "n";
+	key = "K";
+	action = ":m '<-2<CR>gv=gv";
+      }
+
+      # Move selected lines down.
+      {
+	mode = "n";
+	key = "J";
+	action = ":m '>+1<CR>gv=gv";
       }
     ];
     globals.mapleader = " "; # Sets the leader key to space.
