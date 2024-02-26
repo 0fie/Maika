@@ -12,7 +12,6 @@ let
       urgent = "";
     };
     on-click = "activate";
-    # persistent_workspaces = { "*" = 10; };
   };
 
   mainWaybarConfig = {
@@ -24,10 +23,9 @@ let
 
     modules-left = ["custom/logo" "hyprland/workspaces"];
     modules-right = [
-      "hyprland/language"
       "network"
       "bluetooth"
-      "pulseaudio#microphone"
+      # Volume
       "custom/battery"
       "clock"
       "tray"

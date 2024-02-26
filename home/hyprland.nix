@@ -152,8 +152,8 @@ in
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
 	"${pkgs.hyprpaper}/bin/hyprpaper -c ${hyprpaperConf}"
-        "${pkgs.waybar}/bin/waybar &"
-	"${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 & "
+        "${pkgs.waybar}/bin/waybar"
+	"${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       ];
     };
   };
