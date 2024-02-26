@@ -104,7 +104,7 @@ in
 
 	# Toggle window states.
         "$mainMod SHIFT, t, togglefloating,"
-        "$mainMod, F, fullscreen,"
+        "$mainMod SHIFT, f, fullscreen,"
 
 	# Move focus from one window to another.
         "$mainMod, h, movefocus, l"
