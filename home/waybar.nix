@@ -20,7 +20,7 @@
 	"hyprland/workspaces" = {
           format = "{icon}";
 	  persistent-workspaces = {
-	    "*" = 5;
+	    "*" = 1;
 	  };
           format-icons = {
             active = "";
@@ -41,6 +41,26 @@
 	  format-icons = [ "" "" "" "" "" ];
 	};
 
+        clock = {
+  	  format = "󰥔 {:%H:%M}";
+  	  tooltip-format = ''
+  	    <span size='9pt' font='WenQuanYi Zen Hei Mono'>{calendar}</span>
+	  '';
+  	  calendar = {
+  	    format = {
+  	      days = "<span color='#ecc6d9'><b>{}</b></span>";
+  	      months = "<span color='#ffead3'><b>{}</b></span>";
+  	      today = "<span color='#ff6699'><b><u>{}</u></b></span>";
+  	      weekdays = "<span color='#ffcc66'><b>{}</b></span>";
+  	      weeks = "<span color='#99ffdd'><b>W{}</b></span>";
+  	    };
+  	    mode = "year";
+  	    mode-mon-col = 3;
+  	    on-click-right = "mode";
+  	    on-scroll = 1;
+  	    weeks-pos = "right";
+  	  };
+        };
       };
     };
   };
