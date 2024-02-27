@@ -10,7 +10,7 @@
 	height = 18;
 	modules-left = [ "custom/logo" "hyprland/workspaces"];
 	modules-center = [];
-	modules-right = [ "battery" "clock" ];
+	modules-right = [ "custom/battery" "clock" ];
 
 	"custom/logo" = {
 	  exec = "echo ' '";

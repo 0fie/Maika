@@ -8,7 +8,6 @@
     cava
     exiftool
     file
-    github-desktop
     gnome.nautilus
     keepassxc
     lf
