@@ -4,7 +4,7 @@
   programs.git = {
     enable = true;
     userName = "0fie";
-    userEmail = "mitesh@makosa.dev";
+    userEmail = "151028199+0fie@users.noreply.github.com";
     extraConfig = {
       user = {
         defaultBranch = "main";
