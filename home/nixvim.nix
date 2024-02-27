@@ -1,4 +1,4 @@
-# TODO: Implement Zaney's solution to stop "notify" from complaining about hex colors
+# TODO: Implement Zaney's solution to stop "notify" from complaining about hex colors. Fix keybinds.
 { config, pkgs, ... }:
 
 {

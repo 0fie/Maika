@@ -1,5 +1,15 @@
 { config, pkgs, ... }:
 
+let
+  batteryScript = pkgs.writeShellScriptBin "script.sh" ''
+    currentBatteryPercentage=$(cat /sys/class/power_supply/BAT0/capacity)
+    if [ $currentBatteryPercentage -ge 101 ]; then
+      echo "100"
+    else
+      echo $currentBatteryPercentage
+    fi
+  '';
+in
 {
   programs.waybar = {
     enable = true;
@@ -30,16 +40,11 @@
           on-click = "activate";
         };
 
-	"battery" = {
-	  bat = "BAT0";
-	  interval = 60;
-	  states = {
-	    warning = 30;
-	    critical = 15;
-	  };
-	  format = "{capacity%}";
-	  format-icons = [ "" "" "" "" "" ];
-	};
+        "custom/battery" = {
+          exec = "${batteryScript}/bin/script.sh";
+          format = " 󰁹 {}";
+          interval = 10;
+        };
 
         clock = {
   	  format = "󰥔 {:%H:%M}";
