@@ -1,15 +1,15 @@
 { config, pkgs, ... }:
 
-let
-  batteryScript = pkgs.writeShellScriptBin "script.sh" ''
-    currentBatteryPercentage=$(cat /sys/class/power_supply/BAT0/capacity)
-    if [ $currentBatteryPercentage -ge 101 ]; then
-      echo "100"
-    else
-      echo $currentBatteryPercentage
-    fi
-  '';
-in
+# let
+#   batteryScript = pkgs.writeShellScriptBin "script.sh" ''
+#     currentBatteryPercentage=$(cat /sys/class/power_supply/BAT0/capacity)
+#     if [ $currentBatteryPercentage -ge 101 ]; then
+#       echo "100"
+#     else
+#       echo $currentBatteryPercentage
+#     fi
+#   '';
+# in
 {
   programs.waybar = {
     enable = true;
@@ -23,7 +23,7 @@ in
 	modules-right = [ "custom/battery" "clock" ];
 
 	"custom/logo" = {
-	  exec = "echo ' '";
+	  exec = "echo ''";
 	  format = "{}";
         };
 
@@ -41,7 +41,8 @@ in
         };
 
         "custom/battery" = {
-          exec = "${batteryScript}/bin/script.sh";
+          #exec = "${batteryScript}/bin/script.sh";
+	  exec = "echo '100'";
           format = " 󰁹 {}";
           interval = 10;
         };
