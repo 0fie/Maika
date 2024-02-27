@@ -4,7 +4,7 @@ To-DO
 
 >> Improve
 - /home/firefox.nix
-    * userChrome.css should be fetched from [0fie/trash](github.com/0fie/trash)
+    * userChrome.css should be fetched from my trash repo)
     * Declare bookmarks
     * Declare settings
 
