@@ -20,9 +20,6 @@
 	"hyprland/workspaces" = {
           format = "{icon}";
           format-icons = {
-            "1" = "";
-            "2" = "";
-            "3" = "";
             active = "";
             default = "";
             urgent = "";
