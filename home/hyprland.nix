@@ -23,9 +23,9 @@ in
         layout = "master";
       };
 
-      env = [
-        "XCURSOR_SIZE,11"
-      ];
+      #env = [
+      #  "XCURSOR_SIZE,11"
+      #];
 
       input = {
         kb_layout = "us";
