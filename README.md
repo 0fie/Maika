@@ -1,8 +1,8 @@
-To-DO
+## TODO
 - Setup impermanace to achieve a perfectly reproducible system.
 - Implement an options.nix file for others to easily install the dotfiles.
 
->> Improve
+## Improve
 - /home/firefox.nix
     * userChrome.css should be fetched from my trash repo)
     * Declare bookmarks
@@ -11,7 +11,11 @@ To-DO
 - /system/hardware.nix
     * create tmpfs on /tmp for faster rebuilds
 
->> Configure
+- /home/starship.nix
+    * make use of programs.starship.settings
+
+## Configure
 - Waybar 
 - SDDM
 - Plymouth
+- Hyprlock
