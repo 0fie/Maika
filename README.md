@@ -8,9 +8,6 @@ To-DO
     * Declare bookmarks
     * Declare settings
 
-- /home/waybar.nix
-    * should not be compiled manually during initial installation or updates.
-
 - /system/hardware.nix
     * create tmpfs on /tmp for faster rebuilds
 
