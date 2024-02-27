@@ -1,4 +1,3 @@
-# Add keybind to toggle tiling mode for a window
 { config, pkgs, ... }:
 
 let 
@@ -22,10 +21,6 @@ in
         "col.active_border" = "rgba(${config.colorScheme.palette.base0E}ff) rgba(${config.colorScheme.palette.base09}ff) 60deg";
         layout = "master";
       };
-
-      #env = [
-      #  "XCURSOR_SIZE,11"
-      #];
 
       input = {
         kb_layout = "us";
@@ -151,7 +146,7 @@ in
       ];
 
       exec-once = [
-        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 	"${pkgs.hyprpaper}/bin/hyprpaper -c ${hyprpaperConf}"
         "${pkgs.waybar}/bin/waybar"
       ];
