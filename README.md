@@ -8,14 +8,11 @@
     * Declare bookmarks
     * Declare settings
 
-- /system/hardware.nix
-    * create tmpfs on /tmp for faster rebuilds
-
 - /home/starship.nix
     * make use of programs.starship.settings
 
 - /home/gtk.nix 
-    * find a catppuccin icon theme
+    * find a catppuccin icon theme or any other good alternative
 
 ## Configure
 - Waybar 
