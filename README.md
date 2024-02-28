@@ -14,8 +14,11 @@
 - /home/starship.nix
     * make use of programs.starship.settings
 
+- /home/gtk.nix 
+    * find a catppuccin icon theme
+
 ## Configure
 - Waybar 
 - SDDM
 - Plymouth
-- Hyprlock
+- Hyprlock, Hypridle
