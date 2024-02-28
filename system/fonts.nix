@@ -2,7 +2,7 @@
 
 {
   fonts = {
-    packages = with pkgs; [ (nerdfonts.override { fonts = ["JetBrainsMono"]; }) ];
+    packages = with pkgs; [ (nerdfonts.override { fonts = ["JetBrainsMono" "Iosevka"]; }) ];
     enableDefaultPackages = true;
     fontconfig = {
       defaultFonts = rec {
