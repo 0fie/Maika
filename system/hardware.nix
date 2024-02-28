@@ -1,4 +1,3 @@
-# Improve OpenGL config.
 { config, lib, pkgs, modulesPath, ... }:
 
 {
@@ -17,9 +16,16 @@
     kernelModules = [ "kvm-intel" ];
   };
 
-  fileSystems."/" = { 
-    device = "/dev/disk/by-uuid/f554d441-3e59-452a-bad7-e1cb9ef2fef5";
-    fsType = "ext4";
+  fileSystems = {
+    "/" = { 
+      device = "/dev/disk/by-uuid/f554d441-3e59-452a-bad7-e1cb9ef2fef5";
+      fsType = "ext4";
+    };
+
+    "/tmp" = { 
+      device = "/dev/disk/by-uuid/f554d441-3e59-452a-bad7-e1cb9ef2fef5";
+      fsType = "tmpfs";
+    };
   };
 
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
