@@ -3,8 +3,6 @@
 - Implement an options.nix file for others to easily install the dotfiles.
 
 ## Improve
-- /home/firefox.nix
-    * Declare bookmarks
 
 - /home/starship.nix
     * make use of programs.starship.settings
