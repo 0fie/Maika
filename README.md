@@ -4,15 +4,16 @@
 
 ## Improve
 - /home/firefox.nix
-    * userChrome.css should be fetched from my trash repo)
     * Declare bookmarks
-    * Declare settings
 
 - /home/starship.nix
     * make use of programs.starship.settings
 
 - /home/gtk.nix 
     * find a catppuccin icon theme or any other good alternative
+
+- /system/fonts.nix
+    * remove unused Iosevka font
 
 ## Configure
 - Waybar 
