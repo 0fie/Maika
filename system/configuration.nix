@@ -14,6 +14,5 @@
     ./users.nix
   ];
 
-  programs.hyprland.enable = true;
   system.stateVersion = "23.05";
 }
