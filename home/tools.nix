@@ -13,6 +13,8 @@
     lf
     mono
     neofetch
+    nodejs_21
     which
+    yarn
   ];
 }

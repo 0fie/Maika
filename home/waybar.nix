@@ -1,15 +1,15 @@
 { config, pkgs, ... }:
 
-# let
-#   batteryScript = pkgs.writeShellScriptBin "script.sh" ''
-#     currentBatteryPercentage=$(cat /sys/class/power_supply/BAT0/capacity)
-#     if [ $currentBatteryPercentage -ge 101 ]; then
-#       echo "100"
-#     else
-#       echo $currentBatteryPercentage
-#     fi
-#   '';
-# in
+let
+  batteryScript = pkgs.writeShellScriptBin "script.sh" ''
+    currentBatteryPercentage=$(cat /sys/class/power_supply/BAT0/capacity)
+    if [ $currentBatteryPercentage -ge 100 ]; then
+      echo "100" # My battery reports over 356% when full. It is broken.
+    else
+      echo $currentBatteryPercentage
+    fi
+  '';
+in
 {
   programs.waybar = {
     enable = true;
@@ -41,9 +41,8 @@
         };
 
         "custom/battery" = {
-          #exec = "${batteryScript}/bin/script.sh";
-	  exec = "echo '100'";
-          format = " 󰁹 {}";
+          exec = "${batteryScript}/bin/script.sh";
+          format = "󰁹 {}";
           interval = 10;
         };
 
