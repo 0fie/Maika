@@ -2,8 +2,8 @@
 
 let 
   currentWallpaper = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/0fie/wallpapers/main/images/winter-wall2.png";
-    sha256 = "sha256-MG3s/EaBOV736ugT0OB0Zrm5x358J+HAppgPAaLvQWQ=";
+    url = "https://raw.githubusercontent.com/0fie/wallpapers/main/Anime/power-lines-train-anime-4k-3y.jpg";
+    sha256 = "sha256-SWoOZXV3LUr4mjQ7AdmhEV8YJboGdM7qnyTrQH/ChS4=";
   };
   hyprpaperConf = pkgs.writeText "hyprpaper.conf" ''
     preload = ${currentWallpaper}
