@@ -7,9 +7,6 @@
 - /home/starship.nix
     * make use of programs.starship.settings
 
-- /home/gtk.nix 
-    * find a catppuccin icon theme or any other good alternative
-
 - /system/fonts.nix
     * remove unused Iosevka font
 
