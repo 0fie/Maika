@@ -12,6 +12,13 @@
       };
     };
     cursorTheme.name = "default";
+    iconTheme = {
+      package = pkgs.catppuccin-papirus-folders.override {
+        flavor = "mocha";
+        accent = "pink";
+      };
+      name = "Papirus-Dark";
+    };
   };
 
   # Symlink the `~/.config/gtk-4.0/` folder declaratively to theme GTK-4 apps as well.
