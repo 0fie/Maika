@@ -8,9 +8,6 @@
 - /home/starship.nix
     * make use of programs.starship.settings
 
-- /system/fonts.nix
-    * remove unused Iosevka font
-
 ## Configure
 - Waybar 
 - SDDM
