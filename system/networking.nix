@@ -3,7 +3,7 @@
 {
   networking = {
     networkmanager.enable = true;
-    hostName = "NixOS";
+    hostName = "nix";
     firewall = {
       enable = true;
       allowedTCPPorts = [];
