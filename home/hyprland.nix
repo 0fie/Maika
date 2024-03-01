@@ -92,6 +92,7 @@ in
 	"$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
         "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
 	"$mainMod,        z,   exec,   hyprlock"  # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
+	",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/slurp -g-"
 
         # Close a window o quit Hyprland.
         "$mainMod, Q, killactive,"
