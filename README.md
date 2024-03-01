@@ -5,6 +5,7 @@
 - Add bluetooth support
 - Add nautilus "any-terminal"
 - Declare Gnome "tap to click" setting using Aylur's solution
+- Start using the official Hyprland flake.
 
 
 ## Improve
