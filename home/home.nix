@@ -10,6 +10,7 @@
     ./git.nix
     ./gtk.nix
     ./hyprland.nix
+    ./hyprlock.nix
     ./kitty.nix
     ./lf.nix
     ./mako.nix

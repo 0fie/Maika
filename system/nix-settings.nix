@@ -7,7 +7,6 @@
       trusted-users = [ "root" "me" ];
       experimental-features = [ "nix-command" "flakes" ];
       substituters = [
-        "https://cache.nixos.org/"
         "https://hyprland.cachix.org"
       ];
       trusted-public-keys = [
