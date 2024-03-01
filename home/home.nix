@@ -11,6 +11,7 @@
     ./gtk.nix
     ./hyprland.nix
     ./hyprlock.nix
+    ./hypridle.nix
     ./kitty.nix
     ./lf.nix
     ./mako.nix
