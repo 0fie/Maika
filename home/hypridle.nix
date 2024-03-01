@@ -3,18 +3,19 @@
 {
   services.hypridle = {
     enable = true;
-    general = {
-      lockCmd = "";
-      unlock_cmd = "notify-send 'Unlocked...'";
-      before_sleep_cmd = "";
-      after_sleep_cmd = "notify-send 'We're back! 🙂'";
-      ignore_dbus_inhibit = false;
-    };
+    ignoreDbusInhibit = true;
 
-    #listener = {
-    #  timeout = 500;
-    #  on-timeout = "hyprlock";
-    #  on-resume = notify-send "Welcome back!";
-    #};
+    listeners = [
+      {
+        timeout = 6;
+        onTimeout = "hyprlock";
+        onResume = "notify-send 'Welcome back!'";
+      }
+      {
+	timeout = 900;
+	onTimeout = "systemctl suspend";
+	onResume = "notify-send 'Welcome back! 🙂";
+      }
+    ];
   };
 }
