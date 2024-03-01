@@ -5,6 +5,15 @@
   programs.nixvim = {
     enable = true;
 
+    extraPlugins = with pkgs.vimPlugins; [
+      base16-nvim
+    ];
+
+    extraConfigVim = ''
+      colorscheme base16-catppuccin-mocha
+      let s:guifont = "JetBrainsMono\\ Nerd\\ Font"
+    '';
+
     plugins = {
       lualine.enable = true;
       neo-tree.enable = true;
@@ -44,6 +53,7 @@
 	];
       };
       
+
       nvim-cmp =  {
         enable = true;
 	autoEnableSources = true;
