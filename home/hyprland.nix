@@ -92,6 +92,7 @@ in
 	"$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
 	"$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
         "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
+	"$mainMod,        l,   exec,   hyprlock"  # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
 
         # Close a window o quit Hyprland.
         "$mainMod, Q, killactive,"
