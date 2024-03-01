@@ -12,4 +12,3 @@
 - Waybar 
 - SDDM
 - Plymouth
-- Hyprlock, Hypridle
