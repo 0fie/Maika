@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 
+
 let 
   currentWallpaper = pkgs.fetchurl {
     url = "https://raw.githubusercontent.com/0fie/wallpapers/main/Anime/power-lines-train-anime-4k-3y.jpg";
