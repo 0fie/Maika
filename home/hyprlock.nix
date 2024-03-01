@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  placeholderAndTimeColor = "rgb(205, 214, 244)";
+in
 {
   programs.hyprlock = {
     enable = true;
@@ -10,7 +13,7 @@
     backgrounds = [
       {
         monitor = "";
-        path = toString( pkgs.fetchurl {
+        path = toString(pkgs.fetchurl {
 	  url = "https://raw.githubusercontent.com/0fie/wallpapers/main/Art/mountain.png";
 	  sha256 = "sha256-8LmAIexewsIDpTg8ijm5dnhV+477kFAG8e7FeqEvh0Y=";
 	});
@@ -21,14 +24,14 @@
       {
         size = {
           width = 300;
-          height = 50;
+          height = 40;
         };
 
         outline_thickness = 2;
 
-        outer_color = "rgb(000000)";
-        inner_color = "rgb(200, 200, 200)";
-        font_color = "rgb(10, 10, 10)";
+        outer_color = "rgb(69, 71, 90)";
+        inner_color = placeholderAndTimeColor;
+        font_color = "rgb(127, 132, 156)";
         fade_on_empty = false;
         placeholder_text = "password...";
         dots_spacing = 0.3;
@@ -42,11 +45,11 @@
         text = "$TIME";
 	font_family = "JetBrains Mono Nerd Font";
         font_size = 50;
-        color = "rgb(200, 200, 200)";
+        color = placeholderAndTimeColor;
 
         position = {
           x = 0;
-          y = 80;
+          y = 70;
         };
 
         valign = "center";
