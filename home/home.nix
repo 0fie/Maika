@@ -22,6 +22,7 @@
     ./xdg.nix
     ./zathura.nix
     ./zsh.nix
+    inputs.hyprlock.homeManagerModules.hyprlock
     inputs.nix-colors.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim
   ];
