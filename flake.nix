@@ -34,7 +34,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
   {
     nixosConfigurations = {
       "NixOS" = nixpkgs.lib.nixosSystem {
