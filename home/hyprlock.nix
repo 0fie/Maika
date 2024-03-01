@@ -22,7 +22,7 @@
         size = {
           width = 300;
           height = 50;
-      };
+        };
 
         outline_thickness = 2;
 
