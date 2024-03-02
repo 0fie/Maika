@@ -13,6 +13,12 @@
     };
   };
 
+  # Required by Nautilus
+  programs.nautilus-open-any-terminal = {
+    enable = true;
+    terminal = "kitty";
+  };
+
   # This is required for ZSH to function properly for this user. Removing it might prevent the user from logging in.
   programs.zsh.enable = true;
 
