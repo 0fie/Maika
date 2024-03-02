@@ -11,7 +11,6 @@
     lf
     loupe
     mono
-    neofetch
     nodejs_21
     vlc
     which
