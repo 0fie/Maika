@@ -8,6 +8,7 @@
   if we wish.
 - Implement support for scratchpads
 - Setup Telescope for Neovim
+- Add blueman-applet and network-manager-applet
 
 
 ## Improve
