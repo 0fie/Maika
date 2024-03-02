@@ -7,13 +7,8 @@
 
     listeners = [
       {
-        timeout = 600;
-        onTimeout = "hyprlock";
-        onResume = "notify-send 'Welcome back!'";
-      }
-      {
-	timeout = 1200;
-	onTimeout = "systemctl suspend";
+	timeout = 600;
+	onTimeout = "hyprlock & sleep 600; systemctl suspend";
 	onResume = "notify-send 'Welcome back! 🙂";
       }
     ];
