@@ -6,7 +6,6 @@
     ./btop.nix
     ./cava.nix
     ./dconf.nix
-    ./env.nix
     ./firefox.nix
     ./git.nix
     ./gtk.nix
@@ -16,6 +15,7 @@
     ./kitty.nix
     ./lf.nix
     ./mako.nix
+    ./nautilus.nix
     ./neofetch.nix
     ./nixvim.nix
     ./rofi.nix
