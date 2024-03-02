@@ -11,7 +11,6 @@
     ./gtk.nix
     ./hyprland.nix
     ./hyprlock.nix
-    ./hypridle.nix
     ./kitty.nix
     ./lf.nix
     ./mako.nix
@@ -19,6 +18,7 @@
     ./neofetch.nix
     ./nixvim.nix
     ./rofi.nix
+    ./services.nix
     ./spotify.nix
     ./starship.nix
     ./tools.nix
