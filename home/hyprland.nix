@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 
-
 let 
   currentWallpaper = pkgs.fetchurl {
     url = "https://raw.githubusercontent.com/0fie/wallpapers/main/Anime/power-lines-train-anime-4k-3y.jpg";
@@ -10,6 +9,7 @@ let
     preload = ${currentWallpaper}
     wallpaper = ,${currentWallpaper}
   '';
+  scripts = import ./scripts.nix { inherit pkgs; };
 in
 {
   wayland.windowManager.hyprland = {
@@ -94,6 +94,7 @@ in
         "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
 	"$mainMod,        z,   exec,   hyprlock"  # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
 	"$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
+	"$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
 	",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/slurp -g-"
 
         # Close a window o quit Hyprland.

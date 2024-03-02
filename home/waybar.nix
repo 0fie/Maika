@@ -1,6 +1,7 @@
 { pkgs, config, ... }: 
 
 let
+  scripts = import ./scripts.nix { inherit pkgs; };
   workspaces = {
     format = "{icon}";
     format-icons = {
@@ -78,11 +79,11 @@ let
       interval = 10;
     };
 
-    # "custom/battery" = {
-    #   exec = "${scripts.battery}/bin/script";
-    #   format = " 󰁹 {}";
-    #   interval = 10;
-    # };
+    "custom/battery" = {
+      exec = "${scripts.waybarBatteryScript}/bin/script";
+      format = " 󰁹 {}";
+      interval = 10;
+    };
 
     "custom/gpu-usage" = {
       exec = "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
@@ -121,7 +122,7 @@ let
     };
 
     network = {
-      format-disconnected = " Disconnected";
+      format-disconnected = "✈️";
       format-ethernet = "󱘖 Wired";
       format-linked = "󱘖 {ifname} (No IP)";
       format-wifi = "󰤨 {essid}";
