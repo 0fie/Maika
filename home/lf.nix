@@ -1,61 +1,38 @@
+# TODO: Setup fuzzy finding and interpolate cli tools in scripts.
 { pkgs, config, lib, ... }:
 
 {
   programs.lf = {
     enable = true;
     commands = {
-      drag-out = ''%${pkgs.ripdrag}/bin/ripdrag -a -x "$fx"'';
       editor-open = ''$$EDITOR "$f"'';
-      edit-dir = ''$$EDITOR .'';
-      mkdirfile = ''
-        ''${{
-            printf "File: "
-            read DIR
-            mk $DIR
-        }}
-      '';
-
-      #on-cd = ''
-      #  ''${{ }}
-      #'';
     };
+
     keybindings = {
-      "\\\"" = "";
-      o = "";
-      d = "";
-      e = "";
-      f = "";
-      c = "mkdirfile";
+      m = "push %mkdir<space>";
+      t = "push %touch<space>";
+      r = "push :rename<space>";
+      x = "delete";
       "." = "set hidden!";
-      D = "delete";
+      z = "zip";
+      Z = "unzip";
+      f = "fzf";
+
+
       p = "paste";
       dd = "cut";
       y = "copy";
-      "`" = "mark-load";
-      "\\'" = "mark-load";
       "<enter>" = "open";
-      a = "rename";
-      r = "reload";
-      C = "clear";
+      R = "reload";
       U = "unselect";
 
-      do = "drag-out";
-
-      "g~" = "cd";
-      gh = "cd";
-      "g/" = "/";
       gd = "cd ~/Downloads";
-      gt = "cd /tmp";
-      gv = "cd ~/Videos";
-      go = "cd ~/Documents";
       gc = "cd ~/.config";
-      gn = "cd ~/nixconf";
       gp = "cd ~/Projects";
-      gs = "cd ~/.local/share";
       gm = "cd /run/media";
+      gn = "cd /etc/nixos";
 
-      ee = "editor-open";
-      "e." = "edit-dir";
+      e = "editor-open";
       V = ''''$${pkgs.bat}/bin/bat --paging=always "$f"'';
 
       "<C-d>" = "5j";
@@ -63,10 +40,11 @@
     };
 
     settings = {
+      scrolloff = 5;
       reverse = false;
       preview = true;
       hidden = false;
-      drawbox = true;
+      drawbox = false;
       icons = true;
       ignorecase = true;
     };
@@ -100,7 +78,6 @@
     '';
   };
 
-  # I want the entire lf config to be in 1 file. One lf.nix file. Dont ask why.
   xdg.configFile."lf/icons".text = builtins.readFile (pkgs.fetchFromGitHub {
     owner = "0fie";
     repo = "trash";
