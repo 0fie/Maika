@@ -7,7 +7,6 @@
     discord
     exiftool
     file
-    gnome.nautilus
     keepassxc
     lf
     loupe
