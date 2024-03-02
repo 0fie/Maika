@@ -8,6 +8,7 @@
 - Implement support for scratchpads
 - Declare Gnome "tap to click" setting using Aylur's solution
   if we wish.
+- Setup Telescope for Neovim
 
 
 ## Improve
