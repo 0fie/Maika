@@ -77,7 +77,7 @@ in
       };
 
       gestures = {
-        workspace_swipe = false;
+        workspace_swipe = true;
       };
 
       # Using the Super key (windows button) as the main mod.
@@ -154,7 +154,7 @@ in
 	"${pkgs.hyprpaper}/bin/hyprpaper -c ${hyprpaperConf}"
         "${pkgs.waybar}/bin/waybar"
 
-        # Please see /home/gtk.nix before modifying the line below. It actually sets the cursor to Bibata-Modern-Ice.
+        # Please see home/gtk.nix before modifying the line below. It actually sets the cursor to Bibata-Modern-Ice.
 	"hyprctl setcursor default 24"
       ];
     };
