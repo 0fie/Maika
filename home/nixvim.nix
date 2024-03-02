@@ -1,4 +1,3 @@
-# TODO: Implement Zaney's solution to stop "notify" from complaining about hex colors. Fix keybinds.
 { config, pkgs, ... }:
 
 {
@@ -9,9 +8,17 @@
       base16-nvim
     ];
 
+    # When writing a line of Lua code, start the line with 'lua'. 👇️
     extraConfigVim = ''
       colorscheme base16-catppuccin-mocha
       let s:guifont = "JetBrainsMono\\ Nerd\\ Font"
+
+      lua vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+      lua vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+      lua vim.keymap.set({ "n", "i", "v" }, "<A-l>", vim.cmd.bnext, { desc = "Switch to next Buffer" })
+      lua vim.keymap.set({ "n", "i", "v" }, "<A-h>", vim.cmd.bprev, { desc = "Switch to prev Buffer" })
+      lua vim.keymap.set("n", "<C-q>", function() vim.cmd("bw"); end, { desc = "Close Buffer" })
     '';
 
     plugins = {
@@ -99,21 +106,6 @@
         mode = "n";
         key = "<leader>f";
         action = "<cmd>Neotree toggle<CR>";
-      }
-      {
-	mode = "n";
-	key = "Alt-l";
-	action = "<cmd>tabnext<CR>";
-      }
-      {
-	mode = "n";
-	key = "Alt-h";
-	action = "<cmd>tabprevious<CR>";
-      }
-      {
-	mode = "n";
-	key = "Alt-q";
-	action = "<cmd>q<CR>";
       }
     ];
     globals.mapleader = " "; # Sets the leader key to space.
