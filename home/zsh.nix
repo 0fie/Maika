@@ -12,9 +12,11 @@
     # Aliases
     shellAliases = {
       rbs = "sudo nixos-rebuild switch";
-      n = "nvim";
+      n = "nvim"; # Using ${pkgs.neovim}/bin/nvim causes a 'module catppuccin not found' error.
+      gs = "${pkgs.git}/bin/git status";
+      gc = "${pkgs.git}/bin/git commit";
 
-      # Modern yuunix, uwu <3
+      # Modern yuunix, uwu <3 🤍
       # TODO: Find more modern and convinient replacements for legacy yuunix tools.
       c = "clear";
       cat =  "${pkgs.bat}/bin/bat $@";
@@ -68,10 +70,4 @@
       }
     ];
   };
-  home.packages = with pkgs; [
-    zsh-nix-shell
-    zsh-completions
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-  ];
 }
