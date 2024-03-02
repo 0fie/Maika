@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   programs.firefox = {
@@ -16,6 +16,7 @@
       settings = {
         "browser.download.panel.shown" = true;
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+        "browser.tabs.loadInBackground" = true;
 	"extensions.pocket.enabled" = false;
         "dom.security.https_only_mode" = true;
         "privacy.trackingprotection.enabled" = true;
