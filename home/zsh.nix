@@ -29,7 +29,7 @@
       df =   "${pkgs.duf}/bin/duf $@";
     };
 
-    profileExtra = ''
+    profileExtra = /* bash */ ''
       if [ "$(tty)" = "/dev/tty1" ]; then;
           exec Hyprland
       fi

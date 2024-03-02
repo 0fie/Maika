@@ -68,7 +68,7 @@
         ${pkgs.ctpv}/bin/ctpvclear
         ${pkgs.kitty}/bin/kitty +kitten icat --clear --stdin no --silent --transfer-mode file < /dev/null > /dev/tty
       '';
-    in ''
+    in /* bash */ ''
       # set cleaner ''${pkgs.ctpv}/bin/ctpvclear
       set cleaner ${cleaner}/bin/clean.sh
       set previewer ${pkgs.ctpv}/bin/ctpv

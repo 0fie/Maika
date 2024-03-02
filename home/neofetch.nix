@@ -2,7 +2,7 @@
 
 {
   home.packages = [ pkgs.neofetch ];
-  home.file.".config/neofetch/config.conf".text = ''
+  home.file.".config/neofetch/config.conf".text = /* bash */ ''
     print_info() {
     prin " \n \n ╭───────┤ $(color 5) NixOS $(color 15)├───────╮"
     info " " kernel

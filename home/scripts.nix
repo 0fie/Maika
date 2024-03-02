@@ -11,7 +11,6 @@
   '';
 
   rofiPowerMenuScript = pkgs.writeShellScriptBin "script" ''
-    #!/usr/bin/env bash
     lock="🔒️  Lock"
     logout="🏃  Log Out"
     shutdown="💡  Shut Down"
