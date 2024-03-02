@@ -5,9 +5,8 @@
 - Add nautilus "any-terminal"
 - Start using the official Hyprland flake.
 - Refactor flake.nix so that we can use 'nix build' instead of 'nixos-rebuild'. We should be able to build only the home configuration
-- Implement support for scratchpads
-- Declare Gnome "tap to click" setting using Aylur's solution
   if we wish.
+- Implement support for scratchpads
 - Setup Telescope for Neovim
 
 
