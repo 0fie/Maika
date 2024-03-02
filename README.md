@@ -6,6 +6,8 @@
 - Add nautilus "any-terminal"
 - Declare Gnome "tap to click" setting using Aylur's solution
 - Start using the official Hyprland flake.
+- Refactor flake.nix so that we can use 'nix build' instead of 'nixos-rebuild'. We should be able to build only the home configuration
+  if we wish.
 
 
 ## Improve
