@@ -10,13 +10,13 @@
       base16-nvim
     ];
 
-    extraConfigVim = ''
+    extraConfigVim = /* vim */ ''
       colorscheme base16-catppuccin-mocha
       let s:guifont = "JetBrainsMono\\ Nerd\\ Font"
       cmap w!! w !sudo tee > /dev/null %
     '';
 
-    extraConfigLua = ''
+    extraConfigLua = /* lua */''
       vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
       vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -118,13 +118,11 @@
       cursorline = true;
     };
     
-    keymaps = [
-      {
+    keymaps = [{
         mode = "n";
         key = "<leader>f";
         action = "<cmd>Neotree toggle<CR>";
-      }
-    ];
+    }];
     globals.mapleader = " "; # Sets the leader key to space.
   };
 }
