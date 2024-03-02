@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  home.sessionVariables.EDITOR = "nvim";
+
   programs.nixvim = {
     enable = true;
 
