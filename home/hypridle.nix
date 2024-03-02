@@ -3,7 +3,7 @@
 {
   services.hypridle = {
     enable = true;
-    ignoreDbusInhibit = true;
+    ignoreDbusInhibit = false;
 
     listeners = [
       {
