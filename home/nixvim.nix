@@ -14,6 +14,7 @@
     extraConfigVim = ''
       colorscheme base16-catppuccin-mocha
       let s:guifont = "JetBrainsMono\\ Nerd\\ Font"
+      cmap w!! w !sudo tee > /dev/null %
 
       lua vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
       lua vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -111,5 +112,35 @@
       }
     ];
     globals.mapleader = " "; # Sets the leader key to space.
+  };
+
+  xdg.desktopEntries = {
+    nvim = {
+      name = "Neovim";
+      genericName = "Text Editor";
+      comment = "Edit text files";
+      exec = "${pkgs.kitty}/bin/kitty -e nvim %F";
+      icon = "nvim";
+      mimeType = [
+        "text/english"
+        "text/plain"
+        "text/x-makefile"
+        "text/x-c++hdr"
+        "text/x-c++src"
+        "text/x-chdr"
+        "text/x-csrc"
+        "text/x-java"
+        "text/x-moc"
+        "text/x-pascal"
+        "text/x-tcl"
+        "text/x-tex"
+        "application/x-shellscript"
+        "text/x-c"
+        "text/x-c++"
+      ];
+      terminal = true;
+      type = "Application";
+      categories = [ "Utility" "TextEditor" ];
+    };
   };
 }
