@@ -14,8 +14,8 @@
     #!/usr/bin/env bash
     lock="🔒️  Lock"
     logout="🏃  Log Out"
-    shutdown="  Shut Down"
-    reboot="  Reboot"
+    shutdown="💡  Shut Down"
+    reboot="🔃  Reboot"
     sleep="💤  Sleep"
     # Get answer from user via rofi
     selected_option=$(echo "$lock
