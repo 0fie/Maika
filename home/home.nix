@@ -5,6 +5,7 @@
     ./bat.nix
     ./btop.nix
     ./cava.nix
+    ./dconf.nix
     ./env.nix
     ./firefox.nix
     ./git.nix
