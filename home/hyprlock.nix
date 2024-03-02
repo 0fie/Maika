@@ -10,25 +10,17 @@ in
       hide_cursor = true;
     };
 
-    backgrounds = [
-      {
+    backgrounds = [{
         monitor = "";
         path = toString(pkgs.fetchurl {
 	  url = "https://raw.githubusercontent.com/0fie/wallpapers/main/Art/mountain.png";
 	  sha256 = "sha256-8LmAIexewsIDpTg8ijm5dnhV+477kFAG8e7FeqEvh0Y=";
 	});
-      }
-    ];
+    }];
 
-    input-fields = [
-      {
-        size = {
-          width = 300;
-          height = 40;
-        };
-
+    input-fields = [{
+        size = { width = 300; height = 40; };
         outline_thickness = 2;
-
         outer_color = "rgb(69, 71, 90)";
         inner_color = placeholderAndTimeColor;
         font_color = "rgb(127, 132, 156)";
@@ -36,25 +28,17 @@ in
         placeholder_text = "password...";
         dots_spacing = 0.3;
         dots_center = true;
-      }
-    ];
+    }];
 
-    labels = [
-      {
+    labels = [{
         monitor = "";
         text = "$TIME";
 	font_family = "JetBrains Mono Nerd Font";
         font_size = 50;
         color = placeholderAndTimeColor;
-
-        position = {
-          x = 0;
-          y = 70;
-        };
-
+        position = { x = 0; y = 70; };
         valign = "center";
         halign = "center";
-      }
-    ];
+    }];
   };
 }
