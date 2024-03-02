@@ -23,6 +23,7 @@
       c = "clear";
       cat =  "${pkgs.bat}/bin/bat $@";
       ls =   "${pkgs.eza}/bin/eza --git --icons $@";
+      tree = "${pkgs.eza}/bin/eza --git --icons --tree $@";
       find = "${pkgs.fd}/bin/fd $@";
       grep = "${pkgs.ripgrep}/bin/rg $@";
       df =   "${pkgs.duf}/bin/duf $@";
