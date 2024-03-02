@@ -10,18 +10,32 @@
       base16-nvim
     ];
 
-    # When writing a line of Lua code, start the line with 'lua'. 👇️
     extraConfigVim = ''
       colorscheme base16-catppuccin-mocha
       let s:guifont = "JetBrainsMono\\ Nerd\\ Font"
       cmap w!! w !sudo tee > /dev/null %
+    '';
 
-      lua vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-      lua vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+    extraConfigLua = ''
+      vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+      vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-      lua vim.keymap.set({ "n", "i", "v" }, "<A-l>", vim.cmd.bnext, { desc = "Switch to next Buffer" })
-      lua vim.keymap.set({ "n", "i", "v" }, "<A-h>", vim.cmd.bprev, { desc = "Switch to prev Buffer" })
-      lua vim.keymap.set("n", "<C-q>", function() vim.cmd("bw"); end, { desc = "Close Buffer" })
+      vim.keymap.set({ "n", "i", "v" }, "<A-l>", vim.cmd.bnext, { desc = "Switch to next Buffer" })
+      vim.keymap.set({ "n", "i", "v" }, "<A-h>", vim.cmd.bprev, { desc = "Switch to prev Buffer" })
+      vim.keymap.set("n", "<C-q>", function() vim.cmd("bw"); end, { desc = "Close Buffer" })
+
+      vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+      vim.keymap.set("n", "<space>f", vim.lsp.buf.format, { desc = "Format code" })
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
+      vim.keymap.set("n", "<space>a", vim.lsp.buf.code_action, { desc = "Code action" })
+
+      vim.keymap.set("n", "<space>d", vim.diagnostic.open_float, { desc = "Floating diagnostic" })
+      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+      vim.keymap.set("n", "gl", vim.diagnostic.setloclist, { desc = "Diagnostics on loclist" })
+      vim.keymap.set("n", "gq", vim.diagnostic.setqflist, { desc = "Diagnostics on quickfix" })
     '';
 
     plugins = {
@@ -112,35 +126,5 @@
       }
     ];
     globals.mapleader = " "; # Sets the leader key to space.
-  };
-
-  xdg.desktopEntries = {
-    nvim = {
-      name = "Neovim";
-      genericName = "Text Editor";
-      comment = "Edit text files";
-      exec = "${pkgs.kitty}/bin/kitty -e nvim %F";
-      icon = "nvim";
-      mimeType = [
-        "text/english"
-        "text/plain"
-        "text/x-makefile"
-        "text/x-c++hdr"
-        "text/x-c++src"
-        "text/x-chdr"
-        "text/x-csrc"
-        "text/x-java"
-        "text/x-moc"
-        "text/x-pascal"
-        "text/x-tcl"
-        "text/x-tex"
-        "application/x-shellscript"
-        "text/x-c"
-        "text/x-c++"
-      ];
-      terminal = true;
-      type = "Application";
-      categories = [ "Utility" "TextEditor" ];
-    };
   };
 }
