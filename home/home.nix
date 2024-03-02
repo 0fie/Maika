@@ -15,6 +15,7 @@
     ./kitty.nix
     ./lf.nix
     ./mako.nix
+    ./neofetch.nix
     ./nixvim.nix
     ./rofi.nix
     ./spotify.nix
