@@ -1,12 +1,12 @@
 ## TODO
 - Setup impermanace to achieve a perfectly reproducible system.
 - Implement an options.nix file for others to easily install the dotfiles.
-- Implement support for scratchpads
 - Add bluetooth support
 - Add nautilus "any-terminal"
-- Declare Gnome "tap to click" setting using Aylur's solution
 - Start using the official Hyprland flake.
 - Refactor flake.nix so that we can use 'nix build' instead of 'nixos-rebuild'. We should be able to build only the home configuration
+- Implement support for scratchpads
+- Declare Gnome "tap to click" setting using Aylur's solution
   if we wish.
 
 
