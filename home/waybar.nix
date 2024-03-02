@@ -122,7 +122,7 @@ let
     };
 
     network = {
-      format-disconnected = "✈️";
+      format-disconnected = "";
       format-ethernet = "󱘖 Wired";
       format-linked = "󱘖 {ifname} (No IP)";
       format-wifi = "󰤨 {essid}";
