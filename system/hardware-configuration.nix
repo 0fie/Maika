@@ -13,11 +13,11 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  # I already modified this in /system/sys.nix 👇️
-  # fileSystems."/" =
-  #   { device = "/dev/disk/by-uuid/f554d441-3e59-452a-bad7-e1cb9ef2fef5";
-  #     fsType = "ext4";
-  #   };
+  # tmpfs for /tmp is safely declared in system/sys.nix
+  fileSystems."/" =
+    { device = "/dev/disk/by-uuid/f554d441-3e59-452a-bad7-e1cb9ef2fef5";
+      fsType = "ext4";
+    };
 
   swapDevices = [ ];
 
