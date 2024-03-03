@@ -6,6 +6,7 @@ let
   imageViewer = "org.gnome.Loupe.desktop";
   fileManager = "org.gnome.Nautilus.desktop";
   torrentClient = "transmission-gtk.desktop";
+  textEditor = "neovim.desktop";
 in
 {
   home.packages = with pkgs; [ xdg-utils ];
@@ -57,37 +58,24 @@ in
         "image/svg+xml-compressed" = imageViewer;
         "image/vnd.wap.wbmp" = imageViewer;
         "image/x-icns" = imageViewer;
-      };
-    };
-  };
 
-  xdg.desktopEntries = {
-    nvim = {
-      name = "Neovim";
-      genericName = "Text Editor";
-      comment = "Edit text files";
-      exec = "${pkgs.kitty}/bin/kitty -e nvim %F";
-      icon = "nvim";
-      mimeType = [
-        "text/english"
-        "text/plain"
-        "text/x-makefile"
-        "text/x-c++hdr"
-        "text/x-c++src"
-        "text/x-chdr"
-        "text/x-csrc"
-        "text/x-java"
-        "text/x-moc"
-        "text/x-pascal"
-        "text/x-tcl"
-        "text/x-tex"
-        "application/x-shellscript"
-        "text/x-c"
-        "text/x-c++"
-      ];
-      terminal = true;
-      type = "Application";
-      categories = [ "Utility" "TextEditor" ];
+        # Text & Code
+        "text/english" = textEditor;
+        "text/plain" = textEditor;
+        "text/x-makefile" = textEditor;
+        "text/x-c++hdr" = textEditor;
+        "text/x-c++src" = textEditor;
+        "text/x-chdr" = textEditor;
+        "text/x-csrc" = textEditor;
+        "text/x-java" = textEditor;
+        "text/x-moc" = textEditor;
+        "text/x-pascal" = textEditor;
+        "text/x-tcl" = textEditor;
+        "text/x-tex" = textEditor;
+        "application/x-shellscript" = textEditor;
+        "text/x-c" = textEditor;
+        "text/x-c++" = textEditor;
+      };
     };
   };
 }
