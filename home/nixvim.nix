@@ -18,6 +18,7 @@
       notify.enable = true;
       noice.enable = true;
       nvim-autopairs.enable = true;
+      nvim-colorizer.enable = true;
 
       lsp = {
         enable = true;
