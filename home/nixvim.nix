@@ -120,7 +120,7 @@
     
     keymaps = [{
         mode = "n";
-        key = "<leader>f";
+        key = "<leader>t";
         action = "<cmd>Neotree toggle<CR>";
     }];
     globals.mapleader = " "; # Sets the leader key to space.
