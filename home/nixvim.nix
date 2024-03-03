@@ -19,6 +19,8 @@
       noice.enable = true;
       nvim-autopairs.enable = true;
       nvim-colorizer.enable = true;
+      nvim-lightbulb.enable = true;
+      rainbow-delimiters.enable = true;
 
       lsp = {
         enable = true;
