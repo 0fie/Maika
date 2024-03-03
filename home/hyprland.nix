@@ -105,7 +105,7 @@ in
 	"$mainMod,        z,   exec,   hyprlock"  # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
 	"$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
 	"$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
-	",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/slurp -g-"
+	",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g- && notify-send 'Screenshot saved 📷️'"
 
         # Close a window or quit Hyprland.
         "$mainMod, Q, killactive,"
