@@ -15,7 +15,7 @@ in
     userDirs = {
       enable = true;
       createDirectories = true;
-      desktop = "${config.home.homeDirectory}/.local/desktop";
+      desktop = "${config.home.homeDirectory}/Projects";
       publicShare = "${config.home.homeDirectory}/.local/public";
       templates = "${config.home.homeDirectory}/.local/templates";
     };
