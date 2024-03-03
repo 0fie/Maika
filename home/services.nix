@@ -5,7 +5,7 @@
     network-manager-applet.enable = true;
     blueman-applet.enable= true;
 
-    hypridle = rec {
+    hypridle = {
       enable = true;
       lockCmd = "hyprlock";
       unlockCmd = "notify-send 'Welcome back! 🙂'";
@@ -13,11 +13,18 @@
       afterSleepCmd = "notify-send ''";
       ignoreDbusInhibit = false;
 
-      listeners = [{
-          timeout = 60;
-          onTimeout = "${lockCmd} & sleep 600; systemctl suspend";
+      listeners = [
+        {
+          timeout = 600;
+          onTimeout = "hyprlock";
+          onResume = "";
+        }
+        {
+          timeout = 1200;
+          onTimeout = "systemctl suspend";
           onResume = "notify-send 'Welcome back! 🙂'";
-      }];
+        }
+      ];
     };
   };
 }
