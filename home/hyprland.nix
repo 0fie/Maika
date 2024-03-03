@@ -43,6 +43,7 @@ in
       misc = {
         enable_swallow = true;
         force_default_wallpaper = 0;
+        new_window_takes_over_fullscreen = 2; # Unfullscreen when opening something
       };
 
       decoration = {
@@ -97,7 +98,7 @@ in
 	"$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
 	",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/slurp -g-"
 
-        # Close a window o quit Hyprland.
+        # Close a window or quit Hyprland.
         "$mainMod, Q, killactive,"
         "$mainMod SHIFT, M, exit,"
 
