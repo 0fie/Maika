@@ -14,6 +14,7 @@ in
 {
   wayland.windowManager.hyprland = {
     enable = true;
+    systemd.variables = [ "--all" ];
     settings = {
       general = {
         gaps_in = 5;

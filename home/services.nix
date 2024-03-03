@@ -14,7 +14,7 @@
       ignoreDbusInhibit = false;
 
       listeners = [{
-          timeout = 600;
+          timeout = 60;
           onTimeout = "${lockCmd} & sleep 600; systemctl suspend";
           onResume = "notify-send 'Welcome back! 🙂'";
       }];
