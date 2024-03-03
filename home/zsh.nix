@@ -17,6 +17,7 @@
       gc = "${pkgs.git}/bin/git commit";
       gl = "${pkgs.git}/bin/git log";
       ga = "${pkgs.git}/bin/git add";
+      gp = "${pkgs.git}/bin/git push origin";
 
       # Modern yuunix, uwu <3 🤍
       # TODO: Find more modern and convinient replacements for legacy yuunix tools.
