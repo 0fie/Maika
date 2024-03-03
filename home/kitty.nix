@@ -9,7 +9,7 @@
     font.name = "JetBrainsMono Nerd Font Mono";
     font.size = 11;
     settings = with config.colorScheme.palette; {
-      background_opacity = "0.95";
+      background_opacity = "0.8";
       enable_audio_bell = "no";
 
       cursor = "#${base06}";
