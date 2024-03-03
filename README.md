@@ -3,6 +3,7 @@
 - Start using the official Hyprland flake.
 - Implement support for scratchpads
 - Implement an options.nix file for others to easily install the dotfiles.
+- Create a derivation for My-Bibata-Modern-Ice
 
 
 ## Improve
