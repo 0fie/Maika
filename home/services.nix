@@ -8,23 +8,16 @@
     hypridle = {
       enable = true;
       lockCmd = "hyprlock";
-      unlockCmd = "notify-send 'Welcome back! 🙂'";
+      unlockCmd = "notify-send ''";
       beforeSleepCmd = "notify-send ''";
       afterSleepCmd = "notify-send ''";
       ignoreDbusInhibit = false;
 
-      listeners = [
-        {
-          timeout = 600;
-          onTimeout = "hyprlock";
-          onResume = "";
-        }
-        {
-          timeout = 1200;
-          onTimeout = "systemctl suspend";
-          onResume = "notify-send 'Welcome back! 🙂'";
-        }
-      ];
+      listeners = [{
+        timeout = 1200;
+        onTimeout = "hyprlock & sleep 60; systemctl suspend";
+        onResume = "notify-send 'Welcome back! 🙂'";
+      }];
     };
   };
 }
