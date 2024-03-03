@@ -31,6 +31,7 @@ in
         kb_rules = "";
         touchpad = {
           natural_scroll = false;
+	  disable_while_typing = true;
         };
 
         repeat_rate = 40;
@@ -51,7 +52,15 @@ in
         drop_shadow = true;
         shadow_range = 30;
         shadow_render_power = 3;
+        fullscreen_opacity = 1.0;
         "col.shadow" = "rgba(1a1a1aee)";
+        blur = {
+          enabled = true;
+          size = 10;
+          passes = 5;
+          new_optimizations = true;
+          ignore_opacity = false;
+        };
       };
 
       animations = {
