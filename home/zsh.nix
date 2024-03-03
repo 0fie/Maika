@@ -11,7 +11,7 @@
 
     # Aliases
     shellAliases = {
-      rbs = "sudo nixos-rebuild switch";
+      rbs = "sudo nixos-rebuild switch && notify-send 'System Rebuild Complete 🚀'";
       n = "nvim"; # Using ${pkgs.neovim}/bin/nvim causes a 'module catppuccin not found' error.
       gs = "${pkgs.git}/bin/git status";
       gc = "${pkgs.git}/bin/git commit";
