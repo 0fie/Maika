@@ -1,9 +1,10 @@
 { config, pkgs, ... }:
 
 let
+  imageViewer = "org.gnome.Loupe.desktop";
+  mediaPlayer = "vlc.desktop";
   browser = "firefox.desktop";
   docOpener = "zathura.desktop";
-  imageViewer = "org.gnome.Loupe.desktop";
   fileManager = "org.gnome.Nautilus.desktop";
   torrentClient = "transmission-gtk.desktop";
   textEditor = "neovim.desktop";
@@ -35,6 +36,7 @@ in
 
         # Images
         "image/jpeg" = imageViewer;
+        "image/avif" = imageViewer;
         "image/bmp" = imageViewer;
         "image/gif" = imageViewer;
         "image/jpg" = imageViewer;
@@ -75,6 +77,13 @@ in
         "application/x-shellscript" = textEditor;
         "text/x-c" = textEditor;
         "text/x-c++" = textEditor;
+
+        # Videos
+	"video/webm" = mediaPlayer;
+	"video/ogg" =  mediaPlayer;
+	"video/mp4" = mediaPlayer;
+	"video/avi" = mediaPlayer;
+	"video/mkv" = mediaPlayer;
       };
     };
   };
