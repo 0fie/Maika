@@ -65,7 +65,6 @@
       color7 = "#${base05}";
       color15 = "#${base06}";
 
-      allow_remote_control = "yes";
       listen_on = "unix:/tmp/kitty";
       shell_integration = "enabled";
     };
