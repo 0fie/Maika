@@ -66,7 +66,7 @@ in
       name = "Neovim";
       genericName = "Text Editor";
       comment = "Edit text files";
-      exec = "nvim %F";
+      exec = "${pkgs.kitty}/bin/kitty -e nvim %F";
       icon = "nvim";
       mimeType = [
         "text/english"
