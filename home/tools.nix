@@ -7,6 +7,7 @@
     discord
     exiftool
     file
+    git-extras
     keepassxc
     lf
     loupe
