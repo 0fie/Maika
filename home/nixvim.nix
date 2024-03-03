@@ -10,33 +10,6 @@
       base16-nvim
     ];
 
-    extraConfigVim = /* vim */ ''
-      colorscheme base16-catppuccin-mocha
-      let s:guifont = "JetBrainsMono\\ Nerd\\ Font"
-      cmap w!! w !sudo tee > /dev/null %
-    '';
-
-    extraConfigLua = /* lua */ ''
-      vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-      vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
-      vim.keymap.set({ "n", "i", "v" }, "<A-l>", vim.cmd.bnext, { desc = "Switch to next Buffer" })
-      vim.keymap.set({ "n", "i", "v" }, "<A-h>", vim.cmd.bprev, { desc = "Switch to prev Buffer" })
-      vim.keymap.set("n", "<C-q>", function() vim.cmd("bw"); end, { desc = "Close Buffer" })
-
-      vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
-      vim.keymap.set("n", "<space>f", vim.lsp.buf.format, { desc = "Format code" })
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
-      vim.keymap.set("n", "<space>a", vim.lsp.buf.code_action, { desc = "Code action" })
-
-      vim.keymap.set("n", "<space>d", vim.diagnostic.open_float, { desc = "Floating diagnostic" })
-      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
-      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
-      vim.keymap.set("n", "gl", vim.diagnostic.setloclist, { desc = "Diagnostics on loclist" })
-      vim.keymap.set("n", "gq", vim.diagnostic.setqflist, { desc = "Diagnostics on quickfix" })
-    '';
 
     plugins = {
       lualine.enable = true;
@@ -57,6 +30,7 @@
 	  csharp-ls.enable = true;
 	  jsonls.enable = true;
 	  pyright.enable = true;
+	  eslint.enable = true;
         };
       };
 
@@ -76,7 +50,6 @@
 	  nix vim regex lua bash markdown markdown_inline c vimdoc python c-sharp
 	];
       };
-      
 
       nvim-cmp =  {
         enable = true;
@@ -119,10 +92,38 @@
     };
     
     keymaps = [{
-        mode = "n";
-        key = "<leader>t";
-        action = "<cmd>Neotree toggle<CR>";
+      mode = "n";
+      key = "<leader>t";
+      action = "<cmd>Neotree toggle<CR>";
     }];
     globals.mapleader = " "; # Sets the leader key to space.
+
+    extraConfigVim = /* vim */ ''
+      colorscheme base16-catppuccin-mocha
+      let s:guifont = "JetBrainsMono\\ Nerd\\ Font"
+      cmap w!! w !sudo tee > /dev/null %
+    '';
+
+    extraConfigLua = /* lua */ ''
+      vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+      vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+      vim.keymap.set({ "n", "i", "v" }, "<A-l>", vim.cmd.bnext, { desc = "Switch to next Buffer" })
+      vim.keymap.set({ "n", "i", "v" }, "<A-h>", vim.cmd.bprev, { desc = "Switch to prev Buffer" })
+      vim.keymap.set("n", "<C-q>", function() vim.cmd("bw"); end, { desc = "Close Buffer" })
+
+      vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+      vim.keymap.set("n", "<space>f", vim.lsp.buf.format, { desc = "Format code" })
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
+      vim.keymap.set("n", "<space>a", vim.lsp.buf.code_action, { desc = "Code action" })
+
+      vim.keymap.set("n", "<space>d", vim.diagnostic.open_float, { desc = "Floating diagnostic" })
+      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+      vim.keymap.set("n", "gl", vim.diagnostic.setloclist, { desc = "Diagnostics on loclist" })
+      vim.keymap.set("n", "gq", vim.diagnostic.setqflist, { desc = "Diagnostics on quickfix" })
+    '';
   };
 }
