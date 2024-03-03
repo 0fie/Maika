@@ -8,6 +8,8 @@ in
     enable = true;
     general = {
       hide_cursor = true;
+      disable_loading_bar = false;
+      no_fade_in = false;
     };
 
     backgrounds = [{
@@ -16,6 +18,8 @@ in
 	  url = "https://raw.githubusercontent.com/0fie/wallpapers/main/Art/mountain.png";
 	  sha256 = "sha256-8LmAIexewsIDpTg8ijm5dnhV+477kFAG8e7FeqEvh0Y=";
 	});
+	blur_size = 1;
+	blur_passes = 2;
     }];
 
     input-fields = [{
