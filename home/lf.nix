@@ -84,4 +84,13 @@
     rev = "main";
     sha256 = "sha256-KWVe12znmNOFcYfDewxpZfh4T1Fz967W+yQJZbmKkNs=";
   } + "/icons");
+
+  # TODO: LF should not have a desktop entry
+  # xdg.desktopEntries = {
+  #   "lf" = {
+  #     exec = "";
+  #     name = "LF";
+  #     settings.NoDisplay = "true";
+  #   };
+  # };
 }
