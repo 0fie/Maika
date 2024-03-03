@@ -40,12 +40,17 @@ in
         force_no_accel = true;
         sensitivity = 0.0; # -1.0 - 1.0, 0 means no modification.
         follow_mouse = 1;
+	numlock_by_default = true;
       };
 
       misc = {
         enable_swallow = true;
         force_default_wallpaper = 0;
         new_window_takes_over_fullscreen = 2; # Unfullscreen when opening something
+	disable_hyprland_logo = true;
+	disable_splash_rendering = true;
+	animate_manual_resizes = true;
+	animate_mouse_windowdragging = true;
       };
 
       decoration = {
@@ -73,8 +78,8 @@ in
           "border, 1, 10, default"
           "borderangle, 1, 8, default"
           "fade, 1, 7, default"
-          "workspaces, 1, 3, default, slidevert"
-          "workspaces, 1, 3, myBezier, slidefadevert"
+          #"workspaces, 1, 8, default, slidefadevert"
+          "workspaces, 1, 7, myBezier, slidefadevert"
         ];
       };
 
