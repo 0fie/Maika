@@ -12,6 +12,7 @@
     hyprland = {
       url = "github:hyprwm/Hyprland";
       # inputs.nixpkgs.follows = "nixpkgs"; You'll build from source if you comment this out. 😂
+      # let cachix do its thing.
     };
 
     nix-colors = {
