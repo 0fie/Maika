@@ -40,20 +40,35 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  let
+    system = "x86_64-linux";
+    inherit (import ./system/options.nix) username hostname;
+
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {
+	allowUnfree = true;
+      };
+    };
+  in
   {
     nixosConfigurations = {
-      "NixOS" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+      "$hostname" = nixpkgs.lib.nixosSystem {
+	specialArgs = { 
+          inherit system; inherit inputs; 
+          inherit username; inherit hostname;
+        };
         modules = [
 	  ./system/configuration.nix
           home-manager.nixosModules.home-manager {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = { inherit inputs; };
-              users.me = import ./home/home.nix;
+	    home-manager.extraSpecialArgs = {
+	      inherit username; inherit inputs;
             };
-          }
+	    home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+	    home-manager.users.${username} = import ./home/home.nix;
+	  }
 	];
       };
     };

@@ -115,6 +115,12 @@ in
 	"$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
 	",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g- && notify-send 'Screenshot saved 📷️'"
 
+        # Control media players.
+        ",XF86AudioPlay,  exec, ${pkgs.playerctl}/bin/playerctl play-pause"
+        ",XF86AudioPause, exec, ${pkgs.playerctl}/bin/playerctl play-pause"
+        ",XF86AudioNext,  exec, ${pkgs.playerctl}/bin/playerctl next"
+        ",XF86AudioPrev,  exec, ${pkgs.playerctl}/bin/playerctl previous"
+
         # Close a window or quit Hyprland.
         "$mainMod, Q, killactive,"
         "$mainMod SHIFT, M, exit,"
@@ -157,6 +163,7 @@ in
         # Control the volume.
 	",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
 	",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+	",XF86AudioMute,        exec, wpctl set-mute   @DEFAULT_AUDIO_SINK@ toggle"
 
         # Resize windows.
         "$mainMod CTRL, l, resizeactive, 30 0"
