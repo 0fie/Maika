@@ -85,12 +85,6 @@ let
       interval = 10;
     };
 
-    "custom/gpu-usage" = {
-      exec = "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits";
-      format = "{}";
-      interval = 10;
-    };
-
     "custom/logo" = {
       exec = "echo ' '";
       format = "{}";
@@ -143,10 +137,10 @@ let
         portable = " ";
       };
       format-muted = "婢 {volume}%";
-      on-click = "pavucontrol -t 3";
-      on-click-middle = "pamixer -t";
-      on-scroll-down = "pamixer -d 5";
-      on-scroll-up = "pamixer -i 5";
+      on-click = "${pkgs.pavucontrol}/bin/pavucontrol -t 3";
+      on-click-middle = "${pkgs.pamixer}/bin/pamixer -t";
+      on-scroll-down = "${pkgs.pamixer}/bin/pamixer -d 5";
+      on-scroll-up = "${pkgs.pamixer}/bin/pamixer -i 5";
       scroll-step = 5;
       tooltip-format = "{icon} {desc} {volume}%";
     };
@@ -156,9 +150,9 @@ let
       format-source = "  {volume}%";
       format-source-muted = "  {volume}%";
       on-click = "pavucontrol -t 4";
-      on-click-middle = "pamixer --default-source -t";
-      on-scroll-down = "pamixer --default-source -d 5";
-      on-scroll-up = "pamixer --default-source -i 5";
+      on-click-middle = "${pkgs.pamixer}/bin/pamixer --default-source -t";
+      on-scroll-down =  "${pkgs.pamixer}/bin/pamixer --default-source -d 5";
+      on-scroll-up =    "${pkgs.pamixer}/bin/pamixer --default-source -i 5";
       scroll-step = 5;
     };
 
