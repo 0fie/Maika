@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      # inputs.nixpkgs.follows = "nixpkgs"; You'll build from source if you comment this out. 😂
+    };
+
     nix-colors = {
       url = "github:misterio77/nix-colors";
     };
