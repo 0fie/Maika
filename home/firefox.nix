@@ -1,14 +1,17 @@
 { config, pkgs, inputs, ... }:
 
+let
+  inherit (import ../system/options.nix) username;
+in
 {
   home.sessionVariables.BROWSER = "firefox";
 
   programs.firefox = {
     enable = true;
-    profiles.me = {
+    profiles."${username}" = {
       isDefault = true;
-      name = "Me";
-      path = "Me.default";
+      name = "${username}";
+      path = "${username}.default";
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
         ublock-origin
         sponsorblock
@@ -50,8 +53,8 @@
 	  name = "Other";
 	  toolbar = false;
 	  bookmarks = [
-	    { name = "Xe";     url = "https://xeiaso.net"; }
-	    { name = "Lime";   url = "https://fasterthanli.me"; }
+	    { name = "Xe";        url = "https://xeiaso.net"; }
+	    { name = "FT-Lime";   url = "https://fasterthanli.me"; }
 	  ];
 	}
       ];
