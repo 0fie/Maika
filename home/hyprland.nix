@@ -154,8 +154,8 @@ in
         "$mainMod SHIFT, j, moveactive, 0 20"
 
         # Control the volume.
-	"XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-	"XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+	",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+	",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
 
         # Resize windows.
         "$mainMod CTRL, l, resizeactive, 30 0"
