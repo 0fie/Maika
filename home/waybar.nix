@@ -26,7 +26,7 @@ let
     modules-right = [
       "network"
       "bluetooth"
-      # Volume
+      "pulseaudio"
       "custom/battery"
       "clock"
       "tray"
