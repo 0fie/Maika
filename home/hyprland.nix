@@ -110,6 +110,7 @@ in
         "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
 	"$mainMod,        z,   exec,   hyprlock"  # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
 	"$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
+	"$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
 	"$mainMod,        d,   exec,   ${pkgs.discord}/bin/discord"
 	"$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
 	",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g- && notify-send 'Screenshot saved 📷️'"
