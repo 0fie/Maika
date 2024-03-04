@@ -110,6 +110,7 @@ in
         "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
 	"$mainMod,        z,   exec,   hyprlock"  # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
 	"$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
+	"$mainMod,        d,   exec,   ${pkgs.discord}/bin/discord"
 	"$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
 	",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g- && notify-send 'Screenshot saved 📷️'"
 
@@ -151,6 +152,10 @@ in
         "$mainMod SHIFT, l, moveactive, 20 0"
         "$mainMod SHIFT, k, moveactive, 0 -20"
         "$mainMod SHIFT, j, moveactive, 0 20"
+
+        # Control the volume.
+	"XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+	"XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
 
         # Resize windows.
         "$mainMod CTRL, l, resizeactive, 30 0"
