@@ -1,9 +1,9 @@
 ## TODO
 - Setup impermanace to achieve a perfectly reproducible system.
 - Implement support for scratchpads
-- Implement an options.nix file for others to easily install the dotfiles.
-- Create a derivation for My-Bibata-Modern-Ice
+- Create a derivation for My-Bibata-Modern-Ice, which includes cursors, folder icons, and more!
 - Resolve the "Your GStreamer installation is missing a plug-in." err in Nautilus
+- Add optional generate GTK theme from colorscheme! My-Bibata-Modern-Ice will be default.
 
 
 ## Improve
