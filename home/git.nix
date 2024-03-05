@@ -1,10 +1,15 @@
 { config, pkgs, ... }:
 
-{
+let
+  info = import ../options.nix;
+  gitUserName = info.user.gitUserName;
+  gitEmail = info.user.gitEmail;
+
+in {
   programs.git = rec {
     enable = true;
-    userName = "0fie";
-    userEmail = "151028199+0fie@users.noreply.github.com";
+    userName = "${gitUserName}";
+    userEmail = "${gitEmail}";
     extraConfig = {
       user.defaultBranch = "main";
       color.ui = true;
