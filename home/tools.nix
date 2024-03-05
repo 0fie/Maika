@@ -12,6 +12,7 @@
     loupe
     mono
     nodejs_21
+    protonvpn-gui
     vlc
     which
     yarn
