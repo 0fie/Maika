@@ -1,5 +1,7 @@
 { config, pkgs, lib, ... }:
 
+let inherit (import ../options/system/networking.nix) hostName; in
+
 {
   networking = {
     networkmanager.enable = true;
