@@ -1,1 +1,3 @@
-
+{
+  hostName = "NixOS";
+}
