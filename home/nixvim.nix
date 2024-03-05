@@ -8,6 +8,7 @@
 
     extraPlugins = with pkgs.vimPlugins; [
       base16-nvim
+      vim-smoothie
     ];
 
 
@@ -21,6 +22,15 @@
       nvim-colorizer.enable = true;
       nvim-lightbulb.enable = true;
       rainbow-delimiters.enable = true;
+
+      gitsigns.enable = true;
+      telescope = {
+	enable = true;
+	keymaps = {
+	  "<leader>ff" = "find_files";
+	  "<leader>lg" = "live_grep";
+	};
+      };
 
       lsp = {
         enable = true;
@@ -52,6 +62,7 @@
 	grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
 	  nix vim regex lua bash markdown markdown_inline c vimdoc python c-sharp
 	];
+	nixGrammars = true;
       };
 
       nvim-cmp =  {
@@ -94,17 +105,32 @@
       cursorline = true;
     };
     
-    keymaps = [{
-      mode = "n";
-      key = "<leader>t";
-      action = "<cmd>Neotree toggle<CR>";
-    }];
+    keymaps = [
+      {
+        mode = "n";
+        key = "<leader>t";
+        action = "<cmd>Neotree toggle<CR>";
+      }
+      {
+        mode = "n";
+        key = "<space>fb";
+        action = ":Telescope file_browser<CR>";
+        options.noremap = true;
+      }
+      {
+        key = "<Tab>";
+        action = ":bnext<CR>";
+        options.silent = false;
+      }
+    ];
+
     globals.mapleader = " "; # Sets the leader key to space.
 
     extraConfigVim = /* vim */ ''
       colorscheme base16-catppuccin-mocha
       let s:guifont = "JetBrainsMono\\ Nerd\\ Font"
       cmap w!! w !sudo tee > /dev/null %
+      inoremap jk <ESC>
     '';
 
     extraConfigLua = /* lua */ ''
