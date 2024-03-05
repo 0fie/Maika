@@ -1,24 +1,11 @@
 ## TODO
-- Setup impermanace to achieve a perfectly reproducible system.
-- Implement support for scratchpads
-- Create a derivation for My-Bibata-Modern-Ice, which includes cursors, folder icons, and more!
-- Resolve the "Your GStreamer installation is missing a plug-in." err in Nautilus
-- Add optional generate GTK theme from colorscheme! My-Bibata-Modern-Ice will be default.
 
-
-## Improve
-
-- home/starship.nix
-    * make use of programs.starship.settings
-
-- home/nixvim.nix
-    * setup Telescope
-
-- home/waybar.nix
-    * rice the bar!
-    * make it a systemd service
-
-
-## Configure
-- SDDM
-- Plymouth
+1. Add Hyprland plugins! (Hyprtrail + Alt-Tab)
+2. Implement support for scratchpads.
+3. Resolve the "Your GStreamer installation is missing a plug-in." err in Nautilus.
+4. Add option to generate GTK theme from colorscheme!
+5. Declare Starship's settings properly.
+6. Create a derivation for Bibata-Modern-Ice-Plus-Papirus-Dark-Pink, which includes cursors, folder icons, and more!
+7. Setup Impermanace.
+8. Switch to AGS.
+9. Rice GRUB, Plymouth & SDDM.
