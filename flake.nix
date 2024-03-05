@@ -43,7 +43,8 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
   let
     system = "x86_64-linux";
-    inherit (import ./system/options.nix) username hostname;
+    inherit (import ./options/system/networking.nix) hostName;
+    inherit (import ./options/home/home.nix) userName;
 
     pkgs = import nixpkgs {
       inherit system;
@@ -54,21 +55,21 @@
   in
   {
     nixosConfigurations = {
-      "$hostname" = nixpkgs.lib.nixosSystem {
+      hostName = nixpkgs.lib.nixosSystem {
 	specialArgs = { 
           inherit system; inherit inputs; 
-          inherit username; inherit hostname;
+          inherit userName; inherit hostName;
         };
         modules = [
 	  ./system/configuration.nix
           home-manager.nixosModules.home-manager {
 	    home-manager.extraSpecialArgs = {
-	      inherit username; inherit inputs;
+	      inherit userName; inherit inputs;
             };
 	    home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-	    home-manager.users.${username} = import ./home/home.nix;
+	    home-manager.users.${userName} = import ./home/home.nix;
 	  }
 	];
       };
