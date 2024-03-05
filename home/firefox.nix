@@ -1,17 +1,16 @@
 { config, pkgs, inputs, ... }:
 
-let
-  inherit (import ../system/options.nix) username;
-in
+let inherit (import ../options/home/home.nix) userName; in
+
 {
   home.sessionVariables.BROWSER = "firefox";
 
   programs.firefox = {
     enable = true;
-    profiles."${username}" = {
+    profiles."${userName}" = {
       isDefault = true;
-      name = "${username}";
-      path = "${username}.default";
+      name = "${userName}";
+      path = "${userName}.default";
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
         ublock-origin
         sponsorblock
