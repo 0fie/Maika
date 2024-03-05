@@ -15,9 +15,7 @@
       # let cachix do its thing.
     };
 
-    nix-colors = {
-      url = "github:misterio77/nix-colors";
-    };
+    nix-colors = { url = "github:misterio77/nix-colors"; };
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
@@ -41,38 +39,39 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
-  let
-    system = "x86_64-linux";
-    inherit (import ./options/system/networking.nix) hostName;
-    inherit (import ./options/home/home.nix) userName;
+    let
+      system = "x86_64-linux";
+      inherit (import ./options/system/networking.nix) hostName;
+      inherit (import ./options/home/home.nix) userName;
 
-    pkgs = import nixpkgs {
-      inherit system;
-      config = {
-	allowUnfree = true;
+      pkgs = import nixpkgs {
+        inherit system;
+        config = { allowUnfree = true; };
       };
-    };
-  in
-  {
-    nixosConfigurations = {
-      hostName = nixpkgs.lib.nixosSystem {
-	specialArgs = { 
-          inherit system; inherit inputs; 
-          inherit userName; inherit hostName;
+    in {
+      nixosConfigurations = {
+        "${hostName}" = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit system;
+            inherit inputs;
+            inherit userName;
+            inherit hostName;
+          };
+          modules = [
+            ./system/configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.extraSpecialArgs = {
+                inherit userName;
+                inherit inputs;
+              };
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "backup";
+              home-manager.users.${userName} = import ./home/home.nix;
+            }
+          ];
         };
-        modules = [
-	  ./system/configuration.nix
-          home-manager.nixosModules.home-manager {
-	    home-manager.extraSpecialArgs = {
-	      inherit userName; inherit inputs;
-            };
-	    home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "backup";
-	    home-manager.users.${userName} = import ./home/home.nix;
-	  }
-	];
       };
     };
-  };
 }

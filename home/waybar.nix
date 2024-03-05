@@ -1,4 +1,4 @@
-{ pkgs, config, ... }: 
+{ pkgs, config, ... }:
 
 let
   scripts = import ./scripts.nix { inherit pkgs; };
@@ -22,15 +22,9 @@ let
     height = 14;
     position = "top";
 
-    modules-left = ["custom/logo" "hyprland/workspaces"];
-    modules-right = [
-      "network"
-      "bluetooth"
-      "pulseaudio"
-      "custom/battery"
-      "clock"
-      "tray"
-    ];
+    modules-left = [ "custom/logo" "hyprland/workspaces" ];
+    modules-right =
+      [ "network" "bluetooth" "pulseaudio" "custom/battery" "clock" "tray" ];
 
     "wlr/workspaces" = workspaces;
     "hyprland/workspaces" = workspaces;
@@ -68,14 +62,14 @@ let
       };
       format = "󰥔 {:%H:%M}";
       format-alt = "󰥔 {:%A, %B %d, %Y (%R)} ";
-      tooltip-format = ''
-        <span size='9pt' font='WenQuanYi Zen Hei Mono'>{calendar}</span>'';
+      tooltip-format =
+        "<span size='9pt' font='WenQuanYi Zen Hei Mono'>{calendar}</span>";
     };
 
     cpu = {
       format = "󰍛 {usage}%";
       format-alt = "{icon0}{icon1}{icon2}{icon3}";
-      format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
+      format-icons = [ "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
       interval = 10;
     };
 
@@ -129,7 +123,7 @@ let
       format = "{icon}  {volume}%";
       format-icons = {
         car = " ";
-        default = ["" "" ""];
+        default = [ "" "" "" ];
         hands-free = " ";
         headphone = " ";
         headset = " ";
@@ -151,8 +145,8 @@ let
       format-source-muted = "  {volume}%";
       on-click = "pavucontrol -t 4";
       on-click-middle = "${pkgs.pamixer}/bin/pamixer --default-source -t";
-      on-scroll-down =  "${pkgs.pamixer}/bin/pamixer --default-source -d 5";
-      on-scroll-up =    "${pkgs.pamixer}/bin/pamixer --default-source -i 5";
+      on-scroll-down = "${pkgs.pamixer}/bin/pamixer --default-source -d 5";
+      on-scroll-up = "${pkgs.pamixer}/bin/pamixer --default-source -i 5";
       scroll-step = 5;
     };
 
@@ -339,6 +333,6 @@ in {
     #  mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
     #});
     style = css;
-    settings = {mainBar = mainWaybarConfig;};
+    settings = { mainBar = mainWaybarConfig; };
   };
 }

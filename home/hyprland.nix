@@ -1,8 +1,9 @@
 { config, pkgs, ... }:
 
-let 
+let
   currentWallpaper = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/0fie/wallpapers/main/Anime/power-lines-train-anime-4k-3y.jpg";
+    url =
+      "https://raw.githubusercontent.com/0fie/wallpapers/main/Anime/power-lines-train-anime-4k-3y.jpg";
     sha256 = "sha256-SWoOZXV3LUr4mjQ7AdmhEV8YJboGdM7qnyTrQH/ChS4=";
   };
   hyprpaperConf = pkgs.writeText "hyprpaper.conf" ''
@@ -10,8 +11,7 @@ let
     wallpaper = ,${currentWallpaper}
   '';
   scripts = import ./scripts.nix { inherit pkgs; };
-in
-{
+in {
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.variables = [ "--all" ];
@@ -20,7 +20,8 @@ in
         gaps_in = 5;
         gaps_out = 10;
         border_size = 1;
-        "col.active_border" = "rgba(${config.colorScheme.palette.base0E}ff) rgba(${config.colorScheme.palette.base09}ff) 60deg";
+        "col.active_border" =
+          "rgba(${config.colorScheme.palette.base0E}ff) rgba(${config.colorScheme.palette.base09}ff) 60deg";
         layout = "master";
       };
 
@@ -32,7 +33,7 @@ in
         kb_rules = "";
         touchpad = {
           natural_scroll = false;
-	  disable_while_typing = true;
+          disable_while_typing = true;
         };
 
         repeat_rate = 40;
@@ -40,17 +41,18 @@ in
         force_no_accel = true;
         sensitivity = 0.0; # -1.0 - 1.0, 0 means no modification.
         follow_mouse = 1;
-	numlock_by_default = true;
+        numlock_by_default = true;
       };
 
       misc = {
         enable_swallow = true;
         force_default_wallpaper = 0;
-        new_window_takes_over_fullscreen = 2; # Unfullscreen when opening something
-	disable_hyprland_logo = true;
-	disable_splash_rendering = true;
-	animate_manual_resizes = true;
-	animate_mouse_windowdragging = true;
+        new_window_takes_over_fullscreen =
+          2; # Unfullscreen when opening something
+        disable_hyprland_logo = true;
+        disable_splash_rendering = true;
+        animate_manual_resizes = true;
+        animate_mouse_windowdragging = true;
       };
 
       decoration = {
@@ -88,13 +90,9 @@ in
         preserve_split = true;
       };
 
-      master = {
-        new_is_master = true;
-      };
+      master = { new_is_master = true; };
 
-      gestures = {
-        workspace_swipe = true;
-      };
+      gestures = { workspace_swipe = true; };
 
       # Using the Super key (windows button) as the main mod.
       "$mainMod" = "SUPER";
@@ -102,18 +100,18 @@ in
       bind = [
         # Launch apps
         "$mainMod,        r,   exec,   ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
-	"$mainMod,        e,   exec,   ${pkgs.emote}/bin/emote"
-	"$mainMod,        b,   exec,   ${pkgs.firefox}/bin/firefox"
-	"$mainMod,        f,   exec,   ${pkgs.gnome.nautilus}/bin/nautilus"
-	"$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
-	"$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
+        "$mainMod,        e,   exec,   ${pkgs.emote}/bin/emote"
+        "$mainMod,        b,   exec,   ${pkgs.firefox}/bin/firefox"
+        "$mainMod,        f,   exec,   ${pkgs.gnome.nautilus}/bin/nautilus"
+        "$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
+        "$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
         "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
-	"$mainMod,        z,   exec,   hyprlock"  # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
-	"$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
-	"$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
-	"$mainMod,        d,   exec,   ${pkgs.discord}/bin/discord"
-	"$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
-	",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g- && notify-send 'Screenshot saved 📷️'"
+        "$mainMod,        z,   exec,   hyprlock" # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
+        "$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
+        "$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
+        "$mainMod,        d,   exec,   ${pkgs.discord}/bin/discord"
+        "$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
+        ",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g- && notify-send 'Screenshot saved 📷️'"
 
         # Control media players.
         ",XF86AudioPlay,  exec, ${pkgs.playerctl}/bin/playerctl play-pause"
@@ -125,33 +123,30 @@ in
         "$mainMod, Q, killactive,"
         "$mainMod SHIFT, M, exit,"
 
-	# Toggle window states.
+        # Toggle window states.
         "$mainMod SHIFT, t, togglefloating,"
         "$mainMod SHIFT, f, fullscreen,"
 
-	# Move focus from one window to another.
+        # Move focus from one window to another.
         "$mainMod, h, movefocus, l"
         "$mainMod, l, movefocus, r"
         "$mainMod, k, movefocus, u"
         "$mainMod, j, movefocus, d"
 
-	# Move window to either the left, right, top, or bottom.
+        # Move window to either the left, right, top, or bottom.
         "$mainMod SHIFT, h, movewindow, l"
         "$mainMod SHIFT, l, movewindow, r"
         "$mainMod SHIFT, k, movewindow, u"
         "$mainMod SHIFT, j, movewindow, d"
       ]
-        # WTF is this? I don't understand Nix code. 😿
-        ++ map (n: "$mainMod SHIFT, ${toString n}, movetoworkspace, ${toString (
-          if n == 0
-          then 10
-          else n
-        )}") [1 2 3 4 5 6 7 8 9 0]
-        ++ map (n: "$mainMod, ${toString n}, workspace, ${toString (
-          if n == 0
-          then 10
-          else n
-        )}") [1 2 3 4 5 6 7 8 9 0];
+      # WTF is this? I don't understand Nix code. 😿
+        ++ map (n:
+          "$mainMod SHIFT, ${toString n}, movetoworkspace, ${
+            toString (if n == 0 then 10 else n)
+          }") [ 1 2 3 4 5 6 7 8 9 0 ] ++ map (n:
+            "$mainMod, ${toString n}, workspace, ${
+              toString (if n == 0 then 10 else n)
+            }") [ 1 2 3 4 5 6 7 8 9 0 ];
 
       binde = [
         # Move windows.
@@ -161,9 +156,9 @@ in
         "$mainMod SHIFT, j, moveactive, 0 20"
 
         # Control the volume.
-	",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-	",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-	",XF86AudioMute,        exec, wpctl set-mute   @DEFAULT_AUDIO_SINK@ toggle"
+        ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ",XF86AudioMute,        exec, wpctl set-mute   @DEFAULT_AUDIO_SINK@ toggle"
 
         # Resize windows.
         "$mainMod CTRL, l, resizeactive, 30 0"
@@ -180,11 +175,11 @@ in
 
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-	"${pkgs.hyprpaper}/bin/hyprpaper -c ${hyprpaperConf}"
+        "${pkgs.hyprpaper}/bin/hyprpaper -c ${hyprpaperConf}"
         "${pkgs.waybar}/bin/waybar"
 
         # Please see home/gtk.nix before modifying the line below. It actually sets the cursor to Bibata-Modern-Ice.
-	"hyprctl setcursor default 24"
+        "hyprctl setcursor default 24"
       ];
     };
   };

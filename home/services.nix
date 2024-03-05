@@ -3,7 +3,7 @@
 {
   services = {
     network-manager-applet.enable = true;
-    blueman-applet.enable= true;
+    blueman-applet.enable = true;
 
     hypridle = {
       enable = true;

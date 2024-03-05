@@ -4,9 +4,7 @@
 {
   programs.lf = {
     enable = true;
-    commands = {
-      editor-open = ''$$EDITOR "$f"'';
-    };
+    commands = { editor-open = ''$$EDITOR "$f"''; };
 
     keybindings = {
       m = "push %mkdir<space>";
@@ -17,7 +15,6 @@
       z = "zip";
       Z = "unzip";
       f = "fzf";
-
 
       p = "paste";
       dd = "cut";
@@ -68,7 +65,8 @@
         ${pkgs.ctpv}/bin/ctpvclear
         ${pkgs.kitty}/bin/kitty +kitten icat --clear --stdin no --silent --transfer-mode file < /dev/null > /dev/tty
       '';
-    in /* bash */ ''
+      # bash
+    in ''
       # set cleaner ''${pkgs.ctpv}/bin/ctpvclear
       set cleaner ${cleaner}/bin/clean.sh
       set previewer ${pkgs.ctpv}/bin/ctpv

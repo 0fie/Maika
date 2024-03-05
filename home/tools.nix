@@ -11,7 +11,9 @@
     lf
     loupe
     mono
+    nixfmt
     nodejs_21
+    nodePackages.prettier
     protonvpn-gui
     vlc
     which

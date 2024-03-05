@@ -11,8 +11,10 @@
 
     # Aliases
     shellAliases = {
-      rbs = "sudo nixos-rebuild switch && notify-send 'System Rebuild Complete 🚀'";
-      n = "nvim"; # Using ${pkgs.neovim}/bin/nvim causes a 'module catppuccin not found' error.
+      rbs =
+        "sudo nixos-rebuild switch && notify-send 'System Rebuild Complete 🚀'";
+      n =
+        "nvim"; # Using ${pkgs.neovim}/bin/nvim causes a 'module catppuccin not found' error.
       gs = "${pkgs.git}/bin/git status";
       gc = "${pkgs.git}/bin/git commit";
       gl = "${pkgs.git}/bin/git log";
@@ -22,19 +24,20 @@
       # Modern yuunix, uwu <3 🤍
       # TODO: Find more modern and convinient replacements for legacy yuunix tools.
       c = "clear";
-      cat =  "${pkgs.bat}/bin/bat $@";
-      ls =   "${pkgs.eza}/bin/eza --git --icons $@";
+      cat = "${pkgs.bat}/bin/bat $@";
+      ls = "${pkgs.eza}/bin/eza --git --icons $@";
       tree = "${pkgs.eza}/bin/eza --git --icons --tree $@";
       find = "${pkgs.fd}/bin/fd $@";
       grep = "${pkgs.ripgrep}/bin/rg $@";
-      df =   "${pkgs.duf}/bin/duf $@";
+      df = "${pkgs.duf}/bin/duf $@";
     };
 
-    profileExtra = /* bash */ ''
-      if [ "$(tty)" = "/dev/tty1" ]; then;
-          exec Hyprland
-      fi
-    '';
+    profileExtra = # bash
+      ''
+        if [ "$(tty)" = "/dev/tty1" ]; then;
+            exec Hyprland
+        fi
+      '';
 
     plugins = [
       {

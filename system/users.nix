@@ -8,7 +8,8 @@
       isNormalUser = true;
       description = "Me";
       extraGroups = [ "networkmanager" "wheel" ];
-      hashedPassword = "$y$j9T$RESLq/fRruOfj/mdwU7MQ/$Hf7riy3m/QEwAmzxU8UBvU1NASKqshloGjhXripIlg6";
+      hashedPassword =
+        "$y$j9T$RESLq/fRruOfj/mdwU7MQ/$Hf7riy3m/QEwAmzxU8UBvU1NASKqshloGjhXripIlg6";
       shell = pkgs.zsh;
     };
   };
@@ -28,5 +29,5 @@
 
   # This is required by Hyprlock. The package installed through home-manager will *not* be able to unlock the session
   # without this configuration.
-  security.pam.services.hyprlock = {};
+  security.pam.services.hyprlock = { };
 }

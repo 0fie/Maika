@@ -7,16 +7,10 @@
       device = "/dev/sda";
       useOSProber = true;
     };
-    plymouth = {
-      enable = true;
-    };
+    plymouth = { enable = true; };
   };
 
-  fileSystems = {
-    "/tmp" = { 
-      fsType = "tmpfs";
-    };
-  };
+  fileSystems = { "/tmp" = { fsType = "tmpfs"; }; };
 
   powerManagement = {
     enable = true;

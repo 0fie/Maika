@@ -8,8 +8,7 @@ let
   fileManager = "org.gnome.Nautilus.desktop";
   torrentClient = "transmission-gtk.desktop";
   textEditor = "neovim.desktop";
-in
-{
+in {
   home.packages = with pkgs; [ xdg-utils ];
   xdg = {
     userDirs = {
@@ -24,15 +23,15 @@ in
       enable = true;
       associations.added = defaultApplications;
       defaultApplications = {
-	"application/pdf" = [ docOpener ];
-	"inode/directory" = [ fileManager ];
-	"x-scheme-handler/magnet" = torrentClient;
+        "application/pdf" = [ docOpener ];
+        "inode/directory" = [ fileManager ];
+        "x-scheme-handler/magnet" = torrentClient;
 
-	# Web stuff
-	"text/html" = [ browser ];
-	"x-scheme-handler/http" = browser;
-	"x-scheme-handler/https" = browser;
-	"application/xhtml+xml" = browser;
+        # Web stuff
+        "text/html" = [ browser ];
+        "x-scheme-handler/http" = browser;
+        "x-scheme-handler/https" = browser;
+        "application/xhtml+xml" = browser;
 
         # Images
         "image/jpeg" = imageViewer;
@@ -55,9 +54,9 @@ in
         "application/x-shellscript" = textEditor;
 
         # Videos
-	"video/webm" = mediaPlayer;
-	"video/mp4" = mediaPlayer;
-	"video/mkv" = mediaPlayer;
+        "video/webm" = mediaPlayer;
+        "video/mp4" = mediaPlayer;
+        "video/mkv" = mediaPlayer;
       };
     };
   };
