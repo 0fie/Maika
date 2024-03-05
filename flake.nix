@@ -9,11 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      # inputs.nixpkgs.follows = "nixpkgs"; You'll build from source if you comment this out. 😂
-      # let cachix do its thing.
-    };
+    hyprland = { url = "github:hyprwm/Hyprland"; };
 
     nix-colors = { url = "github:misterio77/nix-colors"; };
 
@@ -41,8 +37,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      inherit (import ./options/system/networking.nix) hostName;
-      inherit (import ./options/home/home.nix) userName;
+      info = (import ./options.nix);
 
       pkgs = import nixpkgs {
         inherit system;
@@ -50,25 +45,26 @@
       };
     in {
       nixosConfigurations = {
-        "${hostName}" = nixpkgs.lib.nixosSystem {
+        "${info.system.hostName}" = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit system;
             inherit inputs;
-            inherit userName;
-            inherit hostName;
+            # inherit userName;
+            # inherit hostName;
           };
           modules = [
             ./system/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.extraSpecialArgs = {
-                inherit userName;
-                inherit inputs;
+                # inherit userName;
+                # inherit inputs;
+                inherit info;
               };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
-              home-manager.users.${userName} = import ./home/home.nix;
+              home-manager.users.${info.user.userName} = import ./home/home.nix;
             }
           ];
         };
