@@ -1,6 +1,9 @@
 { config, pkgs, inputs, ... }:
 
-let inherit (import ../options/home/home.nix) userName;
+let
+  names = import ../options.nix;
+  userName = names.user.userName;
+  userFullName = names.user.userFullName;
 
 in {
   home.sessionVariables.BROWSER = "firefox";
@@ -9,9 +12,11 @@ in {
     enable = true;
     profiles."${userName}" = {
       isDefault = true;
-      name = "${userName}";
+      name = "${userFullName}";
       path = "${userName}.default";
+
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+        # For these plugins to start working, open the Firefox app and enable them manually.
         ublock-origin
         sponsorblock
         vimium
