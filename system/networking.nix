@@ -1,11 +1,11 @@
 { config, pkgs, lib, ... }:
 
-let inherit (import ../options/system/networking.nix) hostName;
+let inherit (import ../options.nix) hostName;
 
 in {
   networking = {
     networkmanager.enable = true;
-    hostName = "NixOS";
+    hostName = "${hostName}";
     firewall = {
       enable = true;
       allowedTCPPorts = [ ];
