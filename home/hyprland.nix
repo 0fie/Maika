@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 let
   currentWallpaper = pkgs.fetchurl {
@@ -11,10 +11,16 @@ let
     wallpaper = ,${currentWallpaper}
   '';
   scripts = import ./scripts.nix { inherit pkgs; };
+  hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
 in {
   wayland.windowManager.hyprland = {
     enable = true;
-    systemd.variables = [ "--all" ];
+    xwayland.enable = true;
+    systemd = {
+      enable = true;
+      variables = [ "--all" ];
+    };
+    plugins = [ hyprplugins.hyprtrails ];
     settings = {
       general = {
         gaps_in = 5;
@@ -68,6 +74,11 @@ in {
           passes = 5;
           new_optimizations = true;
           ignore_opacity = false;
+        };
+      };
+      plugin = {
+        hyprtrails = {
+          color = "rgba(${config.colorScheme.palette.base0A}ff)";
         };
       };
 
