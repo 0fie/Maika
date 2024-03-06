@@ -7,6 +7,7 @@
     exiftool
     file
     git-extras
+    gst_all_1.gstreamer
     keepassxc
     lf
     loupe
