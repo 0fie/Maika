@@ -124,6 +124,7 @@ in {
         "$mainMod,        d,   exec,   ${pkgs.discord}/bin/discord"
         "$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
         ",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g- && notify-send 'Screenshot saved 📷️'"
+        "ALT,             k,   exec,   ${pkgs.pyprland}/bin/pypr toggle term && hyprctl dispatch bringactivetotop"
 
         # Control media players.
         ",XF86AudioPlay,  exec, ${pkgs.playerctl}/bin/playerctl play-pause"
@@ -190,6 +191,7 @@ in {
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "${pkgs.hyprpaper}/bin/hyprpaper -c ${hyprpaperConf}"
         "${pkgs.waybar}/bin/waybar"
+        "${pkgs.pyprland}/bin/pypr"
 
         # Please see home/gtk.nix before modifying the line below. It actually sets the cursor to Bibata-Modern-Ice.
         "hyprctl setcursor default 24"
