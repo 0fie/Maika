@@ -1,9 +1,9 @@
 { config, pkgs, inputs, ... }:
 
 let
-  names = import ../options.nix;
-  userName = names.user.userName;
-  userFullName = names.user.userFullName;
+  usr = import ../options.nix;
+  userName = usr.userName;
+  userFullName = usr.userFullName;
 
 in {
   home.sessionVariables.BROWSER = "firefox";
