@@ -76,6 +76,7 @@ in {
           ignore_opacity = false;
         };
       };
+
       plugin = {
         hyprtrails = {
           color = "rgba(${config.colorScheme.palette.base0A}ff)";
@@ -145,11 +146,12 @@ in {
         "$mainMod, j, movefocus, d"
 
         # Move window to either the left, right, top, or bottom.
-        "$mainMod SHIFT, h, movewindow, l"
-        "$mainMod SHIFT, l, movewindow, r"
-        "$mainMod SHIFT, k, movewindow, u"
-        "$mainMod SHIFT, j, movewindow, d"
+        "$mainMod SHIFT,  h, movewindow, l"
+        "$mainMod SHIFT,  l, movewindow, r"
+        "$mainMod SHIFT,  k, movewindow, u"
+        "$mainMod SHIFT,  j, movewindow, d"
       ]
+
       # WTF is this? I don't understand Nix code. 😿
         ++ map (n:
           "$mainMod SHIFT, ${toString n}, movetoworkspace, ${
