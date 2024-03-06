@@ -24,6 +24,7 @@
       nvim-lightbulb.enable = true;
       rainbow-delimiters.enable = true;
       lspkind.enable = true;
+      ts-autotag.enable = true;
 
       gitsigns.enable = true;
       telescope = {
