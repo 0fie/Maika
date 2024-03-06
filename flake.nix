@@ -24,6 +24,10 @@
       url = "github:hyprwm/hypridle";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hycov = {
+      url = "github:DreamMaoMao/hycov";
+      inputs.hyprland.follows = "hyprland";
+    };
 
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -39,15 +43,13 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      OPT = (import ./options.nix);
-
       pkgs = import nixpkgs {
         inherit system;
         config = { allowUnfree = true; };
       };
     in {
       nixosConfigurations = {
-        OPT.system.hostName = nixpkgs.lib.nixosSystem {
+        "NixOS" = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit system;
             inherit inputs;
@@ -60,13 +62,12 @@
             {
               home-manager.extraSpecialArgs = {
                 # inherit userName;
-                # inherit inputs;
-                inherit OPT;
+                inherit inputs;
               };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
-              home-manager.users.${OPT.user.userName} = import ./home/home.nix;
+              home-manager.users."me" = import ./home/home.nix;
             }
           ];
         };
