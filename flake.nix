@@ -45,7 +45,7 @@
       };
     in {
       nixosConfigurations = {
-        "${info.system.hostName}" = nixpkgs.lib.nixosSystem {
+        "NixOS" = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit system;
             inherit inputs;
