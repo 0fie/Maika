@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
-{
+let scripts = import ./scripts.nix { inherit pkgs; };
+
+in {
   home.packages = with pkgs; [ pyprland ];
 
   xdg.configFile."hypr/pyprland.toml".text = ''
@@ -19,6 +21,13 @@
     [scratchpads.term]
     animation = "fromTop"
     command = "kitty --class kitty-dropterm"
+    class = "kitty-dropterm"
+    size = "75% 60%"
+    max_size = "1920px 100%"
+
+    [scratchpads.dotfiles]
+    animation = "fromTop"
+    command = "kitty --class kitty-dropterm -e ${pkgs.bash}/bin/bash ${scripts.enterDotfilesGit}/bin/script"
     class = "kitty-dropterm"
     size = "75% 60%"
     max_size = "1920px 100%"
