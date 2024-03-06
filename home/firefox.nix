@@ -1,9 +1,6 @@
 { config, pkgs, inputs, ... }:
 
-let
-  usr = import ../options.nix;
-  userName = usr.userName;
-  userFullName = usr.userFullName;
+let inherit (import ./options.nix) userName gitUserName hostName;
 
 in {
   home.sessionVariables.BROWSER = "firefox";
@@ -12,7 +9,7 @@ in {
     enable = true;
     profiles."${userName}" = {
       isDefault = true;
-      name = "${userFullName}";
+      name = "${gitUserName}";
       path = "${userName}.default";
 
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
