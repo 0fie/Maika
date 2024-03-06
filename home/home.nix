@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ config, pkgs, lib, inputs, userName, ... }:
 
 {
   imports = [
@@ -35,8 +35,8 @@
 
   # Info required by home-manager.
   home = {
-    username = "me";
-    homeDirectory = "/home/me";
+    username = "${userName}";
+    homeDirectory = "/home/${userName}";
     stateVersion = "23.11";
 
     sessionVariables = {
@@ -45,7 +45,6 @@
           pkgs.gst_all_1.gst-plugins-good
           pkgs.gst_all_1.gst-plugins-bad
           pkgs.gst_all_1.gst-plugins-ugly
-          #pkgs.gst_all_1.gst-plugins-libav
         ];
       NIXOS_OZONE_WL = "1";
       ELECTRON_USE_WAYLAND = "1";
