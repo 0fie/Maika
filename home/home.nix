@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   imports = [
@@ -38,6 +38,16 @@
     username = "me";
     homeDirectory = "/home/me";
     stateVersion = "23.11";
+
+    sessionVariables = {
+      GST_PLUGIN_SYSTEM_PATH_1_0 =
+        lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0" [
+          pkgs.gst_all_1.gst-plugins-good
+          pkgs.gst_all_1.gst-plugins-bad
+          pkgs.gst_all_1.gst-plugins-ugly
+          #pkgs.gst_all_1.gst-plugins-libav
+        ];
+    };
   };
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
