@@ -4,7 +4,10 @@
   programs.cava = {
     enable = true;
     settings = {
-      general = { bar_spacing = 0; };
+      general = {
+        bar_spacing = 0;
+        bar_width = 1;
+      };
       color = {
         gradient = 1;
         gradient_color_1 = "'#8bd5ca'";
