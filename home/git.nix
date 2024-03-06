@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
-let
-  usr = import ../options.nix;
-  gitUserName = usr.gitUserName;
-  gitEmail = usr.gitEmail;
+let inherit (import ./options.nix) gitUserName gitEmail;
 
 in {
   programs.git = rec {
