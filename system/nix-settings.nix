@@ -1,10 +1,11 @@
 { config, pkgs, lib, ... }:
 
-{
+let inherit (import ./options.nix) userName system;
+in {
   nix = {
     settings = {
       auto-optimise-store = true;
-      trusted-users = [ "root" "me" ];
+      trusted-users = [ "root" "${userName}" ];
       experimental-features = [ "nix-command" "flakes" ];
       warn-dirty = false;
 
@@ -27,6 +28,6 @@
   # Configure nixpkgs.
   nixpkgs.config = {
     allowUnfree = true;
-    hostPlatform = lib.mkDefault "x86_64-linux";
+    hostPlatform = lib.mkDefault "${system}";
   };
 }
