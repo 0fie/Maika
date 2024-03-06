@@ -24,10 +24,6 @@
       url = "github:hyprwm/hypridle";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hycov = {
-      url = "github:DreamMaoMao/hycov";
-      inputs.hyprland.follows = "hyprland";
-    };
 
     nixvim = {
       url = "github:nix-community/nixvim";
