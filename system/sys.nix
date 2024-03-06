@@ -10,7 +10,13 @@
     plymouth = { enable = true; };
   };
 
-  fileSystems = { "/tmp" = { fsType = "tmpfs"; }; };
+  fileSystems = {
+    "/tmp" = {
+      device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "size=30%" "mode=755" ];
+    };
+  };
 
   powerManagement = {
     enable = true;
