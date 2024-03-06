@@ -12,11 +12,6 @@
       udiskie
     ];
 
-    variables = {
-      EDITOR = "nvim";
-      BROWSER = "firefox";
-      NIXOS_OZONE_WL = "1";
-      ELECTRON_USE_WAYLAND = "1";
-    };
+    variables = { EDITOR = "nvim"; };
   };
 }

@@ -47,6 +47,8 @@
           pkgs.gst_all_1.gst-plugins-ugly
           #pkgs.gst_all_1.gst-plugins-libav
         ];
+      NIXOS_OZONE_WL = "1";
+      ELECTRON_USE_WAYLAND = "1";
     };
   };
 
