@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 let
-  info = import ../options.nix;
-  gitUserName = info.user.gitUserName;
-  gitEmail = info.user.gitEmail;
+  usr = import ../options.nix;
+  gitUserName = usr.gitUserName;
+  gitEmail = usr.gitEmail;
 
 in {
   programs.git = rec {
@@ -15,7 +15,7 @@ in {
       color.ui = true;
       core.editor = "nvim";
       credential.helper = "store";
-      github.user = userName;
+      github.user = gitUserName;
       push.autoSetupRemote = true;
     };
   };
