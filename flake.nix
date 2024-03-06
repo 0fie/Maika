@@ -38,32 +38,27 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
-      system = "x86_64-linux";
+      inherit (import ./options.nix) userName hostName system;
       pkgs = import nixpkgs {
         inherit system;
         config = { allowUnfree = true; };
       };
     in {
       nixosConfigurations = {
-        "NixOS" = nixpkgs.lib.nixosSystem {
+        "${hostName}" = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit system;
             inherit inputs;
-            # inherit userName;
-            # inherit hostName;
           };
           modules = [
             ./system/configuration.nix
             home-manager.nixosModules.home-manager
             {
-              home-manager.extraSpecialArgs = {
-                # inherit userName;
-                inherit inputs;
-              };
+              home-manager.extraSpecialArgs = { inherit inputs userName; };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
-              home-manager.users."me" = import ./home/home.nix;
+              home-manager.users.${userName} = import ./home/home.nix;
             }
           ];
         };
