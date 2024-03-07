@@ -1,15 +1,13 @@
 { config, ... }:
 
-let inherit (import ./options.nix) theTimezone theLocale theLCVariables;
+let inherit (import ../options.nix) theTimezone theLocale theLCVariables;
 in {
   # Select internationalisation properties.
   i18n = {
-    # Set your time zone
-    time.timeZone = "${theTimezone}";
 
     # Select internationalisation properties
-    i18n.defaultLocale = "${theLocale}";
-    i18n.extraLocaleSettings = {
+    defaultLocale = "${theLocale}";
+    extraLocaleSettings = {
       LC_ADDRESS = "${theLCVariables}";
       LC_IDENTIFICATION = "${theLCVariables}";
       LC_MEASUREMENT = "${theLCVariables}";
@@ -24,7 +22,7 @@ in {
 
   # Configure your time settings.
   time = {
-    timeZone = "${theTimezone}/Harare";
+    timeZone = "${theTimezone}";
     hardwareClockInLocalTime = true;
   };
 }
