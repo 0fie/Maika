@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  enterDotfilesGit = pkgs.writeShellScriptBin "script" ''
-    cd /etc/nixos
-  '';
-
   waybarBatteryScript = pkgs.writeShellScriptBin "script" ''
     percentage=$(cat /sys/class/power_supply/BAT0/capacity)
     if [ $percentage -ge 100 ]; then
