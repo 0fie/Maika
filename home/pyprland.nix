@@ -25,13 +25,6 @@ in {
     size = "75% 60%"
     max_size = "1920px 100%"
 
-    [scratchpads.dotfiles]
-    animation = "fromTop"
-    command = "kitty --class kitty-dropterm -e ${pkgs.bash}/bin/bash ${scripts.enterDotfilesGit}/bin/script"
-    class = "kitty-dropterm"
-    size = "75% 60%"
-    max_size = "1920px 100%"
-
     [scratchpads.volume]
     animation = "fromRight"
     command = "pavucontrol"

@@ -53,8 +53,7 @@ in {
       misc = {
         enable_swallow = true;
         force_default_wallpaper = 0;
-        new_window_takes_over_fullscreen =
-          2; # Unfullscreen when opening something
+        new_window_takes_over_fullscreen = 2;
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         animate_manual_resizes = true;
@@ -124,7 +123,7 @@ in {
         "$mainMod,        d,   exec,   ${pkgs.discord}/bin/discord"
         "$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
         ",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g- && notify-send 'Screenshot saved 📷️'"
-        "ALT,             k,   exec,   ${pkgs.pyprland}/bin/pypr toggle term && hyprctl dispatch bringactivetotop"
+        "ALT,        return,   exec,   ${pkgs.pyprland}/bin/pypr toggle term && hyprctl dispatch bringactivetotop"
 
         # Control media players.
         ",XF86AudioPlay,  exec, ${pkgs.playerctl}/bin/playerctl play-pause"
