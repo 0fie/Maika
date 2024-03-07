@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 
-{
+let inherit (import ../options.nix) dotfilesDir;
+in {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -12,14 +13,14 @@
     # Aliases
     shellAliases = {
       rbs =
-        "sudo nixos-rebuild switch && notify-send 'System Rebuild Complete 🚀'";
+        "sudo nixos-rebuild switch --flake ${dotfilesDir}/.# && notify-send 'System Rebuild Complete 🚀'";
       n =
         "nvim"; # Using ${pkgs.neovim}/bin/nvim causes a 'module catppuccin not found' error.
       gs = "${pkgs.git}/bin/git status";
       gc = "${pkgs.git}/bin/git commit";
       gl = "${pkgs.git}/bin/git log";
       ga = "${pkgs.git}/bin/git add";
-      gp = "${pkgs.git}/bin/git push origin";
+      gp = "${pkgs.git}/bin/git push origin main";
 
       # Modern yuunix, uwu <3 🤍
       # TODO: Find more modern and convinient replacements for legacy yuunix tools.
