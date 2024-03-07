@@ -5,7 +5,6 @@
 3. Create a derivation for Bibata-Modern-Ice-Plus-Papirus-Dark-Pink, which includes cursors, folder icons, and more!
 4. Setup Impermanace.
 5. Switch to AGS.
-6. Rice GRUB & Plymouth.
 
 ### Long term goals
 
