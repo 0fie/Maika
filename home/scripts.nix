@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  notifyDone = pkgs.writeShellScriptBin "script" ''
+    ${pkgs.libnotify}/bin/notify-send "System Rebuild Complete 🚀"
+  '';
+
   waybarBatteryScript = pkgs.writeShellScriptBin "script" ''
     percentage=$(cat /sys/class/power_supply/BAT0/capacity)
     if [ $percentage -ge 100 ]; then
