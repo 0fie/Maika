@@ -16,6 +16,7 @@
     nodePackages.prettier
     protonvpn-gui
     vlc
+    vokoscreen-ng
     which
     yarn
   ];
