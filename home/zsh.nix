@@ -1,6 +1,8 @@
 { config, lib, pkgs, ... }:
 
-let inherit (import ../options.nix) dotfilesDir;
+let
+  inherit (import ../options.nix) dotfilesDir;
+  scripts = import ./scripts.nix { inherit pkgs; };
 in {
   programs.zsh = {
     enable = true;
@@ -11,9 +13,9 @@ in {
     history.path = "${config.home.homeDirectory}/.config/zsh/.zsh_history";
 
     # Aliases
-    shellAliases = {
-      rbs =
-        "sudo nixos-rebuild switch --flake ${dotfilesDir}/.# && notify-send 'System Rebuild Complete 🚀'";
+    shellAliases = rec {
+      Done = "${scripts.notifyDone}/bin/script";
+      rbs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.# && ${Done}";
       n =
         "nvim"; # Using ${pkgs.neovim}/bin/nvim causes a 'module catppuccin not found' error.
       gs = "${pkgs.git}/bin/git status";
