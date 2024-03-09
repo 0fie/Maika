@@ -8,31 +8,41 @@ in {
     enable = true;
     enableCompletion = true;
     enableAutosuggestions = true;
-
     dotDir = ".config/zsh";
     history.path = "${config.home.homeDirectory}/.config/zsh/.zsh_history";
 
-    # Aliases
     shellAliases = rec {
+      # Custom
       Done = "${scripts.notifyDone}/bin/script";
+
+      # Git
       ga = "${pkgs.git}/bin/git add";
       gc = "${pkgs.git}/bin/git commit";
       gl = "${pkgs.git}/bin/git log";
       gs = "${pkgs.git}/bin/git status";
       gp = "${pkgs.git}/bin/git push origin main";
+
       n = "nvim";
-      rbs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.# && ${Done}";
+
+      # Nix
+      nb = "nix build";
+      nbn = "nix build nixpkgs#";
+      nd = "nix develop -c $SHELL";
+      nf = "nix flake";
+      nrs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.# && ${Done}";
+      ns = "nix shell";
+      nsn = "nix shell nixpkgs#";
 
       # Modern yuunix, uwu <3 🤍
       # TODO: Find more modern and convinient replacements for legacy yuunix tools.
       c = "clear";
       cat = "${pkgs.bat}/bin/bat $@";
-      # cp = "${pkgs.advcpmv}/bin/advcp -g";
-      # mv = "${pkgs.advcpmv}/bin/advmv -g";
+      cp = "${pkgs.advcpmv}/bin/advcp -g";
       df = "${pkgs.duf}/bin/duf $@";
       ls = "${pkgs.eza}/bin/eza --git --icons $@";
       find = "${pkgs.fd}/bin/fd $@";
       grep = "${pkgs.ripgrep}/bin/rg $@";
+      mv = "${pkgs.advcpmv}/bin/advmv -g";
       tree = "${pkgs.eza}/bin/eza --git --icons --tree $@";
     };
 
