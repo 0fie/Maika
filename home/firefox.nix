@@ -16,7 +16,6 @@ in {
         # For these plugins to start working, open the Firefox app and enable them manually.
         ublock-origin
         sponsorblock
-        vimium
       ];
 
       settings = {
