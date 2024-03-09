@@ -24,10 +24,4 @@ in {
       options = "--delete-older-than 1d";
     };
   };
-
-  # Configure nixpkgs.
-  nixpkgs.config = {
-    allowUnfree = true;
-    hostPlatform = lib.mkDefault "${system}";
-  };
 }
