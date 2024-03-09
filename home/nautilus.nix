@@ -14,6 +14,15 @@
         ];
     };
   };
+
+  # Automatically mounts new devices/peripherals.
+  services.udiskie = {
+    enable = true;
+    automount = true;
+    notify = true;
+    tray = "auto";
+  };
+
   dconf.settings = {
     "org/gnome/desktop/peripherals/touchpad" = {
       tap-to-click = true;
@@ -21,6 +30,5 @@
     };
   };
 
-  # Refer to system/services.nix
-  # The first 3 services in that file give additional functionality to Nautilus.
+  # Refer to system/services.nix. The first 3 services in that file give additional functionality to Nautilus.
 }
