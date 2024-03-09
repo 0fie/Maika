@@ -1,6 +1,6 @@
 { config, ... }:
 
-let inherit (import ../options.nix) hostName;
+let inherit (import ./options.nix) hostName;
 
 in {
   networking = {

@@ -1,6 +1,6 @@
 { config, ... }:
 
-let inherit (import ../options.nix) theTimezone theLocale theLCVariables;
+let inherit (import ./options.nix) theTimezone theLocale theLCVariables;
 in {
   # Select internationalisation properties.
   i18n = {
