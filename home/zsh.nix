@@ -15,32 +15,32 @@ in {
     # Aliases
     shellAliases = rec {
       Done = "${scripts.notifyDone}/bin/script";
-      rbs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.# && ${Done}";
-      n =
-        "nvim"; # Using ${pkgs.neovim}/bin/nvim causes a 'module catppuccin not found' error.
-      gs = "${pkgs.git}/bin/git status";
+      ga = "${pkgs.git}/bin/git add";
       gc = "${pkgs.git}/bin/git commit";
       gl = "${pkgs.git}/bin/git log";
-      ga = "${pkgs.git}/bin/git add";
+      gs = "${pkgs.git}/bin/git status";
       gp = "${pkgs.git}/bin/git push origin main";
+      n = "nvim";
+      rbs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.# && ${Done}";
 
       # Modern yuunix, uwu <3 🤍
       # TODO: Find more modern and convinient replacements for legacy yuunix tools.
       c = "clear";
       cat = "${pkgs.bat}/bin/bat $@";
+      # cp = "${pkgs.advcpmv}/bin/advcp -g";
+      # mv = "${pkgs.advcpmv}/bin/advmv -g";
+      df = "${pkgs.duf}/bin/duf $@";
       ls = "${pkgs.eza}/bin/eza --git --icons $@";
-      tree = "${pkgs.eza}/bin/eza --git --icons --tree $@";
       find = "${pkgs.fd}/bin/fd $@";
       grep = "${pkgs.ripgrep}/bin/rg $@";
-      df = "${pkgs.duf}/bin/duf $@";
+      tree = "${pkgs.eza}/bin/eza --git --icons --tree $@";
     };
 
-    profileExtra = # bash
-      ''
-        if [ "$(tty)" = "/dev/tty1" ]; then;
-            exec Hyprland
-        fi
-      '';
+    profileExtra = ''
+      if [ "$(tty)" = "/dev/tty1" ]; then;
+          exec Hyprland
+      fi
+    '';
 
     plugins = [
       {
