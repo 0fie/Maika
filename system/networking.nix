@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, ... }:
 
 let inherit (import ../options.nix) hostName;
 
