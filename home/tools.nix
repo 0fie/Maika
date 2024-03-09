@@ -7,17 +7,15 @@
     exiftool
     file
     git-extras
+    #iotop
     keepassxc
     lf
     loupe
-    mono
     nixfmt
-    nodejs_21
     nodePackages.prettier
     protonvpn-gui
     vlc
     vokoscreen-ng
     which
-    yarn
   ];
 }
