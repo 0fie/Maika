@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
-  inherit (import ../options.nix) dotfilesDir;
+  inherit (import ./options.nix) dotfilesDir;
   scripts = import ./scripts.nix { inherit pkgs; };
 in {
   programs.zsh = {
