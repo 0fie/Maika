@@ -2,16 +2,18 @@
 
 {
   services = {
-    devmon.enable = true; # 1. Monitors for new storage devices.
-    gvfs.enable = true; # 2. Adds functionality to nautilus file manager.
-    udisks2.enable =
-      true; # 3. Allow apps to query and manipulate storage devices.
+    # Devmon monitors for new storage devices. Udisks2 allows apps like Nautilus to query and manipulate
+    # storage devices. Gnome-keyring enables allows apps to display an auth dialog to perform adminstrative
+    # operations, like mounting another partition.
+    devmon.enable = true;
+    gvfs.enable = true;
+    udisks2.enable = true;
 
     gnome.gnome-keyring.enable = true;
     blueman.enable = true; # GUI Bluetooth manager.
 
     fstrim = {
-      enable = true; # Trim SSDs in the background.
+      enable = true; # Trim SSD in the background, once every month.
       interval = "monthly";
     };
   };
