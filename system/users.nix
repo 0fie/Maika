@@ -1,12 +1,13 @@
 { config, pkgs, ... }:
 
-{
+let inherit (import ../home/options.nix) userName userFullName;
+in {
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
     mutableUsers = true;
-    users.me = {
+    users.${userName} = {
       isNormalUser = true;
-      description = "Me";
+      description = "${userFullName}";
       extraGroups = [ "networkmanager" "wheel" ];
       hashedPassword =
         "$y$j9T$RESLq/fRruOfj/mdwU7MQ/$Hf7riy3m/QEwAmzxU8UBvU1NASKqshloGjhXripIlg6";
