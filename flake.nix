@@ -38,7 +38,8 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
-      inherit (import ./options.nix) userName hostName system;
+      inherit (import ./system/options.nix) hostName system;
+      inherit (import ./home/options.nix) userName;
       pkgs = import nixpkgs {
         inherit system;
         config = { allowUnfree = true; };
