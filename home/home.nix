@@ -8,6 +8,7 @@
     ./firefox.nix
     ./git.nix
     ./gtk.nix
+    ./helix.nix
     ./hyprland.nix
     ./hyprlock.nix
     ./kitty.nix
