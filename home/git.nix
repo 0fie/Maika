@@ -8,7 +8,7 @@ in {
     userName = "${gitUserName}";
     userEmail = "${gitEmail}";
     extraConfig = {
-      user.defaultBranch = "main";
+      init.defaultBranch = "main";
       color.ui = true;
       core.editor = "nvim";
       credential.helper = "store";
