@@ -7,13 +7,9 @@
     extraPackages = with pkgs;
       with nodePackages; [
         vscode-langservers-extracted
-        typescript
-        typescript-language-server
-        marksman
         nil
         nixpkgs-fmt
         clang-tools
-        bash-language-server
       ];
 
     languages.language = [
