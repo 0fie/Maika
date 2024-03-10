@@ -1,6 +1,8 @@
 { config, pkgs, lib, ... }:
 
-let inherit (import ./options.nix) userName system;
+let
+  inherit (import ./options.nix) system;
+  inherit (import ../home/options.nix) userName;
 in {
   nix = {
     settings = {
@@ -24,4 +26,5 @@ in {
       options = "--delete-older-than 1d";
     };
   };
+  nixpkgs.config.allowUnfree = true;
 }
