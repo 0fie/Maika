@@ -5,16 +5,13 @@
     enable = true;
     defaultEditor = true;
 
-    extraPackages = with pkgs;
-      with nodePackages; [
-        nil
-        nixfmt
-
-        omnisharp-roslyn
-
-        typescript-language-server
-        vscode-langservers-extracted
-      ];
+    extraPackages = with pkgs; [
+      nil
+      nixfmt
+      omnisharp-roslyn
+      nodePackages.typescript-language-server
+      nodePackages.vscode-langservers-extracted
+    ];
 
     languages.language = [
       {
@@ -26,32 +23,32 @@
       {
         name = "nix";
         indent.tab-width = 2;
+        indent.unit = " ";
         formatter.command = "nixfmt";
         auto-format = true;
       }
     ];
 
     settings = {
+      theme = "catppuccin_mocha";
       keys = {
         normal = {
           C-q = ":bclose";
           tab = "goto_next_buffer";
           S-tab = "goto_previous_buffer";
-          ZZ = ":wq";
           space = {
             f = ":fmt";
-            ff = "file_picker";
+            b = "file_picker";
           };
         };
       };
-
-      theme = "catppuccin_mocha";
 
       editor = {
         line-number = "relative";
         completion-trigger-len = 1;
         bufferline = "multiple";
         color-modes = true;
+
         statusline = {
           left = [
             "mode"
@@ -64,6 +61,11 @@
             "spinner"
           ];
           right = [ "file-encoding" "file-type" "selections" "position" ];
+          mode = {
+            normal = "NORMAL";
+            insert = "INSERT";
+            select = "SELECT";
+          };
         };
         cursor-shape = {
           insert = "bar";
