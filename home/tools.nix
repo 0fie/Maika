@@ -13,6 +13,7 @@
     nodePackages.prettier
     persepolis
     protonvpn-gui
+    transmission-gtk
     vlc
     vokoscreen-ng
     which
