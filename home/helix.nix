@@ -7,8 +7,12 @@
 
     extraPackages = with pkgs;
       with nodePackages; [
+        vscode-langservers-extracted
         nil
         nixfmt
+      	omnisharp-roslyn
+      	typescript-language-server
+        vscode-langservers-extracted
       ];
 
     languages.language = [
