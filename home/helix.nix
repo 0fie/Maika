@@ -31,6 +31,7 @@
 
     settings = {
       theme = "catppuccin_mocha";
+
       keys = {
         normal = {
           C-q = ":bclose";
@@ -40,7 +41,10 @@
             f = ":fmt";
             b = "file_picker";
           };
+          g.a = "code_action";
+          Z.Z = ":wq";
         };
+        insert = { j.k = "normal_mode"; };
       };
 
       editor = {
@@ -48,6 +52,14 @@
         completion-trigger-len = 1;
         bufferline = "multiple";
         color-modes = true;
+        cursorline = true;
+        insert-final-newline = false;
+        idle-timeout = 0;
+
+        lsp = {
+          display-messages = true;
+          display-inlay-hints = true;
+        };
 
         statusline = {
           left = [
@@ -60,18 +72,19 @@
             "file-modification-indicator"
             "spinner"
           ];
-          right = [ "file-encoding" "file-type" "selections" "position" ];
+          right = [ "file-type" "position-percentage" "total-line-numbers" ];
           mode = {
             normal = "NORMAL";
             insert = "INSERT";
             select = "SELECT";
           };
         };
+
         cursor-shape = {
           insert = "bar";
           select = "underline";
         };
-        whitespace.render.tab = "all";
+
         indent-guides = {
           render = true;
           character = "┊";
