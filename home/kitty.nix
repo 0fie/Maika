@@ -68,7 +68,5 @@
       listen_on = "unix:/tmp/kitty";
       shell_integration = "enabled";
     };
-    # extraConfig = ''
-    # '';
   };
 }
