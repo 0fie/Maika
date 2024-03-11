@@ -3,31 +3,26 @@
 {
   programs.helix = {
     enable = true;
+    defaultEditor = true;
 
     extraPackages = with pkgs;
       with nodePackages; [
-        vscode-langservers-extracted
+        #vscode-langservers-extracted
         nil
-        nixpkgs-fmt
-        clang-tools
+        nixfmt
+        #clang-tools
       ];
 
     languages.language = [
       {
-        name = "typescript";
-        indent.tab-width = 4;
-        indent.unit = " ";
-        auto-format = true;
-      }
-      {
         name = "javascript";
-        indent.tab-width = 4;
+        indent.tab-width = 5;
         indent.unit = " ";
         auto-format = true;
       }
       {
         name = "nix";
-        formatter.command = "nixpkgs-fmt";
+        formatter.command = "nixfmt";
       }
     ];
 
