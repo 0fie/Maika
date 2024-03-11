@@ -7,10 +7,8 @@
 
     extraPackages = with pkgs;
       with nodePackages; [
-        #vscode-langservers-extracted
         nil
         nixfmt
-        #clang-tools
       ];
 
     languages.language = [

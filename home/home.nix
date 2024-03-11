@@ -16,7 +16,6 @@
     ./mako.nix
     ./nautilus.nix
     ./neofetch.nix
-    ./nixvim.nix
     ./pyprland.nix
     ./rofi.nix
     ./services.nix
