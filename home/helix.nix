@@ -7,11 +7,12 @@
 
     extraPackages = with pkgs;
       with nodePackages; [
-        vscode-langservers-extracted
         nil
         nixfmt
-      	omnisharp-roslyn
-      	typescript-language-server
+
+        omnisharp-roslyn
+
+        typescript-language-server
         vscode-langservers-extracted
       ];
 
@@ -24,21 +25,27 @@
       }
       {
         name = "nix";
+        indent.tab-width = 2;
         formatter.command = "nixfmt";
+        auto-format = true;
       }
     ];
 
     settings = {
       keys = {
         normal = {
-          C-s = ":w";
           C-q = ":bclose";
-          A-l = "goto_next_buffer";
-          A-h = "goto_previous_buffer";
+          tab = "goto_next_buffer";
+          S-tab = "goto_previous_buffer";
+          ZZ = ":wq";
+          space = {
+            f = ":fmt";
+            ff = "file_picker";
+          };
         };
       };
 
-      theme = "base16_transparent";
+      theme = "catppuccin_mocha";
 
       editor = {
         line-number = "relative";
@@ -58,7 +65,10 @@
           ];
           right = [ "file-encoding" "file-type" "selections" "position" ];
         };
-        cursor-shape.insert = "bar";
+        cursor-shape = {
+          insert = "bar";
+          select = "underline";
+        };
         whitespace.render.tab = "all";
         indent-guides = {
           render = true;
