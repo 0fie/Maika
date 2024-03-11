@@ -55,6 +55,7 @@
         cursorline = true;
         insert-final-newline = false;
         idle-timeout = 0;
+        auto-save = true;
 
         lsp = {
           display-messages = true;
