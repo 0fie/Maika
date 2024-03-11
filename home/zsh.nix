@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 
 let
   inherit (import ./options.nix) dotfilesDir;
@@ -21,8 +21,6 @@ in {
       gl = "${pkgs.git}/bin/git log";
       gs = "${pkgs.git}/bin/git status";
       gp = "${pkgs.git}/bin/git push origin main";
-
-      n = "nvim";
 
       # Nix
       nb = "nix build";
