@@ -10,7 +10,6 @@
     keepassxc
     lf
     loupe
-    nixfmt
     nodePackages.prettier
     persepolis
     protonvpn-gui
