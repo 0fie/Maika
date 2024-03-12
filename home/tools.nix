@@ -9,7 +9,7 @@
     iotop
     keepassxc
     lf
-    #libreoffice
+    libreoffice
     loupe
     nodePackages.prettier
     persepolis
