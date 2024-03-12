@@ -124,6 +124,7 @@ looking for a third person to help.
 - [Zaney/zaneyos](https://gitlab.com/Zaney/zaneyos) - Several snippets & Nixvim although I no longer use it
 
 #### Learning resources
-- [https://nixos-and-flakes.thiscute.world/](https://nixos-and-flakes.thiscute.world/)
-- [https://xeiaso.net/blog](https://xeiaso.net/blog)
+- [NixOS and Flake Book/](https://nixos-and-flakes.thiscute.world/)
+- [Xe's blog](https://xeiaso.net/blog)
 - [NixOS Discord](https://discord.com/invite/2HeKRM3)
+- [Zaney's Blog](https://zaney.org/)
