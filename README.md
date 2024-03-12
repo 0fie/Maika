@@ -1,5 +1,17 @@
+<h2 align="center">:snowflake: 0fie's Ultra-Simple NixOS Config :snowflake:</h2>
+
 <p align="center">
-  This is the NixOS config that powers my laptop. It might not look like much, but I swear it gets the job done. 🙂<br/>
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="400" />
+</p>
+
+<p align="center">
+	<a href="https://github.com/ryan4yin/nix-config/stargazers">
+		<img alt="Stargazers" src="https://img.shields.io/github/stars/ryan4yin/nix-config?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41"></a>
+    <a href="https://nixos.org/">
+        <img src="https://img.shields.io/badge/NixOS-unstable-informational.svg?style=for-the-badge&logo=nixos&color=F2CDCD&logoColor=D9E0EE&labelColor=302D41"></a>
+    <a href="https://github.com/ryan4yin/nixos-and-flakes-book">
+        <img src="https://img.shields.io/static/v1?label=Nix Flakes&message=learning&style=for-the-badge&logo=nixos&color=DDB6F2&logoColor=D9E0EE&labelColor=302D41"></a>
+  </a>
 </p>
 
 ## Features
@@ -26,7 +38,7 @@ Nix package manager from there. And that's just about it. Simple, right?
 
 ## How to Install?
 First of all, you're not supposed to install my NixOS config on your computer. I didn't have that kind of sharing in mind when I wrote
-these configs. You should cherry-pick the .nix files that you're interested in. Let's say you admire my Cava setup and you'd
+these configs. You should cherry-pick the `.nix` files that you're interested in. Let's say you admire my Cava setup and you'd
 like to have it as part of your system... you'd simply copy my [home/cava.nix](home/cava.nix) file into **your** config directory, and then import it.
 However, if you're still adamant about installing my configs on your machine, or would like to fork my flake, follow the steps below.
 
