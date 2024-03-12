@@ -123,6 +123,7 @@ looking for a third person to help.
 - [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - Catppuccin themes for CLI tools like bat, cava etc. Copied as is, without modification. Thank you!
 - [Zaney/zaneyos](https://gitlab.com/Zaney/zaneyos) - Several snippets & Nixvim although I no longer use it
 
+
 #### Learning resources
 - [NixOS and Flakes Book/](https://nixos-and-flakes.thiscute.world/)
 - [Xe's blog](https://xeiaso.net/blog)
