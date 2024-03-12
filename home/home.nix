@@ -5,6 +5,7 @@
     ./bat.nix
     ./btop.nix
     ./cava.nix
+    ./direnv.nix
     ./firefox.nix
     ./git.nix
     ./gtk.nix
