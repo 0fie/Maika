@@ -15,22 +15,24 @@
 </p>
 
 ## Notable Features?
+-----------------------------------------------------------------------------------------------------------------------------
+|  🪟 Compositor/WM          | [Hyprland](https://hyprland.org) (without Xwayland, I don't run X apps, yuck.)
+|    Terminal >>            | [Kitty](https://sw.kovidgoyal.net/kitty/) (bloated, I'm only there for the image protocol, its awesome)
+|    Code Editor >>         | [Helix](https://helix-editor.com) (the greatest code editor since Neovim)
+|  🔒️ Screenlock >>          | [Hyprlock](https://github.com/hyprwm/hyprlock) (This software is a work of art)
+|  💤 Idle management daemon | [Hypridle](https://github.com/hyprwm/hypridle) (Another work of art from [@vaxerski](https://github.com/vaxerski))
+|  🎨 Theme >>               | [Catppuccin](https://github.com/catppuccin/catppuccin) (the mocha variant, system-wide from CLI to GUI)
+|  🖼️  Image viewer           | [Loupe](https://apps.gnome.org/Loupe/) (GPU-accelarated, elegant UI)
+|  🚀 App Launcher           | [rofi-wayland]()
+|  🔔 Notification Daemon    | [Mako]()
+|  📂 File Managers          | [Natilus]() + [LF]()
+|  🎥 Screenshots >>         | [Grim]() + [Slurp]()
+|  🐚 Shell & Prompt         | [ZSH]() + [Starship]()
+|  🌐 Web browser            | Firefox
+|  💼 Office suite           | LibreOffice
+|  🎧️ Media player           | VLC
 
--  🪟 Compositor/WM >> [Hyprland](https://hyprland.org) (without Xwayland, I don't run X apps, yuck.)
--    Terminal >> [Kitty](https://sw.kovidgoyal.net/kitty/) (bloated, I'm only there for the image protocol, its awesome)
--    Code Editor >> [Helix](https://helix-editor.com) (the greatest code editor since Neovim)
--  🔒️ Screenlock >> [Hyprlock](https://github.com/hyprwm/hyprlock) (This software is a work of art)
--  💤 Idle management daemon >> [Hypridle](https://github.com/hyprwm/hypridle) (Another work of art from [@vaxerski](https://github.com/vaxerski))
--  🎨 Theme >> [Catppuccin](https://github.com/catppuccin/catppuccin) (the mocha variant, system-wide from CLI to GUI)
--  🖼️  Image viewer >> [Loupe](https://apps.gnome.org/Loupe/) (GPU-accelarated, elegant UI)
--  🚀 App Launcher >> [rofi-wayland]()
--  🔔 Notification Daemon >> [Mako]()
--  📂 File Managers >> [Natilus]() + [LF]()
--  🎥 Screenshots >> [Grim]() + [Slurp]()
--  🐚 Shell & Prompt [ZSH]() + [Starship]()
--  🌐 Web browser >> Firefox
--  💼 Office suite >> LibreOffice
--  🎧️ Media player >> VLC
+
 
 ## Philosophy and design principles
 
