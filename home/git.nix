@@ -10,7 +10,7 @@ in {
     extraConfig = {
       init.defaultBranch = "main";
       color.ui = true;
-      core.editor = "nvim";
+      core.editor = "hx";
       credential.helper = "store";
       github.user = gitUserName;
       push.autoSetupRemote = true;
