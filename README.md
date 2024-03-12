@@ -32,8 +32,8 @@ Nix package manager from there. And that's just about it. Simple, right?
 
 ## How to Install?
 First of all, you're not supposed to install my NixOS config on your computer. I didn't have that kind of sharing in mind when I wrote
-these configs. You should cherry-pick the .nix files that you're interested in. Let's say you admire my [cava]() setup and you'd
-like to have it as part of your system... you'd simply copy my [home/cava]() file into **your** config directory, and them import it.
+these configs. You should cherry-pick the .nix files that you're interested in. Let's say you admire my Cava setup and you'd
+like to have it as part of your system... you'd simply copy my [home/cava.nix](home/cava.nix) file into **your** config directory, and then import it.
 However, if you're still adamant about installing my configs on your machine, or would like to fork my flake, follow the steps below.
 
 #### Edit the 2 options.nix files
