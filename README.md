@@ -14,7 +14,7 @@
 -  Terminal >> [Kitty](https://sw.kovidgoyal.net/kitty/) (bloated, I'm only there for the image protocol, its awesome)
 -  Code Editor >> [Helix](https://helix-editor.com) (the greatest code editor since Neovim)
 -  🔒️ Screenlock >> [Hyprlock](https://github.com/hyprwm/hyprlock) (This software is a work of art)
--  💤 Idle management daemon >> [Hypridle](https://github.com/hyprwm/hypridle) (Another work of art from @vaxerski)
+-  💤 Idle management daemon >> [Hypridle](https://github.com/hyprwm/hypridle) (Another work of art from [@vaxerski](https://github.com/vaxerski))
 -  🎨 Theme >> [Catppuccin](https://github.com/catppuccin/catppuccin) (the mocha variant, system-wide from CLI to GUI)
 -  🖼️  Image viewer >> [Loupe](https://apps.gnome.org/Loupe/) (GPU-accelarated, elegant UI)
 -  🌐 Web browser >> Firefox
