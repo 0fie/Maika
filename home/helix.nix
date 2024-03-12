@@ -22,6 +22,12 @@
         auto-format = true;
       }
       {
+        name = "markdown";
+        indent.tab-width = 2;
+        indent.unit = " ";
+        auto-format = true;
+      }
+      {
         name = "nix";
         indent.tab-width = 2;
         indent.unit = " ";
