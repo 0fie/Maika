@@ -25,11 +25,11 @@
 |  💤 Idle management daemon | [Hypridle](https://github.com/hyprwm/hypridle) (Another work of art from [@vaxerski](https://github.com/vaxerski))
 |  🎨 Theme >>               | [Catppuccin](https://github.com/catppuccin/catppuccin) (the mocha variant, system-wide from CLI to GUI)
 |  🖼️  Image viewer           | [Loupe](https://apps.gnome.org/Loupe/) (GPU-accelarated, elegant UI)
-|  🚀 App Launcher           | [rofi-wayland]()
-|  🔔 Notification Daemon    | [Mako]()
-|  📂 File Managers          | [Natilus]() + [LF]()
-|  🎥 Screenshots >>         | [Grim]() + [Slurp]()
-|  🐚 Shell & Prompt         | [ZSH]() + [Starship]()
+|  🚀 App Launcher           | [rofi-wayland](https://github.com/lbonn/rofi)
+|  🔔 Notification Daemon    | [Mako](https://wayland.emersion.fr/mako/)
+|  📂 File Managers          | [Nautilus](https://wiki.gnome.org/Apps/Files) + [LF](https://godoc.org/github.com/gokcehan/lf)
+|  🎥 Screenshots >>         | [Grim](https://github.com/emersion/grim) + [Slurp](https://github.com/emersion/slurp)
+|  🐚 Shell & Prompt         | [ZSH](https://www.zsh.org/) + [Starship](https://starship.rs/)
 |  🌐 Web browser            | Firefox
 |  💼 Office suite           | LibreOffice
 |  🎧️ Media player           | VLC
