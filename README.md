@@ -27,6 +27,7 @@
 -  🔔 Notification Daemon >> [Mako]()
 -  📂 File Managers >> [Natilus]() + [LF]()
 -  🎥 Screenshots >> [Grim]() + [Slurp]()
+-  🐚 Shell & Prompt [ZSH]() + [Starship]()
 -  🌐 Web browser >> Firefox
 -  💼 Office suite >> LibreOffice
 -  🎧️ Media player >> VLC
