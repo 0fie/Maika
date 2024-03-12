@@ -103,3 +103,13 @@ echo '
 }
 ' > system/sys.nix
 ```
+
+If you've made it this far, run
+
+```bash
+sudo nixos-rebuild boot --flake .# && reboot
+```
+
+Finally, I will mention that the instructions above were never tested. If you actually succeed, let me know... lol
+If you need help with your NixOS config, contact me via Discord [here](). I'm not very good at Nix though... so we might end up
+looking for a third person to help.
