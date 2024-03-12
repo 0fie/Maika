@@ -122,3 +122,8 @@ looking for a third person to help.
 - [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - Firefox declaration with addons, Helix config
 - [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - Catppuccin themes for CLI tools like bat, cava etc. Copied as is, without modification. Thank you!
 - [Zaney/zaneyos](https://gitlab.com/Zaney/zaneyos) - Several snippets & Nixvim although I no longer use it
+
+#### Learning resources
+- [https://nixos-and-flakes.thiscute.world/](https://nixos-and-flakes.thiscute.world/)
+- [https://xeiaso.net/blog](https://xeiaso.net/blog)
+- [NixOS Discord](https://discord.com/invite/2HeKRM3)
