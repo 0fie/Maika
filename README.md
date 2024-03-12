@@ -15,7 +15,9 @@
 </p>
 
 ## Notable Features?
-|----------------------------|-----------------------------------------------------------------------------------------------
+
+| Task                       | Utility
+| -------------------------- | :----------------------------------------------------------------------------------------------
 |  🪟 Compositor/WM          | [Hyprland](https://hyprland.org) (without Xwayland, I don't run X apps, yuck.)
 |    Terminal >>            | [Kitty](https://sw.kovidgoyal.net/kitty/) (bloated, I'm only there for the image protocol, its awesome)
 |    Code Editor >>         | [Helix](https://helix-editor.com) (the greatest code editor since Neovim)
