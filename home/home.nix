@@ -50,4 +50,8 @@
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
   programs.home-manager.enable = true;
+  home.file.".local/share/fonts" = {
+    source = ../fonts;
+    recursive = true;
+  };
 }
