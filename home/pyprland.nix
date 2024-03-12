@@ -1,8 +1,6 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
-let scripts = import ./scripts.nix { inherit pkgs; };
-
-in {
+{
   home.packages = with pkgs; [ pyprland ];
 
   xdg.configFile."hypr/pyprland.toml".text = ''

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let placeholderAndTimeColor = "rgb(205, 214, 244)";
 in {

@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 
 # TODO: These configs should only be used if the users' full name is 0fie (me).
 {

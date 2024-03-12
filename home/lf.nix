@@ -1,5 +1,5 @@
 # TODO: Setup fuzzy finding and interpolate cli tools in scripts.
-{ pkgs, config, lib, ... }:
+{ pkgs, ... }:
 
 {
   programs.lf = {

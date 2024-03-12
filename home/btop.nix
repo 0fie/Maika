@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   xdg.configFile."btop/themes/catppuccin_mocha.theme".text = builtins.readFile

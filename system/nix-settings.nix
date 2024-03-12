@@ -1,8 +1,6 @@
-{ config, pkgs, lib, ... }:
+{ ... }:
 
-let
-  inherit (import ./options.nix) system;
-  inherit (import ../home/options.nix) userName;
+let inherit (import ../home/options.nix) userName;
 in {
   nix = {
     settings = {

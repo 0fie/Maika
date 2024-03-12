@@ -1,6 +1,6 @@
-{ config, pkgs, inputs, ... }:
+{ inputs, ... }:
 
-let inherit (import ./options.nix) userName gitUserName hostName;
+let inherit (import ./options.nix) userName gitUserName;
 
 in {
   home.sessionVariables.BROWSER = "firefox";

@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 
 let inherit (import ./options.nix) theTimezone theLocale theLCVariables;
 in {

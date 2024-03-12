@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 let inherit (import ./options.nix) gitUserName gitEmail;
 
 in {
-  programs.git = rec {
+  programs.git = {
     enable = true;
     userName = "${gitUserName}";
     userEmail = "${gitEmail}";

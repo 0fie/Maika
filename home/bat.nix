@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 {
   home.activation.buildBatCache = "${lib.getExe pkgs.bat} cache --build";

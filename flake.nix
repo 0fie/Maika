@@ -36,10 +36,6 @@
     let
       inherit (import ./system/options.nix) hostName system;
       inherit (import ./home/options.nix) userName;
-      pkgs = import nixpkgs {
-        inherit system;
-        config = { allowUnfree = true; };
-      };
     in {
       nixosConfigurations = {
         ${hostName} = nixpkgs.lib.nixosSystem {
