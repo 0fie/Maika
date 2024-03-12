@@ -1,14 +1,3 @@
-<!--toc:start-->
-- [Notable Features?](#notable-features)
-- [Philosophy and design principles](#philosophy-and-design-principles)
-- [How to Install?](#how-to-install)
-    - [Edit the 2 options.nix files](#edit-the-2-optionsnix-files)
-    - [Generate the suitable hardware configuration for your rig](#generate-the-suitable-hardware-configuration-for-your-rig)
-    - [Configure boot settings](#configure-boot-settings)
-  - [I stole about 30 percent of the code in this repo from the following sources:](#i-stole-about-30-percent-of-the-code-in-this-repo-from-the-following-sources)
-    - [Learning resources that have also been helpful](#learning-resources-that-have-also-been-helpful)
-<!--toc:end-->
-
 <h2 align="center">:snowflake: 0fie's Ultra-Simple NixOS Config :snowflake:</h2>
 
 <p align="center">
