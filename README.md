@@ -61,17 +61,30 @@ nixos-generate-config --show-hardware-config > system/hardware-configuration.nix
 This is the slightly complicated part. By default, my config is meant for ancient systems that use GRUB and legacy boot; BIOS, not UEFI.
 So unless your machine has BIOS or was made sometime before the year 2010, you use UEFI. You probably know what I'm trying (and failing)
 to explain so here is the way forward.
-If you're on UEFI, you need the boot config:
+If you're on UEFI, you need to add the boot config by running the following command.:
 
 ```bash
-echo '{ config, ... }:' > system/sys.nix 
-echo '' >> system/sys.nix 
-echo '{' >> system/sys.nix
-echo '  # Bootloader' >> system/sys.nix
-echo '  boot.loader.systemd-boot.enable = true;' >> system/sys.nix   
-echo '  boot.loader.efi.canTouchEfiVariables = true;' >> system/sys.nix   
-echo '  boot.kernel.sysctl = { "vm.max_map_count" = 2147483642; };' >> system/sys.nix  
-echo '  boot.tmp.useTmpfs = true;' >> system/sys.nix   
-echo '  boot.tmp.tmpfsSize = "25%";' >> system/sys.nix   
-echo '}' >> system/sys.nix 
+echo '
+{ pkgs, ... }:
+
+{
+  boot = {
+    tmp.cleanOnBoot = true;
+    supportedFilesystems = [ "ntfs" ];
+    loader = {
+      timeout = 10;
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    plymouth = {
+      enable = true;
+      themePackages = with pkgs; [(
+        adi1090x-plymouth-themes.override {
+          selected_themes = [ "connect" ];
+        }
+      )];
+    };
+  };
+}
+' > system/sys.nix
 ```
