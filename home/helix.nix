@@ -10,6 +10,7 @@
       nixfmt
       omnisharp-roslyn
       nodePackages.typescript-language-server
+      marksman
       nodePackages.vscode-langservers-extracted
     ];
 
