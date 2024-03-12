@@ -65,7 +65,7 @@ nixos-generate-config --show-hardware-config > system/hardware-configuration.nix
 This is the slightly complicated part. By default, my config is meant for ancient systems that use GRUB and legacy boot; BIOS, not UEFI.
 So unless your machine has BIOS or was made sometime before the year 2010, you use UEFI. You probably know what I'm trying (and failing)
 to explain so here is the way forward.
-If you're on UEFI, you need to add the boot config by running the following command.:
+If you're on UEFI, you need to add the boot config by **running** the following command.:
 
 ```bash
 echo '
