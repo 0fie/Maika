@@ -12,7 +12,8 @@ in {
       }
     '';
     shellAliases = {
-      # Custom
+      # ETC.
+      c = "clear";
       Done = "${scripts.notifyDone}/bin/script";
 
       # Git
@@ -23,21 +24,12 @@ in {
       gp = "${pkgs.git}/bin/git push origin main";
 
       # Nix
-      nb = "nix build";
-      nbn = "nix build nixpkgs#";
-      nd = "nix develop -c $env.SHELL";
-      nf = "nix flake";
       nrs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.#";
-      ns = "nix shell";
-      nsn = "nix shell nixpkgs#";
 
       # Modern yuunix, uwu <3 🤍
-      # TODO: Find more modern and convinient replacements for legacy yuunix tools.
-      c = "clear";
       cat = "${pkgs.bat}/bin/bat";
       cp = "${pkgs.advcpmv}/bin/advcp -g";
       df = "${pkgs.duf}/bin/duf";
-      ls = "${pkgs.eza}/bin/eza --git --icons";
       find = "${pkgs.fd}/bin/fd";
       grep = "${pkgs.ripgrep}/bin/rg";
       mv = "${pkgs.advcpmv}/bin/advmv -g";
@@ -99,7 +91,7 @@ in {
           ${str}'') "" (map (name: completion name) names);
     in ''
       $env.config = ${conf};
-      ${completions [ "cargo" "git" "nix" "npm" ]}
+      ${completions [ "git" "nix" "npm" ]}
     '';
   };
 }
