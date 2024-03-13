@@ -129,7 +129,7 @@ looking for a third person to help.
 
 
 #### Learning resources that have also been helpful
-- [NixOS and Flakes Book/](https://nixos-and-flakes.thiscute.world/)
+- [NixOS and Flakes Book/](https://nixos-and-flakes.thiscute.world)
 - [Xe's blog](https://xeiaso.net/blog)
 - [NixOS Discord](https://discord.com/invite/2HeKRM3)
 - [Zaney's Blog](https://zaney.org/)
