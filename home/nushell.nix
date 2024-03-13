@@ -25,23 +25,23 @@ in {
       # Nix
       nb = "nix build";
       nbn = "nix build nixpkgs#";
-      nd = "nix develop -c $SHELL";
+      nd = "nix develop -c $env.SHELL";
       nf = "nix flake";
-      nrs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.# && ${Done}";
+      #nrs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.# && ${Done}";
       ns = "nix shell";
       nsn = "nix shell nixpkgs#";
 
       # Modern yuunix, uwu <3 🤍
       # TODO: Find more modern and convinient replacements for legacy yuunix tools.
       c = "clear";
-      cat = "${pkgs.bat}/bin/bat $@";
+      cat = "${pkgs.bat}/bin/bat";
       cp = "${pkgs.advcpmv}/bin/advcp -g";
-      df = "${pkgs.duf}/bin/duf $@";
-      ls = "${pkgs.eza}/bin/eza --git --icons $@";
-      find = "${pkgs.fd}/bin/fd $@";
-      grep = "${pkgs.ripgrep}/bin/rg $@";
+      df = "${pkgs.duf}/bin/duf";
+      ls = "${pkgs.eza}/bin/eza --git --icons";
+      find = "${pkgs.fd}/bin/fd";
+      grep = "${pkgs.ripgrep}/bin/rg";
       mv = "${pkgs.advcpmv}/bin/advmv -g";
-      tree = "${pkgs.eza}/bin/eza --git --icons --tree $@";
+      tree = "${pkgs.eza}/bin/eza --git --icons --tree";
     };
 
     environmentVariables = {
