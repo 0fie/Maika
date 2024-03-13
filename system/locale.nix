@@ -2,10 +2,7 @@
 
 let inherit (import ./options.nix) theTimezone theLocale theLCVariables;
 in {
-  # Select internationalisation properties.
   i18n = {
-
-    # Select internationalisation properties
     defaultLocale = "${theLocale}";
     extraLocaleSettings = {
       LC_ADDRESS = "${theLCVariables}";
@@ -20,7 +17,6 @@ in {
     };
   };
 
-  # Configure your time settings.
   time = {
     timeZone = "${theTimezone}";
     hardwareClockInLocalTime = true;

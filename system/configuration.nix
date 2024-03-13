@@ -16,5 +16,6 @@
     ./users.nix
   ];
 
+  # Do not change this unless you truly understand what you're doing. It's actually fine as it is.
   system.stateVersion = "23.05";
 }
