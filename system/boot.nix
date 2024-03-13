@@ -11,6 +11,7 @@
     plymouth = { enable = true; };
   };
 
+  # tmpfs on /tmp for speed and less strain on SSD/HDD during builds.
   fileSystems = {
     "/tmp" = {
       device = "none";
