@@ -30,7 +30,7 @@
 | 🔔 Notification Daemon    | [Mako](https://wayland.emersion.fr/mako/)
 | 📂 File Managers          | [Nautilus](https://wiki.gnome.org/Apps/Files) + [LF](https://godoc.org/github.com/gokcehan/lf)
 | 🎥 Screenshots            | [Grim](https://github.com/emersion/grim) + [Slurp](https://github.com/emersion/slurp)
-| 🐚 Shell & Prompt         | [ZSH](https://www.zsh.org/) + [Starship](https://starship.rs/)
+| 🐚 Shell & Prompt         | [Nushell](https://www.nushell.sh/) + [Starship](https://starship.rs/)
 | 🌐 Web browser            | Firefox
 | 💼 Office suite           | LibreOffice
 | 🎧️ Media player           | VLC
