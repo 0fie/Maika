@@ -51,7 +51,6 @@ in {
       PROMPT_COMMAND_RIGHT = ''""'';
       SHELL = ''"${pkgs.nushell}/bin/nu"'';
       EDITOR = config.home.sessionVariables.EDITOR;
-      VISUAL = config.home.sessionVariables.VISUAL;
     };
 
     extraConfig = let
