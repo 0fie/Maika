@@ -6,7 +6,7 @@
   programs.kitty = {
     enable = true;
     shellIntegration.enableBashIntegration = true;
-    font.name = "JetBrainsMono Nerd Font Mono";
+    font.name = "JetBrainsMono Nerd Font";
     font.size = 11;
     settings = with config.colorScheme.palette; {
       background_opacity = "0.85";

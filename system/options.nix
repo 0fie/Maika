@@ -5,6 +5,6 @@
   theLCVariables = "en_ZW.UTF-8";
   theTimezone = "Africa/Harare";
   system = "X86_64-linux";
-  font = "jetbrains-mono";
+  fontPackage = "jetbrains-mono";
   fontName = "JetBrainsMono";
 }

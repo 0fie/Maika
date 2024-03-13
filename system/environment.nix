@@ -2,6 +2,14 @@
 
 {
   environment = {
-    systemPackages = with pkgs; [ zip unzip wl-clipboard git neovim ntfs3g ];
+    systemPackages = with pkgs; [
+      jetbrains-mono
+      zip
+      unzip
+      wl-clipboard
+      git
+      neovim
+      ntfs3g
+    ];
   };
 }
