@@ -19,6 +19,7 @@
 | Task                       | Utility
 | -------------------------- | :----------------------------------------------------------------------------------------------
 |  🪟 Compositor/WM          | [Hyprland](https://hyprland.org) (without Xwayland, I don't run X apps, yuck.)
+|  📶 Status Bar             | [Waybar](https://github.com/Alexays/Waybar) (easy to rice, just works)
 |    Terminal >>            | [Kitty](https://sw.kovidgoyal.net/kitty/) (bloated, I'm only there for the image protocol, its awesome)
 |    Code Editor >>         | [Helix](https://helix-editor.com) (the greatest code editor since Neovim)
 |  🔒️ Screenlock >>          | [Hyprlock](https://github.com/hyprwm/hyprlock) (This software is a work of art)
@@ -48,7 +49,7 @@ Nix package manager from there. And that's just about it. Simple, right?
 First of all, you're not supposed to install my NixOS config on your computer. I didn't have that kind of sharing in mind when I wrote
 these configs. You should cherry-pick the `.nix` files that you're interested in. Let's say you admire my Cava setup and you'd
 like to have it as part of your system... you'd simply copy my [home/cava.nix](home/cava.nix) file into **your** config directory, and then import it.
-However, if you're still adamant about installing my configs on your machine, or would like to fork my flake, follow the steps below.
+However, if you're still adamant about installing my configs on your machine, or would like to fork my flake, follow the cursed steps below.
 
 #### Edit the 2 options.nix files
 You can not install this NixOS config directly on your machine. Well... you can, but you gotta jump through some hoops first.
