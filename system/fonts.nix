@@ -1,6 +1,6 @@
 { pkgs, ... }:
 
-let inherit (import ./options.nix) fontPackage;
+let inherit (import ./options.nix) fontName;
 in {
   fonts = {
     packages = with pkgs;
@@ -8,8 +8,8 @@ in {
     enableDefaultPackages = true;
     fontconfig = {
       defaultFonts = rec {
-        monospace = [ "JetBrainsMono Mono" ];
-        sansSerif = [ "JetBrainsMono" ];
+        monospace = [ "${fontName} Mono" ];
+        sansSerif = [ "${fontName}" ];
         serif = sansSerif;
       };
     };

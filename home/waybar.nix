@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 let
+  inherit (import ../system/options.nix) fontName;
   scripts = import ./scripts.nix { inherit pkgs; };
   workspaces = {
     format = "{icon}";
@@ -160,7 +161,7 @@ let
     * {
         border: none;
         border-radius: 0px;
-        font-family: "JetBrainsMono, Symbols Nerd Font Mono";
+        font-family: "${fontName}";
         font-weight: bold;
         font-size: 14px;
         min-height: 0px;

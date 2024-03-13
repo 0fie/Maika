@@ -51,13 +51,13 @@
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
   programs.home-manager.enable = true;
 
-  home.file.".local/share/fonts" = {
-    recursive = true;
-    source = (pkgs.fetchFromGitHub {
-      owner = "0fie";
-      repo = "trash";
-      rev = "main";
-      sha256 = "sha256-yM/P7Dzg/42xkznKv6NGHvMMql0i4JYkmoYlfXOMP3A=";
-    } + "/fonts");
-  };
+  #home.file.".local/share/fonts" = {
+  #  recursive = true;
+  #  source = (pkgs.fetchFromGitHub {
+  #    owner = "0fie";
+  #    repo = "trash";
+  #    rev = "main";
+  #    sha256 = "sha256-yM/P7Dzg/42xkznKv6NGHvMMql0i4JYkmoYlfXOMP3A=";
+  #  } + "/fonts");
+  #};
 }
