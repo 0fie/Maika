@@ -5,6 +5,7 @@
     ./environment.nix
     ./fonts.nix
     ./hardware-configuration.nix
+    ./hw-acceleration.nix
     ./networking.nix
     ./nix-settings.nix
     ./locale.nix

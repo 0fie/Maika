@@ -1,7 +1,8 @@
-{ ... }:
+{ pkgs, ... }:
 
-# TODO: These configs should only be used if the users' full name is 0fie (me).
+# TODO: These configs should only be used if the users' full name is 0fie.
 {
+
   boot = {
     loader.grub = {
       enable = true;
@@ -22,18 +23,5 @@
   powerManagement = {
     enable = true;
     cpuFreqGovernor = "performance";
-  };
-
-  hardware = {
-    bluetooth = {
-      enable = true;
-      powerOnBoot = false;
-    };
-
-    opengl = {
-      enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
-    };
   };
 }
