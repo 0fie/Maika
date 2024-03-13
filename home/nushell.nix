@@ -15,6 +15,8 @@ in {
       # ETC.
       c = "clear";
       Done = "${scripts.notifyDone}/bin/script";
+      la = "ls -la";
+      ll = "ls -l";
 
       # Git
       ga = "${pkgs.git}/bin/git add";

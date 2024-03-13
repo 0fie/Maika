@@ -51,3 +51,4 @@ in {
     }];
   };
 }
+# All thanks to Fufexan for creating these amazing home-manager modules.

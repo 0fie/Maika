@@ -1,3 +1,4 @@
+# TODO: Make LibreOffice the default document opener.
 { config, pkgs, ... }:
 
 let

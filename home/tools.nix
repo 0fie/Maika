@@ -8,10 +8,8 @@
     git-extras
     iotop
     keepassxc
-    lf
     libreoffice
     loupe
-    nodePackages.prettier
     persepolis
     protonvpn-gui
     shotcut

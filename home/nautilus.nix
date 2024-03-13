@@ -1,3 +1,4 @@
+# TODO: Remove unnecessary gst-plugins
 { pkgs, lib, ... }:
 
 {
