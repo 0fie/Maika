@@ -15,12 +15,9 @@
       enable = true;
       extraPackages = with pkgs; [
         intel-media-driver
-        vaapi
-        Intel
-        vaapi
-        Vdpau
-        lib
-        vdpau-va-gl
+        vaapiIntel
+        vaapiVdpau
+        libvdpau-va-gl
       ];
       driSupport = true;
       driSupport32Bit = true;
