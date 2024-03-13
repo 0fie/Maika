@@ -4,9 +4,9 @@ let
   inherit (import ./options.nix) dotfilesDir;
   scripts = import ./scripts.nix { inherit pkgs; };
 in {
-  nushell = {
+  programs.nushell = {
     enable = true;
-    loginFile = ''
+    loginFile.text = ''
       if (tty) == "/dev/tty1" {
         exec Hyprland
       }
