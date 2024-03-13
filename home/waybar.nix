@@ -110,16 +110,6 @@ let
       tooltip-format = " {used:0.1f}GB/{total:0.1f}GB";
     };
 
-    network = {
-      format-disconnected = "";
-      format-ethernet = "󱘖 Wired";
-      format-linked = "󱘖 {ifname} (No IP)";
-      format-wifi = "󰤨 {essid}";
-      interval = 5;
-      max-length = 30;
-      tooltip-format = "󱘖 {ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}";
-    };
-
     pulseaudio = {
       format = "{icon}  {volume}%";
       format-icons = {
