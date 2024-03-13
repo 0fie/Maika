@@ -20,7 +20,7 @@ let
     mod = "dock";
     layer = "top";
     gtk-layer-shell = true;
-    height = 14;
+    #height = 14;
     position = "top";
 
     modules-left = [ "custom/logo" "hyprland/workspaces" ];
@@ -164,7 +164,7 @@ let
         font-family: "${fontName}";
         font-weight: bold;
         font-size: 14px;
-        min-height: 0px;
+        min-height: 11px;
     }
 
     window#waybar {

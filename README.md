@@ -18,22 +18,22 @@
 
 | Task                       | Utility
 | -------------------------- | :----------------------------------------------------------------------------------------------
-|  🪟 Compositor/WM          | [Hyprland](https://hyprland.org) (without Xwayland, I don't run X apps, yuck.)
-|  📶 Status Bar             | [Waybar](https://github.com/Alexays/Waybar) (easy to rice, just works)
-|    Terminal >>            | [Kitty](https://sw.kovidgoyal.net/kitty/) (bloated, I'm only there for the image protocol, its awesome)
-|    Code Editor >>         | [Helix](https://helix-editor.com) (the greatest code editor since Neovim)
-|  🔒️ Screenlock >>          | [Hyprlock](https://github.com/hyprwm/hyprlock) (This software is a work of art)
-|  💤 Idle management daemon | [Hypridle](https://github.com/hyprwm/hypridle) (Another work of art from [@vaxerski](https://github.com/vaxerski))
-|  🎨 Theme >>               | [Catppuccin](https://github.com/catppuccin/catppuccin) (the mocha variant, system-wide from CLI to GUI)
-|  🖼️  Image viewer           | [Loupe](https://apps.gnome.org/Loupe/) (GPU-accelarated, elegant UI)
-|  🚀 App Launcher           | [rofi-wayland](https://github.com/lbonn/rofi)
-|  🔔 Notification Daemon    | [Mako](https://wayland.emersion.fr/mako/)
-|  📂 File Managers          | [Nautilus](https://wiki.gnome.org/Apps/Files) + [LF](https://godoc.org/github.com/gokcehan/lf)
-|  🎥 Screenshots >>         | [Grim](https://github.com/emersion/grim) + [Slurp](https://github.com/emersion/slurp)
-|  🐚 Shell & Prompt         | [ZSH](https://www.zsh.org/) + [Starship](https://starship.rs/)
-|  🌐 Web browser            | Firefox
-|  💼 Office suite           | LibreOffice
-|  🎧️ Media player           | VLC
+| 🪟 Compositor/WM          | [Hyprland](https://hyprland.org) (without Xwayland, I don't run X apps, yuck.)
+| 📶 Status Bar             | [Waybar](https://github.com/Alexays/Waybar) (easy to rice, just works)
+|   Terminal               | [Kitty](https://sw.kovidgoyal.net/kitty/) (bloated, I'm only there for the image protocol, its awesome)
+|   Code Editor            | [Helix](https://helix-editor.com) (the greatest code editor since Neovim)
+| 🔒️ Screenlock             | [Hyprlock](https://github.com/hyprwm/hyprlock) (This software is a work of art)
+| 💤 Idle management daemon | [Hypridle](https://github.com/hyprwm/hypridle) (Another work of art from [@vaxerski](https://github.com/vaxerski))
+| 🎨 Theme                  | [Catppuccin](https://github.com/catppuccin/catppuccin) (the mocha variant, system-wide from CLI to GUI)
+|  🖼️  Image viewer          | [Loupe](https://apps.gnome.org/Loupe/) (GPU-accelarated, elegant UI)
+| 🚀 App Launcher           | [rofi-wayland](https://github.com/lbonn/rofi)
+| 🔔 Notification Daemon    | [Mako](https://wayland.emersion.fr/mako/)
+| 📂 File Managers          | [Nautilus](https://wiki.gnome.org/Apps/Files) + [LF](https://godoc.org/github.com/gokcehan/lf)
+| 🎥 Screenshots            | [Grim](https://github.com/emersion/grim) + [Slurp](https://github.com/emersion/slurp)
+| 🐚 Shell & Prompt         | [ZSH](https://www.zsh.org/) + [Starship](https://starship.rs/)
+| 🌐 Web browser            | Firefox
+| 💼 Office suite           | LibreOffice
+| 🎧️ Media player           | VLC
 
 
 ## Philosophy and design principles

@@ -22,7 +22,7 @@ in {
       general = {
         gaps_in = 5;
         gaps_out = 10;
-        border_size = 1;
+        border_size = 2;
         "col.active_border" =
           "rgba(${config.colorScheme.palette.base0E}ff) rgba(${config.colorScheme.palette.base09}ff) 60deg";
         layout = "master";
@@ -58,7 +58,7 @@ in {
       };
 
       decoration = {
-        rounding = 5;
+        rounding = 7;
         drop_shadow = true;
         shadow_range = 30;
         shadow_render_power = 3;
@@ -66,11 +66,15 @@ in {
         "col.shadow" = "rgba(1a1a1aee)";
         blur = {
           enabled = true;
-          size = 10;
-          xray = true;
+          size = 1;
           passes = 5;
+          xray = true;
           new_optimizations = true;
-          ignore_opacity = false;
+          ignore_opacity = true;
+          contrast = 0.7;
+          brightness = 0.8;
+          vibrancy = 0.2;
+          special = true; # expensive, but helps distinguish special workspaces
         };
       };
 
