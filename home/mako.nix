@@ -1,11 +1,12 @@
 { config, pkgs, ... }:
 
-{
+let inherit (import ../system/options.nix) fontName;
+in {
   home.packages = with pkgs; [ libnotify ];
 
   services.mako = {
     enable = true;
-    font = "JetBrainsMono Nerd Font 12";
+    font = "${fontName}";
     margin = "0,20,20";
     padding = "10";
     borderSize = 2;

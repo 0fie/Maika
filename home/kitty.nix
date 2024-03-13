@@ -1,12 +1,13 @@
 { config, ... }:
 
-{
+let inherit (import ../system/options.nix) fontName;
+in {
   home.sessionVariables.TERMINAL = "kitty";
 
   programs.kitty = {
     enable = true;
     shellIntegration.enableBashIntegration = true;
-    font.name = "JetBrainsMono Nerd Font";
+    font.name = "${fontName}";
     font.size = 11;
     settings = with config.colorScheme.palette; {
       background_opacity = "0.6";
