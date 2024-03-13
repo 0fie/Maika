@@ -11,7 +11,7 @@ in {
       extraGroups = [ "networkmanager" "wheel" ];
       hashedPassword =
         "$y$j9T$RESLq/fRruOfj/mdwU7MQ/$Hf7riy3m/QEwAmzxU8UBvU1NASKqshloGjhXripIlg6";
-      shell = pkgs.zsh;
+      shell = pkgs.nushell;
     };
   };
 
