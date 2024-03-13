@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   programs.helix = {
     enable = true;
-    defaultEditor = true;
+    defaultEditor = lib.mkForce true;
 
     extraPackages = with pkgs; [
       nil
@@ -44,10 +44,7 @@
           C-q = ":bclose";
           tab = "goto_next_buffer";
           S-tab = "goto_previous_buffer";
-          space = {
-            f = ":fmt";
-            b = "file_picker";
-          };
+          space = { f = ":fmt"; };
           g.a = "code_action";
           Z.Z = ":wq";
         };
