@@ -25,7 +25,7 @@ let
 
     modules-left = [ "custom/logo" "hyprland/workspaces" ];
     modules-right =
-      [ "network" "bluetooth" "pulseaudio" "custom/battery" "clock" "tray" ];
+      [ "bluetooth" "pulseaudio" "custom/battery" "clock" "tray" ];
 
     "wlr/workspaces" = workspaces;
     "hyprland/workspaces" = workspaces;
