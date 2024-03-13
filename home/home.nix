@@ -26,7 +26,6 @@
     ./tools.nix
     ./waybar.nix
     ./xdg.nix
-    ./zathura.nix
     inputs.hyprland.homeManagerModules.default
     inputs.hypridle.homeManagerModules.hypridle
     inputs.hyprlock.homeManagerModules.hyprlock
