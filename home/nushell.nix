@@ -11,7 +11,7 @@ in {
         exec Hyprland
       }
     '';
-    shellAliases = rec {
+    shellAliases = {
       # Custom
       Done = "${scripts.notifyDone}/bin/script";
 
@@ -27,7 +27,7 @@ in {
       nbn = "nix build nixpkgs#";
       nd = "nix develop -c $env.SHELL";
       nf = "nix flake";
-      #nrs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.# && ${Done}";
+      nrs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.#";
       ns = "nix shell";
       nsn = "nix shell nixpkgs#";
 

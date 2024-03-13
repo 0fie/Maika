@@ -49,7 +49,7 @@
       devShells = forAllSystems ({ pkgs }: {
         default = pkgs.mkShell {
           # The Nix packages provided in the environment
-          packages = with pkgs; [ ];
+          packages = [ ];
         };
       });
       nixosConfigurations = {
