@@ -121,7 +121,7 @@ looking for a third person to help.
 
 ### I stole about 30 percent of the code in this repo from the following sources:
 
-- [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Several dozen snippets, Helix config, UEFI boot stuff for the instructions above
+- [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell, Helix config, UEFI boot stuff for the instructions above
 - [NotAShelf/Nyx](https://github.com/NotAShelf/Nyx) - Hyprland animations, Helix config, plus dozens of other snippets from their ultra-complex setup
 - [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - Firefox declaration with addons, Helix config
 - [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - Catppuccin themes for CLI tools like bat, cava etc. Copied as is, without modification. Thank you!
