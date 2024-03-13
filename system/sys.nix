@@ -1,22 +1,27 @@
 { pkgs, ... }:
 
-# TODO: These configs should only be used if the users' full name is 0fie.
 {
-
-  boot = {
-    loader.grub = {
-      enable = true;
-      device = "/dev/sda";
-      useOSProber = true;
-    };
-    plymouth = { enable = true; };
+  nixpkgs.config.packageOverrides = pkgs: {
+    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
   };
 
-  fileSystems = {
-    "/tmp" = {
-      device = "none";
-      fsType = "tmpfs";
-      options = [ "defaults" "size=30%" "mode=755" ];
+  hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+    };
+
+    # Hardware acceleration.
+    opengl = {
+      enable = true;
+      extraPackages = with pkgs; [
+        intel-media-driver
+        vaapiIntel
+        vaapiVdpau
+        libvdpau-va-gl
+      ];
+      driSupport = true;
+      driSupport32Bit = true;
     };
   };
 
