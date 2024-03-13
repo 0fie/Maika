@@ -66,8 +66,8 @@ in {
         "col.shadow" = "rgba(1a1a1aee)";
         blur = {
           enabled = true;
-          size = 1;
-          passes = 5;
+          size = 2;
+          passes = 4;
           xray = true;
           new_optimizations = true;
           ignore_opacity = true;
