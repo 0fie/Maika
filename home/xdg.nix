@@ -1,14 +1,13 @@
-# TODO: Make LibreOffice the default document opener.
 { config, pkgs, ... }:
 
 let
   imageViewer = "org.gnome.Loupe.desktop";
   mediaPlayer = "vlc.desktop";
   browser = "firefox.desktop";
-  docOpener = "zathura.desktop";
+  docOpener = "libreoffice.desktop";
   fileManager = "org.gnome.Nautilus.desktop";
   torrentClient = "transmission-gtk.desktop";
-  textEditor = "neovim.desktop";
+  textEditor = "helix.desktop";
 in {
   home.packages = with pkgs; [ xdg-utils ];
   xdg = {
