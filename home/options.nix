@@ -31,7 +31,8 @@
 
   ##########################################
   # Your git email.
-  # Make sure it is correct and verified by GitHub... otherwise your contribution will not be recognised.
+  # Make sure it is correct and verified by GitHub... otherwise your contributions will not be recognised or displayed
+  # on your GitHub profile's 'contributions' section.
   # Required by home/git.nix
   gitEmail = "151028199+0fie@users.noreply.github.com";
 
