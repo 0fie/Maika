@@ -585,7 +585,8 @@
         "hyprlock": "hyprlock",
         "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs_2",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "trash": "trash"
       }
     },
     "systems": {
@@ -675,6 +676,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "trash": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1710413562,
+        "narHash": "sha256-ltZOuqOW8qTkgrGflEeXm2t7p+J4Jo28j7ssRM8hYQY=",
+        "owner": "0fie",
+        "repo": "trash",
+        "rev": "dfe1a56ef68c82e08d23903508ce6e8ad779f463",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0fie",
+        "repo": "trash",
         "type": "github"
       }
     },
