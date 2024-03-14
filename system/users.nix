@@ -2,7 +2,7 @@
 
 let inherit (import ../home/options.nix) userName userFullName;
 in {
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # You can change the user name by editing home/options.nix
   users = {
     mutableUsers = true;
     users.${userName} = {

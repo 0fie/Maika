@@ -1,11 +1,11 @@
+# If you'd like to change the font, see system/options.nix
+# There's nothing much to edit here.
 { pkgs, ... }:
 
 let inherit (import ./options.nix) fontName fontPackage;
 in {
   fonts = {
     packages = with pkgs;
-    # Add your preferred nerd font below, and then edit system/options.nix to set it as the default font. Under normal
-    # circumstances, it's the only line you should edit in this file.
       [ (nerdfonts.override { fonts = [ "${fontPackage}" ]; }) ];
     enableDefaultPackages = true;
     fontconfig = {

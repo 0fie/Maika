@@ -12,14 +12,16 @@
     gnome.gnome-keyring.enable = true;
     blueman.enable = true; # GUI Bluetooth manager.
 
+    # Trim SSD in the background, once every month.
+    # You can set this to "weekly";
     fstrim = {
-      enable = true; # Trim SSD in the background, once every month.
+      enable = true;
       interval = "monthly";
     };
   };
 
   xdg.portal = with pkgs; {
-    # These allow basic Desktop capabilities like screen-sharing and 'drag and drop'.
+    # These enable basic Desktop capabilities like screen-sharing and 'drag and drop'.
     enable = true;
     extraPortals = [ xdg-desktop-portal-gtk xdg-desktop-portal ];
     configPackages =
