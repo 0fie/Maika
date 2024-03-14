@@ -5,6 +5,7 @@
   home.packages = with pkgs; [
     exiftool
     file
+    gimp
     git-extras
     iotop
     keepassxc
