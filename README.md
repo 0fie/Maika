@@ -126,6 +126,7 @@ looking for a third person to help.
 - [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - Firefox declaration with addons, Helix config
 - [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - Catppuccin themes for CLI tools like bat, cava etc. Copied as is, without modification. Thank you!
 - [Zaney/zaneyos](https://gitlab.com/Zaney/zaneyos) - Several snippets & Nixvim although I no longer use it
+- [My Linux For Work Dotfile 2.8](https://gitlab.com/stephan-raabe/dotfiles) - Inspiration for hyprlock and hypridle
 
 
 #### Learning resources that have also been helpful
