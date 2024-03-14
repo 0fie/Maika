@@ -1,7 +1,7 @@
 <h2 align="center">:snowflake: 0fie's Ultra-Simple NixOS Config :snowflake:</h2>
 
 <p align="center">
-  <img src="https://github.com/0fie/Dotfiles/assets/151028199/874b8a4b-c2c4-4fe7-9afd-bdcaff236843" width="400" />
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="400" />
 </p>
 
 <p align="center">
