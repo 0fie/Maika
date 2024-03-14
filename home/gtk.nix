@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   gtk = {
@@ -34,11 +34,12 @@
   # The bibata-cursors package in nixpkgs downloads over 400MB worth of assets. I only need the 2MB "modern-ice".
   # I don't know if or how the package can be overriden. So this is a quick hack to save my time and bandwidth.
   home.file.".icons/default" = {
-    source = (pkgs.fetchFromGitHub {
-      owner = "0fie";
-      repo = "trash";
-      rev = "main";
-      sha256 = "sha256-psXD7z1UecJo7E1ocFFWe3QDRVbaF+dDzhmuXtvsPo8=";
-    } + "/My-Bibata-Modern-Ice");
+    source = "${inputs.trash}/My-Bibata-Modern-Ice";
+    #(pkgs.fetchFromGitHub {
+    #  owner = "0fie";
+    #  repo = "trash";
+    #  rev = "main";
+    #  sha256 = "sha256-psXD7z1UecJo7E1ocFFWe3QDRVbaF+dDzhmuXtvsPo8=";
+    #} + "/My-Bibata-Modern-Ice");
   };
 }

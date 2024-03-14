@@ -1,5 +1,4 @@
-# TODO: Setup fuzzy finding and interpolate cli tools in scripts.
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   programs.lf = {
@@ -12,9 +11,6 @@
       r = "push :rename<space>";
       x = "delete";
       "." = "set hidden!";
-      z = "zip";
-      Z = "unzip";
-      f = "fzf";
 
       p = "paste";
       dd = "cut";
@@ -26,8 +22,6 @@
       gd = "cd ~/Downloads";
       gc = "cd ~/.config";
       gp = "cd ~/Projects";
-      gm = "cd /run/media";
-      gn = "cd /etc/nixos";
 
       e = "editor-open";
       V = ''''$${pkgs.bat}/bin/bat --paging=always "$f"'';
@@ -61,19 +55,5 @@
     '';
   };
 
-  xdg.configFile."lf/icons".text = builtins.readFile (pkgs.fetchFromGitHub {
-    owner = "0fie";
-    repo = "trash";
-    rev = "main";
-    sha256 = "sha256-psXD7z1UecJo7E1ocFFWe3QDRVbaF+dDzhmuXtvsPo8=";
-  } + "/icons");
-
-  # TODO: LF should not have a desktop entry
-  # xdg.desktopEntries = {
-  #   "lf" = {
-  #     exec = "";
-  #     name = "LF";
-  #     settings.NoDisplay = "true";
-  #   };
-  # };
+  xdg.configFile."lf/icons".source = "${inputs.trash}/icons";
 }
