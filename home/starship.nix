@@ -3,7 +3,6 @@
 {
   programs.starship = {
     enable = true;
-    settings =
-      lib.importTOML (builtins.readFile "${inputs.trash}/starship.toml");
+    settings = lib.importTOML "${inputs.trash}/starship.toml";
   };
 }
