@@ -35,6 +35,11 @@
       url = "github:0fie/trash";
       flake = false;
     };
+
+    catppuccin-starship = {
+      url = "github:catppuccin/starship";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
