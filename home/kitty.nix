@@ -69,9 +69,5 @@ in {
       listen_on = "unix:/tmp/kitty";
       shell_integration = "enabled";
     };
-
-    extraConfig = ''
-      symbol_map U+E0A0-U+E0A3,U+E0C0-U+E0C7 SymbolsNFM
-    '';
   };
 }

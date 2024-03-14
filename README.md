@@ -105,7 +105,7 @@ echo '
     };
   };
 }
-' > system/sys.nix
+' > system/boot.nix
 ```
 
 If you've made it this far, run
