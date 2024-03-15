@@ -61,6 +61,7 @@ in {
         "float,udiskie"
         "float,title:^(Transmission)$"
         "float,title:^(Volume Control)$"
+        "float,title:^(Library)$"
         "size 700 450,title:^(Volume Control)$"
       ];
       windowrulev2 = [
