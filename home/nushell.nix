@@ -29,7 +29,7 @@ in {
       # Nix
       nrs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.#";
 
-      # Modern yuunix, uwu <3 🤍
+      # Modern yuunix, uwu <3
       cat = "${pkgs.bat}/bin/bat";
       cp = "${pkgs.advcpmv}/bin/advcp -g";
       df = "${pkgs.duf}/bin/duf";
@@ -44,7 +44,6 @@ in {
       PROMPT_INDICATOR_VI_NORMAL = ''"∙ "'';
       PROMPT_COMMAND = ''""'';
       PROMPT_COMMAND_RIGHT = ''""'';
-      DIRENV_LOG_LEVEL = ''""'';
       SHELL = ''"${pkgs.nushell}/bin/nu"'';
       EDITOR = config.home.sessionVariables.EDITOR;
     };

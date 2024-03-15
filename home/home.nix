@@ -41,6 +41,7 @@
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
       ELECTRON_USE_WAYLAND = "1";
+      DIRENV_LOG_FORMAT = "";
       POLKIT_BIN =
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
     };
