@@ -8,6 +8,7 @@
     gimp
     git-extras
     iotop
+    jetbrains.rider
     keepassxc
     libreoffice
     loupe
