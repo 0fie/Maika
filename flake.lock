@@ -441,11 +441,11 @@
     "trash": {
       "flake": false,
       "locked": {
-        "lastModified": 1710464034,
-        "narHash": "sha256-tMDfij8bEkRa0Ay6avWbJuQA/oaRRPYhPPsxoAnsDIo=",
+        "lastModified": 1710506931,
+        "narHash": "sha256-v8cUTyg6WtMGvJeWp5E2qgJXaH0GZ0l5iMJCHQUUTcE=",
         "owner": "0fie",
         "repo": "trash",
-        "rev": "6f0dd794eac88f2de67ef90a33b90a5ea53f303d",
+        "rev": "67efeda689734638219f644bf39e1af7e938947e",
         "type": "github"
       },
       "original": {
