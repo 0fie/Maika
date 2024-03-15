@@ -72,7 +72,7 @@ in {
         "float,class:^(notification)$"
         "float,title:^(File Operation Progress)$"
       ];
-      #layerrule = [ "blur,waybar" ];
+      layerrule = [ "blur,waybar" ];
 
       decoration = {
         rounding = 7;
@@ -80,8 +80,8 @@ in {
         "col.shadow" = "rgba(1a1a1aee)";
         blur = {
           enabled = true;
-          size = 3;
-          passes = 5;
+          size = 5;
+          passes = 2;
           new_optimizations = true;
         };
       };
