@@ -121,6 +121,9 @@ sudo nixos-rebuild boot --flake .# && reboot
 > The instructions above were never tested, lol 😅
 
 
+<hr>
+
+
 ### I got a lot of inspiration as well as actual code from the following sources:
 
 - [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell, Helix config, UEFI boot stuff for the instructions above
