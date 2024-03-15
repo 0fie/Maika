@@ -10,7 +10,7 @@ in {
     font.name = "${fontName}";
     font.size = 11;
     settings = with config.colorScheme.palette; {
-      background_opacity = "0.6";
+      background_opacity = "0.55";
       enable_audio_bell = "no";
 
       cursor = "#${base06}";
