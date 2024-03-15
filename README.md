@@ -14,10 +14,10 @@
   </a>
 </p>
 
-## Notable Features?
+## Applications
 
-| Task                       | Utility
-| -------------------------- | :----------------------------------------------------------------------------------------------
+| Type                      | Program
+| --------------------------| :----------------------------------------------------------------------------------------------
 | 🪟 Compositor/WM          | [Hyprland](https://hyprland.org) (without Xwayland, I don't run X apps, yuck.)
 |   Code Editor            | [Helix](https://helix-editor.com) (the greatest code editor since Neovim)
 | 🐚 Shell & Prompt         | [Nushell](https://www.nushell.sh/) + [Starship](https://starship.rs/)
