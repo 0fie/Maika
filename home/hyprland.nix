@@ -116,7 +116,7 @@ in {
         "$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
         "$mainMod,        d,   exec,   ${pkgs.discord}/bin/discord"
         "$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
-        ",            Print,   exec,   ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g- && notify-send 'Screenshot saved 📷️'"
+        ",            Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify --cursor save area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
         "ALT,        return,   exec,   ${pkgs.pyprland}/bin/pypr toggle term && hyprctl dispatch bringactivetotop"
 
         # Control media players.
