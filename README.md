@@ -131,13 +131,13 @@ sudo nixos-rebuild boot --flake .# && reboot
 - [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - Firefox declaration with addons, Helix config
 - [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - Catppuccin themes for CLI tools like bat, cava etc. Thank you!
 - [My Linux For Work Dotfiles 2.7 - 2.8](https://gitlab.com/stephan-raabe/dotfiles) - Inspiration for hyprlock and hypridle
-- [isabelroses/dotfiles/](https://github.com/isabelroses/dotfiles/) - Catppuccin for SDDM and Plymouth, thank you!
+- [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles/) - Catppuccin for SDDM and Plymouth, thank you!
 - [prasanthrangan/hyprdots](https://github.com/prasanthrangan/hyprdots) - Hyprland animations
 - [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Maxfetch, Starship, Kitty
 
 
 #### Other learning resources that have also been helpful
-- [NixOS and Flakes Book/](https://nixos-and-flakes.thiscute.world)
+- [NixOS and Flakes Book](https://nixos-and-flakes.thiscute.world)
 - [Vimjoyer's Nix playlist](https://www.youtube.com/playlist?list=PLko9chwSoP-15ZtZxu64k_CuTzXrFpxPE)
 - [NixOS Discord](https://discord.com/invite/2HeKRM3)
 - [Zaney's Blog](https://zaney.org/)
