@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 let
   inherit (import ./options.nix) dotfilesDir;
@@ -17,6 +17,7 @@ in {
       Done = "${scripts.notifyDone}/bin/script";
       la = "ls -la";
       ll = "ls -l";
+      mf = "bash ${inputs.trash}/maxfetch.sh";
 
       # Git
       ga = "${pkgs.git}/bin/git add";
