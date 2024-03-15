@@ -172,6 +172,10 @@ in {
               name = "discord";
               url = "https://nixos.org";
             }
+            {
+              name = "Noogle (nix func search)";
+              url = "https://noogle.dev";
+            }
           ];
         }
 
