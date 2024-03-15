@@ -29,7 +29,6 @@
     inputs.hypridle.homeManagerModules.hypridle
     inputs.hyprlock.homeManagerModules.hyprlock
     inputs.nix-colors.homeManagerModules.default
-    inputs.nixvim.homeManagerModules.nixvim
   ];
 
   # Info required by home-manager.
