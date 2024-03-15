@@ -29,6 +29,12 @@
 <br>
 </div>
 
+<p align="center">
+   <img src="https://github.com/0fie/Dotfiles/assets/151028199/b70cdfd9-eb34-4e63-8cc6-7033ef1bd260" width="800px" /> <br>
+</p>
+<p align="center">
+   Screeenshot last updated <b>2024-03-3</b>
+</p>
 ## Applications
 
 | Type                      | Program                                       
