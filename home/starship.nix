@@ -16,10 +16,10 @@
       character = {
         success_symbol = "[ ](bold #89b4fa)[ ➜](bold green)";
         error_symbol = "[ ](bold #89b4fa)[ ➜](bold red)";
-        # error_symbol = "[ ](bold #89dceb)[ ✗](bold red)";
       };
 
       cmd_duration = {
+        min_time = 10;
         format =
           "[]($style)[[󰔚 ](bg:#161821 fg:#d4c097 bold)$duration](bg:#161821 fg:#BBC3DF)[ ]($style)";
         disabled = false;
@@ -28,7 +28,7 @@
 
       directory.substitutions = {
         "~" = "󰋞";
-        "Documents" = " ";
+        "Documents" = " ";
         "Downloads" = " ";
         "Music" = " ";
         "Pictures" = " ";
