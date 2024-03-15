@@ -16,7 +16,7 @@
 
 ## Applications
 
-| Type                      | Program
+| Type                      | Program                                       
 | --------------------------| :----------------------------------------------------------------------------------------------
 | 🪟 Compositor/WM          | [Hyprland](https://hyprland.org)
 |   Code Editor            | [Helix](https://helix-editor.com)
@@ -136,7 +136,7 @@ sudo nixos-rebuild boot --flake .# && reboot
 - [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Maxfetch, Starship, Kitty, Discord, Hyprland window rules
 
 
-#### Other learning resources that have also been helpful
+### Other learning resources that have also been helpful
 - [NixOS and Flakes Book](https://nixos-and-flakes.thiscute.world)
 - [Vimjoyer's Nix playlist](https://www.youtube.com/playlist?list=PLko9chwSoP-15ZtZxu64k_CuTzXrFpxPE)
 - [NixOS Discord](https://discord.com/invite/2HeKRM3)
