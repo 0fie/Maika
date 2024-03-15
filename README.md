@@ -119,7 +119,7 @@ If you need help with your NixOS config, contact me via Discord [here](). I'm no
 looking for a third person to help.
 
 
-### I stole about 30 percent of the code in this repo from the following sources:
+### I got a lot of inspiration as well as actual code from the following sources:
 
 - [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell, Helix config, UEFI boot stuff for the instructions above
 - [NotAShelf/Nyx](https://github.com/NotAShelf/Nyx) - Helix config, plus dozens of other snippets from their ultra-complex setup
@@ -131,7 +131,7 @@ looking for a third person to help.
 - [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Maxfetch, Starship, Kitty
 
 
-#### Learning resources that have also been helpful
+#### Other learning resources that have also been helpful
 - [NixOS and Flakes Book/](https://nixos-and-flakes.thiscute.world)
 - [Vimjoyer's Nix playlist](https://www.youtube.com/playlist?list=PLko9chwSoP-15ZtZxu64k_CuTzXrFpxPE)
 - [NixOS Discord](https://discord.com/invite/2HeKRM3)
