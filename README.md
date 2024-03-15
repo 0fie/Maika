@@ -117,9 +117,8 @@ If you've made it this far, run
 sudo nixos-rebuild boot --flake .# && reboot
 ```
 
-Finally, I will mention that the instructions above were never tested. If you actually succeed, let me know... lol.
-If you need help with your NixOS config, contact me via Discord [here](). I'm not very good at Nix though... so we might end up
-looking for a third person to help.
+> [!WARNING]
+> The instructions above were never tested, lol 😅
 
 
 ### I got a lot of inspiration as well as actual code from the following sources:
