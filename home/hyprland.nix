@@ -57,14 +57,31 @@ in {
         animate_mouse_windowdragging = true;
       };
 
+      windowrule = [
+        "float,udiskie"
+        "float,title:^(Transmission)$"
+        "float,title:^(Volume Control)$"
+        "size 700 450,title:^(Volume Control)$"
+      ];
+      windowrulev2 = [
+        "float,class:^(pavucontrol)$"
+        "float,class:^(file_progress)$"
+        "float,class:^(confirm)$"
+        "float,class:^(dialog)$"
+        "float,class:^(download)$"
+        "float,class:^(notification)$"
+        "float,title:^(File Operation Progress)$"
+      ];
+      #layerrule = [ "blur,waybar" ];
+
       decoration = {
         rounding = 7;
         fullscreen_opacity = 1.0;
         "col.shadow" = "rgba(1a1a1aee)";
         blur = {
           enabled = true;
-          size = 5;
-          passes = 3;
+          size = 3;
+          passes = 5;
           new_optimizations = true;
         };
       };
