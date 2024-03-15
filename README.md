@@ -18,15 +18,15 @@
 
 | Type                      | Program
 | --------------------------| :----------------------------------------------------------------------------------------------
-| 🪟 Compositor/WM          | [Hyprland](https://hyprland.org) (without Xwayland, I don't run X apps, yuck.)
-|   Code Editor            | [Helix](https://helix-editor.com) (the greatest code editor since Neovim)
-| 🐚 Shell & Prompt         | [Nushell](https://www.nushell.sh/) + [Starship](https://starship.rs/)
-| 🔒️ Screenlock             | [Hyprlock](https://github.com/hyprwm/hyprlock) (This software is a work of art)
-| 💤 Idle management daemon | [Hypridle](https://github.com/hyprwm/hypridle) (Another work of art from [@vaxerski](https://github.com/vaxerski))
-| 📶 Status Bar             | [Waybar](https://github.com/Alexays/Waybar) (easy to rice, just works)
-|   Terminal               | [Kitty](https://sw.kovidgoyal.net/kitty/) (feature rich, got most things correct)
-| 🎨 Theme                  | [Catppuccin](https://github.com/catppuccin/catppuccin) (the mocha variant, system-wide from CLI to GUI)
-|  🖼️  Image viewer          | [Loupe](https://apps.gnome.org/Loupe/) (GPU-accelarated, elegant UI)
+| 🪟 Compositor/WM          | [Hyprland](https://hyprland.org)
+|   Code Editor            | [Helix](https://helix-editor.com)
+| 🐚 Shell & Prompt         | [Nushell](https://www.nushell.sh/)
+| 🔒️ Screenlock             | [Hyprlock](https://github.com/hyprwm/hyprlock)
+| 💤 Idle management daemon | [Hypridle](https://github.com/hyprwm/hypridle)
+| 📶 Status Bar             | [Waybar](https://github.com/Alexays/Waybar)
+|   Terminal               | [Kitty](https://sw.kovidgoyal.net/kitty/)
+| 🎨 Theme                  | [Catppuccin](https://github.com/catppuccin/catppuccin)
+|  🖼️  Image viewer          | [Loupe](https://apps.gnome.org/Loupe/)
 | 🚀 App Launcher           | [rofi-wayland](https://github.com/lbonn/rofi)
 | 🔔 Notification Daemon    | [Mako](https://wayland.emersion.fr/mako/)
 | 📂 File Managers          | [Nautilus](https://wiki.gnome.org/Apps/Files) + [LF](https://godoc.org/github.com/gokcehan/lf)
@@ -142,4 +142,4 @@ sudo nixos-rebuild boot --flake .# && reboot
 - [NixOS Discord](https://discord.com/invite/2HeKRM3)
 - [Zaney's Blog](https://zaney.org/)
 
--##### Special thanks to [NobbZ](https://github.com/NobbZ) for answering all my questions on Discord.
+##### Special thanks to [NobbZ](https://github.com/NobbZ) for answering all my questions on Discord.
