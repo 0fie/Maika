@@ -37,15 +37,15 @@
 </p>
 
 ### 📓 Components
-|                             | NixOS + Hyprland                                                                              |
+| Type                        | Program                                                                                       |
 | --------------------------- | :---------------------------------------------------------------------------------------------:
 | **Compositor**              | [Hyprland][Hyprland] |
 | **Lockscreen**              | [Hyprlock][Hyprlock] |
 | **Idle Mgmt. Daemon**       | [Hypridle][Hypridle] |
 | **Wallpaper Setter**        | [Hyprpaper][Hyprpaper] |
-| **Terminal Emulator**       | [Kitty][Kitty] |
 | **Text Editor**             | [Helix][Helix] |
 | **Shell**                   | [Nushell][Nushell] + [Starship][Starship] |
+| **Terminal Emulator**       | [Kitty][Kitty] |
 | **Notification Daemon**     | [Mako][Mako] |
 | **Color Scheme**            | [Catppuccin][Catppuccin] |
 | **Screenshot Software**     | [Grimblast][Grimblast] |
