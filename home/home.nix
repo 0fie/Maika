@@ -6,6 +6,7 @@
     ./btop.nix
     ./cava.nix
     ./direnv.nix
+    ./discord.nix
     ./firefox.nix
     ./git.nix
     ./gtk.nix
