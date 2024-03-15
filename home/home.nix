@@ -24,7 +24,7 @@
     ./spotify.nix
     ./starship.nix
     ./tools.nix
-    ./vscode.nix
+    #./vscode.nix
     ./waybar.nix
     ./xdg.nix
     inputs.hyprland.homeManagerModules.default
