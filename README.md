@@ -1,6 +1,5 @@
 <h1 align="center">
-   <img src="./.gi![nixos-logo](https://github.com/0fie/Dotfiles/assets/151028199/6da7fe65-6661-4bb6-b5bc-b72aa6d79a7a)
-s-logo.png  " width="100px" /> 
+   <img src="https://github.com/0fie/Dotfiles/assets/151028199/6da7fe65-6661-4bb6-b5bc-b72aa6d79a7a" width="100px" /> 
    <br>
       0fie's ultra-simple NixOS Config 
    <br>
