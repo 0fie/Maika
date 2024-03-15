@@ -2,17 +2,6 @@
 
 {
   services = {
-    greetd = {
-      enable = true;
-      settings = {
-        default_session = {
-          command =
-            "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-          user = "greeter";
-        };
-      };
-    };
-
     # Devmon monitors for new storage devices. Udisks2 allows apps like Nautilus to query and manipulate
     # storage devices. Gnome-keyring enables apps to display an auth dialog when attempting to perform privileged operations.
     # operations, like mounting another partition.
