@@ -73,7 +73,7 @@ in {
         "float,class:^(notification)$"
         "float,title:^(File Operation Progress)$"
       ];
-      layerrule = [ "blur,waybar" ];
+      #layerrule = [ "blur,waybar" ];
 
       decoration = {
         rounding = 7;
