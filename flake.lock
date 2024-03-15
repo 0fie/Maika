@@ -699,11 +699,11 @@
     "trash": {
       "flake": false,
       "locked": {
-        "lastModified": 1710413562,
-        "narHash": "sha256-ltZOuqOW8qTkgrGflEeXm2t7p+J4Jo28j7ssRM8hYQY=",
+        "lastModified": 1710464034,
+        "narHash": "sha256-tMDfij8bEkRa0Ay6avWbJuQA/oaRRPYhPPsxoAnsDIo=",
         "owner": "0fie",
         "repo": "trash",
-        "rev": "dfe1a56ef68c82e08d23903508ce6e8ad779f463",
+        "rev": "6f0dd794eac88f2de67ef90a33b90a5ea53f303d",
         "type": "github"
       },
       "original": {
