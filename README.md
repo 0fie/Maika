@@ -142,4 +142,4 @@ sudo nixos-rebuild boot --flake .# && reboot
 - [NixOS Discord](https://discord.com/invite/2HeKRM3)
 - [Zaney's Blog](https://zaney.org/)
 
-##### Special thanks to [NobbZ](https://github.com/NobbZ) for answering all my questions on Discord.
+###### Special thanks to [NobbZ](https://github.com/NobbZ) for answering all my questions on Discord.
