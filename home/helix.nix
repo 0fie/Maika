@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, lib, ... }:
 
 {
   programs.helix = {
@@ -8,7 +8,6 @@
     extraPackages = with pkgs; [
       nil
       nixfmt
-      omnisharp-roslyn
       nodePackages.typescript-language-server
       marksman
       nodePackages.vscode-langservers-extracted
