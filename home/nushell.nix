@@ -44,6 +44,7 @@ in {
       PROMPT_INDICATOR_VI_NORMAL = ''"∙ "'';
       PROMPT_COMMAND = ''""'';
       PROMPT_COMMAND_RIGHT = ''""'';
+      DIRENV_LOG_FORMAT = ''""'';
       SHELL = ''"${pkgs.nushell}/bin/nu"'';
       EDITOR = config.home.sessionVariables.EDITOR;
     };
