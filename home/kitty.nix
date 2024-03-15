@@ -16,6 +16,8 @@ in {
       cursor = "#${base06}";
       cursor_text_color = "background";
 
+      window_padding_width = 4;
+
       url_color = "#${base0D}";
 
       visual_bell_color = "#${base0C}";

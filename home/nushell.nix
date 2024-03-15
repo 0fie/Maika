@@ -58,7 +58,7 @@ in {
         rm.always_trash = true;
 
         table = {
-          mode = "compact"; # compact thin rounded
+          mode = "rounded"; # compact thin rounded
           index_mode = "always"; # alway never auto
           header_on_separator = false;
         };
