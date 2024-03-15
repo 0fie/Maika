@@ -78,14 +78,33 @@ in {
 
       decoration = {
         rounding = 7;
-        fullscreen_opacity = 1.0;
+        #fullscreen_opacity = 1.0;
         "col.shadow" = "rgba(1a1a1aee)";
+        #blur = {
+        #  enabled = true;
+        #  size = 5;
+        #  passes = 2;
+        #  new_optimizations = true;
+        #};
+        active_opacity = 0.85;
+        inactive_opacity = 0.85;
+        fullscreen_opacity = 1.0;
         blur = {
           enabled = true;
-          size = 5;
+
+          size = 4;
           passes = 2;
+
+          brightness = 1;
+          contrast = 1.3;
+          ignore_opacity = true;
+          noise = 1.17e-2;
+
           new_optimizations = true;
+
+          xray = true;
         };
+
       };
 
       animations = {

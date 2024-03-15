@@ -161,7 +161,7 @@ sudo nixos-rebuild boot --flake .# && reboot
 - [My Linux For Work Dotfiles 2.7 - 2.8](https://gitlab.com/stephan-raabe/dotfiles) - Inspiration for hyprlock and hypridle
 - [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles/) - Catppuccin for SDDM and Plymouth, thank you!
 - [prasanthrangan/hyprdots](https://github.com/prasanthrangan/hyprdots) - Hyprland animations
-- [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Maxfetch, Starship, Kitty, Discord, Hyprland window rules
+- [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Maxfetch, Starship, Kitty, Discord, Hyprland window rules, Waybar
 
 
 ### Other learning resources that have also been helpful
