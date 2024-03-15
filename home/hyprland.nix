@@ -74,24 +74,15 @@ in {
         "float,class:^(notification)$"
         "float,title:^(File Operation Progress)$"
       ];
-      #layerrule = [ "blur,waybar" ];
 
       decoration = {
         rounding = 7;
-        #fullscreen_opacity = 1.0;
         "col.shadow" = "rgba(1a1a1aee)";
-        #blur = {
-        #  enabled = true;
-        #  size = 5;
-        #  passes = 2;
-        #  new_optimizations = true;
-        #};
         active_opacity = 0.85;
         inactive_opacity = 0.85;
         fullscreen_opacity = 1.0;
         blur = {
           enabled = true;
-
           size = 4;
           passes = 2;
 
@@ -101,7 +92,6 @@ in {
           noise = 1.17e-2;
 
           new_optimizations = true;
-
           xray = true;
         };
 
