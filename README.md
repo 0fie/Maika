@@ -46,6 +46,9 @@ Nix package manager from there. And that's just about it. Simple, right?
 
 
 ## How to Install?
+> [!TIP]
+> You can't, lol
+
 First of all, you're not supposed to install my NixOS config on your computer. I didn't have that kind of sharing in mind when I wrote
 these configs. You should cherry-pick the `.nix` files that you're interested in. Let's say you admire my Cava setup and you'd
 like to have it as part of your system... you'd simply copy my [home/cava.nix](home/cava.nix) file into **your** config directory, and then import it.
@@ -124,7 +127,7 @@ looking for a third person to help.
 - [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell, Helix config, UEFI boot stuff for the instructions above
 - [NotAShelf/Nyx](https://github.com/NotAShelf/Nyx) - Helix config, plus dozens of other snippets from their ultra-complex setup
 - [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - Firefox declaration with addons, Helix config
-- [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - Catppuccin themes for CLI tools like bat, cava etc. Copied as is, without modification. Thank you!
+- [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - Catppuccin themes for CLI tools like bat, cava etc. Thank you!
 - [My Linux For Work Dotfiles 2.7 - 2.8](https://gitlab.com/stephan-raabe/dotfiles) - Inspiration for hyprlock and hypridle
 - [isabelroses/dotfiles/](https://github.com/isabelroses/dotfiles/) - Catppuccin for SDDM and Plymouth, thank you!
 - [prasanthrangan/hyprdots](https://github.com/prasanthrangan/hyprdots) - Hyprland animations
