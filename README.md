@@ -35,27 +35,34 @@
 <p align="center">
    Screeenshot last updated on <b>2024-03-15</b>
 </p>
-## Applications
 
-| Type                      | Program                                       
-| --------------------------| :----------------------------------------------------------------------------------------------
-| 🪟 Compositor/WM          | [Hyprland](https://hyprland.org)
-|   Code Editor            | [Helix](https://helix-editor.com)
-| 🐚 Shell & Prompt         | [Nushell](https://www.nushell.sh/)
-| 🔒️ Screenlock             | [Hyprlock](https://github.com/hyprwm/hyprlock)
-| 💤 Idle management daemon | [Hypridle](https://github.com/hyprwm/hypridle)
-| 📶 Status Bar             | [Waybar](https://github.com/Alexays/Waybar)
-|   Terminal               | [Kitty](https://sw.kovidgoyal.net/kitty/)
-| 🎨 Theme                  | [Catppuccin](https://github.com/catppuccin/catppuccin)
-|  🖼️  Image viewer          | [Loupe](https://apps.gnome.org/Loupe/)
-| 🚀 App Launcher           | [rofi-wayland](https://github.com/lbonn/rofi)
-| 🔔 Notification Daemon    | [Mako](https://wayland.emersion.fr/mako/)
-| 📂 File Managers          | [Nautilus](https://wiki.gnome.org/Apps/Files) + [LF](https://godoc.org/github.com/gokcehan/lf)
-| 🎥 Screenshots            | [Grim](https://github.com/emersion/grim) + [Slurp](https://github.com/emersion/slurp)
-| 🌐 Web browser            | Firefox
-| 💼 Office suite           | LibreOffice
-| 🎧️ Media player           | VLC
-
+### 📓 Components
+|                             | NixOS + Hyprland                                                                              |
+| --------------------------- | :---------------------------------------------------------------------------------------------:
+| **Compositor**              | [Hyprland][Hyprland] |
+| **Lockscreen**              | [Hyprlock][Hyprlock] |
+| **Idle Mgmt. Daemon**       | [Hypridle][Hypridle] |
+| **Wallpaper Setter**        | [Hyprpaper][Hyprpaper] |
+| **Terminal Emulator**       | [Kitty][Kitty] |
+| **Text Editor**             | [Helix][Helix] |
+| **Shell**                   | [Nushell][Nushell] + [Starship][Starship] |
+| **Notification Daemon**     | [Mako][Mako] |
+| **Color Scheme**            | [Catppuccin][Catppuccin] |
+| **Screenshot Software**     | [Grimblast][Grimblast] |
+| **Application Launcher**    | [rofi-wayland][rofi-wayland] |
+| **Music Player**            | [Spotify][Spotify] |
+| **Bar**                     | [Waybar][Waybar] |
+| **Network Mgmt. Tool**      | [NetworkManager][NetworkManager] + [network-manager-applet][network-manager-applet] |
+| **System resource monitor** | [Btop][Btop] |
+| **File Manager**            | [Nautilus][Nautilus] + [lf][lf] |
+| **Fonts**                   | [Nerd fonts][Nerd fonts] |
+| **Cursor**                  | [Bibata-Modern-Ice][Bibata-Modern-Ice] |
+| **Icons**                   | [catppuccin-papirus-folders][catppuccin-papirus-folders] |
+| **Image Viewer**            | [Loupe][Loupe] |
+| **Media Player**            | [VLC][VLC] |
+| **Screen Recording**        | [VLC 👈️][VLC] |
+| **Clipboard**               | [wl-clipboard][wl-clipboard] |
+| **Office Suite**            | [LibreOffice][LibreOffice] |
 
 ## Philosophy and design principles
 
@@ -164,3 +171,31 @@ sudo nixos-rebuild boot --flake .# && reboot
 - [Zaney's Blog](https://zaney.org/)
 
 ###### Special thanks to [NobbZ](https://github.com/NobbZ) for answering all my questions on Discord.
+
+<!-- links -->
+[Hyprland]: https://github.com/hyprwm/Hyprland
+[Kitty]: https://github.com/kovidgoyal/kitty
+[Starship]: https://github.com/starship/starship
+[Waybar]: https://github.com/Alexays/Waybar
+[Btop]: https://github.com/aristocratos/btop
+[grimblast]: https://github.com/hyprwm/contrib
+[Mako]: https://github.com/emersion/mako
+[Nerd fonts]: https://github.com/ryanoasis/nerd-fonts
+[NetworkManager]: https://wiki.gnome.org/Projects/NetworkManager
+[network-manager-applet]: https://gitlab.gnome.org/GNOME/network-manager-applet/
+[wl-clipboard]: https://github.com/bugaevc/wl-clipboard
+[Catppuccin]: https://github.com/catppuccin/catppuccin
+[catppuccin-papirus-folders]: https://github.com/catppuccin/papirus-folders
+[Nushell]: https://www.nushell.sh
+[rofi-wayland]: https://github.com/lbonn/rofi
+[Helix]: https://helix-editor.com/
+[Nautilus]: https://wiki.gnome.org/Apps/Files
+[lf]: https://godoc.org/github.com/gokcehan/lf
+[Hypridle]: https://github.com/hyprwm/hypridle
+[Hyprlock]: https://github.com/hyprwm/hyprlock
+[Hyprpaper]: https://github.com/hyprwm/hyprpaper
+[Bibata-Modern-Ice]: https://github.com/ful1e5/Bibata_Cursor
+[Loupe]: https://apps.gnome.org/Loupe/
+[VLC]: https://www.videolan.org/vlc/
+[Spotify]: https://spotify.com
+[LibreOffice]: https://www.libreoffice.org/
