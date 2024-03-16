@@ -5,7 +5,7 @@ in {
   nix = {
     settings = {
       auto-optimise-store = true;
-      trusted-users = [ "root" "${userName}" ];
+      trusted-users = [ "${userName}" ];
       experimental-features = [ "nix-command" "flakes" ];
       warn-dirty = false;
     };
