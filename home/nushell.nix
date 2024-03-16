@@ -18,6 +18,7 @@ in {
       la = "ls -la";
       ll = "ls -l";
       mf = "bash ${inputs.trash}/maxfetch.sh";
+      f = "${pkgs.yazi-unwrapped}/bin/yazi";
 
       # Git
       ga = "${pkgs.git}/bin/git add";
