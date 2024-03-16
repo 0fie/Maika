@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   programs.yazi = {
@@ -17,4 +17,6 @@
   };
 
   home.packages = with pkgs; [ ffmpegthumbnailer unar poppler fd ripgrep ];
+  xdg.configFile."yazi/theme.toml".text =
+    builtins.readFile "${inputs.yazi-theme}/catppuccin-mocha/theme.toml";
 }

@@ -375,7 +375,8 @@
         "hyprlock": "hyprlock",
         "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs_2",
-        "trash": "trash"
+        "trash": "trash",
+        "yazi-theme": "yazi-theme"
       }
     },
     "systems": {
@@ -503,6 +504,22 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "yazi-theme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1710237651,
+        "narHash": "sha256-s7QRbX7TU27hsHeBFzKMJifD5navp2iWoS8Naa+rWog=",
+        "owner": "yazi-rs",
+        "repo": "themes",
+        "rev": "b1668d5fe7d912584f1d925e392fd648e8e1dba8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yazi-rs",
+        "repo": "themes",
         "type": "github"
       }
     }

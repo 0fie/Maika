@@ -35,6 +35,11 @@
       url = "github:catppuccin/starship";
       flake = false;
     };
+
+    yazi-theme = {
+      url = "github:yazi-rs/themes";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
