@@ -13,7 +13,6 @@
       };
       headsup = { disable_exec_warn = true; };
       plugin = builtins.fromTOML ''
-        [plugin]
         prepend_previewers = [
           { name = "*.md", run = "glow" },
         ]
