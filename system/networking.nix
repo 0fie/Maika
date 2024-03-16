@@ -8,8 +8,8 @@ in {
     hostName = "${hostName}";
     firewall = {
       enable = true;
-      allowedTCPPorts = [ ];
-      allowedUDPPorts = [ ];
+      allowedTCPPorts = [ 59010 59011 ];
+      allowedUDPPorts = [ 59010 59011 ];
     };
   };
 }

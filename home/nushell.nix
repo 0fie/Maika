@@ -45,6 +45,9 @@ in {
       PROMPT_COMMAND = ''""'';
       PROMPT_COMMAND_RIGHT = ''""'';
       DIRENV_LOG_FORMAT = ''""'';
+      QT_QPA_PLATFORM = ''"wayland"'';
+      NIXOS_OZONE_WL = ''"1"'';
+      ELECTRON_USE_WAYLAND = ''"1"'';
       SHELL = ''"${pkgs.nushell}/bin/nu"'';
       EDITOR = config.home.sessionVariables.EDITOR;
     };

@@ -15,6 +15,7 @@
     persepolis
     protonvpn-gui
     shotcut
+    soundwireserver
     transmission-gtk
     vlc
     vokoscreen-ng
