@@ -6,7 +6,14 @@
     package = pkgs.yazi-unwrapped;
     enableNushellIntegration = true;
     keymap = { };
-    settings = { };
+    settings = {
+      manager = {
+        show_hidden = false;
+        sort_by = "alphabetical";
+        sort_dir_first = true;
+      };
+      preview.image_quality = "100";
+    };
     theme = { };
   };
 
