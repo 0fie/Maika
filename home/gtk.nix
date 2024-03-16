@@ -36,7 +36,5 @@
   home.file.".icons/default" = {
     source = "${inputs.trash}/My-Bibata-Modern-Ice";
   };
-  home.file.".local/share/fonts/monolisa" = {
-    source = "${inputs.trash}/fonts";
-  };
+  home.file.".local/share/fonts" = { source = "${inputs.trash}/fonts"; };
 }
