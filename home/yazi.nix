@@ -12,7 +12,6 @@
         sort_by = "alphabetical";
         sort_dir_first = true;
       };
-      preview.image_quality = "100";
     };
     theme = { };
   };
