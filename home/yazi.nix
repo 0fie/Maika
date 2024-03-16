@@ -1,8 +1,10 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }:
+
+{
   programs.yazi = {
     enable = true;
     package = pkgs.yazi-unwrapped;
-    enableNushellIntergration = true;
+    enableNushellIntegration = true;
     keymap = { };
     settings = { };
     theme = { };
