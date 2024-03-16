@@ -40,6 +40,10 @@
       url = "github:yazi-rs/themes";
       flake = false;
     };
+    yazi-glow = {
+      url = "github:Reledia/glow.yazi";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

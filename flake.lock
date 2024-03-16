@@ -376,6 +376,7 @@
         "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs_2",
         "trash": "trash",
+        "yazi-glow": "yazi-glow",
         "yazi-theme": "yazi-theme"
       }
     },
@@ -504,6 +505,22 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "yazi-glow": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1706456726,
+        "narHash": "sha256-YTe76i5pdw0GhzWGBU41FDAKy3PJR7aPQgn+dbXHPNg=",
+        "owner": "Reledia",
+        "repo": "glow.yazi",
+        "rev": "54b34c2b337ab0933130a06f61038398efa9ce65",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Reledia",
+        "repo": "glow.yazi",
         "type": "github"
       }
     },

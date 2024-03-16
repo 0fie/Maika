@@ -18,7 +18,7 @@ in {
       la = "ls -la";
       ll = "ls -l";
       mf = "bash ${inputs.trash}/maxfetch.sh";
-      ff = "${pkgs.yazi-unwrapped}/bin/yazi";
+      f = "${pkgs.yazi-unwrapped}/bin/yazi";
 
       # Git
       ga = "${pkgs.git}/bin/git add";
@@ -97,7 +97,7 @@ in {
       $env.config = ${conf};
       ${completions [ "git" "nix" "npm" ]}
 
-      def --env f [...args] {
+      def --env ff [...args] {
       	let tmp = (mktemp -t "yazi-cwd.XXXXX")
       	yazi ...$args --cwd-file $tmp
       	let cwd = (open $tmp)
