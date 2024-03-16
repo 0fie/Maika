@@ -18,7 +18,7 @@ in {
       la = "ls -la";
       ll = "ls -l";
       mf = "bash ${inputs.trash}/maxfetch.sh";
-      f = "${pkgs.yazi-unwrapped}/bin/yazi";
+      ff = "${pkgs.yazi-unwrapped}/bin/yazi";
 
       # Git
       ga = "${pkgs.git}/bin/git add";
@@ -46,9 +46,6 @@ in {
       PROMPT_COMMAND = ''""'';
       PROMPT_COMMAND_RIGHT = ''""'';
       DIRENV_LOG_FORMAT = ''""'';
-      QT_QPA_PLATFORM = ''"wayland"'';
-      NIXOS_OZONE_WL = ''"1"'';
-      ELECTRON_USE_WAYLAND = ''"1"'';
       SHELL = ''"${pkgs.nushell}/bin/nu"'';
       EDITOR = config.home.sessionVariables.EDITOR;
     };
@@ -99,6 +96,16 @@ in {
     in ''
       $env.config = ${conf};
       ${completions [ "git" "nix" "npm" ]}
+
+      def --env f [...args] {
+      	let tmp = (mktemp -t "yazi-cwd.XXXXX")
+      	yazi ...$args --cwd-file $tmp
+      	let cwd = (open $tmp)
+      	if $cwd != "" and $cwd != $env.PWD {
+      		cd $cwd
+      	}
+      	rm -fp $tmp
+      }
     '';
   };
 }
