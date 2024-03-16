@@ -47,6 +47,7 @@
 | **Shell**                   | [Nushell][Nushell] + [Starship][Starship] |
 | **Terminal Emulator**       | [Kitty][Kitty] |
 | **Notification Daemon**     | [Mako][Mako] |
+| **File Manager**            | [Yazi][Yazi] |
 | **Color Scheme**            | [Catppuccin][Catppuccin] |
 | **Screenshot Software**     | [Grimblast][Grimblast] |
 | **Application Launcher**    | [rofi-wayland][rofi-wayland] |
@@ -54,7 +55,6 @@
 | **Bar**                     | [Waybar][Waybar] |
 | **Network Mgmt. Tool**      | [NetworkManager][NetworkManager] + [network-manager-applet][network-manager-applet] |
 | **System resource monitor** | [Btop][Btop] |
-| **File Manager**            | [Nautilus][Nautilus] + [lf][lf] |
 | **Fonts**                   | [Nerd fonts][Nerd fonts] |
 | **Cursor**                  | [Bibata-Modern-Ice][Bibata-Modern-Ice] |
 | **Icons**                   | [catppuccin-papirus-folders][catppuccin-papirus-folders] |
@@ -189,8 +189,7 @@ sudo nixos-rebuild boot --flake .# && reboot
 [Nushell]: https://www.nushell.sh
 [rofi-wayland]: https://github.com/lbonn/rofi
 [Helix]: https://helix-editor.com/
-[Nautilus]: https://wiki.gnome.org/Apps/Files
-[lf]: https://godoc.org/github.com/gokcehan/lf
+[Yazi]: https://github.com/sxyazi/yazi
 [Hypridle]: https://github.com/hyprwm/hypridle
 [Hyprlock]: https://github.com/hyprwm/hyprlock
 [Hyprpaper]: https://github.com/hyprwm/hyprpaper

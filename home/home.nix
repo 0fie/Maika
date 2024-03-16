@@ -14,7 +14,6 @@
     ./hyprland.nix
     ./hyprlock.nix
     ./kitty.nix
-    ./lf.nix
     ./mako.nix
     ./nautilus.nix
     ./nushell.nix
@@ -27,6 +26,7 @@
     #./vscode.nix
     ./waybar.nix
     ./xdg.nix
+    ./yazi.nix
     inputs.hyprland.homeManagerModules.default
     inputs.hypridle.homeManagerModules.hypridle
     inputs.hyprlock.homeManagerModules.hyprlock
