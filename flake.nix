@@ -52,7 +52,7 @@
       inherit (import ./home/options.nix) userName;
 
       allSystems = [
-        "${system}" # 64-bit Intel/AMD Linux
+        "x86_64-linux" # 64-bit Intel/AMD Linux
       ];
 
       # Helper to provide system-specific attributes
