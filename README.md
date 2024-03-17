@@ -166,8 +166,9 @@ sudo nixos-rebuild boot --flake .# && reboot
 
 ### Other learning resources that have also been helpful
 - [NixOS and Flakes Book](https://nixos-and-flakes.thiscute.world)
-- [Vimjoyer's Nix playlist](https://www.youtube.com/playlist?list=PLko9chwSoP-15ZtZxu64k_CuTzXrFpxPE)
 - [NixOS Discord](https://discord.com/invite/2HeKRM3)
+- [Zero to Nix](https://zero-to-nix.com)
+- [Vimjoyer's Nix playlist](https://www.youtube.com/playlist?list=PLko9chwSoP-15ZtZxu64k_CuTzXrFpxPE)
 - [Zaney's Blog](https://zaney.org/)
 
 ###### Special thanks to [NobbZ](https://github.com/NobbZ) for answering all my questions on Discord.
