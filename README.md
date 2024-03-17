@@ -55,7 +55,6 @@
 | **Bar**                     | [Waybar][Waybar] |
 | **Network Mgmt. Tool**      | [NetworkManager][NetworkManager] + [network-manager-applet][network-manager-applet] |
 | **System resource monitor** | [Btop][Btop] |
-| **Fonts**                   | [Nerd fonts][Nerd fonts] |
 | **Cursor**                  | [Bibata-Modern-Ice][Bibata-Modern-Ice] |
 | **Icons**                   | [catppuccin-papirus-folders][catppuccin-papirus-folders] |
 | **Image Viewer**            | [Loupe][Loupe] |
