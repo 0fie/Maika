@@ -1,4 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+
+{
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
@@ -22,7 +24,7 @@
       "window.menuBarVisibility" = "toggle";
       "editor.fontFamily" = "'JetBrainsMono Nerd Font', 'SymbolsNerdFont'";
       "terminal.integrated.fontFamily" =
-        "'JetBrainsMono Nerd Font', 'SymbolsNerdFont'";
+        "'Monolisa Nerd Font', 'SymbolsNerdFont'";
       "editor.fontSize" = 11;
       "workbench.colorTheme" = "Catppuccin Mocha";
       "workbench.iconTheme" = "catppuccin-mocha";
