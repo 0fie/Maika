@@ -30,7 +30,7 @@
 </div>
 
 <p align="center">
-   <img src="https://github.com/0fie/trash/blob/34df9541c906fd31d69e890bc73855312b168d6d/RICE-2024-03-15-At-04h23m22s.png" width="800px" /> <br>
+   <img src="https://github.com/0fie/trash/blob/fd58ae7baddc7155cce0add7841ece035e7b9312/RICE-2024-03-17-At-08h21m01s.png" width="800px" /> <br>
 </p>
 <p align="center">
    Screeenshot last updated on <b>2024-03-15</b>
