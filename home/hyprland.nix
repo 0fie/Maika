@@ -213,6 +213,8 @@ in {
         "${pkgs.hyprpaper}/bin/hyprpaper -c ${hyprpaperConf}"
         "${pkgs.waybar}/bin/waybar"
         "${pkgs.pyprland}/bin/pypr"
+
+        # Make hdrop start these programs in the background for faster launch when we need them.
         "${pkgs.hdrop}/bin/hdrop -b ${pkgs.emote}/bin/emote"
         "${pkgs.hdrop}/bin/hdrop -b ${pkgs.gnome.nautilus}/bin/nautilus"
 
