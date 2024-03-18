@@ -1,11 +1,12 @@
 { pkgs, ... }:
 
-{
+let inherit (import ../system/options.nix) fontName;
+in {
   programs.waybar = {
     enable = true;
     style = let
       custom = {
-        font = "JetBrainsMono Nerd Font";
+        font = "${fontName}";
         font_size = "15px";
         font_weight = "bold";
         text_color = "#cdd6f4";
@@ -104,7 +105,7 @@
       margin-right = 0;
       modules-left = [ "custom/launcher" "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "tray" "cpu" "memory" "disk" "pulseaudio" "network" ];
+      modules-right = [ "tray" "cpu" "memory" "pulseaudio" ];
       clock = {
         format = " {:%H:%M}";
         tooltip = "true";
@@ -147,18 +148,6 @@
         format-alt = "  {avg_frequency} GHz";
         interval = 2;
       };
-      disk = {
-        # path = "/";
-        format = "󰋊 {percentage_used}%";
-        interval = 60;
-      };
-      network = {
-        format-wifi = "  {signalStrength}%";
-        format-ethernet = "󰀂 ";
-        tooltip-format = "Connected to {essid} {ifname} via {gwaddr}";
-        format-linked = "{ifname} (No IP)";
-        format-disconnected = "󰖪 ";
-      };
       tray = {
         icon-size = 20;
         spacing = 8;
@@ -168,12 +157,11 @@
         format-muted = "󰖁 ";
         format-icons = { default = [ " " ]; };
         scroll-step = 5;
-        on-click = "pamixer -t";
+        on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
       };
       "custom/launcher" = {
         format = "";
-        on-click = "pkill wofi || wofi --show drun";
-        on-click-right = "pkill wofi || wallpaper-picker";
+        on-click = "pkill rofi || ${pkgs.rofi-wayland}/bin/rofi --show drun";
         tooltip = "false";
       };
     };
