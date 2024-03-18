@@ -67,7 +67,7 @@
 
 Simplicity... as a simple person with simple requirements, I sought to craft a NixOS config to daily drive on my old Dell laptop.
 Here is a quick explanation of the folder structure. This "project" is a [flake](https://zero-to-nix.com/concepts/flakes) as you 
-might have noticed. The home directory contains my [home-manager](https://github.com/nix-community/home-manager) configuration for apps
+might have noticed. The home directory contains my [home-manager](https://github.com/nix-community/home-manager) configurations for apps
 like Firefox, Spotify etc. The system directory holds system-level configs, like the hostname, etc. You can also configure the
 Nix package manager from there. And that's just about it. Simple, right?
 
