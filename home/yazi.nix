@@ -23,20 +23,30 @@
 
   home.packages = with pkgs; [
     exiftool
-    file
-    ffmpegthumbnailer
-    jq
-    unar
-    poppler
     fd
-    ripgrep
+    ffmpegthumbnailer
+    file
     glow
+    jq
+    poppler
+    ripgrep
+    unar
   ];
 
   xdg.configFile = {
     "yazi/theme.toml".text =
       builtins.readFile "${inputs.yazi-theme}/catppuccin-mocha/theme.toml";
-    "yazi/plugins/glow/init.lua".text =
-      builtins.readFile "${inputs.yazi-glow}/init.lua";
+
+    "yazi/plugins/glow.yazi".source = "${inputs.yazi-glow}";
+
+    "yazi/plugins/smart-enter.yazi/init.lua".text = # lua
+      ''
+        return {
+        	entry = function()
+        		local h = cx.active.current.hovered
+        		ya.manager_emit(h and h.cha.is_dir and "enter" or "open", { hovered = true })
+        	end,
+        }
+      '';
   };
 }
