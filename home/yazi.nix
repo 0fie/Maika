@@ -24,6 +24,7 @@
     exiftool
     file
     ffmpegthumbnailer
+    jq
     unar
     poppler
     fd
