@@ -6,7 +6,7 @@
     gimp
     git-extras
     iotop
-    keepassxc
+    killall
     libreoffice
     loupe
     persepolis
