@@ -2,7 +2,7 @@
   # User options.
 
   ##########################################
-  # The username for your user. Do not include special characters or capital letters.
+  # Below is the username for your user. Do not include special characters or capital letters.
   # Suppose you're called Tom, you'd edit the line like so:
   #
   #...
