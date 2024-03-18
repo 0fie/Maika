@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
-{
+let inherit (import ../system/options.nix) fontName;
+in {
   home.packages = with pkgs; [ rofi ];
 
   xdg.configFile."rofi/config.rasi".text = ''
@@ -35,7 +36,7 @@
         grey: #6c7086;
 
         width: 600;
-        font: "JetBrainsMono Nerd Font 14";
+        font: "${fontName} 13";
     }
 
     element-text, element-icon , mode-switcher {
