@@ -12,11 +12,12 @@
         sort_dir_first = true;
       };
       headsup = { disable_exec_warn = true; };
-      plugin = builtins.fromTOML ''
-        prepend_previewers = [
-          { name = "*.md", run = "glow" },
-        ]
-      '';
+      plugin = {
+        prepend_previewers = [{
+          name = "*.md";
+          run = "glow";
+        }];
+      };
     };
   };
 
