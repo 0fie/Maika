@@ -61,8 +61,8 @@ in {
         "float,udiskie"
         "float,title:^(Transmission)$"
         "float,title:^(Volume Control)$"
-        "float,title:^(Library)$"
         "size 700 450,title:^(Volume Control)$"
+        "float,title:^(Library)$"
       ];
       windowrulev2 = [
         "float,class:^(pavucontrol)$"
@@ -133,9 +133,9 @@ in {
       bind = [
         # Launch apps
         "$mainMod,        r,   exec,   ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
-        "$mainMod,        e,   exec,   ${pkgs.emote}/bin/emote"
+        "$mainMod,        e,   exec,   ${pkgs.hdrop}/bin/hdrop ${pkgs.emote}/bin/emote"
         "$mainMod,        b,   exec,   ${pkgs.firefox}/bin/firefox"
-        "$mainMod,        f,   exec,   ${pkgs.gnome.nautilus}/bin/nautilus"
+        "$mainMod,        f,   exec,   ${pkgs.hdrop}/bin/hdrop ${pkgs.gnome.nautilus}/bin/nautilus"
         "$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
         "$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
         "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
@@ -213,6 +213,8 @@ in {
         "${pkgs.hyprpaper}/bin/hyprpaper -c ${hyprpaperConf}"
         "${pkgs.waybar}/bin/waybar"
         "${pkgs.pyprland}/bin/pypr"
+        "${pkgs.hdrop}/bin/hdrop -b ${pkgs.emote}/bin/emote"
+        "${pkgs.hdrop}/bin/hdrop -b ${pkgs.gnome.nautilus}/bin/nautilus"
 
         # Please see home/gtk.nix before modifying the line below. It actually sets the cursor to Bibata-Modern-Ice.
         "hyprctl setcursor default 24"
