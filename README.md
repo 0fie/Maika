@@ -4,14 +4,12 @@
       0fie's ultra-simple NixOS Config 
    <br>
       <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px" /> <br>
-   <div align="center">
 
-   <div align="center">
       <div align="center">
          <a href="https://github.com/0fie/Dotfiles/stargazers">
             <img src="https://img.shields.io/github/stars/0fie/Dotfiles?color=F5BDE6&labelColor=303446&style=for-the-badge&logo=starship&logoColor=F5BDE6">
          </a>
-         <a href="https://github.com/0fie/Dotfiles/">
+         <a href="https://github.com/0fie/Dotfiles"/>
             <img src="https://img.shields.io/github/repo-size/0fie/Dotfiles?color=C6A0F6&labelColor=303446&style=for-the-badge&logo=github&logoColor=C6A0F6">
          </a>
          <a href="https://nixos.org">
@@ -22,7 +20,6 @@
          </a>
       </div>
       <br>
-   </div>
 </h1>
 
 <br>

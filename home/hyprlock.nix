@@ -14,8 +14,8 @@ in {
       monitor = "";
       path = toString (pkgs.fetchurl {
         url =
-          "https://raw.githubusercontent.com/0fie/wallpapers/main/Art/mountain.png";
-        sha256 = "sha256-8LmAIexewsIDpTg8ijm5dnhV+477kFAG8e7FeqEvh0Y=";
+          "https://raw.githubusercontent.com/0fie/wallpapers/main/images/cat-leaves.png";
+        sha256 = "";
       });
       blur_size = 1;
       blur_passes = 1;
