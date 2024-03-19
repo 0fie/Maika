@@ -15,7 +15,7 @@ in {
       path = toString (pkgs.fetchurl {
         url =
           "https://raw.githubusercontent.com/0fie/wallpapers/main/images/cat-leaves.png";
-        sha256 = "";
+        sha256 = "sha256-kegUK62YtI7G3P/pIqcWdFGlqN4S1/4xOOmOboPxJKE=";
       });
       blur_size = 1;
       blur_passes = 1;
