@@ -1,8 +1,11 @@
-<img src="https://github.com/0fie/Dotfiles/assets/151028199/6da7fe65-6661-4bb6-b5bc-b72aa6d79a7a" width="100px">
-<br>
+<div align="center">
+<img align="center" src="https://github.com/0fie/Dotfiles/assets/151028199/6da7fe65-6661-4bb6-b5bc-b72aa6d79a7a" width="100px">
+
+  <br>
 0fie's ultra-simple NixOS Config
 <br>
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px">
+</div>
 <br>
 <div align="center">
 <div align="center">
