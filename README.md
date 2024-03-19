@@ -36,8 +36,9 @@
    Screeenshot last updated <b>2024-03-3</b>
 </p>
 
-### 🖼️ Gallery
 <!--
+### 🖼️ Gallery
+
 <details>
 <summary>
 CURRENT (EXPAND)
