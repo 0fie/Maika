@@ -1,34 +1,32 @@
 <div align="center">
-<img align="center" src="https://github.com/0fie/Dotfiles/assets/151028199/6da7fe65-6661-4bb6-b5bc-b72aa6d79a7a" width="100px">
-
+  <img align="center" src="https://github.com/0fie/Dotfiles/assets/151028199/6da7fe65-6661-4bb6-b5bc-b72aa6d79a7a" width="100px">
   <br>
-0fie's ultra-simple NixOS Config
-<br>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px">
+  <h1>0fie's ultra-simple NixOS Config</h1>
+  <br>
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px">
 </div>
+
 <br>
 <div align="center">
-<div align="center">
-  <a href="https://github.com/0fie/Dotfiles/stargazers">
-    <img
-      src="https://img.shields.io/github/stars/0fie/Dotfiles?color=F5BDE6&labelColor=303446&style=for-the-badge&logo=starship&logoColor=F5BDE6">
-  </a>
-  <a href="https://github.com/0fie/Dotfiles">
+  <div align="center">
+    <a href="https://github.com/0fie/Dotfiles/stargazers">
+      <img
+        src="https://img.shields.io/github/stars/0fie/Dotfiles?color=F5BDE6&labelColor=303446&style=for-the-badge&logo=starship&logoColor=F5BDE6">
+    </a>
+    <a href="https://github.com/0fie/Dotfiles">
     <img
       src="https://img.shields.io/github/repo-size/0fie/Dotfiles?color=C6A0F6&labelColor=303446&style=for-the-badge&logo=github&logoColor=C6A0F6">
-  </a>
-  <a href="https://nixos.org">
+    </a>
+    <a href="https://nixos.org">
     <img
       src="https://img.shields.io/badge/NixOS-unstable-pink.svg?style=for-the-badge&labelColor=303446&logo=NixOS&logoColor=white&color=91D7E3">
-  </a>
-  <a href="https://github.com/0fie/Dotfiles/blob/main/LICENSE">
-    <img
-      src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&colorA=313244&colorB=F5A97F&logo=unlicense&logoColor=F5A97F&">
-  </a>
-</div>
-<br>
-</div>
-</h1>
+    </a>
+    <a href="https://github.com/0fie/Dotfiles/blob/main/LICENSE">
+      <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&colorA=313244&colorB=F5A97F&logo=unlicense&logoColor=F5A97F&">
+    </a>
+  </div>
+  <br>
+</div.
 
 <br>
 </div>
