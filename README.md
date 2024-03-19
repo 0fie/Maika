@@ -7,7 +7,6 @@
    <div align="center">
 
    <div align="center">
-      <p></p>
       <div align="center">
          <a href="https://github.com/0fie/Dotfiles/stargazers">
             <img src="https://img.shields.io/github/stars/0fie/Dotfiles?color=F5BDE6&labelColor=303446&style=for-the-badge&logo=starship&logoColor=F5BDE6">
@@ -15,7 +14,7 @@
          <a href="https://github.com/0fie/Dotfiles/">
             <img src="https://img.shields.io/github/repo-size/0fie/Dotfiles?color=C6A0F6&labelColor=303446&style=for-the-badge&logo=github&logoColor=C6A0F6">
          </a>
-         <a = href="https://nixos.org">
+         <a href="https://nixos.org">
             <img src="https://img.shields.io/badge/NixOS-unstable-pink.svg?style=for-the-badge&labelColor=303446&logo=NixOS&logoColor=white&color=91D7E3">
          </a>
          <a href="https://github.com/0fie/Dotfiles/blob/main/LICENSE">
