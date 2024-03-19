@@ -6,6 +6,7 @@
     gimp
     git-extras
     iotop
+    jetbrains-toolbox
     killall
     libreoffice
     loupe

@@ -133,9 +133,9 @@ in {
       bind = [
         # Launch apps
         "$mainMod,        r,   exec,   ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
-        "$mainMod,        e,   exec,   ${pkgs.hdrop}/bin/hdrop ${pkgs.emote}/bin/emote"
+        "$mainMod,        e,   exec,   ${pkgs.emote}/bin/emote"
         "$mainMod,        b,   exec,   ${pkgs.firefox}/bin/firefox"
-        "$mainMod,        f,   exec,   ${pkgs.hdrop}/bin/hdrop ${pkgs.gnome.nautilus}/bin/nautilus"
+        "$mainMod,        f,   exec,   ${pkgs.gnome.nautilus}/bin/nautilus"
         "$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
         "$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
         "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
@@ -144,7 +144,7 @@ in {
         "$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
         "$mainMod,        d,   exec,   ${pkgs.discord}/bin/discord"
         "$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
-        ",            Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify --cursor save area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
+        ",            Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify --cursor save area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png | wl-copy"
         "ALT,        return,   exec,   ${pkgs.pyprland}/bin/pypr toggle term && hyprctl dispatch bringactivetotop"
 
         # Control media players.
@@ -216,6 +216,7 @@ in {
 
         # Make hdrop start these programs in the background for faster launch when we need them.
         "${pkgs.hdrop}/bin/hdrop -b ${pkgs.emote}/bin/emote"
+        "${pkgs.hdrop}/bin/hdrop -b ${pkgs.firefox}/bin/firefox"
         "${pkgs.hdrop}/bin/hdrop -b ${pkgs.gnome.nautilus}/bin/nautilus"
 
         # Please see home/gtk.nix before modifying the line below. It actually sets the cursor to Bibata-Modern-Ice.
