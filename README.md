@@ -33,7 +33,7 @@
    <img src="https://github.com/0fie/trash/blob/1054bd402b447f0dc4f4618fa70659c95bf233dc/RICE-2024-03-20-At-04h45m32s.png" width="800px" /> <br>
 </p>
 <p align="center">
-   Screeenshot last updated <b>2024-03-3</b>
+   Screeenshot last updated <b>20 March</b>
 </p>
 
 ### 🖼️ Gallery
@@ -45,13 +45,6 @@
    <p align="center">
       <img src="https://github.com/0fie/trash/blob/1054bd402b447f0dc4f4618fa70659c95bf233dc/RICE-TERM-2024-03-20-At-04h34m30s.png" width="800px" /> <br>
    </p>
-
-<!--
-   <p align="center">Hyprlock<br>
-     <img src="https://github.com/0fie/trash/blob/9a3e6184ffa1259d276f7cccc87331dbfea61c26/lockscreen.png" width="800px" /> 
-     <br>
-   </p>
--->
 </details>
 
 <details>
