@@ -134,13 +134,13 @@ in {
           margin-left: 7px;
       }
       #memory {
-          font-size: ${custom.font_size};
           padding-left: 9px;
           padding-right: 9px;
       }
 
       #tray {
           padding: 0 16px;
+          padding-right: 12px;
           margin-left: 7px;
       }
 
