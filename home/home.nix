@@ -5,9 +5,8 @@
     ./bat.nix
     ./btop.nix
     ./cava.nix
-    ./cli.nix
     ./direnv.nix
-    #./discord.nix
+    ./discord.nix
     ./firefox.nix
     ./git.nix
     ./gtk.nix
@@ -40,7 +39,6 @@
     stateVersion = "23.11";
 
     sessionVariables = {
-      "env.NIXOS_OZONE_WL" = "1";
       POLKIT_BIN =
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
     };
