@@ -36,21 +36,19 @@
    Screeenshot last updated <b>2024-03-3</b>
 </p>
 
-<!--
 ### 🖼️ Gallery
 
 <details>
-<summary>
-CURRENT (EXPAND)
-</summary>
-<p align="center">
-   <img src="./.github/assets/screenshots/2.png" width="800px" /> <br>
-</p>
-<p align="center">
-   <img src="./.github/assets/screenshots/3.png" width="800px" /> <br>
-</p>
+   <summary>
+      CURRENT (EXPAND)
+   </summary>
+   <p align="center">
+      <img src="./.github/assets/screenshots/2.png" width="800px" /> <br>
+   </p>
+   <p align="center">
+      <img src="./.github/assets/screenshots/3.png" width="800px" /> <br>
+   </p>
 </details>
--->
 
 ### 📓 Components
 | Type                        | Program                                                                                       |
