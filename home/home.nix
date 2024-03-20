@@ -5,6 +5,7 @@
     ./bat.nix
     ./btop.nix
     ./cava.nix
+    ./cli.nix
     ./direnv.nix
     #./discord.nix
     ./firefox.nix
@@ -23,7 +24,6 @@
     ./spotify.nix
     ./starship.nix
     ./tools.nix
-    #./vscode.nix
     ./waybar.nix
     ./xdg.nix
     ./yazi.nix
