@@ -135,6 +135,7 @@ in {
           margin-left: 7px;
       }
       #memory {
+          font-size: ${custom.font_size};
           padding-left: 9px;
           padding-right: 9px;
       }
