@@ -133,9 +133,9 @@ in {
       bind = [
         # Launch apps
         "$mainMod,        r,   exec,   ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
-        "$mainMod,        e,   exec,   ${pkgs.emote}/bin/emote"
-        "$mainMod,        b,   exec,   ${pkgs.firefox}/bin/firefox"
-        "$mainMod,        f,   exec,   ${pkgs.gnome.nautilus}/bin/nautilus"
+        "$mainMod,        e,   exec,   ${pkgs.hdrop}/bin/hdrop ${pkgs.emote}/bin/emote"
+        "$mainMod,        b,   exec,   ${pkgs.hdrop}/bin/hdrop ${pkgs.firefox}/bin/firefox"
+        "$mainMod,        f,   exec,   ${pkgs.hdrop}/bin/hdrop ${pkgs.gnome.nautilus}/bin/nautilus"
         "$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
         "$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
         "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
