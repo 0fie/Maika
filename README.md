@@ -47,9 +47,11 @@
    </p>
 
    <p align="center">Hyprlock<br>
-      <img src="https://github.com/0fie/trash/blob/1054bd402b447f0dc4f4618fa70659c95bf233dc/lock2.mp4" width="800px" /> <br>
+     <video width="800" controls>
+       <source src="https://github.com/0fie/trash/blob/1054bd402b447f0dc4f4618fa70659c95bf233dc/lock2.mp4" type="video/mp4">
+     </video> 
+     <br>
    </p>
-
 </details>
 
 <details>
