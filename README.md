@@ -56,7 +56,7 @@
 
 <details>
   <summary>More Pics</summary>
-  <p>Just kidding, star the repo lol lol</p>
+  <p>Just kidding, star the repo lol lol 😅</p>
 </details>
 
 ### 📓 Components
