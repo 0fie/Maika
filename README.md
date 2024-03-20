@@ -30,7 +30,7 @@
 </div>
 
 <p align="center">
-   <img src="https://github.com/0fie/trash/blob/fd58ae7baddc7155cce0add7841ece035e7b9312/RICE-2024-03-17-At-08h21m01s.png" width="800px" /> <br>
+   <img src="https://github.com/0fie/trash/blob/1054bd402b447f0dc4f4618fa70659c95bf233dc/RICE-2024-03-20-At-04h45m32s.png" width="800px" /> <br>
 </p>
 <p align="center">
    Screeenshot last updated <b>2024-03-3</b>
@@ -43,11 +43,18 @@
       CURRENT (EXPAND)
    </summary>
    <p align="center">
-      <img src="./.github/assets/screenshots/2.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/trash/blob/1054bd402b447f0dc4f4618fa70659c95bf233dc/RICE-TERM-2024-03-20-At-04h34m30s.png" width="800px" /> <br>
    </p>
-   <p align="center">
-      <img src="./.github/assets/screenshots/3.png" width="800px" /> <br>
+
+   <p align="center">Hyprlock<br>
+      <img src="https://github.com/0fie/trash/blob/1054bd402b447f0dc4f4618fa70659c95bf233dc/lock2.mp4" width="800px" /> <br>
    </p>
+
+</details>
+
+<details>
+  <summary>More Pics</summary>
+  <p>Just kidding, star the repo lol lol</p>
 </details>
 
 ### 📓 Components
