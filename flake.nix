@@ -44,11 +44,6 @@
       url = "github:Reledia/glow.yazi";
       flake = false;
     };
-
-    bat-theme = {
-      url = "github:catppuccin/bat";
-      flake = false;
-    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
