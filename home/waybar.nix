@@ -4,6 +4,81 @@ let inherit (import ../system/options.nix) fontName;
 in {
   programs.waybar = {
     enable = true;
+    settings.mainBar = {
+      position = "top";
+      layer = "top";
+      height = 5;
+      margin-top = 0;
+      margin-bottom = 0;
+      margin-left = 0;
+      margin-right = 0;
+      modules-left = [ "custom/launcher" "hyprland/workspaces" ];
+      modules-center = [ "clock" ];
+      modules-right = [ "cpu" "memory" "pulseaudio" "tray" ];
+
+      clock = {
+        format = " {:%H:%M}";
+        tooltip = "true";
+        tooltip-format = ''
+          <big>{:%Y %B}</big>
+          <tt><small>{calendar}</small></tt>'';
+        format-alt = " {:%d/%m}";
+      };
+
+      "hyprland/workspaces" = {
+        active-only = false;
+        disable-scroll = true;
+        format = "{icon}";
+        on-click = "activate";
+        persistent-workspaces = { "1" = [ ]; };
+        format-icons = {
+          "1" = "1";
+          "2" = "2";
+          "3" = "3";
+          "4" = "4";
+          "5" = "5";
+          "6" = "6";
+          "7" = "7";
+          "8" = "8";
+          "9" = "9";
+          "10" = "0";
+          sort-by-number = true;
+        };
+      };
+
+      memory = {
+        format = " {}%";
+        format-alt = " {used} GB";
+        interval = 2;
+      };
+
+      cpu = {
+        format = " {usage}%";
+        format-alt = "  {avg_frequency} GHz";
+        interval = 2;
+      };
+
+      tray = {
+        icon-size = 20;
+        spacing = 8;
+      };
+
+      pulseaudio = {
+        format = "{icon} {volume}%";
+        format-muted = "󰖁 ";
+        format-icons = { default = [ " " ]; };
+        scroll-step = 5;
+        on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
+      };
+
+      "custom/launcher" = {
+        format = "";
+        on-click =
+          "pkill rofi || ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons";
+        tooltip = "false";
+      };
+    };
+
     style = let
       custom = {
         font = "${fontName}";
@@ -32,9 +107,8 @@ in {
       }
 
       #workspaces {
-          font-size: 18px;
+          font-size: ${custom.font_size};
           padding-left: 15px;
-          
       }
       #workspaces button {
           color: ${custom.text_color};
@@ -54,25 +128,24 @@ in {
       }
 
       #cpu {
-          padding-left: 15px;
+          font-size: ${custom.font_size};
+          padding-left: 9px;
           padding-right: 9px;
           margin-left: 7px;
       }
       #memory {
+          font-size: ${custom.font_size};
           padding-left: 9px;
           padding-right: 9px;
       }
-      #disk {
-          padding-left: 9px;
-          padding-right: 15px;
-      }
 
       #tray {
-          padding: 0 20px;
+          padding: 0 16px;
           margin-left: 7px;
       }
 
       #pulseaudio {
+          font-size: ${custom.font_size};
           padding-left: 15px;
           padding-right: 9px;
           margin-left: 7px;
@@ -88,82 +161,12 @@ in {
       }
 
       #custom-launcher {
-          font-size: 20px;
+          font-size: 18px;
           color: #b4befe;
           font-weight: ${custom.font_weight};
           padding-left: 10px;
-          padding-right: 15px;
+          padding-right: 12px;
       }
     '';
-    settings.mainBar = {
-      position = "top";
-      layer = "top";
-      height = 5;
-      margin-top = 0;
-      margin-bottom = 0;
-      margin-left = 0;
-      margin-right = 0;
-      modules-left = [ "custom/launcher" "hyprland/workspaces" ];
-      modules-center = [ "clock" ];
-      modules-right = [ "tray" "cpu" "memory" "pulseaudio" ];
-      clock = {
-        format = " {:%H:%M}";
-        tooltip = "true";
-        tooltip-format = ''
-          <big>{:%Y %B}</big>
-          <tt><small>{calendar}</small></tt>'';
-        format-alt = " {:%d/%m}";
-      };
-      "hyprland/workspaces" = {
-        active-only = false;
-        disable-scroll = true;
-        format = "{icon}";
-        on-click = "activate";
-        format-icons = {
-          "1" = "󰈹";
-          "2" = "";
-          "3" = "󰘙";
-          "4" = "󰙯";
-          "5" = "";
-          "6" = "";
-          urgent = "";
-          default = "";
-          sort-by-number = true;
-        };
-        persistent-workspaces = {
-          "1" = [ ];
-          "2" = [ ];
-          "3" = [ ];
-          "4" = [ ];
-          "5" = [ ];
-        };
-      };
-      memory = {
-        format = "󰟜 {}%";
-        format-alt = "󰟜 {used} GiB"; # 
-        interval = 2;
-      };
-      cpu = {
-        format = "  {usage}%";
-        format-alt = "  {avg_frequency} GHz";
-        interval = 2;
-      };
-      tray = {
-        icon-size = 20;
-        spacing = 8;
-      };
-      pulseaudio = {
-        format = "{icon} {volume}%";
-        format-muted = "󰖁 ";
-        format-icons = { default = [ " " ]; };
-        scroll-step = 5;
-        on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
-      };
-      "custom/launcher" = {
-        format = "";
-        on-click = "pkill rofi || ${pkgs.rofi-wayland}/bin/rofi --show drun";
-        tooltip = "false";
-      };
-    };
   };
 }
