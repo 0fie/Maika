@@ -91,7 +91,7 @@
 | File/Dir               | What it does
 |------------------------| :------------------------------------------------------:
 | [flake.nix](flake.nix) | base of the configuration |
-| [home/](home/) 🏠️       | contains home-manager configs for the user. like themes|
+| [home/](home/) 🏠️       | contains home-manager configs for the user, like themes|
 | [system/](system/) ⚙️      | contains system-level OS configs like filesystem & boot. |
 
 <br>
@@ -100,7 +100,8 @@
 Simplicity... as a simple person with simple requirements, I sought to craft a beautiful and functional NixOS + Hyprland config to daily
 drive on my old Dell laptop, and this is it! It might look half-baked or primitive, but I can assure you that it meets my needs
 perfectly, and there is nothing more to add to it. So simple, so elegant. You will notice that the [home](home/) and [system](system/) directories
-do not contain any additional directories inside them. This was intentionally done to avoid unnecessary complexity.
+do not contain any additional directories inside them. This was intentionally done to avoid unnecessary complexity. You can open an
+[issue](https://github.com/0fie/Dotfiles/issues/new) if you face trouble with the dotfiles.
 
 <br>
 
@@ -110,7 +111,7 @@ Progress is a bit slow due to time contraints on my side. However, the plan is t
 home-manager configuration without having to include the rest of my OS configs. This means you can create another user on your system
 just to test out these configs, all without tampering with your existing setup. So for now, you should cherry pick the parts that you're
 interested in. For example, if want to add my Hyprland config to your setup, you'd simply copy my [home/hyprland.nix](home]hyprland.nix)
-file to your dotfiles directory and then import it.
+file to your dotfiles directory and then import it. 
 
 <hr>
 
