@@ -43,7 +43,13 @@
       Current (Expand)
    </summary>
    <p align="center">
+      Kitty + Nushell + Starship + Cava
       <img src="https://github.com/0fie/trash/blob/1054bd402b447f0dc4f4618fa70659c95bf233dc/RICE-TERM-2024-03-20-At-04h34m30s.png" width="800px" /> <br>
+   </p>
+
+   <p align="center">
+      Hyprlock (lockscreen)
+      <img src="https://github.com/0fie/trash/blob/397803c2729638ffee7a3e5d470a2aca65378c34/LOCK-2024-03-21-At-09h07m13s.png" width="800px" /> <br>
    </p>
 </details>
 
