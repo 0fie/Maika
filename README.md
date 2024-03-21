@@ -117,7 +117,9 @@ home-manager configuration without having to include the rest of my OS configs. 
 just to test out these configs, all without tampering with your existing setup. So for now, you should cherry pick the parts that you're
 interested in. For example, if you want to add my Hyprland config to your setup, you'd simply copy my [home/hyprland.nix](home]hyprland.nix)
 file to your dotfiles directory and then import it.    
-For other distros, go to the [releases](). You'll find configs for Hyprland, Kitty and more!
+
+##### If you're not using Nix or NixOS
+Go to the [releases](https://github.com/0fie/Dotfiles/releases). You'll find configs for Hyprland, Kitty and more!
 
 <hr>
 
