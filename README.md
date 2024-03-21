@@ -51,6 +51,11 @@
       Hyprlock (lockscreen)
       <img src="https://github.com/0fie/trash/blob/397803c2729638ffee7a3e5d470a2aca65378c34/LOCK-2024-03-21-At-09h07m13s.png" width="800px" /> <br>
    </p>
+   <p align="center">
+      App Launcher (rofi-wayland)
+      <img src="https://github.com/0fie/trash/blob/aa0f653391d827b8c67e9779311abedc60f47116/ROFI-2024-03-21-At-10h05m03s.png" width="800px" /> <br>
+   </p>
+
 </details>
 
 <details>
