@@ -44,6 +44,11 @@
       url = "github:Reledia/glow.yazi";
       flake = false;
     };
+
+    my-neovim = {
+      url = "github:0fie/nvim-config";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

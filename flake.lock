@@ -299,6 +299,22 @@
         "type": "github"
       }
     },
+    "my-neovim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1711034718,
+        "narHash": "sha256-O24Sb4cMybf44p4MdXnnV8k28y9OHN0xqBQW+hddWRM=",
+        "owner": "0fie",
+        "repo": "nvim-config",
+        "rev": "9f3a8f16554fbd4b787dc68817c3da129a0f4687",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0fie",
+        "repo": "nvim-config",
+        "type": "github"
+      }
+    },
     "nix-colors": {
       "inputs": {
         "base16-schemes": "base16-schemes",
@@ -373,6 +389,7 @@
         "hypridle": "hypridle",
         "hyprland": "hyprland",
         "hyprlock": "hyprlock",
+        "my-neovim": "my-neovim",
         "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs_2",
         "trash": "trash",
