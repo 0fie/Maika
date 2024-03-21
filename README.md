@@ -85,6 +85,8 @@
 | **Clipboard**               | [wl-clipboard][wl-clipboard] |
 | **Office Suite**            | [LibreOffice][LibreOffice] |
 
+<br>
+
 ### 📚 Directory Structure
 | File/Dir               | What it does
 |------------------------| :------------------------------------------------------:
