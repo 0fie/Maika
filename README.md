@@ -115,7 +115,7 @@ I'm still figuring out how to make it safe and convinient for others to install 
 Progress is a bit slow due to time contraints on my side. However, the plan is to refactor the flake so that you can install just the
 home-manager configuration without having to include the rest of my OS configs. This means you can create another user on your system
 just to test out these configs, all without tampering with your existing setup. So for now, you should cherry pick the parts that you're
-interested in. For example, if want to add my Hyprland config to your setup, you'd simply copy my [home/hyprland.nix](home]hyprland.nix)
+interested in. For example, if you want to add my Hyprland config to your setup, you'd simply copy my [home/hyprland.nix](home]hyprland.nix)
 file to your dotfiles directory and then import it.    
 For other distros, go to the [releases](). You'll find configs for Hyprland, Kitty and more!
 
