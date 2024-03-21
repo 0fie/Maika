@@ -81,9 +81,9 @@
 
 ### 📚 Directory Structure
 
--   [flake.nix](flake.nix) base of the configuration    
--   [home](home/) contains home-manager configs for the user.    
--   [system](system/) contains system-level configs for the OS.
+| [flake.nix](flake.nix) | base of the configuration |
+| [home](home/)          | contains home-manager configs for the user. |
+| [system](system/)      | contains system-level configs for the OS. |
 
 ### Why it looks like this?
 Simplicity... as a simple person with simple requirements, I sought to craft a beautiful and functional NixOS + Hyprland config to daily
