@@ -94,11 +94,15 @@
 | [home/](home/) 🏠️       | contains home-manager configs for the user. like themes|
 | [system/](system/) ⚙️      | contains system-level OS configs like filesystem & boot. |
 
+<br>
+
 ### Why it looks like this?
 Simplicity... as a simple person with simple requirements, I sought to craft a beautiful and functional NixOS + Hyprland config to daily
 drive on my old Dell laptop, and this is it! It might look half-baked or primitive, but I can assure you that it meets my needs
 perfectly, and there is nothing more to add to it. So simple, so elegant. You will notice that the [home](home/) and [system](system/) directories
 do not contain any additional directories inside them. This was intentionally done to avoid unnecessary complexity.
+
+<br>
 
 ## How to Install?
 I'm still figuring out how to make it safe and convinient for others to install these dotfiles on their NixOS (and non-nix) machines.
