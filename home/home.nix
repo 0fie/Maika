@@ -15,6 +15,7 @@
     ./kitty.nix
     ./mako.nix
     ./nautilus.nix
+    ./neovim.nix
     ./nushell.nix
     ./pyprland.nix
     ./rofi.nix
