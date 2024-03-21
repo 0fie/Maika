@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 let inherit (import ./options.nix) gitUserName gitEmail;
 
@@ -10,7 +10,7 @@ in {
     extraConfig = {
       init.defaultBranch = "main";
       color.ui = true;
-      core.editor = "hx";
+      core.editor = "${config.home.sessionVariables.EDITOR}";
       credential.helper = "store";
       github.user = gitUserName;
       push.autoSetupRemote = true;

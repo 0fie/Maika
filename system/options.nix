@@ -21,7 +21,7 @@
   #
   # If you don't set the correct locale, programs might display text in other languages.
   # Required by system/locale.nix
-  theLocale = "en_US.UTF-8";
+  theLocale = "en_ZW.UTF-8";
 
   ####################################################
   # The variable below defines additional locale and internationalisation properties for your computer. It defines date and time
@@ -73,8 +73,8 @@
   # ...
   # Don't add 'Mono' in front of the fontName... otherwise icons will appear 'too small' in Kitty.
   # Required by system/fonts.nix
+  #
   #fontName = "JetBrainsMono Nerd Font";
   #fontPackage = "JetBrainsMono";
   fontName = "Monolisa Nerd Font";
-  #fontPackage = "JetBrainsMono";
 }

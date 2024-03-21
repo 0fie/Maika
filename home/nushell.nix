@@ -32,11 +32,11 @@ in {
 
       # Modern yuunix, uwu <3
       cat = "${pkgs.bat}/bin/bat";
-      cp = "${pkgs.advcpmv}/bin/advcp -g";
+      cp = "${pkgs.advcpmv}/bin/advcp -g"; # Shows progress bar.
       df = "${pkgs.duf}/bin/duf";
       find = "${pkgs.fd}/bin/fd";
       grep = "${pkgs.ripgrep}/bin/rg";
-      mv = "${pkgs.advcpmv}/bin/advmv -g";
+      mv = "${pkgs.advcpmv}/bin/advmv -g"; # Also shows progress bar.
       tree = "${pkgs.eza}/bin/eza --git --icons --tree";
     };
 
@@ -45,7 +45,7 @@ in {
       PROMPT_INDICATOR_VI_NORMAL = ''"∙ "'';
       PROMPT_COMMAND = ''""'';
       PROMPT_COMMAND_RIGHT = ''""'';
-      DIRENV_LOG_FORMAT = ''""'';
+      DIRENV_LOG_FORMAT = ''""''; # make direnv quiet
       SHELL = ''"${pkgs.nushell}/bin/nu"'';
       EDITOR = config.home.sessionVariables.EDITOR;
     };
