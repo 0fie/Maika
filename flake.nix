@@ -59,6 +59,7 @@
       forAllSystems = f:
         nixpkgs.lib.genAttrs allSystems
         (system: f { pkgs = import nixpkgs { inherit system; }; });
+
     in {
       devShells = forAllSystems ({ pkgs }: {
         default = pkgs.mkShell {
@@ -66,6 +67,7 @@
           packages = [ ];
         };
       });
+
       nixosConfigurations = {
         ${hostName} = nixpkgs.lib.nixosSystem {
           specialArgs = {
