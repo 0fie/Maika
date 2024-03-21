@@ -30,4 +30,13 @@
     enable = true;
     cpuFreqGovernor = "performance";
   };
+
+  # tmpfs on /tmp for speed and less strain on SSD/HDD during builds.
+  fileSystems = {
+    "/tmp" = {
+      device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "size=30%" "mode=755" ];
+    };
+  };
 }

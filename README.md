@@ -40,7 +40,7 @@
 
 <details>
    <summary>
-      CURRENT (EXPAND)
+      Current (Expand)
    </summary>
    <p align="center">
       <img src="https://github.com/0fie/trash/blob/1054bd402b447f0dc4f4618fa70659c95bf233dc/RICE-TERM-2024-03-20-At-04h34m30s.png" width="800px" /> <br>
@@ -49,7 +49,7 @@
 
 <details>
   <summary>More Pics</summary>
-  <p>Just kidding, star the repo lol lol 😅</p>
+  <p>Just kidding, please star the repo lol lol 😅</p>
 </details>
 
 ### 📓 Components
@@ -79,96 +79,28 @@
 | **Clipboard**               | [wl-clipboard][wl-clipboard] |
 | **Office Suite**            | [LibreOffice][LibreOffice] |
 
-## Philosophy and design principles
+### 📚 Directory Structure
 
-Simplicity... as a simple person with simple requirements, I sought to craft a NixOS config to daily drive on my old Dell laptop.
-Here is a quick explanation of the folder structure. This "project" is a [flake](https://zero-to-nix.com/concepts/flakes) as you 
-might have noticed. The home directory contains my [home-manager](https://github.com/nix-community/home-manager) configurations for apps
-like Firefox, Spotify etc. The system directory holds system-level configs, like the hostname, etc. You can also configure the
-Nix package manager from there. And that's just about it. Simple, right?
+-   [flake.nix](flake.nix) base of the configuration
+    [home](home/) contains home-manager configs for the user.
+    [system](system/) contains system-level configs for the OS.
 
+### Why it looks like this?
+Simplicity... as a simple person with simple requirements, I sought to craft a beautiful and functional NixOS + Hyprland config to daily
+drive on my old Dell laptop, and this is it! It might look half-baked or primitive, but I can assure you that it meets my needs
+perfectly, and there is nothing more to add to it. So simple, so elegant. You will notice that
 
 ## How to Install?
-> [!TIP]
-> You can't, lol
-
-First of all, you're not supposed to install my NixOS config on your computer. I didn't have that kind of sharing in mind when I wrote
-these configs. You should cherry-pick the `.nix` files that you're interested in. Let's say you admire my Cava setup and you'd
-like to have it as part of your system... you'd simply copy my [home/cava.nix](home/cava.nix) file into **your** config directory, and then import it.
-However, if you're still adamant about installing my configs on your machine, or would like to fork my flake, follow the cursed steps below.
-
-#### Edit the 2 options.nix files
-You can not install this NixOS config directly on your machine. Well... you can, but you gotta jump through some hoops first.
-1. Assumming you've already cloned this repo and CD'd into it, edit the [home/options.nix](home/options.nix) file. You probably want to
-change the git username & email as well as the dotfiles dir. If you're using Helix as your editor:
-
-```bash
-hx home/options.nix
-```
-
-2. Now you need to the edit [system/options.nix](system/options.nix) file. Edit it as you see fit. You probably want to change
-the hostname, timezone and locale.
-
-```bash
-hx system/options.nix
-```
-
-#### Generate the suitable hardware configuration for your rig
-- The hardware configuration is located in [system/hardware-configuration.nix](system/hardware-configuration.nix). You're probably
-not using the exact same 11yr old Dell laptop as I am, so let's generate the appropriate hardware config for your computer. Run the
-following command:
-
-```bash
-nixos-generate-config --show-hardware-config > system/hardware-configuration.nix
-```
-
-#### Configure boot settings
-This is the slightly complicated part. By default, my config is meant for ancient systems that use GRUB and legacy boot; BIOS, not UEFI.
-So unless your machine has BIOS or was made sometime before the year 2010, you use UEFI. You probably know what I'm trying (and failing)
-to explain so here is the way forward.
-If you're on UEFI, you need to add the boot config by **running** the following command.:
-
-```bash
-echo '
-{ pkgs, ... }:
-
-{
-  boot = {
-    tmp.cleanOnBoot = true;
-    supportedFilesystems = [ "ntfs" ];
-    loader = {
-      timeout = 10;
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
-    plymouth = {
-      enable = true;
-      themePackages = with pkgs; [(
-        adi1090x-plymouth-themes.override {
-          selected_themes = [ "connect" ];
-        }
-      )];
-    };
-  };
-}
-' > system/boot.nix
-```
-
-If you've made it this far, run
-
-```bash
-sudo nixos-rebuild boot --flake .# && reboot
-```
-
-> [!WARNING]
-> The instructions above were never tested, lol 😅
-
+I'm still figuring out how to make it safe and convinient for others to install these dotfiles on their NixOS (and non-nix) machines.
+Progress is a bit slow due to time contraints on my side. However, the plan is to refactor the flake so that you can install just the
+home-manager configuration without having to include the rest of my OS configs. This means you can create another user on your system
+just to test out these configs, all without tampering with your existing setup. So for now, you should cherry pick the parts that you're
+interested in. For example, if want to add my Hyprland config to your setup, you'd simply copy my [home/hyprland.nix](home]hyprland.nix)
+file to your dotfiles directory and then import it.
 
 <hr>
 
-
 ### I got a lot of inspiration as well as actual code from the following sources:
-
 - [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell, Helix config, UEFI boot stuff for the instructions above
 - [NotAShelf/Nyx](https://github.com/NotAShelf/Nyx) - Helix config, plus dozens of other snippets from their ultra-complex setup
 - [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - Firefox declaration with addons, Helix config
