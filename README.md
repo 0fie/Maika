@@ -80,10 +80,16 @@
 | **Office Suite**            | [LibreOffice][LibreOffice] |
 
 ### 📚 Directory Structure
-
+| File/Dir               | What it does
+|------------------------| :------------------------------------------------------:
 | [flake.nix](flake.nix) | base of the configuration |
-| [home](home/) 🏠️       | contains home-manager configs for the user. |
-| [system](system/) ⚙️    | contains system-level configs for the OS. |
+<<<<<<< HEAD
+| [home](home/)        | contains home-manager configs for the user. |
+| [system](system/)     | contains system-level configs for the OS. |
+=======
+| [home/](home/)          | contains home-manager configs for the user. |
+| [system/](system/)      | contains system-level configs for the OS. |
+>>>>>>> f99340cf164fd6243aa468efdfc1e11d8def660d
 
 ### Why it looks like this?
 Simplicity... as a simple person with simple requirements, I sought to craft a beautiful and functional NixOS + Hyprland config to daily
