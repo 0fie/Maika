@@ -83,8 +83,8 @@
 | File/Dir               | What it does
 |------------------------| :------------------------------------------------------:
 | [flake.nix](flake.nix) | base of the configuration |
-| [home](home/) 🏠️       | contains home-manager configs for the user. |
-| [home/](home/) ⚙️      | contains home-manager configs for the user. |
+| [home/](home/) 🏠️       | contains home-manager configs for the user. like themes|
+| [system/](system/) ⚙️      | contains system-level OS configs like filesystem & boot. |
 
 ### Why it looks like this?
 Simplicity... as a simple person with simple requirements, I sought to craft a beautiful and functional NixOS + Hyprland config to daily
