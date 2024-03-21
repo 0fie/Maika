@@ -33,7 +33,7 @@
    <img src="https://github.com/0fie/trash/blob/1054bd402b447f0dc4f4618fa70659c95bf233dc/RICE-2024-03-20-At-04h45m32s.png" width="800px" /> <br>
 </p>
 <p align="center">
-   Screeenshot last updated <b>20 March</b>
+   Screenshot last updated <b>20 March</b>
 </p>
 
 ### 🖼️ Gallery
@@ -48,7 +48,7 @@
    </p>
 
    <p align="center">
-      Hyprlock (lockscreen)
+      Hyprlock (lock screen)
       <img src="https://github.com/0fie/trash/blob/397803c2729638ffee7a3e5d470a2aca65378c34/LOCK-2024-03-21-At-09h07m13s.png" width="800px" /> <br>
    </p>
    <p align="center">
@@ -67,7 +67,7 @@
 | Type                        | Program                                                                                       |
 | --------------------------- | :---------------------------------------------------------------------------------------------:
 | **Compositor**              | [Hyprland][Hyprland] |
-| **Lockscreen**              | [Hyprlock][Hyprlock] |
+| **Lock screen**             | [Hyprlock][Hyprlock] |
 | **Idle Mgmt. Daemon**       | [Hypridle][Hypridle] |
 | **Wallpaper Setter**        | [Hyprpaper][Hyprpaper] |
 | **Text Editor**             | [Helix][Helix] |
@@ -96,42 +96,42 @@
 | File/Dir               | What it does
 |------------------------| :------------------------------------------------------:
 | [flake.nix](flake.nix) | base of the configuration |
-| [home/](home/) 🏠️       | contains home-manager configs for the user, like themes|
-| [system/](system/) ⚙️      | contains system-level OS configs like filesystem & boot. |
+| [home/](home/) 🏠️      | contains home-manager configs for the user, like themes |
+| [system/](system/) ⚙️   | contains system-level OS configs like file system & boot. |
 
 <br>
 
 ### Why it looks like this?
-Simplicity... as a simple person with simple requirements, I sought to craft a beautiful and functional NixOS + Hyprland config to daily
-drive on my old Dell laptop, and this is it! It might look half-baked or primitive, but I can assure you that it meets my needs
-perfectly, and there is nothing more to add to it. So simple, so elegant. You will notice that the [home](home/) and [system](system/) directories
-do not contain any additional directories inside them. This was intentionally done to avoid unnecessary complexity. You can open an
+Simplicity. As a simple person with simple requirements, I sought to craft a beautiful and functional NixOS + Hyprland config to daily
+drive on my old Dell laptop, and this is it! It might look half-baked or "insufficient" but I can assure you that it meets my needs perfectly,
+and there is nothing more to add to it. You will notice that the [home](home/) and [system](system/) directories do not contain any
+additional directories inside them. This was intentionally done to avoid unnecessary complexity. You can open an
 [issue](https://github.com/0fie/Dotfiles/issues/new) if you face trouble with the dotfiles.
 
 <br>
 
 ## How to Install?
-I'm still figuring out how to make it safe and convinient for others to install these dotfiles on their NixOS (and non-nix) machines.
-Progress is a bit slow due to time contraints on my side. However, the plan is to refactor the flake so that you can install just the
+I'm still figuring out how to make it safe and convenient for others to install these dotfiles on their NixOS (and non-nix) machines.
+Progress is a bit slow due to time constraints on my side. However, the plan is to refactor the flake so that you can install just the
 home-manager configuration without having to include the rest of my OS configs. This means you can create another user on your system
 just to test out these configs, all without tampering with your existing setup. So for now, you should cherry pick the parts that you're
 interested in. For example, if you want to add my Hyprland config to your setup, you'd simply copy my [home/hyprland.nix](home]hyprland.nix)
-file to your dotfiles directory and then import it.    
+file into your dotfiles directory and then import it.    
 
-##### If you're not using Nix or NixOS
+#### If you're not using Nix or NixOS
 Go to the [releases](https://github.com/0fie/Dotfiles/releases). You'll find configs for Hyprland, Kitty and more!
 
 <hr>
 
 ### I got a lot of inspiration as well as actual code from the following sources:
-- [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell, Helix config, UEFI boot stuff for the instructions above
-- [NotAShelf/Nyx](https://github.com/NotAShelf/Nyx) - Helix config, plus dozens of other snippets from their ultra-complex setup
-- [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - Firefox declaration with addons, Helix config
+- [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell
+- [NotAShelf/Nyx](https://github.com/NotAShelf/Nyx) - dozens of snippets from their ultra-complex setup
+- [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - Firefox declaration with addons
 - [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - Catppuccin themes for CLI tools like bat, cava etc. Thank you!
 - [My Linux For Work Dotfiles 2.7 - 2.8](https://gitlab.com/stephan-raabe/dotfiles) - Inspiration for hyprlock and hypridle
 - [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles/) - Catppuccin for SDDM and Plymouth, thank you!
 - [prasanthrangan/hyprdots](https://github.com/prasanthrangan/hyprdots) - Hyprland animations
-- [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Maxfetch, Starship, Kitty, Discord, Hyprland window rules, Waybar
+- [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Maxfetch, Starship, Kitty, Hyprland window rules, Waybar
 
 
 ### Other learning resources that have also been helpful
