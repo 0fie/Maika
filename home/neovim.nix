@@ -3,7 +3,7 @@
 {
   programs.neovim = {
     enable = true;
-    defaultEditor = lib.mkForce true;
+    #defaultEditor = lib.mkDefault 100;
     viAlias = true;
     vimAlias = true;
     withPython3 = false;

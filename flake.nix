@@ -69,7 +69,7 @@
       devShells = forAllSystems ({ pkgs }: {
         default = pkgs.mkShell {
           # The Nix packages provided in the environment
-          packages = [ ];
+          packages = with pkgs; [ nil nodePackages_latest.grammarly-languageserver];
         };
       });
 

@@ -302,11 +302,11 @@
     "my-neovim": {
       "flake": false,
       "locked": {
-        "lastModified": 1711034718,
-        "narHash": "sha256-O24Sb4cMybf44p4MdXnnV8k28y9OHN0xqBQW+hddWRM=",
+        "lastModified": 1711079578,
+        "narHash": "sha256-hQkZCIs2yuX4616XHU07Srg/XVWn/21m7uv6M6YpURw=",
         "owner": "0fie",
         "repo": "nvim-config",
-        "rev": "9f3a8f16554fbd4b787dc68817c3da129a0f4687",
+        "rev": "2a8191c2c2ddaeada5ff756216429cabeb96edf6",
         "type": "github"
       },
       "original": {
