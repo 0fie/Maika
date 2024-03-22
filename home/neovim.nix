@@ -1,6 +1,14 @@
-{ pkgs, inputs, ... }:
+{ lib, inputs, ... }:
 
 {
-  home.packages = with pkgs; [ neovim nixd lua-language-server ];
-  #xdg.configFile."nvim".source = "${inputs.my-neovim}";
+  programs.neovim = {
+    enable = true;
+    defaultEditor = lib.mkForce true;
+    viAlias = true;
+    vimAlias = true;
+    withPython3 = false;
+    withRuby = false;
+  };
+
+  xdg.configFile = { "nvim".source = "${inputs.my-neovim}"; };
 }
