@@ -17,6 +17,9 @@ in {
       options = "--delete-older-than 1d";
     };
   };
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowBroken = true;
+
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowBroken = true;
+  };
 }

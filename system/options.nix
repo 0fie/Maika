@@ -74,6 +74,8 @@
   # Don't add 'Mono' in front of the fontName... otherwise icons will appear 'too small' in Kitty.
   # Required by system/fonts.nix
   #
+
+  ## You can uncomment if necessary. See system/fonts.nix
   #fontName = "JetBrainsMono Nerd Font";
   #fontPackage = "JetBrainsMono";
   fontName = "Monolisa Nerd Font";
