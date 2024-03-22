@@ -140,7 +140,7 @@ Go to the [releases](https://github.com/0fie/Dotfiles/releases). You'll find con
 - [Zero to Nix](https://zero-to-nix.com)
 - [Vimjoyer's Nix playlist](https://www.youtube.com/playlist?list=PLko9chwSoP-15ZtZxu64k_CuTzXrFpxPE)
 - [Zaney's Blog](https://zaney.org/)
-- [IogaMaster's channel][https://www.youtube.com/@IogaMaster]
+- [IogaMaster's channel](https://www.youtube.com/@IogaMaster)
 
 ###### Special thanks to [NobbZ](https://github.com/NobbZ) for answering all my questions on Discord.
 
