@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
-let
-  inherit (import ../system/options.nix) fontName;
-  scripts = import ./scripts.nix { inherit pkgs; };
+let inherit (import ../system/options.nix) fontName;
 in {
   programs.waybar = {
     enable = true;
@@ -16,7 +14,7 @@ in {
       margin-right = 0;
       modules-left = [ "custom/launcher" "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "cpu" "memory" "pulseaudio" "tray" "custom/battery" ];
+      modules-right = [ "cpu" "memory" "pulseaudio" "tray" ];
 
       clock = {
         calendar = {
@@ -35,7 +33,6 @@ in {
         disable-scroll = true;
         format = "{icon}";
         on-click = "activate";
-        persistent-workspaces = { "1" = [ ]; };
         format-icons = {
           "1" = "1";
           "2" = "2";
@@ -49,12 +46,6 @@ in {
           "10" = "0";
           sort-by-number = true;
         };
-      };
-
-      "custom/battery" = {
-        exec = "${scripts.waybarBatteryScript}/bin/script";
-        format = " 󰁹 {}";
-        interval = 10;
       };
 
       memory = {
