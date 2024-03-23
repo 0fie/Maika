@@ -1,9 +1,8 @@
-{ lib, inputs, ... }:
+{ inputs, ... }:
 
 {
   programs.neovim = {
     enable = true;
-    #defaultEditor = lib.mkDefault 100;
     viAlias = true;
     vimAlias = true;
     withPython3 = false;
