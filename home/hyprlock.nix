@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
-let placeholderAndTimeColor = "rgb(205, 214, 244)";
+let
+  placeholderAndTimeColor = "rgb(205, 214, 244)";
+  inherit (import ../system/options.nix) fontName;
 in {
   programs.hyprlock = {
     enable = true;
@@ -37,7 +39,7 @@ in {
     labels = [{
       monitor = "";
       text = "$TIME";
-      font_family = "JetBrains Mono Nerd Font";
+      font_family = "${fontName}";
       font_size = 50;
       color = placeholderAndTimeColor;
       position = {
