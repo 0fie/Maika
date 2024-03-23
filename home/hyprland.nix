@@ -132,20 +132,21 @@ in {
 
       bind = [
         # Launch apps
-        "$mainMod,        r,   exec,   ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
-        "$mainMod,        e,   exec,   ${pkgs.emote}/bin/emote"
         "$mainMod,        b,   exec,   ${pkgs.firefox}/bin/firefox"
-        "$mainMod,        f,   exec,   ${pkgs.gnome.nautilus}/bin/nautilus"
-        "$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
-        "$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
-        "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
-        "$mainMod,        z,   exec,   hyprlock" # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
-        "$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
-        "$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
         "$mainMod,        d,   exec,   ${pkgs.discord}/bin/discord"
+        "$mainMod,        e,   exec,   ${pkgs.emote}/bin/emote"
+        "$mainMod,        f,   exec,   ${pkgs.gnome.nautilus}/bin/nautilus"
+        "$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
+        "$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
         "$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
-        ",            Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify --cursor save area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
+        "$mainMod,        r,   exec,   ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
+        "$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
+        "$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
+        "$mainMod,        z,   exec,   hyprlock" # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
+        "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
         "ALT,        return,   exec,   ${pkgs.pyprland}/bin/pypr toggle term && hyprctl dispatch bringactivetotop"
+        ",            Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify --cursor save area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
+        "SHIFT,       Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify copysave screen ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
 
         # Control media players.
         ",XF86AudioPlay,  exec, ${pkgs.playerctl}/bin/playerctl play-pause"
