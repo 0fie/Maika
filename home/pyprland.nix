@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [ pyprland ];
 
+  # TODO: Make use of
   xdg.configFile."hypr/pyprland.toml".text = ''
     [pyprland]
     plugins = [

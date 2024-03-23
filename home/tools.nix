@@ -12,7 +12,7 @@
     persepolis # download manager
     protonvpn-gui
     shotcut # lightweight video cutter
-    soundwireserver # cast sound to Android phone. Or use it as a bluetooth speaker!
+    soundwireserver # cast sound to Android phone.
     transmission-gtk # torrent client
     vlc
     vokoscreen-ng # screen recorder
