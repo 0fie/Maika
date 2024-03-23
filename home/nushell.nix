@@ -23,6 +23,7 @@ in {
       # Git
       ga = "${pkgs.git}/bin/git add";
       gc = "${pkgs.git}/bin/git commit";
+      gd = "${pkgs.git}/bin/git diff";
       gl = "${pkgs.git}/bin/git log";
       gs = "${pkgs.git}/bin/git status";
       gp = "${pkgs.git}/bin/git push origin main";
@@ -50,6 +51,7 @@ in {
       EDITOR = config.home.sessionVariables.EDITOR;
     };
 
+    # See the Nushell docs for more options.
     extraConfig = let
       conf = builtins.toJSON {
         show_banner = false;
@@ -60,8 +62,8 @@ in {
         rm.always_trash = true;
 
         table = {
-          mode = "rounded"; # compact thin rounded
-          index_mode = "always"; # alway never auto
+          mode = "rounded";
+          index_mode = "always";
           header_on_separator = false;
         };
 
