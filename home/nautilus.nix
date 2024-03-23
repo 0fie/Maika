@@ -6,6 +6,7 @@
     packages = with pkgs; [ gnome.nautilus gst_all_1.gstreamer ];
 
     # These session variables allow Nautilus to display audio/video properties of a media file.
+    # For some reason it stopped working. Please help me if you're reading this.
     sessionVariables = {
       GST_PLUGIN_SYSTEM_PATH_1_0 =
         lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0" [
