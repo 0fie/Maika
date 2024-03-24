@@ -55,6 +55,7 @@ in {
         disable_splash_rendering = true;
         animate_manual_resizes = true;
         animate_mouse_windowdragging = true;
+        disable_autoreload = true; # useless on nixos
       };
 
       windowrule = [
@@ -138,14 +139,14 @@ in {
         "$mainMod,        f,   exec,   ${pkgs.gnome.nautilus}/bin/nautilus"
         "$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
         "$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
+        "$mainMod,        l,   exec,   hyprlock" # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
         "$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
         "$mainMod,        r,   exec,   ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
         "$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
         "$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
-        "$mainMod,        z,   exec,   hyprlock" # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
         "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
         "ALT,        return,   exec,   ${pkgs.pyprland}/bin/pypr toggle term && hyprctl dispatch bringactivetotop"
-        ",            Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify --cursor save area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
+        ",            Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify --cursor copysave area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
         "SHIFT,       Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify copysave screen ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
 
         # Control media players.
