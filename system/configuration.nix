@@ -6,9 +6,10 @@
     ./environment.nix
     ./fonts.nix
     ./hardware-configuration.nix
+    ./kernel.nix
+    ./locale.nix
     ./networking.nix
     ./nix-settings.nix
-    ./locale.nix
     ./services.nix
     ./systemd.nix
     ./sound.nix
