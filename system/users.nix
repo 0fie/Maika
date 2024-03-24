@@ -16,13 +16,13 @@ in {
   };
 
   # Required by Nautilus. Does not work though.
+  # If you're reading this, please help me.
   programs.nautilus-open-any-terminal = {
     enable = true;
     terminal = "kitty";
   };
 
-  # The line below enables crucial system components necessary for Hyprland to run properly. If you remove it, Hyprland WILL crash
-  # whenever you attempt to start it.
+  # The line below enables crucial system components necessary for Hyprland to run properly.
   programs.hyprland.enable = true;
 
   # This is required by Hyprlock. The package installed through home-manager will not be able to unlock the session

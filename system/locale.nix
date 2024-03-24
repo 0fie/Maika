@@ -1,4 +1,5 @@
 { ... }:
+# There is nothing meaningful to edit here. See system/options.nix
 
 let inherit (import ./options.nix) theTimezone theLocale additionalLocales;
 in {
