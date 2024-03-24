@@ -30,7 +30,7 @@
 </div>
 
 <p align="center">
-   <img src="https://github.com/0fie/trash/blob/1054bd402b447f0dc4f4618fa70659c95bf233dc/RICE-2024-03-20-At-04h45m32s.png" width="800px" /> <br>
+   <img src="https://github.com/0fie/Dotfiles/docs/rice/rice.png" width="800px" /> <br>
 </p>
 <p align="center">
    Screenshot last updated <b>20 March</b>
@@ -44,16 +44,16 @@
    </summary>
    <p align="center">
       Kitty + Nushell + Starship + Cava
-      <img src="https://github.com/0fie/trash/blob/1054bd402b447f0dc4f4618fa70659c95bf233dc/RICE-TERM-2024-03-20-At-04h34m30s.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Dotfiles/docs/rice/term.png" width="800px" /> <br>
    </p>
 
    <p align="center">
       Hyprlock (lock screen)
-      <img src="https://github.com/0fie/trash/blob/397803c2729638ffee7a3e5d470a2aca65378c34/LOCK-2024-03-21-At-09h07m13s.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Dotfiles/docs/rice/lockscreen.png" width="800px" /> <br>
    </p>
    <p align="center">
       App Launcher (rofi-wayland)
-      <img src="https://github.com/0fie/trash/blob/aa0f653391d827b8c67e9779311abedc60f47116/ROFI-2024-03-21-At-10h05m03s.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Dotfiles/docs/rice/rofi.png" width="800px" /> <br>
    </p>
 
 </details>
