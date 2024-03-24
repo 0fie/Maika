@@ -37,11 +37,6 @@
     username = "${userName}";
     homeDirectory = "/home/${userName}";
     stateVersion = "23.11";
-
-    sessionVariables = {
-      POLKIT_BIN =
-        "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-    };
   };
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
