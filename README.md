@@ -128,7 +128,7 @@ Kitty and more!
 - [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell
 - [NotAShelf/Nyx](https://github.com/NotAShelf/Nyx) - dozens of snippets from their ultra-complex setup
 - [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - Firefox declaration with addons
-- [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - Catppuccin themes for CLI tools like bat, cava etc. Thank you!
+- [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - bat, cava etc. Thank you!
 - [My Linux For Work Dotfiles 2.7 - 2.8](https://gitlab.com/stephan-raabe/dotfiles) - Inspiration for hyprlock and hypridle
 <!--
 - [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles/) - Catppuccin for SDDM and Plymouth, thank you!
