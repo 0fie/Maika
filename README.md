@@ -49,11 +49,15 @@
 
    <p align="center">
       Hyprlock (lock screen)
-      <img src="https://github.com/0fie/Dotfiles/docs/rice/lockscreen.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Dotfiles/docs/rice/lock.png" width="800px" /> <br>
    </p>
    <p align="center">
       App Launcher (rofi-wayland)
       <img src="https://github.com/0fie/Dotfiles/docs/rice/rofi.png" width="800px" /> <br>
+   </p>
+   <p align="center">
+      Helix Editor (left) and Yazi (right)
+      <img src="https://github.com/0fie/Dotfiles/docs/rice/cli.png" width="800px" /> <br>
    </p>
 
 </details>
