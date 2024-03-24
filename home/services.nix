@@ -20,7 +20,7 @@
           onResume = "";
         }
         {
-          timeout = 600;
+          timeout = 1200;
           onTimeout = "systemctl suspend";
           onResume = "notify-send 'welcome back!'";
         }
