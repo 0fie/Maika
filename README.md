@@ -130,9 +130,7 @@ Kitty and more!
 - [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - Firefox declaration with addons
 - [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - bat, cava etc. Thank you!
 - [My Linux For Work Dotfiles 2.7 - 2.8](https://gitlab.com/stephan-raabe/dotfiles) - Inspiration for hyprlock and hypridle
-<!--
-- [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles/) - Catppuccin for SDDM and Plymouth, thank you!
--->
+- [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles/) - Catppuccin for SDDM. thank you!
 - [prasanthrangan/hyprdots](https://github.com/prasanthrangan/hyprdots) - Hyprland animations
 - [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Maxfetch, Starship, Kitty, Hyprland window rules, Waybar
 
