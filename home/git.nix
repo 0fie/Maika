@@ -14,6 +14,7 @@ in {
       credential.helper = "store";
       github.user = gitUserName;
       push.autoSetupRemote = true;
+      help.autocorrect = 10;
     };
   };
 }
