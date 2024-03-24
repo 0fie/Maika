@@ -16,5 +16,17 @@ in {
       push.autoSetupRemote = true;
       help.autocorrect = 10;
     };
+    ignores = [
+      "target/"
+      ".cache/"
+      ".idea/"
+      "*.elc"
+      ".~lock*"
+      "auto-save-list"
+      ".direnv/"
+      "node_modules"
+      "result"
+      "result-*"
+    ];
   };
 }
