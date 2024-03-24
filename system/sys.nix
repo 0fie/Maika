@@ -6,11 +6,6 @@
   };
 
   hardware = {
-    bluetooth = {
-      enable = true;
-      powerOnBoot = false;
-    };
-
     # Hardware acceleration.
     opengl = {
       enable = true;
@@ -24,6 +19,19 @@
       driSupport32Bit = true;
     };
     enableRedistributableFirmware = true;
+
+    bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+      settings = {
+        General = {
+          FastConnectable = true;
+          JustWorksRepairing = "always";
+          # Battery info for Bluetooth devices
+          Experimental = true;
+        };
+      };
+    };
   };
 
   powerManagement = {
