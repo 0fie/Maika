@@ -62,22 +62,17 @@ rec {
 
   ####################################################
   # The 'fontName' variable below is used by apps like Waybar and Kitty to determine which font to use. It is *not* the actual font
-  # package that will get installed. The actual font package to be installed is defined in the fontPackage variable, and it
-  # is the JetBrainsMono nerd font. Suppose you want to switch to the Iosevka nerd font, you'd edit the line below like so:
+  # package that will get installed. Suppose you've installed the Iosevka font and would like all your apps to use it, you'd edit the
+  # line below like so:
+  #
   # ...
   #    fontName = "Iosevka Nerd Font";
   # ...
   #
-  # And then change fontPackage to the actual Iosevka nerd font like so:
-  # ...
-  #    fontPackage = "Iosevka";
-  # ...
-  # Don't add 'Mono' in front of the fontName... otherwise icons will appear 'too small' in Kitty.
-  # Required by system/fonts.nix
   #
-
-  ## You can uncomment if necessary. See system/fonts.nix
-  #fontName = "JetBrainsMono Nerd Font";
-  #fontPackage = "JetBrainsMono";
+  # NOTE: 
+  #     - You should install the font yourself, manually. This variable just exists to let your apps know which font to use.
+  #     - Don't add 'Mono' in front of the fontName... otherwise icons will appear 'too small' in Kitty.
+  # Required by system/fonts.nix
   fontName = "Monolisa Nerd Font";
 }
