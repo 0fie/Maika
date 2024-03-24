@@ -1,8 +1,11 @@
-{ ... }:
+{ inputs, lib, ... }:
 
 let inherit (import ../home/options.nix) userName;
 in {
   nix = {
+    # pin the registry to avoid downloading and evaling a new nixpkgs version every time
+    registry = lib.mapAttrs (_: v: { flake = v; }) inputs;
+
     settings = {
       auto-optimise-store = true;
       trusted-users = [ "${userName}" ];

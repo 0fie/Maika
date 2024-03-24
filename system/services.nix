@@ -18,6 +18,10 @@
       enable = true;
       interval = "monthly";
     };
+
+    logind.extraConfig = ''
+      HandlePowerKey=suspend
+    '';
   };
 
   xdg.portal = with pkgs; {
@@ -27,5 +31,4 @@
     configPackages =
       [ xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-desktop-portal ];
   };
-
 }

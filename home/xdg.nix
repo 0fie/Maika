@@ -19,6 +19,7 @@ in {
       templates = "${config.home.homeDirectory}/.local/templates";
     };
 
+    # TODO: There is a better way to do this.
     mimeApps = rec {
       enable = true;
       associations.added = defaultApplications;
