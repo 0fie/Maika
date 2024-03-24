@@ -93,11 +93,12 @@
 <br>
 
 ### 📚 Directory Structure
-| File/Dir               | What it does
-|------------------------| :------------------------------------------------------:
-| [flake.nix](flake.nix) | base of the configuration |
-| [home/](home/) 🏠️      | contains home-manager configs for the user, like themes |
-| [system/](system/) ⚙️   | contains system-level OS configs like file system & boot. |
+| File/Dir                   | What it does
+|----------------------------| :------------------------------------------------------:
+| [flake.nix](flake.nix) ❄️   | base of the configuration |
+| [home/](home/) 🏠️          | contains home-manager configs for the user, like themes |
+| [system/](system/) ⚙️       | contains system-level OS configs like file system & boot. |
+| [docs/](docs/) 📚️          | the documentation: explains how to do x, what option y does, etc. |
 
 <br>
 
