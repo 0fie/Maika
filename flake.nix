@@ -45,10 +45,11 @@
       flake = false;
     };
 
-    my-neovim = {
-      url = "github:0fie/nvim-config";
-      flake = false;
+    spicetify-nix = {
+      url = "github:the-argus/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

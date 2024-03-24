@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ ... }:
 
 {
   programs.neovim = {
@@ -9,5 +9,5 @@
     withRuby = false;
   };
 
-  xdg.configFile = { "nvim".source = "${inputs.my-neovim}"; };
+  # xdg.configFile = { "nvim".source = "${inputs.my-neovim}"; };
 }
