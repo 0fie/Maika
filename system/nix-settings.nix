@@ -10,6 +10,7 @@ in {
     };
 
     # Enable auto cleanup.
+    # 0fie used Arch for so long, they no longer believe in rollbacks. We only roll forward!
     gc = {
       automatic = true;
       persistent = true;
@@ -18,8 +19,5 @@ in {
     };
   };
 
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowBroken = true;
-  };
+  nixpkgs.config = { allowUnfree = true; };
 }
