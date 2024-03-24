@@ -1,28 +1,26 @@
-{ ... }:
+{ config, pkgs, lib, ... }:
 
-{
+let scripts = import ./scripts.nix { inherit pkgs; };
+in {
   services = {
     network-manager-applet.enable = true;
     blueman-applet.enable = true;
 
-    hypridle = {
+    hypridle = rec {
       enable = true;
-      lockCmd = "hyprlock";
-      unlockCmd = "notify-send ''";
-      beforeSleepCmd = "notify-send ''";
-      afterSleepCmd = "notify-send ''";
+      lockCmd = lib.getExe config.programs.hyprlock.package;
+      beforeSleepCmd = "${pkgs.systemd}/bin/loginctl lock-session";
       ignoreDbusInhibit = false;
 
       listeners = [
         {
           timeout = 600;
-          onTimeout = "hyprlock";
+          onTimeout = lockCmd;
           onResume = "";
         }
         {
           timeout = 1200;
-          onTimeout = "systemctl suspend";
-          onResume = "notify-send 'welcome back!'";
+          onTimeout = "${scripts.suspendScript}/bin/script";
         }
       ];
     };
