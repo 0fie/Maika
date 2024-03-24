@@ -1,4 +1,4 @@
-{
+rec {
   # This file defines a bunch of options to be used on the NixOS system, such as the default fonts, time zone, etc.
 
   ####################################################
@@ -14,26 +14,27 @@
 
   ####################################################
   # The variable below defines the locale to be used on the computer. It is used by apps to determine language settings,
-  # sort orders, character sets, etc. Suppose you're based in the Netherlands, you'd change the locale like so:
+  # sort orders, currency formats, etc. Suppose you're based in the Netherlands, you'd change the locale like so:
   # ...
   #    theLocale = "nl_NL.UTF-8";
   # ...
   #
-  # If you don't set the correct locale, programs might display text in other languages.
+  # If you set the wrong locale, apps like the browser might display dates and currency in "incorrect formats".
   # Required by system/locale.nix
   theLocale = "en_ZW.UTF-8";
 
   ####################################################
-  # The variable below defines additional locale and internationalisation properties for your computer. It defines date and time
-  # formats as well as currency formats. Suppose you're based in Germany, you'd edit the line below like so:
+  # The variable below allows you to add additional locales to your system. It is a list of strings. Search for "i18n.supportedLocales"
+  # in configuration.nix to learn more.
+  # Suppose you want to add Japan, Romania and Netherlands, you'd edit the line below like so:
   #
   # ...
-  #    theLCVariable = "de_DE.UTF-8";
+  #    additionalLocales = [ "ja_JP.UTF-8/UTF-8" "ro_RO.UTF-8/UTF-8" "ja_JP.UTF-8/UTF-8"];
   # ...
   #
   # If you set the wrong internationalisation property, apps like the browser will display dates and currency in "incorrect" formats.
   # Required by system/locale.nix
-  theLCVariables = "en_ZW.UTF-8";
+  additionalLocales = [ "ja_JP.UTF-8/UTF-8" "${theLocale}" ];
 
   ####################################################
   # You almost certainly want to edit the line below. It defines the time zone used when displaying times and dates. Suppose
