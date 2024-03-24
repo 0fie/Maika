@@ -1,6 +1,25 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
+  imports = [ inputs.spicetify-nix.homeManagerModule ];
+
   home.packages = with pkgs; [ spotify ];
-  # TODO: Make the app use a Catppuccin colorscheme.
+
+  programs.spicetify =
+    let spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
+    in {
+      enable = true;
+
+      theme = spicePkgs.themes.catppuccin;
+
+      colorScheme = "mocha";
+
+      enabledExtensions = with spicePkgs.extensions; [
+        fullAppDisplay
+        history
+        genre
+        hidePodcasts
+        shuffle
+      ];
+    };
 }
