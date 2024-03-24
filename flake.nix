@@ -87,11 +87,13 @@
             ./system/configuration.nix
             home-manager.nixosModules.home-manager
             {
-              home-manager.extraSpecialArgs = { inherit inputs userName; };
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "backup";
-              home-manager.users.${userName} = import ./home/home.nix;
+              home-manager = {
+                extraSpecialArgs = { inherit inputs userName; };
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                backupFileExtension = "backup";
+                users.${userName} = import ./home/home.nix;
+              };
             }
           ];
         };
