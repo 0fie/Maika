@@ -125,14 +125,15 @@ Kitty and more!
 <hr>
 
 ### I got a lot of inspiration as well as actual code from the following sources:
-- [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell
+- [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell configs
 - [NotAShelf/Nyx](https://github.com/NotAShelf/Nyx) - dozens of snippets from their ultra-complex setup
-- [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - Firefox declaration with addons
-- [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - bat, cava etc. Thank you!
+- [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - their Firefox declaration with addons
+- [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - bat & cava configs. Thank you!
 - [My Linux For Work Dotfiles 2.7 - 2.8](https://gitlab.com/stephan-raabe/dotfiles) - Inspiration for hyprlock and hypridle
 - [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles/) - Catppuccin for SDDM. thank you!
-- [prasanthrangan/hyprdots](https://github.com/prasanthrangan/hyprdots) - Hyprland animations
-- [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Maxfetch, Starship, Kitty, Hyprland window rules, Waybar
+- [prasanthrangan/hyprdots](https://github.com/prasanthrangan/hyprdots) - their Hyprland animations
+- [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Configs for Maxfetch, Starship, Kitty, Waybar & Hyprland window rules
+- [fufexan/dotfiles](https://github.com/fufexan/dotfiles) - Configs for Spicetify, Hypridle and more
 
 
 ### Other learning resources that have also been helpful
