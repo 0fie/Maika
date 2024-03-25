@@ -1,4 +1,4 @@
-{ pkgs, inputs, userName, ... }:
+{ inputs, userName, ... }:
 
 {
   imports = [
@@ -18,6 +18,7 @@
     ./neovim.nix
     ./nushell.nix
     ./pyprland.nix
+    ./qt.nix
     ./rofi.nix
     ./services.nix
     ./starship.nix
