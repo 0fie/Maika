@@ -73,6 +73,7 @@ in {
         "float,class:^(dialog)$"
         "float,class:^(download)$"
         "float,class:^(notification)$"
+        "float,class:^(nm-connection-editor)$"
         "float,title:^(File Operation Progress)$"
       ];
 
