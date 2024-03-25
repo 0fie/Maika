@@ -20,7 +20,6 @@
     ./pyprland.nix
     ./rofi.nix
     ./services.nix
-    ./spotify.nix
     ./starship.nix
     ./tools.nix
     ./waybar.nix
