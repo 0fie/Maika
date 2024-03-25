@@ -24,19 +24,6 @@ rec {
   theLocale = "en_ZW.UTF-8";
 
   ####################################################
-  # The variable below allows you to add additional locales to your system. It is a list of strings. Search for "i18n.supportedLocales"
-  # in configuration.nix to learn more.
-  # Suppose you want to add Japan, Romania and Netherlands, you'd edit the line below like so:
-  #
-  # ...
-  #    additionalLocales = [ "ja_JP.UTF-8/UTF-8" "ro_RO.UTF-8/UTF-8" "ja_JP.UTF-8/UTF-8"];
-  # ...
-  #
-  # If you set the wrong internationalisation property, apps like the browser will display dates and currency in "incorrect" formats.
-  # Required by system/locale.nix
-  additionalLocales = [ "ja_JP.UTF-8/UTF-8" "${theLocale}" ];
-
-  ####################################################
   # You almost certainly want to edit the line below. It defines the time zone used when displaying times and dates. Suppose
   # you're based in New York, USA, you'd edit the line below like so:
   #

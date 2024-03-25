@@ -1,13 +1,10 @@
 { ... }:
 # There is nothing meaningful to edit here. See system/options.nix
 
-let inherit (import ./options.nix) theTimezone theLocale additionalLocales;
+let inherit (import ./options.nix) theTimezone theLocale;
 in {
   i18n = {
     defaultLocale = "${theLocale}";
-    # Saves space, according to Fufexan.
-    supportedLocales = additionalLocales;
-
     extraLocaleSettings = {
       LC_ADDRESS = "${theLocale}";
       LC_IDENTIFICATION = "${theLocale}";
