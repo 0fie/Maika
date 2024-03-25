@@ -90,7 +90,7 @@
 | **Icons**                   | [catppuccin-papirus-folders][catppuccin-papirus-folders] |
 | **Image Viewer**            | [Loupe][Loupe] |
 | **Media Player**            | [VLC][VLC] |
-| **Screen Recording**        | [VLC 👈️][VLC] |
+| **Screen Recording**        | [vokoscreenNG][vokoscreenNG] |
 | **Clipboard**               | [wl-clipboard][wl-clipboard] |
 | **Office Suite**            | [LibreOffice][LibreOffice] |
 
@@ -175,5 +175,6 @@ Kitty and more!
 [Bibata-Modern-Ice]: https://github.com/ful1e5/Bibata_Cursor
 [Loupe]: https://apps.gnome.org/Loupe/
 [VLC]: https://www.videolan.org/vlc/
+[vokoscreenNG]: https://github.com/vkohaupt/vokoscreenNG
 [Spotify]: https://spotify.com
 [LibreOffice]: https://www.libreoffice.org/
