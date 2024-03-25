@@ -30,7 +30,7 @@
 </div>
 
 <p align="center">
-   <img src="https://github.com/0fie/Dotfiles/docs/images/rice/rice.png" width="800px" /> <br>
+   <img src="https://github.com/0fie/Dotfiles/blob/main/docs/images/rice/rice.png" width="800px" /> <br>
 </p>
 <p align="center">
    Screenshot last updated <b>20 March</b>
@@ -44,20 +44,20 @@
    </summary>
    <p align="center">
       Kitty + Nushell + Starship + Cava
-      <img src="https://github.com/0fie/Dotfiles/docs/images/rice/term.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Dotfiles/blob/main/docs/images/rice/term.png" width="800px" /> <br>
    </p>
 
    <p align="center">
       Hyprlock (lock screen)
-      <img src="https://github.com/0fie/Dotfiles/docs/images/rice/lock.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Dotfiles/blob/main/docs/images/rice/lock.png" width="800px" /> <br>
    </p>
    <p align="center">
       App Launcher (rofi-wayland)
-      <img src="https://github.com/0fie/Dotfiles/docs/images/rice/rofi.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Dotfiles/blob/main/docs/images/rice/rofi.png" width="800px" /> <br>
    </p>
    <p align="center">
       Helix Editor (left) and Yazi (right)
-      <img src="https://github.com/0fie/Dotfiles/docs/images/rice/cli.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Dotfiles/blob/main/docs/images/rice/cli.png" width="800px" /> <br>
    </p>
 
 </details>
