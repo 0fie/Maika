@@ -133,9 +133,9 @@ Kitty and more!
 - [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell configs
 - [NotAShelf/Nyx](https://github.com/NotAShelf/Nyx) - dozens of snippets from their ultra-complex setup
 - [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - their Firefox declaration with addons
-- [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - bat & cava configs. Thank you!
+- [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - bat & cava configs
 - [My Linux For Work Dotfiles 2.7 - 2.8](https://gitlab.com/stephan-raabe/dotfiles) - Inspiration for hyprlock and hypridle
-- [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles/) - Catppuccin for SDDM. thank you!
+- [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles/) - Catppuccin for SDDM
 - [prasanthrangan/hyprdots](https://github.com/prasanthrangan/hyprdots) - their Hyprland animations
 - [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Configs for Maxfetch, Starship, Kitty, Waybar & Hyprland window rules
 - [fufexan/dotfiles](https://github.com/fufexan/dotfiles) - Configs for Spicetify, Hypridle and more
