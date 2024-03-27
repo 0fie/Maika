@@ -21,10 +21,10 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
-boot.initrd.luks.devices."luks-ad25b88c-d338-4d0f-a1f6-145c0c451cc0".device = "/dev/disk/by-uuid/ad25b88c-d338-4d0f-a1f6-145c0c451cc0";
+
   # tmpfs for /tmp is safely declared in system/sys.nix
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/f554d441-3e59-452a-bad7-e1cb9ef2fef5";
+    device = "/dev/sdc1";
     fsType = "ext4";
   };
 
