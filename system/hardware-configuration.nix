@@ -24,7 +24,7 @@
 
   # tmpfs for /tmp is safely declared in system/sys.nix
   fileSystems."/" = {
-    device = "/dev/sdc1";
+    device = "/dev/sda1";
     fsType = "ext4";
   };
 
