@@ -123,10 +123,7 @@ just to test out these configs, all without tampering with your existing setup. 
 interested in. For example, if you want to add my Hyprland config to your setup, you'd simply copy my [home/hyprland.nix](home]hyprland.nix)
 file into your dotfiles directory and then import it.    
 
-#### If you're not using Nix or NixOS
-Go to the [releases](https://github.com/0fie/Dotfiles/releases). The [v1.0.0-other-distros](https://github.com/0fie/Dotfiles/releases/download/v1.0.0-other-distros/v1.0.0-other-distros.tar) archive contains regular .conf files for Hyprland,
-Kitty and more!
-
+<br>
 <hr>
 
 ### I got a lot of inspiration as well as actual code from the following sources:
