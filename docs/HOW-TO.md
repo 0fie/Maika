@@ -1,6 +1,4 @@
-# How to do X?
-
-### How to change color scheme
+## How to change color scheme
 Open [home/home.nix]() in your editor. Jump to line 42 and modify the line to your liking.
 Possible values (themes) can be found at [nix-colors](https://github.com/misterio77/nix-colors).
 
