@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   # Packages that should be installed to the user profile.
@@ -18,5 +18,7 @@
     transmission-gtk # torrent client
     vokoscreen-ng # screen recorder
     which
+
+    inputs.catppuccinifier.packages.${pkgs.system}.cli
   ];
 }
