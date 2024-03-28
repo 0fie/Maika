@@ -443,11 +443,11 @@
     "trash": {
       "flake": false,
       "locked": {
-        "lastModified": 1711339943,
-        "narHash": "sha256-HhAbgBE58xou5cMy7Tw7GLvdf21RU7eP3bVZjY5gIAA=",
+        "lastModified": 1711615250,
+        "narHash": "sha256-8mYw3lXMz1VsUPHysu+Ml0VCmuJrmV9bHY43rSGihAg=",
         "owner": "0fie",
         "repo": "trash",
-        "rev": "53de1c538f356e2267581ab5b43f731714bc811b",
+        "rev": "3e2f8bcf03c459dae43d0c4817c5cc7ec818652b",
         "type": "github"
       },
       "original": {

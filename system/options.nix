@@ -61,5 +61,5 @@ rec {
   #     - You should install the font yourself, manually. This variable just exists to let your apps know which font to use.
   #     - Don't add 'Mono' in front of the fontName... otherwise icons will appear 'too small' in Kitty.
   # Required by system/fonts.nix
-  fontName = "Monolisa Nerd Font";
+  fontName = "MonoLisa Nerd Font";
 }
