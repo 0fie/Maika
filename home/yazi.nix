@@ -34,8 +34,8 @@
   ];
 
   xdg.configFile = {
-    "yazi/theme.toml".text =
-      builtins.readFile "${inputs.yazi-theme}/catppuccin-mocha/theme.toml";
+    "yazi/theme.toml".text = builtins.readFile
+      "${inputs.yazi-theme}/catppuccin-mocha.yazi/flavor.toml";
 
     "yazi/plugins/glow.yazi".source = "${inputs.yazi-glow}";
 
