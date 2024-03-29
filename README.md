@@ -147,7 +147,7 @@ file into your dotfiles directory and then import it.
 - [IogaMaster's channel](https://www.youtube.com/@IogaMaster)
 
 ###### Special thanks to [NobbZ](https://github.com/NobbZ) for answering all my questions on Discord.
-<p align="center"><a href="https://github.com/0fie/Dotfiles?tab=readme-ov-file#readme"><small>back to top</small></a></p>
+<p align="center"><a href="https://github.com/0fie/Maika?tab=readme-ov-file#readme"><small>back to top</small></a></p>
 
 <!-- links -->
 [Hyprland]: https://github.com/hyprwm/Hyprland
