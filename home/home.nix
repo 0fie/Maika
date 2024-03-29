@@ -5,7 +5,6 @@
     ./bat.nix
     ./btop.nix
     ./cava.nix
-    ./direnv.nix
     ./firefox.nix
     ./git.nix
     ./gtk.nix
@@ -15,10 +14,8 @@
     ./kitty.nix
     ./mako.nix
     ./nautilus.nix
-    ./neovim.nix
     ./nushell.nix
     ./pyprland.nix
-    ./qt.nix
     ./rofi.nix
     ./services.nix
     ./starship.nix
