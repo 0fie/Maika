@@ -153,24 +153,12 @@ in {
           toolbar = false;
           bookmarks = [
             {
-              name = "homepage";
-              url = "https://nixos.org/";
-            }
-            {
-              name = "wiki";
-              url = "https://nixos.wiki/";
-            }
-            {
               name = "nix.dev";
               url = "https://nix.dev/";
             }
             {
               name = "discourse";
               url = "https://discourse.nixos.org";
-            }
-            {
-              name = "discord";
-              url = "https://nixos.org";
             }
             {
               name = "Noogle (nix func search)";
@@ -180,12 +168,18 @@ in {
         }
 
         {
-          name = "Neocities";
+          name = "Preact";
           toolbar = false;
-          bookmarks = [{
-            name = "Cyuucat";
-            url = "https://cyuucat.moe";
-          }];
+          bookmarks = [
+            {
+              name = "GitHub";
+              url = "https://github.com/preactjs/preact";
+            }
+            {
+              name = "Tutorial";
+              url = "https://preactjs.com/tutorial";
+            }
+          ];
         }
 
         {
@@ -197,7 +191,7 @@ in {
               url = "https://xeiaso.net";
             }
             {
-              name = "FT-Lime";
+              name = "Faster than lime";
               url = "https://fasterthanli.me";
             }
           ];
