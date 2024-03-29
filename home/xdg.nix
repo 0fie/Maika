@@ -2,7 +2,7 @@
 
 let
   imageViewer = "org.gnome.Loupe.desktop";
-  mediaPlayer = "vlc.desktop";
+  mediaPlayer = "mpv.desktop";
   browser = "firefox.desktop";
   docOpener = "libreoffice.desktop";
   fileManager = "org.gnome.Nautilus.desktop";
@@ -19,7 +19,7 @@ in {
       templates = "${config.home.homeDirectory}/.local/templates";
     };
 
-    # TODO: There is a better way to do this.
+    # TODO: There must be a better way to do this.
     mimeApps = rec {
       enable = true;
       associations.added = defaultApplications;
