@@ -3,6 +3,7 @@
 {
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    charm-freeze
     gcc
     gimp
     git-extras # Provides useful commands like git-summary
