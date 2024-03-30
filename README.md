@@ -1,5 +1,5 @@
 <h1 align="center">
-   <img src="https://github.com/0fie/Dotfiles/assets/151028199/6da7fe65-6661-4bb6-b5bc-b72aa6d79a7a" width="100px" /> 
+   <img src="https://github.com/0fie/Maika/assets/151028199/6da7fe65-6661-4bb6-b5bc-b72aa6d79a7a" width="100px" /> 
    <br>
       0fie's ultra-simple NixOS config 
    <br>
@@ -9,16 +9,16 @@
    <div align="center">
       <p></p>
       <div align="center">
-         <a href="https://github.com/0fie/Dotfiles/stargazers">
-            <img src="https://img.shields.io/github/stars/0fie/Dotfiles?color=F5BDE6&labelColor=303446&style=for-the-badge&logo=starship&logoColor=F5BDE6">
+         <a href="https://github.com/0fie/Maika/stargazers">
+            <img src="https://img.shields.io/github/stars/0fie/Maika?color=F5BDE6&labelColor=303446&style=for-the-badge&logo=starship&logoColor=F5BDE6">
          </a>
-         <a href="https://github.com/0fie/Dotfiles/">
-            <img src="https://img.shields.io/github/repo-size/0fie/Dotfiles?color=C6A0F6&labelColor=303446&style=for-the-badge&logo=github&logoColor=C6A0F6">
+         <a href="https://github.com/0fie/Maika/">
+            <img src="https://img.shields.io/github/repo-size/0fie/Maika?color=C6A0F6&labelColor=303446&style=for-the-badge&logo=github&logoColor=C6A0F6">
          </a>
          <a = href="https://nixos.org">
             <img src="https://img.shields.io/badge/NixOS-unstable-blue.svg?style=for-the-badge&labelColor=303446&logo=NixOS&logoColor=white&color=91D7E3">
          </a>
-         <a href="https://github.com/0fie/Dotfiles/blob/main/LICENSE">
+         <a href="https://github.com/0fie/Maika/blob/main/LICENSE">
             <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&colorA=313244&colorB=F5A97F&logo=unlicense&logoColor=F5A97F&"/>
          </a>
       </div>
@@ -30,7 +30,7 @@
 </div>
 
 <p align="center">
-   <img src="https://github.com/0fie/Dotfiles/blob/main/docs/images/rice/rice.png" width="800px" /> <br>
+   <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/rice.png" width="800px" /> <br>
 </p>
 <p align="center">
    Screenshot last updated <b>20 March</b>
@@ -44,20 +44,20 @@
    </summary>
    <p align="center">
       Kitty + Nushell + Starship + Cava
-      <img src="https://github.com/0fie/Dotfiles/blob/main/docs/images/rice/term.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/term.png" width="800px" /> <br>
    </p>
 
    <p align="center">
       Hyprlock (lock screen)
-      <img src="https://github.com/0fie/Dotfiles/blob/main/docs/images/rice/lock.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/lock.png" width="800px" /> <br>
    </p>
    <p align="center">
       App Launcher (rofi-wayland)
-      <img src="https://github.com/0fie/Dotfiles/blob/main/docs/images/rice/rofi.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/rofi.png" width="800px" /> <br>
    </p>
    <p align="center">
       Helix Editor (left) and Yazi (right)
-      <img src="https://github.com/0fie/Dotfiles/blob/main/docs/images/rice/cli.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/cli.png" width="800px" /> <br>
    </p>
 
 </details>
@@ -68,8 +68,8 @@
 </details>
 
 ### 📓 Components
-| Type                        | Program                                                                                       |
-| --------------------------- | :---------------------------------------------------------------------------------------------:
+| Type                        | Program                                                  |
+| --------------------------- | :--------------------------------------------------------:
 | **Compositor**              | [Hyprland][Hyprland] |
 | **Lock screen**             | [Hyprlock][Hyprlock] |
 | **Idle Mgmt. Daemon**       | [Hypridle][Hypridle] |
@@ -84,14 +84,11 @@
 | **Application Launcher**    | [rofi-wayland][rofi-wayland] |
 | **Music Player**            | [Spotify][Spotify] |
 | **Bar**                     | [Waybar][Waybar] |
-| **Network Mgmt. Tool**      | [NetworkManager][NetworkManager] + [network-manager-applet][network-manager-applet] |
-| **System resource monitor** | [Btop][Btop] |
 | **Cursor**                  | [Bibata-Modern-Ice][Bibata-Modern-Ice] |
 | **Icons**                   | [catppuccin-papirus-folders][catppuccin-papirus-folders] |
 | **Image Viewer**            | [Loupe][Loupe] |
-| **Media Player**            | [VLC][VLC] |
+| **Media Player**            | [MPV][MPV] |
 | **Screen Recording**        | [vokoscreenNG][vokoscreenNG] |
-| **Clipboard**               | [wl-clipboard][wl-clipboard] |
 | **Office Suite**            | [LibreOffice][LibreOffice] |
 
 <br>
@@ -108,7 +105,7 @@
 
 ### Why it looks like this?
 Simplicity. As a simple person with simple requirements, I sought to craft a beautiful and functional NixOS + Hyprland config to daily
-drive on my old Dell laptop, and this is it! It might look half-baked or "insufficient" but I can assure you that it meets my needs perfectly,
+drive on my old Dell laptop, and this is it! It meets my needs perfectly,
 and there is nothing more to add to it. You will notice that the [home](home/) and [system](system/) directories do not contain any
 additional directories inside them. This was intentionally done to avoid unnecessary complexity. You can open an
 [issue](https://github.com/0fie/Dotfiles/issues/new) if you face trouble with the dotfiles.
@@ -154,13 +151,8 @@ file into your dotfiles directory and then import it.
 [Kitty]: https://github.com/kovidgoyal/kitty
 [Starship]: https://github.com/starship/starship
 [Waybar]: https://github.com/Alexays/Waybar
-[Btop]: https://github.com/aristocratos/btop
 [grimblast]: https://github.com/hyprwm/contrib
 [Mako]: https://github.com/emersion/mako
-[Nerd fonts]: https://github.com/ryanoasis/nerd-fonts
-[NetworkManager]: https://wiki.gnome.org/Projects/NetworkManager
-[network-manager-applet]: https://gitlab.gnome.org/GNOME/network-manager-applet/
-[wl-clipboard]: https://github.com/bugaevc/wl-clipboard
 [Catppuccin]: https://github.com/catppuccin/catppuccin
 [catppuccin-papirus-folders]: https://github.com/catppuccin/papirus-folders
 [Nushell]: https://www.nushell.sh
@@ -172,7 +164,7 @@ file into your dotfiles directory and then import it.
 [Hyprpaper]: https://github.com/hyprwm/hyprpaper
 [Bibata-Modern-Ice]: https://github.com/ful1e5/Bibata_Cursor
 [Loupe]: https://apps.gnome.org/Loupe/
-[VLC]: https://www.videolan.org/vlc/
+[MPV]: https://mpv.io
 [vokoscreenNG]: https://github.com/vkohaupt/vokoscreenNG
 [Spotify]: https://spotify.com
 [LibreOffice]: https://www.libreoffice.org/
