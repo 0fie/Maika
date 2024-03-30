@@ -1,5 +1,7 @@
-rec {
+{
   # This file defines a bunch of options to be used on the NixOS system, such as the default fonts, time zone, etc.
+  # If you find yourself editing this file, then you're probably planning to install my entire NixOS configuration. I don't
+  # recommend this. Also see system/boot.nix and system/sys.nix
 
   ####################################################
   # You may wish to change the system's hostname. This can be achieved by editing the line below. Suppose you want to set
