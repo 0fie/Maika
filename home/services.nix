@@ -16,7 +16,6 @@ in {
         {
           timeout = 600;
           onTimeout = lockCmd;
-          onResume = "";
         }
         {
           timeout = 1200;
