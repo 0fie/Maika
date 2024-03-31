@@ -71,6 +71,7 @@ in {
         "float,class:^(file_progress)$"
         "float,class:^(confirm)$"
         "float,class:^(.protonvpn-app-wrapped)$"
+        "float,class:^(.blueman-manager-wrapped)$"
         "float,class:^(dialog)$"
         "float,class:^(download)$"
         "float,class:^(notification)$"
