@@ -1,8 +1,6 @@
 { config, pkgs, inputs, ... }:
 
-let
-  inherit (import ./options.nix) dotfilesDir;
-  scripts = import ./scripts.nix { inherit pkgs; };
+let inherit (import ./options.nix) dotfilesDir;
 in {
 
   programs = {
@@ -22,7 +20,6 @@ in {
       shellAliases = {
         # ETC.
         c = "clear";
-        Done = "${scripts.notifyDone}/bin/script";
         la = "ls -la";
         ll = "ls -l";
         mf = "bash ${inputs.trash}/maxfetch.sh";
