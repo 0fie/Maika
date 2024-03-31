@@ -105,7 +105,7 @@ to avoid unnecessary complexity. You can open an [issue](https://github.com/0fie
 
 <br>
 
-## How to Install?
+### How to Install?
 You should cherry pick the parts that you're interested in. For example, if you want to add my Hyprland config to your setup, you'd simply
 copy my [home/hyprland.nix](home]hyprland.nix) file into your dotfiles directory and then import it.
 
