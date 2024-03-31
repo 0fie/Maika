@@ -2,6 +2,7 @@
   # This file defines a bunch of options to be used on the NixOS system, such as the default fonts, time zone, etc.
   # If you find yourself editing this file, then you're probably planning to install my entire NixOS configuration. I don't
   # recommend this. Also see system/boot.nix and system/sys.nix
+  # Also inspect home/options.nix for user options.
 
   ####################################################
   # You may wish to change the system's hostname. This can be achieved by editing the line below. Suppose you want to set
@@ -64,4 +65,9 @@
   #     - Don't add 'Mono' in front of the fontName... otherwise icons will appear 'too small' in Kitty.
   # Required by system/fonts.nix
   fontName = "MonoLisa Nerd Font";
+
+  #####################################################
+  # Do not modify the variable below.
+  # We're using it to make sure that home-manager's stateVersion is in sync with the system's stateVersion.
+  stateVersion = "23.11";
 }
