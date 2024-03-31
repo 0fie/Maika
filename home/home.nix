@@ -1,6 +1,13 @@
-{ inputs, userName, ... }:
+{ inputs, ... }:
 
-{
+# Fetches the user's name from home/options.nix
+# And then fetches the system's stateVersion from system/options.nix
+# HM's stateVersion should be in sync with the system's stateVersion to avoid mismatches and conflicts.
+let
+  inherit (import ./options.nix) userName;
+  inherit (import ../system/options.nix) stateVersion;
+
+in {
   imports = [
     ./bat.nix
     ./btop.nix
@@ -33,7 +40,7 @@
   home = {
     username = "${userName}";
     homeDirectory = "/home/${userName}";
-    stateVersion = "23.11";
+    stateVersion = "${stateVersion}";
   };
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;

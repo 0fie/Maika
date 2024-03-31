@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
+# Fetch the user's name and full name from home/options.nix
 let inherit (import ../home/options.nix) userName userFullName;
+
 in {
   # You can change the user name by editing home/options.nix
   users = {

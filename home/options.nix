@@ -25,14 +25,14 @@
   userFullName = "0fie";
 
   ##########################################
-  # Your real GitHub user name
+  # Your GitHub user name
   # Required by home/git.nix
   gitUserName = "0fie";
 
   ##########################################
   # Your git email.
-  # Make sure it is correct and verified by GitHub... otherwise your contributions will not be recognised or displayed
-  # on your GitHub profile's 'contributions' section.
+  # Make sure it is correct and verified by GitHub (you should be able to login using the email)... otherwise your contributions
+  # will not be recognised or displayed on your GitHub profile's 'contributions' section.
   # Required by home/git.nix
   gitEmail = "151028199+0fie@users.noreply.github.com";
 

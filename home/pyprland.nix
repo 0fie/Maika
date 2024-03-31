@@ -1,3 +1,4 @@
+# TODO: Rewrite this file. It's currently useless.
 { pkgs, ... }:
 
 {

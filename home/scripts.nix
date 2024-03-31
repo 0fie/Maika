@@ -1,5 +1,6 @@
 { pkgs, ... }:
 
+# Several scripts that will be used throughout the system.
 {
   suspendScript = pkgs.writeShellScriptBin "script" ''
     ${pkgs.pipewire}/bin/pw-cli i all 2>&1 | ${pkgs.ripgrep}/bin/rg running -q
@@ -7,10 +8,6 @@
     if [ $? == 1 ]; then
       ${pkgs.systemd}/bin/systemctl suspend
     fi
-  '';
-
-  notifyDone = pkgs.writeShellScriptBin "script" ''
-    ${pkgs.libnotify}/bin/notify-send "System Rebuild Complete 🚀"
   '';
 
   waybarBatteryScript = pkgs.writeShellScriptBin "script" ''

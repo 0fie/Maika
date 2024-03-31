@@ -9,7 +9,7 @@ let
   torrentClient = "transmission-gtk.desktop";
   textEditor = "helix.desktop";
 in {
-  home.packages = with pkgs; [ xdg-utils ];
+  home.packages = [ pkgs.xdg-utils ];
   xdg = {
     userDirs = {
       enable = true;
@@ -19,7 +19,6 @@ in {
       templates = "${config.home.homeDirectory}/.local/templates";
     };
 
-    # TODO: There must be a better way to do this.
     mimeApps = rec {
       enable = true;
       associations.added = defaultApplications;

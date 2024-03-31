@@ -1,8 +1,12 @@
 { pkgs, ... }:
 
+# Fetch the fontName variable from system/options.nix to determine which font to use.
 let
-  placeholderAndTimeColor = "rgb(205, 214, 244)";
   inherit (import ../system/options.nix) fontName;
+
+  # TODO: Replace this with proper Catppuccin colors.
+  placeholderAndTimeColor = "rgb(205, 214, 244)";
+
 in {
   programs.hyprlock = {
     enable = true;
@@ -12,11 +16,12 @@ in {
       no_fade_in = false;
     };
 
+    # The background image is fetched from GitHub. I don't store my wallpapers locally.
     backgrounds = [{
       monitor = "";
       path = toString (pkgs.fetchurl {
         url =
-          "https://raw.githubusercontent.com/0fie/wallpapers/main/images/cat-leaves.png";
+          "https://raw.githubusercontent.com/0fie/Wallpapers/main/images/cat-leaves.png";
         sha256 = "sha256-kegUK62YtI7G3P/pIqcWdFGlqN4S1/4xOOmOboPxJKE=";
       });
     }];
@@ -51,4 +56,4 @@ in {
     }];
   };
 }
-# All thanks to Fufexan for creating these amazing home-manager modules.
+# Thanks to Fufexan for creating these amazing home-manager modules.

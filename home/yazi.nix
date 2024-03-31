@@ -11,7 +11,7 @@
         sort_by = "alphabetical";
         sort_dir_first = true;
       };
-      headsup = { disable_exec_warn = true; };
+      #headsup = { disable_exec_warn = true; };
       plugin = {
         prepend_previewers = [{
           name = "*.md";

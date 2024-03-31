@@ -1,4 +1,4 @@
-# TODO: Remove unnecessary gst-plugins
+# TODO: Remove unnecessary gst-plugins. They don't work anyways.
 { pkgs, lib, ... }:
 
 {
@@ -25,6 +25,7 @@
     tray = "never";
   };
 
+  # Does not work. Please help.
   dconf.settings = {
     "org/gnome/desktop/peripherals/touchpad" = {
       tap-to-click = true;

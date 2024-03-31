@@ -1,5 +1,6 @@
 { config, ... }:
 
+# Fetch the user's Git email & username from home/options.nix
 let inherit (import ./options.nix) gitUserName gitEmail;
 
 in {
@@ -16,6 +17,8 @@ in {
       push.autoSetupRemote = true;
       help.autocorrect = 10;
     };
+
+    # Files/Dirs that should not be tracked
     ignores = [
       "target/"
       ".cache/"
@@ -23,10 +26,18 @@ in {
       "*.elc"
       ".~lock*"
       "auto-save-list"
-      ".direnv/"
-      "node_modules"
       "result"
       "result-*"
+
+      # Web dev stuff
+      "node_modules/"
+
+      # Direnv stuff
+      ".envrc"
+      ".direnv/"
+
+      # My TO-DO list
+      ".TODO.md"
     ];
   };
 }

@@ -1,9 +1,10 @@
 { config, pkgs, ... }:
 
+# The wallpaper will be fetched from GitHub. I don't store my wallpapers locally.
 let
   currentWallpaper = pkgs.fetchurl {
     url =
-      "https://raw.githubusercontent.com/0fie/wallpapers/main/images/catppuccin.jpg";
+      "https://raw.githubusercontent.com/0fie/Wallpapers/main/images/catppuccin.jpg";
     sha256 = "sha256-bMYij70tl4RmzGLnsmcjg6wtBDVnL71gO9ox6g2MUcs=";
   };
   hyprpaperConf = pkgs.writeText "hyprpaper.conf" ''
@@ -96,7 +97,6 @@ in {
           new_optimizations = true;
           xray = true;
         };
-
       };
 
       animations = {
