@@ -77,19 +77,13 @@
 | **Text Editor**             | [Helix][Helix] |
 | **Shell**                   | [Nushell][Nushell] + [Starship][Starship] |
 | **Terminal Emulator**       | [Kitty][Kitty] |
-| **Notification Daemon**     | [Mako][Mako] |
 | **File Manager**            | [Yazi][Yazi] |
 | **Color Scheme**            | [Catppuccin][Catppuccin] |
 | **Screenshot Software**     | [Grimblast][Grimblast] |
-| **Application Launcher**    | [rofi-wayland][rofi-wayland] |
-| **Music Player**            | [Spotify][Spotify] |
 | **Bar**                     | [Waybar][Waybar] |
 | **Cursor**                  | [Bibata-Modern-Ice][Bibata-Modern-Ice] |
-| **Icons**                   | [catppuccin-papirus-folders][catppuccin-papirus-folders] |
+| **Folder Icons**            | [catppuccin-papirus-folders][catppuccin-papirus-folders] |
 | **Image Viewer**            | [Loupe][Loupe] |
-| **Media Player**            | [MPV][MPV] |
-| **Screen Recording**        | [vokoscreenNG][vokoscreenNG] |
-| **Office Suite**            | [LibreOffice][LibreOffice] |
 
 <br>
 
@@ -105,23 +99,17 @@
 
 ### Why it looks like this?
 Simplicity. As a simple person with simple requirements, I sought to craft a beautiful and functional NixOS + Hyprland config to daily
-drive on my old Dell laptop, and this is it! It meets my needs perfectly,
-and there is nothing more to add to it. You will notice that the [home](home/) and [system](system/) directories do not contain any
-additional directories inside them. This was intentionally done to avoid unnecessary complexity. You can open an
-[issue](https://github.com/0fie/Dotfiles/issues/new) if you face trouble with the dotfiles.
+drive on my old Dell laptop, and this is it! It meets my needs perfectly, and there is nothing more to add to it. You will notice that
+the [home](home/) and [system](system/) directories do not contain any additional directories inside them. This was intentionally done
+to avoid unnecessary complexity. You can open an [issue](https://github.com/0fie/Dotfiles/issues/new) if you face trouble with the dotfiles.
 
 <br>
 
 ## How to Install?
-I'm still figuring out how to make it safe and convenient for others to install these dotfiles on their NixOS (and non-nix) machines.
-Progress is a bit slow due to time constraints on my side. However, the plan is to refactor the flake so that you can install just the
-home-manager configuration without having to include the rest of my OS configs. This means you can create another user on your system
-just to test out these configs, all without tampering with your existing setup. So for now, you should cherry pick the parts that you're
-interested in. For example, if you want to add my Hyprland config to your setup, you'd simply copy my [home/hyprland.nix](home]hyprland.nix)
-file into your dotfiles directory and then import it.    
+You should cherry pick the parts that you're interested in. For example, if you want to add my Hyprland config to your setup, you'd simply
+copy my [home/hyprland.nix](home]hyprland.nix) file into your dotfiles directory and then import it.
 
 <br>
-<hr>
 
 ### I got a lot of inspiration as well as actual code from the following sources:
 - [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell configs
@@ -152,7 +140,6 @@ file into your dotfiles directory and then import it.
 [Starship]: https://github.com/starship/starship
 [Waybar]: https://github.com/Alexays/Waybar
 [grimblast]: https://github.com/hyprwm/contrib
-[Mako]: https://github.com/emersion/mako
 [Catppuccin]: https://github.com/catppuccin/catppuccin
 [catppuccin-papirus-folders]: https://github.com/catppuccin/papirus-folders
 [Nushell]: https://www.nushell.sh
@@ -164,7 +151,4 @@ file into your dotfiles directory and then import it.
 [Hyprpaper]: https://github.com/hyprwm/hyprpaper
 [Bibata-Modern-Ice]: https://github.com/ful1e5/Bibata_Cursor
 [Loupe]: https://apps.gnome.org/Loupe/
-[MPV]: https://mpv.io
 [vokoscreenNG]: https://github.com/vkohaupt/vokoscreenNG
-[Spotify]: https://spotify.com
-[LibreOffice]: https://www.libreoffice.org/
