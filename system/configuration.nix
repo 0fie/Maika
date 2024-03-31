@@ -8,7 +8,6 @@ in {
     ./environment.nix
     ./fonts.nix
     ./hardware-configuration.nix
-    ./kernel.nix
     ./locale.nix
     ./networking.nix
     ./nix-settings.nix
