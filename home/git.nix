@@ -18,7 +18,10 @@ in {
       help.autocorrect = 10;
     };
 
-    # Files/Dirs that should not be tracked
+    # Files/Dirs that should not be tracked by Git.
+    # This is nice because you won't have to manually add them to a .gitignore file. In some cases, like this dotfiles repo, you
+    # wont need to create the .gitignore file at all, keeping things clean and simple.
+    # They will be written to Git's config directory at: ~/.config/git/ignore
     ignores = [
       "target/"
       ".cache/"
