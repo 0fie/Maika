@@ -64,6 +64,7 @@ in {
         "float,title:^(Transmission)$"
         "float,title:^(Volume Control)$"
         "size 700 450,title:^(Volume Control)$"
+        "size 700 450,title:^(Save As)$"
         "float,title:^(Library)$"
       ];
       windowrulev2 = [
@@ -77,6 +78,7 @@ in {
         "float,class:^(notification)$"
         "float,class:^(nm-connection-editor)$"
         "float,title:^(File Operation Progress)$"
+        "float,title:^(Save As)$"
       ];
 
       decoration = {
