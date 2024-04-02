@@ -20,10 +20,11 @@ in {
       shellAliases = {
         # ETC.
         c = "clear";
+        f = "${pkgs.yazi-unwrapped}/bin/yazi";
         la = "ls -la";
         ll = "ls -l";
-        mf = "bash ${inputs.trash}/maxfetch.sh";
-        f = "${pkgs.yazi-unwrapped}/bin/yazi";
+        n = "nix run nixpkgs#nitch";
+        nv = "nvim";
 
         # Git
         ga = "${pkgs.git}/bin/git add";

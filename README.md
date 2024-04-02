@@ -74,7 +74,7 @@
 | **Lock screen**             | [Hyprlock][Hyprlock] |
 | **Idle Mgmt. Daemon**       | [Hypridle][Hypridle] |
 | **Wallpaper Setter**        | [Hyprpaper][Hyprpaper] |
-| **Text Editor**             | [Helix][Helix] |
+| **Text Editor**             | [Neovim][Neovim] |
 | **Shell**                   | [Nushell][Nushell] + [Starship][Starship] |
 | **Terminal Emulator**       | [Kitty][Kitty] |
 | **File Manager**            | [Yazi][Yazi] |
@@ -144,7 +144,7 @@ copy my [home/hyprland.nix](home]hyprland.nix) file into your dotfiles directory
 [catppuccin-papirus-folders]: https://github.com/catppuccin/papirus-folders
 [Nushell]: https://www.nushell.sh
 [rofi-wayland]: https://github.com/lbonn/rofi
-[Helix]: https://helix-editor.com/
+[Neovim]: https://neovim.io
 [Yazi]: https://github.com/sxyazi/yazi
 [Hypridle]: https://github.com/hyprwm/hypridle
 [Hyprlock]: https://github.com/hyprwm/hyprlock

@@ -1,12 +1,10 @@
-{ inputs, ... }:
-
+{inputs, ...}:
 # Fetches the user's name from home/options.nix
 # And then fetches the system's stateVersion from system/options.nix
 # HM's stateVersion should be in sync with the system's stateVersion to avoid mismatches and conflicts.
 let
   inherit (import ./options.nix) userName;
   inherit (import ../system/options.nix) stateVersion;
-
 in {
   imports = [
     ./bat.nix
@@ -15,7 +13,6 @@ in {
     ./firefox.nix
     ./git.nix
     ./gtk.nix
-    ./helix.nix
     ./hyprland.nix
     ./hyprlock.nix
     ./kitty.nix
@@ -36,11 +33,13 @@ in {
     inputs.nix-colors.homeManagerModules.default
   ];
 
-  # Info required by home-manager.
+  # Info required by home-manager and some session variables.
   home = {
     username = "${userName}";
     homeDirectory = "/home/${userName}";
     stateVersion = "${stateVersion}";
+
+    sessionVariables = {EDITOR = "nvim";};
   };
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
