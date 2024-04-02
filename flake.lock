@@ -636,17 +636,16 @@
         "tree-sitter-nu": "tree-sitter-nu"
       },
       "locked": {
-        "lastModified": 1712058150,
-        "narHash": "sha256-pWuDsg2ptDerl1Gal4A5v7+zo77IptWRMfWwC11CYwI=",
-        "owner": "0fie",
-        "repo": "Mika",
-        "rev": "5d8ae0a1fb157376c78046e00ae98db5af939591",
-        "type": "github"
+        "dirtyRev": "3cf778ee114699a4d50b28e55a75eebe3206e6de-dirty",
+        "dirtyShortRev": "3cf778e-dirty",
+        "lastModified": 1712064181,
+        "narHash": "sha256-bF1Eg+Ypr6+YXhpKl4ozNkFV2JfQy4pDdDcqC+QLFLc=",
+        "type": "git",
+        "url": "file:///home/me/Projects/Mika"
       },
       "original": {
-        "owner": "0fie",
-        "repo": "Mika",
-        "type": "github"
+        "type": "git",
+        "url": "file:///home/me/Projects/Mika"
       }
     },
     "nix-colors": {
