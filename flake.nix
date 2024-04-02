@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mika = { url = "github:0fie/Mika"; };
+
     nix-colors = { url = "github:misterio77/nix-colors"; };
 
     hyprland.url = "github:hyprwm/Hyprland";

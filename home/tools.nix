@@ -13,5 +13,6 @@
     vokoscreen-ng # screen recorder (buggy on Wayland)
 
     inputs.catppuccinifier.packages.${pkgs.system}.cli
+    inputs.mika.packages.${system}.default
   ];
 }
