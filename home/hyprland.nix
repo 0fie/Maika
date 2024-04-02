@@ -66,6 +66,7 @@ in {
         "size 700 450,title:^(Volume Control)$"
         "size 700 450,title:^(Save As)$"
         "float,title:^(Library)$"
+        "float,title:^(Soundwire Server)$"
       ];
       windowrulev2 = [
         "float,class:^(pavucontrol)$"
