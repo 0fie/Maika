@@ -636,11 +636,11 @@
         "tree-sitter-nu": "tree-sitter-nu"
       },
       "locked": {
-        "lastModified": 1712054261,
-        "narHash": "sha256-S4XLp4r16NZU4ozAubrZljGQTifAGZ9gsy3z+Q/fcxI=",
+        "lastModified": 1712058150,
+        "narHash": "sha256-pWuDsg2ptDerl1Gal4A5v7+zo77IptWRMfWwC11CYwI=",
         "owner": "0fie",
         "repo": "Mika",
-        "rev": "638c449ff02636c77f0d8552515f5d6233efda00",
+        "rev": "5d8ae0a1fb157376c78046e00ae98db5af939591",
         "type": "github"
       },
       "original": {

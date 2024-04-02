@@ -57,27 +57,7 @@
     let
       inherit (import ./system/options.nix) hostName system;
       inherit (import ./home/options.nix) userName;
-
-      allSystems = [
-        "x86_64-linux" # 64-bit Intel/AMD Linux
-      ];
-
-      # Helper to provide system-specific attributes
-      forAllSystems = f:
-        nixpkgs.lib.genAttrs allSystems
-        (system: f { pkgs = import nixpkgs { inherit system; }; });
-
     in {
-      devShells = forAllSystems ({ pkgs }: {
-        default = pkgs.mkShell {
-          # The Nix packages provided in the environment
-          packages = with pkgs;
-            [
-              nil
-              # nodePackages_latest.grammarly-languageserver
-            ];
-        };
-      });
 
       nixosConfigurations = {
         ${hostName} = nixpkgs.lib.nixosSystem {
