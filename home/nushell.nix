@@ -1,8 +1,11 @@
-{ config, pkgs, inputs, ... }:
-
-let inherit (import ./options.nix) dotfilesDir;
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}: let
+  inherit (import ./options.nix) dotfilesDir;
 in {
-
   programs = {
     direnv = {
       enable = true;
@@ -20,10 +23,11 @@ in {
       shellAliases = {
         # ETC.
         c = "clear";
+        cf = "clear; ${pkgs.yazi-unwrapped}/bin/yazi";
         f = "${pkgs.yazi-unwrapped}/bin/yazi";
         la = "ls -la";
         ll = "ls -l";
-        n = "nix run nixpkgs#nitch";
+        n = "${pkgs.nitch}/bin/nitch";
         nv = "nvim";
 
         # Git
@@ -78,21 +82,23 @@ in {
             vi_normal = "block";
           };
 
-          menus = [({
-            name = "completion_menu";
-            only_buffer_difference = false;
-            marker = "? ";
-            type = {
-              layout = "columnar"; # list, description
-              columns = 4;
-              col_padding = 2;
-            };
-            style = {
-              text = "magenta";
-              selected_text = "blue_reverse";
-              description_text = "yellow";
-            };
-          })];
+          menus = [
+            {
+              name = "completion_menu";
+              only_buffer_difference = false;
+              marker = "? ";
+              type = {
+                layout = "columnar"; # list, description
+                columns = 4;
+                col_padding = 2;
+              };
+              style = {
+                text = "magenta";
+                selected_text = "blue_reverse";
+                description_text = "yellow";
+              };
+            }
+          ];
         };
         completion = name: ''
           source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/${name}/${name}-completions.nu
@@ -103,7 +109,7 @@ in {
             ${str}'') "" (map (name: completion name) names);
       in ''
         $env.config = ${conf};
-        ${completions [ "git" "nix" "npm" ]}
+        ${completions ["git" "nix" "npm"]}
 
         def --env ff [...args] {
         	let tmp = (mktemp -t "yazi-cwd.XXXXX")
