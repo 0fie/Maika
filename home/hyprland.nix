@@ -1,31 +1,35 @@
-{ config, pkgs, ... }:
-
+{
+  config,
+  pkgs,
+  ...
+}:
 # The wallpaper will be fetched from GitHub. I don't store my wallpapers locally.
 let
   currentWallpaper = pkgs.fetchurl {
-    url =
-      "https://raw.githubusercontent.com/0fie/Wallpapers/main/images/catppuccin.jpg";
+    url = "https://raw.githubusercontent.com/0fie/Wallpapers/main/images/catppuccin.jpg";
     sha256 = "sha256-bMYij70tl4RmzGLnsmcjg6wtBDVnL71gO9ox6g2MUcs=";
   };
   hyprpaperConf = pkgs.writeText "hyprpaper.conf" ''
     preload = ${currentWallpaper}
     wallpaper = ,${currentWallpaper}
   '';
-  scripts = import ./scripts.nix { inherit pkgs; };
+  scripts = import ./scripts.nix {inherit pkgs;};
 in {
   wayland.windowManager.hyprland = {
     enable = true;
     systemd = {
       enable = true;
-      variables = [ "--all" ];
+      variables = ["--all"];
     };
     settings = {
       general = {
         gaps_in = 5;
         gaps_out = 10;
         border_size = 1;
-        "col.active_border" =
-          "rgba(${config.colorScheme.palette.base0E}ff) rgba(${config.colorScheme.palette.base09}ff) 60deg";
+        #"col.active_border" =
+        #  "rgba(${config.colorScheme.palette.base0E}ff) rgba(${config.colorScheme.palette.base09}ff) 60deg";
+        "col.active_border" = "rgb(cba6f7) rgb(94e2d5) 45deg";
+        "col.inactive_border" = "0x00000000";
         layout = "master";
       };
 
@@ -129,66 +133,73 @@ in {
         preserve_split = true;
       };
 
-      master = { new_is_master = true; };
+      master = {new_is_master = true;};
 
-      gestures = { workspace_swipe = true; };
+      gestures = {workspace_swipe = true;};
 
       # Using the Super key (windows button) as the main mod.
       "$mainMod" = "SUPER";
 
-      bind = [
-        # Launch apps
-        "$mainMod,        b,   exec,   ${pkgs.firefox}/bin/firefox"
-        "$mainMod,        d,   exec,   ${pkgs.discord}/bin/discord"
-        "$mainMod,        e,   exec,   ${pkgs.emote}/bin/emote"
-        "$mainMod,        f,   exec,   ${pkgs.gnome.nautilus}/bin/nautilus"
-        "$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
-        "$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
-        "$mainMod,        l,   exec,   hyprlock" # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
-        "$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
-        "$mainMod,        r,   exec,   ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
-        "$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
-        "$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
-        "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
-        "ALT,        return,   exec,   ${pkgs.pyprland}/bin/pypr toggle term && hyprctl dispatch bringactivetotop"
-        ",            Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify --cursor copysave area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
-        "SHIFT,       Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify copysave screen ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
+      bind =
+        [
+          # Launch apps
+          "$mainMod,        b,   exec,   ${pkgs.firefox}/bin/firefox"
+          "$mainMod,        d,   exec,   ${pkgs.discord}/bin/discord"
+          "$mainMod,        e,   exec,   ${pkgs.emote}/bin/emote"
+          "$mainMod,        f,   exec,   ${pkgs.gnome.nautilus}/bin/nautilus"
+          "$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
+          "$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
+          "$mainMod,        l,   exec,   hyprlock" # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
+          "$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
+          "$mainMod,        r,   exec,   ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
+          "$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
+          "$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
+          "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
+          "ALT,        return,   exec,   ${pkgs.pyprland}/bin/pypr toggle term && hyprctl dispatch bringactivetotop"
+          ",            Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify --cursor copysave area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
+          "SHIFT,       Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify copysave screen ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
 
-        # Control media players.
-        ",XF86AudioPlay,  exec, ${pkgs.playerctl}/bin/playerctl play-pause"
-        ",XF86AudioPause, exec, ${pkgs.playerctl}/bin/playerctl play-pause"
-        ",XF86AudioNext,  exec, ${pkgs.playerctl}/bin/playerctl next"
-        ",XF86AudioPrev,  exec, ${pkgs.playerctl}/bin/playerctl previous"
+          # Control media players.
+          ",XF86AudioPlay,  exec, ${pkgs.playerctl}/bin/playerctl play-pause"
+          ",XF86AudioPause, exec, ${pkgs.playerctl}/bin/playerctl play-pause"
+          ",XF86AudioNext,  exec, ${pkgs.playerctl}/bin/playerctl next"
+          ",XF86AudioPrev,  exec, ${pkgs.playerctl}/bin/playerctl previous"
 
-        # Close a window or quit Hyprland.
-        "$mainMod, Q, killactive,"
-        "$mainMod SHIFT, M, exit,"
+          # Close a window or quit Hyprland.
+          "$mainMod, Q, killactive,"
+          "$mainMod SHIFT, M, exit,"
 
-        # Toggle window states.
-        "$mainMod SHIFT, t, togglefloating,"
-        "$mainMod SHIFT, f, fullscreen,"
+          # Toggle window states.
+          "$mainMod SHIFT, t, togglefloating,"
+          "$mainMod SHIFT, f, fullscreen,"
 
-        # Move focus from one window to another.
-        "$mainMod, h, movefocus, l"
-        "$mainMod, l, movefocus, r"
-        "$mainMod, k, movefocus, u"
-        "$mainMod, j, movefocus, d"
+          # Move focus from one window to another.
+          "$mainMod, h, movefocus, l"
+          "$mainMod, l, movefocus, r"
+          "$mainMod, k, movefocus, u"
+          "$mainMod, j, movefocus, d"
 
-        # Move window to either the left, right, top, or bottom.
-        "$mainMod SHIFT,  h, movewindow, l"
-        "$mainMod SHIFT,  l, movewindow, r"
-        "$mainMod SHIFT,  k, movewindow, u"
-        "$mainMod SHIFT,  j, movewindow, d"
-      ]
-
-      # WTF is this? I don't understand Nix code. 😿
-        ++ map (n:
-          "$mainMod SHIFT, ${toString n}, movetoworkspace, ${
-            toString (if n == 0 then 10 else n)
-          }") [ 1 2 3 4 5 6 7 8 9 0 ] ++ map (n:
-            "$mainMod, ${toString n}, workspace, ${
-              toString (if n == 0 then 10 else n)
-            }") [ 1 2 3 4 5 6 7 8 9 0 ];
+          # Move window to either the left, right, top, or bottom.
+          "$mainMod SHIFT,  h, movewindow, l"
+          "$mainMod SHIFT,  l, movewindow, r"
+          "$mainMod SHIFT,  k, movewindow, u"
+          "$mainMod SHIFT,  j, movewindow, d"
+        ]
+        # WTF is this? I don't understand Nix code. 😿
+        ++ map (n: "$mainMod SHIFT, ${toString n}, movetoworkspace, ${
+          toString (
+            if n == 0
+            then 10
+            else n
+          )
+        }") [1 2 3 4 5 6 7 8 9 0]
+        ++ map (n: "$mainMod, ${toString n}, workspace, ${
+          toString (
+            if n == 0
+            then 10
+            else n
+          )
+        }") [1 2 3 4 5 6 7 8 9 0];
 
       binde = [
         # Move windows.
