@@ -5,16 +5,17 @@
 }: {
   # Additional packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    burpsuite
     #charm-freeze
     git-extras # Provides useful commands like git-summary
     libreoffice # Is there a lighter alternative?
     loupe # image viewer
     mpv-unwrapped # lightweight media player
-    protonvpn-gui
+    protonvpn-gui # at least it's open source
     soundwireserver # cast sound to Android phone.
     vokoscreen-ng # screen recorder (buggy on Wayland)
 
-    inputs.catppuccinifier.packages.${pkgs.system}.cli
-    inputs.mika.packages.${system}.default
+    inputs.catppuccinifier.packages.${pkgs.system}.cli # Applies Catppuccin flavors to images.
+    inputs.mika.packages.${system}.default # my neovim flake.
   ];
 }
