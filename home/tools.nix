@@ -5,7 +5,7 @@
 }: {
   # Additional packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    burpsuite
+    burpsuite # to be replaced with Postman.
     #charm-freeze
     git-extras # Provides useful commands like git-summary
     libreoffice # Is there a lighter alternative?

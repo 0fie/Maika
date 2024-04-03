@@ -7,9 +7,7 @@ let
   inherit (import ../system/options.nix) stateVersion;
 in {
   imports = [
-    ./bat.nix
-    ./btop.nix
-    ./cava.nix
+    ./cli.nix
     ./firefox.nix
     ./git.nix
     ./gtk.nix
