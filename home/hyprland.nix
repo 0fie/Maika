@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}:
+{pkgs, ...}:
 # The wallpaper will be fetched from GitHub. I don't store my wallpapers locally.
 let
   currentWallpaper = pkgs.fetchurl {
@@ -23,20 +19,17 @@ in {
     };
     settings = {
       general = {
+        layout = "master";
         gaps_in = 5;
         gaps_out = 10;
         border_size = 1;
         "col.active_border" = "rgb(cba6f7) rgb(94e2d5) 45deg";
         "col.inactive_border" = "0x00000000";
-        layout = "master";
       };
 
       input = {
         kb_layout = "us";
-        kb_variant = "";
-        kb_model = "";
         kb_options = "grp:alt_shift_toggle,caps:escape";
-        kb_rules = "";
         touchpad = {
           natural_scroll = false;
           disable_while_typing = true;
@@ -45,7 +38,7 @@ in {
         repeat_rate = 40;
         repeat_delay = 250;
         force_no_accel = true;
-        sensitivity = 0.0; # -1.0 - 1.0, 0 means no modification.
+        sensitivity = 0.3; # -1.0 - 1.0, 0 means no modification.
         follow_mouse = 1;
         numlock_by_default = true;
       };
@@ -81,6 +74,7 @@ in {
         "float,class:^(notification)$"
         "float,class:^(nm-connection-editor)$"
         "float,title:^(File Operation Progress)$"
+        "float,title:^(Open File)$"
         "float,title:^(Save As)$"
       ];
 
