@@ -1,6 +1,8 @@
-{ pkgs, inputs, ... }:
-
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   # Additional packages that should be installed to the user profile.
   home.packages = with pkgs; [
     #charm-freeze

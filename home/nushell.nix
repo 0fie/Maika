@@ -23,7 +23,6 @@ in {
       shellAliases = {
         # ETC.
         c = "clear";
-        cf = "clear; ${pkgs.yazi-unwrapped}/bin/yazi";
         f = "${pkgs.yazi-unwrapped}/bin/yazi";
         la = "ls -la";
         ll = "ls -l";
@@ -109,7 +108,7 @@ in {
             ${str}'') "" (map (name: completion name) names);
       in ''
         $env.config = ${conf};
-        ${completions ["git" "nix" "npm"]}
+        ${completions ["git" "nix"]}
 
         def --env ff [...args] {
         	let tmp = (mktemp -t "yazi-cwd.XXXXX")
