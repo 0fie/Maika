@@ -1,13 +1,12 @@
-{ pkgs, ... }:
-
+{pkgs, ...}:
 # Several scripts that will be used throughout the system.
 {
-  suspendScript = pkgs.writeShellScriptBin "script" ''
-    ${pkgs.pipewire}/bin/pw-cli i all 2>&1 | ${pkgs.ripgrep}/bin/rg running -q
-    # only suspend if audio isn't running
-    if [ $? == 1 ]; then
-      ${pkgs.systemd}/bin/systemctl suspend
-    fi
+  # The Temperature and Battery modules should "just work" on Waybar, but they don't. Maybe my machine is too old.
+  # That's why I resort to these hacks.
+  waybarTemperatureScript = pkgs.writeShellScriptBin "script" ''
+    temp=$(cat /sys/class/hwmon/hwmon4/temp1_input)
+    actualTemp=$((temp / 1000))
+    echo $actualTemp
   '';
 
   waybarBatteryScript = pkgs.writeShellScriptBin "script" ''
@@ -16,6 +15,14 @@
       echo "100" # My battery reports over 356% when full. It is broken.
     else
       echo $percentage
+    fi
+  '';
+
+  suspendScript = pkgs.writeShellScriptBin "script" ''
+    ${pkgs.pipewire}/bin/pw-cli i all 2>&1 | ${pkgs.ripgrep}/bin/rg running -q
+    # only suspend if audio isn't running
+    if [ $? == 1 ]; then
+      ${pkgs.systemd}/bin/systemctl suspend
     fi
   '';
 
@@ -34,21 +41,21 @@
     # Do something based on selected option
     if [ "$selected_option" == "$lock" ]
     then
-        hyprlock
+      hyprlock
     elif [ "$selected_option" == "$logout" ]
     then
-        loginctl terminate-user "$(whoami)"
+      loginctl terminate-user "$(whoami)"
     elif [ "$selected_option" == "$shutdown" ]
     then
-        systemctl poweroff
+      systemctl poweroff
     elif [ "$selected_option" == "$reboot" ]
     then
-        systemctl reboot
+      systemctl reboot
     elif [ "$selected_option" == "$sleep" ]
     then
-        systemctl suspend
+      systemctl suspend
     else
-        echo "No match"
+      echo "No match"
     fi
   '';
 }
