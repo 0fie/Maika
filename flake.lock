@@ -632,15 +632,14 @@
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
-        "pre-commit-hooks": "pre-commit-hooks_2",
-        "tree-sitter-nu": "tree-sitter-nu"
+        "pre-commit-hooks": "pre-commit-hooks_2"
       },
       "locked": {
-        "lastModified": 1712064894,
-        "narHash": "sha256-bF1Eg+Ypr6+YXhpKl4ozNkFV2JfQy4pDdDcqC+QLFLc=",
+        "lastModified": 1712231175,
+        "narHash": "sha256-eWnU81sWMmRprUWkL8QUZ1VzYp0NYZNvdY+hxVh4mTY=",
         "owner": "0fie",
         "repo": "Mika",
-        "rev": "9e29d720f8a64b8f4c9c3f3182adc220cbd0725f",
+        "rev": "52bb1c9f17f02ecb7a50df11e8ce96cb466ef3b4",
         "type": "github"
       },
       "original": {
@@ -1061,22 +1060,6 @@
       "original": {
         "owner": "0fie",
         "repo": "trash",
-        "type": "github"
-      }
-    },
-    "tree-sitter-nu": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1710005242,
-        "narHash": "sha256-P+ixE359fAW7R5UJLwvMsmju7UFmJw5SN+kbMEw7Kz0=",
-        "owner": "nushell",
-        "repo": "tree-sitter-nu",
-        "rev": "c5b7816043992b1cdc1462a889bc74dc08576fa6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nushell",
-        "repo": "tree-sitter-nu",
         "type": "github"
       }
     },
