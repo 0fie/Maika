@@ -1,15 +1,17 @@
-{ config, pkgs, ... }:
-
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   imageViewer = "org.gnome.Loupe.desktop";
   mediaPlayer = "mpv.desktop";
   browser = "firefox.desktop";
   docOpener = "libreoffice.desktop";
   fileManager = "org.gnome.Nautilus.desktop";
   torrentClient = "transmission-gtk.desktop";
-  textEditor = "helix.desktop";
+  textEditor = "neovim.desktop";
 in {
-  home.packages = [ pkgs.xdg-utils ];
+  home.packages = [pkgs.xdg-utils];
   xdg = {
     userDirs = {
       enable = true;
@@ -23,12 +25,12 @@ in {
       enable = true;
       associations.added = defaultApplications;
       defaultApplications = {
-        "application/pdf" = [ docOpener ];
-        "inode/directory" = [ fileManager ];
+        "application/pdf" = [docOpener];
+        "inode/directory" = [fileManager];
         "x-scheme-handler/magnet" = torrentClient;
 
         # Web stuff
-        "text/html" = [ browser ];
+        "text/html" = [browser];
         "x-scheme-handler/http" = browser;
         "x-scheme-handler/https" = browser;
         "application/xhtml+xml" = browser;

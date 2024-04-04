@@ -1,10 +1,13 @@
-{ config, pkgs, ... }:
-
+{
+  config,
+  pkgs,
+  ...
+}:
 # Fetch the fontName variable from system/options.nix to determine which font to use.
-let inherit (import ../system/options.nix) fontName;
-
+let
+  inherit (import ../system/options.nix) fontName;
 in {
-  home.packages = [ pkgs.libnotify ];
+  home.packages = [pkgs.libnotify];
 
   services.mako = {
     enable = true;

@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  inputs,
   ...
 }: let
   inherit (import ./options.nix) dotfilesDir;

@@ -1,9 +1,9 @@
-{ pkgs, ... }:
-
+{pkgs, ...}:
 # Fetch the fontName variable from system/options.nix to determine which font to use.
-let inherit (import ../system/options.nix) fontName;
+let
+  inherit (import ../system/options.nix) fontName;
 in {
-  home.packages = with pkgs; [ rofi ];
+  home.packages = with pkgs; [rofi];
 
   xdg.configFile."rofi/config.rasi".text = ''
     configuration{
@@ -115,7 +115,7 @@ in {
         padding: 10px;
         background-color: @bg-col-light;
         text-color: @grey;
-        vertical-align: 0.5; 
+        vertical-align: 0.5;
         horizontal-align: 0.5;
     }
 

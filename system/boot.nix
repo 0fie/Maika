@@ -1,5 +1,3 @@
-{ ... }:
-
 # This is kept in a separate file to allow you to copy the system/sys.nix file as it is.
 {
   boot = {
@@ -18,6 +16,6 @@
       "net.core.default_qdisc" = "cake";
     };
 
-    kernelModules = [ "tcp_bbr" ];
+    kernelModules = ["tcp_bbr"];
   };
 }

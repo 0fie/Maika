@@ -1,6 +1,10 @@
-{ config, pkgs, lib, ... }:
-
-let scripts = import ./scripts.nix { inherit pkgs; };
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
+  scripts = import ./scripts.nix {inherit pkgs;};
 in {
   services = {
     network-manager-applet.enable = true;

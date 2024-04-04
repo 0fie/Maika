@@ -11,7 +11,6 @@
   #    hostName = "Hyprnix";
   # ...
   #
-  # Your hostname will be visible to other gadgets on the network, just so you know.
   # Required by system/networking.nix
   hostName = "NixOS";
 
@@ -60,7 +59,7 @@
   # ...
   #
   #
-  # NOTE: 
+  # NOTE:
   #     - You should install the font yourself, manually. This variable just exists to let your apps know which font to use.
   #     - Don't add 'Mono' in front of the fontName... otherwise icons will appear 'too small' in Kitty.
   # Required by system/fonts.nix

@@ -1,8 +1,7 @@
-{ inputs, ... }:
-
+{inputs, ...}:
 # Fetch the user's name and their full name from the home/options.nix file
-let inherit (import ./options.nix) userName userFullName;
-
+let
+  inherit (import ./options.nix) userName userFullName;
 in {
   home.sessionVariables.BROWSER = "firefox";
 
@@ -120,10 +119,8 @@ in {
         "extensions.screenshots.disabled" = true;
 
         # Disable onboarding
-        "browser.onboarding.newtour" =
-          "performance,private,addons,customize,default";
-        "browser.onboarding.updatetour" =
-          "performance,library,singlesearch,customize";
+        "browser.onboarding.newtour" = "performance,private,addons,customize,default";
+        "browser.onboarding.updatetour" = "performance,library,singlesearch,customize";
         "browser.onboarding.enabled" = false;
 
         # Disable recommended extensions

@@ -53,13 +53,13 @@ in {
       "custom/temperature" = {
         exec = "${scripts.waybarTemperatureScript}/bin/script";
         format = "{}°C";
-        interval = 2;
+        interval = 1;
       };
 
       cpu = {
         format = " {usage}%";
         format-alt = "  {avg_frequency} GHz";
-        interval = 2;
+        interval = 1;
       };
 
       tray = {

@@ -1,6 +1,8 @@
-{ pkgs, inputs, ... }:
-
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.yazi = {
     enable = true;
     package = pkgs.yazi-unwrapped;
@@ -11,12 +13,14 @@
         sort_by = "alphabetical";
         sort_dir_first = true;
       };
-      #headsup = { disable_exec_warn = true; };
+      headsup = {disable_exec_warn = true;};
       plugin = {
-        prepend_previewers = [{
-          name = "*.md";
-          run = "glow";
-        }];
+        prepend_previewers = [
+          {
+            name = "*.md";
+            run = "glow";
+          }
+        ];
       };
     };
   };
@@ -34,12 +38,14 @@
   ];
 
   xdg.configFile = {
-    "yazi/theme.toml".text = builtins.readFile
+    "yazi/theme.toml".text =
+      builtins.readFile
       "${inputs.yazi-theme}/catppuccin-mocha.yazi/flavor.toml";
 
     "yazi/plugins/glow.yazi".source = "${inputs.yazi-glow}";
 
-    "yazi/plugins/smart-enter.yazi/init.lua".text = # lua
+    "yazi/plugins/smart-enter.yazi/init.lua".text =
+      # lua
       ''
         return {
         	entry = function()
