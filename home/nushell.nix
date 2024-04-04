@@ -39,6 +39,7 @@ in {
 
         # Nix
         nrs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.#";
+        nlu = "nix flake lock --update-input";
 
         # Modern yuunix, uwu <3
         cat = "${pkgs.bat}/bin/bat";
