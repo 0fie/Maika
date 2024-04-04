@@ -1,7 +1,8 @@
-{ pkgs, ... }:
-
+{pkgs, ...}:
 # Fetch the fontName variable from system/options.nix to determine which font to use.
-let inherit (import ../system/options.nix) fontName;
+let
+  scripts = import ./scripts.nix {inherit pkgs;};
+  inherit (import ../system/options.nix) fontName;
 in {
   programs.waybar = {
     enable = true;
@@ -13,13 +14,13 @@ in {
       margin-bottom = 0;
       margin-left = 0;
       margin-right = 0;
-      modules-left = [ "custom/launcher" "hyprland/workspaces" ];
-      modules-center = [ "clock" ];
-      modules-right = [ "cpu" "memory" "pulseaudio" "tray" ];
+      modules-left = ["custom/launcher" "hyprland/workspaces"];
+      modules-center = ["clock"];
+      modules-right = ["cpu" "custom/temperature" "pulseaudio" "tray"];
 
       clock = {
         calendar = {
-          format = { today = "<span color='#b4befe'><b>{}</b></span>"; };
+          format = {today = "<span color='#b4befe'><b>{}</b></span>";};
         };
         format = " {:%H:%M}";
         tooltip = "true";
@@ -49,9 +50,9 @@ in {
         };
       };
 
-      memory = {
-        format = " {}%";
-        format-alt = " {used} GB";
+      "custom/temperature" = {
+        exec = "${scripts.waybarTemperatureScript}/bin/script";
+        format = "{}°C";
         interval = 2;
       };
 
@@ -69,15 +70,14 @@ in {
       pulseaudio = {
         format = "{icon} {volume}%";
         format-muted = "󰖁 ";
-        format-icons = { default = [ " " ]; };
+        format-icons = {default = [" "];};
         scroll-step = 5;
         on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
       };
 
       "custom/launcher" = {
         format = "";
-        on-click =
-          "pkill rofi || ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons";
+        on-click = "pkill rofi || ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons";
         tooltip = "false";
       };
     };
@@ -126,7 +126,7 @@ in {
           color: #b4befe;
       }
 
-      #tray, #pulseaudio, #network, #cpu, #memory, #disk, #clock {
+      #tray, #pulseaudio, #network, #cpu, #custom-temperature, #disk, #clock {
           font-size: ${custom.font_size};
           color: ${custom.text_color};
       }
@@ -137,7 +137,7 @@ in {
           padding-right: 9px;
           margin-left: 7px;
       }
-      #memory {
+      #custom-temperature {
           font-size: ${custom.font_size};
           padding-left: 9px;
           padding-right: 9px;
