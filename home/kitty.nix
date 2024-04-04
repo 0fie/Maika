@@ -1,8 +1,7 @@
-{ config, ... }:
-
+{config, ...}:
 # Fetch the fontName variable from system/options.nix to determine which font to use.
-let inherit (import ../system/options.nix) fontName;
-
+let
+  inherit (import ../system/options.nix) fontName;
 in {
   home.sessionVariables.TERMINAL = "kitty";
 
@@ -12,7 +11,7 @@ in {
     font.name = "${fontName}";
     font.size = 11;
     settings = with config.colorScheme.palette; {
-      background_opacity = "0.60";
+      background_opacity = "1";
       enable_audio_bell = "no";
 
       cursor = "#${base06}";
