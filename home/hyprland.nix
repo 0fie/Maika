@@ -2,8 +2,8 @@
 # The wallpaper will be fetched from GitHub. I don't store my wallpapers locally.
 let
   currentWallpaper = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/0fie/Wallpapers/main/images/catppuccin.jpg";
-    sha256 = "sha256-bMYij70tl4RmzGLnsmcjg6wtBDVnL71gO9ox6g2MUcs=";
+    url = "https://raw.githubusercontent.com/0fie/Wallpapers/main/images/result.png";
+    sha256 = "sha256-MUXdGe4/KsLR8JrdlvjMm8nlx4PCjwjnY5PqYabBujU=";
   };
   hyprpaperConf = pkgs.writeText "hyprpaper.conf" ''
     preload = ${currentWallpaper}
@@ -22,8 +22,8 @@ in {
         layout = "master";
         gaps_in = 5;
         gaps_out = 10;
-        border_size = 1;
-        "col.active_border" = "rgb(cba6f7) rgb(94e2d5) 45deg";
+        border_size = 2;
+        "col.active_border" = "0x9399b2FF";
         "col.inactive_border" = "0x00000000";
       };
 
@@ -81,8 +81,8 @@ in {
       decoration = {
         rounding = 7;
         "col.shadow" = "rgba(1a1a1aee)";
-        active_opacity = 0.85;
-        inactive_opacity = 0.85;
+        active_opacity = 0.75;
+        inactive_opacity = 0.75;
         fullscreen_opacity = 1.0;
         blur = {
           enabled = true;
@@ -124,10 +124,8 @@ in {
         pseudotile = true;
         preserve_split = true;
       };
-
-      master = {new_is_master = true;};
-
-      gestures = {workspace_swipe = true;};
+      master.new_is_master = true;
+      gestures.workspace_swipe = true;
 
       # Using the Super key (windows button) as the main mod.
       "$mainMod" = "SUPER";
@@ -147,7 +145,6 @@ in {
           "$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
           "$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
           "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
-          "ALT,        return,   exec,   ${pkgs.pyprland}/bin/pypr toggle term && hyprctl dispatch bringactivetotop"
           ",            Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify --cursor copysave area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
           "SHIFT,       Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify copysave screen ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
 
@@ -219,10 +216,9 @@ in {
       ];
 
       exec-once = [
-        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        #        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "${pkgs.hyprpaper}/bin/hyprpaper -c ${hyprpaperConf}"
         "${pkgs.waybar}/bin/waybar"
-        "${pkgs.pyprland}/bin/pypr"
 
         # Please see home/gtk.nix before modifying the line below. It actually sets the cursor to Bibata-Modern-Ice.
         "hyprctl setcursor default 24"
