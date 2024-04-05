@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: let
   inherit (import ./options.nix) dotfilesDir;
@@ -19,7 +20,18 @@ in {
           exec Hyprland
         }
       '';
-      shellAliases = {
+
+      shellAliases = let
+        g = lib.getExe pkgs.git;
+      in {
+        # Git
+        ga = "${g} add";
+        gc = "${g} commit";
+        gd = "${g} diff";
+        gl = "${g} log";
+        gs = "${g} status";
+        gp = "${g} push origin main";
+
         # ETC.
         c = "clear";
         f = "${pkgs.yazi-unwrapped}/bin/yazi";
@@ -27,14 +39,6 @@ in {
         ll = "ls -l";
         n = "${pkgs.nitch}/bin/nitch";
         nv = "nvim";
-
-        # Git
-        ga = "${pkgs.git}/bin/git add";
-        gc = "${pkgs.git}/bin/git commit";
-        gd = "${pkgs.git}/bin/git diff";
-        gl = "${pkgs.git}/bin/git log";
-        gs = "${pkgs.git}/bin/git status";
-        gp = "${pkgs.git}/bin/git push origin main";
 
         # Nix
         nrs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.#";
