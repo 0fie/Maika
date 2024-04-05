@@ -112,7 +112,7 @@ in {
             ${str}'') "" (map (name: completion name) names);
       in ''
         $env.config = ${conf};
-        ${completions ["git" "nix"]}
+        ${completions ["git" "nix" "man"]}
 
         def --env ff [...args] {
         	let tmp = (mktemp -t "yazi-cwd.XXXXX")
