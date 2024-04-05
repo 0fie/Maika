@@ -17,7 +17,6 @@ in {
     ./mako.nix
     ./nautilus.nix
     ./nushell.nix
-    ./pyprland.nix
     ./rofi.nix
     ./services.nix
     ./starship.nix
