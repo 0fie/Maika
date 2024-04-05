@@ -1,4 +1,8 @@
-{pkgs, ...}:
+{
+  pkgs,
+  lib,
+  ...
+}:
 # The wallpaper will be fetched from GitHub. I don't store my wallpapers locally.
 let
   currentWallpaper = pkgs.fetchurl {
@@ -138,6 +142,7 @@ in {
           "$mainMod,        e,   exec,   ${pkgs.emote}/bin/emote"
           "$mainMod,        f,   exec,   ${pkgs.gnome.nautilus}/bin/nautilus"
           "$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
+          "$mainMod,        j,   exec,   ${lib.getExe pkgs.jetbrains-toolbox}"
           "$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
           "$mainMod,        l,   exec,   hyprlock" # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
           "$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"

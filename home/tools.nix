@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     burpsuite # to be replaced with Postman.
     #charm-freeze
+    jetbrains-toolbox
     git-extras # Provides useful commands like git-summary
     libreoffice # Is there a lighter alternative?
     loupe # image viewer
