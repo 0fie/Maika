@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "catppuccin-grub": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1709858112,
+        "narHash": "sha256-e8XFWebd/GyX44WQI06Cx6sOduCZc5z7/YhweVQGMGY=",
+        "owner": "catppuccin",
+        "repo": "grub",
+        "rev": "88f6124757331fd3a37c8a69473021389b7663ad",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "grub",
+        "type": "github"
+      }
+    },
     "catppuccin-starship": {
       "flake": false,
       "locked": {
@@ -635,11 +651,11 @@
         "pre-commit-hooks": "pre-commit-hooks_2"
       },
       "locked": {
-        "lastModified": 1712298524,
-        "narHash": "sha256-3Y2+Y7fajdr9Ar9IPatsZZ2x73GUcDrTqcLNpBN//34=",
+        "lastModified": 1712318336,
+        "narHash": "sha256-KTSJePetl8UyLF+OOPCNpwJnm3sSVc/zKQI523CXf7g=",
         "owner": "0fie",
         "repo": "Mika",
-        "rev": "af27baa8885bb0e8fff4d9aa149e84d3c75e0c4c",
+        "rev": "2edadc49d0a81e7024a87cf84ffd50f977a37334",
         "type": "github"
       },
       "original": {
@@ -870,6 +886,7 @@
     },
     "root": {
       "inputs": {
+        "catppuccin-grub": "catppuccin-grub",
         "catppuccin-starship": "catppuccin-starship",
         "catppuccinifier": "catppuccinifier",
         "firefox-addons": "firefox-addons",
