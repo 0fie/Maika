@@ -1,5 +1,5 @@
 {
-  description = "0fie's ultra-simple NixOS Configuration";
+  description = "0fie's ultra-simple NixOS Configuration.";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -23,33 +23,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    catppuccin-grub = {
-      url = "github:catppuccin/grub";
-      flake = false;
-    };
-
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    trash = {
-      url = "github:0fie/trash";
-      flake = false;
-    };
-
-    catppuccin-starship = {
-      url = "github:catppuccin/starship";
-      flake = false;
-    };
-
-    yazi-theme = {
-      url = "github:yazi-rs/themes";
-      flake = false;
-    };
-    yazi-glow = {
-      url = "github:Reledia/glow.yazi";
-      flake = false;
     };
 
     catppuccinifier = {
