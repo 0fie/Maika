@@ -1,7 +1,7 @@
 {pkgs, ...}:
 # Several scripts that will be used throughout the system.
 {
-  # The Temperature and Battery modules should "just work" on Waybar, but they don't. Maybe my machine is too old.
+  # The Temperature module should "just work" on Waybar, but it does not. Maybe my machine is too old?
   # That's why I resort to these hacks.
   waybarTemperatureScript = pkgs.writeShellScriptBin "script" ''
     temp=$(cat /sys/class/hwmon/hwmon4/temp1_input)
@@ -9,12 +9,12 @@
     echo $actualTemp
   '';
 
-  waybarBatteryScript = pkgs.writeShellScriptBin "script" ''
+  batteryNotificationScript = pkgs.writeShellScriptBin "script" ''
     percentage=$(cat /sys/class/power_supply/BAT0/capacity)
     if [ $percentage -ge 100 ]; then
-      echo "100" # My battery reports over 356% when full. It is broken.
+      ${pkgs.notify-send}/bin/notify-send "Current battery: 100%" # My battery reports over 356% when full. It is broken.
     else
-      echo $percentage
+      ${pkgs.notify-send}/bin/notify-send "Current battery: $percentage"
     fi
   '';
 
