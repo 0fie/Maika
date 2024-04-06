@@ -61,7 +61,7 @@ in {
         PROMPT_COMMAND_RIGHT = ''""'';
         DIRENV_LOG_FORMAT = ''""''; # make direnv quiet
         SHELL = ''"${pkgs.nushell}/bin/nu"'';
-        EDITOR = config.home.sessionVariables.EDITOR;
+        EDITOR = ''"nvim"'';
       };
 
       # See the Nushell docs for more options.
@@ -122,6 +122,10 @@ in {
         		cd $cwd
         	}
         	rm -fp $tmp
+        }
+
+        if path::exists("/home/me/.config/nushell/extra.nu") {
+          source /home/me/.config/nushell/extra.nu
         }
       '';
     };
