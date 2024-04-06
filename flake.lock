@@ -651,11 +651,11 @@
         "pre-commit-hooks": "pre-commit-hooks_2"
       },
       "locked": {
-        "lastModified": 1712318336,
-        "narHash": "sha256-KTSJePetl8UyLF+OOPCNpwJnm3sSVc/zKQI523CXf7g=",
+        "lastModified": 1712383215,
+        "narHash": "sha256-+fpjm8Kd7k8l/PRBiChYFtJIAjDl4WMii532Qvia4FQ=",
         "owner": "0fie",
         "repo": "Mika",
-        "rev": "2edadc49d0a81e7024a87cf84ffd50f977a37334",
+        "rev": "958d7934add71d85e65fc7106a5fdcb019b6c249",
         "type": "github"
       },
       "original": {
