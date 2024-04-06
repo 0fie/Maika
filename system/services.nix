@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   services = {
     # Devmon monitors for new storage devices. Udisks2 allows apps like Nautilus to query and manipulate
     # storage devices. Gnome-keyring enables apps to display an auth dialog when attempting to perform privileged operations,
@@ -30,8 +28,7 @@
   xdg.portal = with pkgs; {
     # These enable basic Desktop capabilities like screen-sharing and 'drag and drop'.
     enable = true;
-    extraPortals = [ xdg-desktop-portal-gtk xdg-desktop-portal ];
-    configPackages =
-      [ xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-desktop-portal ];
+    extraPortals = [xdg-desktop-portal-gtk xdg-desktop-portal];
+    configPackages = [xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-desktop-portal];
   };
 }

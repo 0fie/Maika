@@ -1,10 +1,8 @@
-{ pkgs, ... }:
-
+{pkgs, ...}:
 # In this file, we have hardware acceleration, bluetooth & tmpfs for /tmp
-
 {
   nixpkgs.config.packageOverrides = pkgs: {
-    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+    vaapiIntel = pkgs.vaapiIntel.override {enableHybridCodec = true;};
   };
 
   hardware = {
@@ -44,6 +42,6 @@
   fileSystems."/tmp" = {
     device = "none";
     fsType = "tmpfs";
-    options = [ "defaults" "size=30%" "mode=755" ];
+    options = ["defaults" "size=30%" "mode=755"];
   };
 }

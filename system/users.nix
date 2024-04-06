@@ -1,8 +1,7 @@
-{ pkgs, ... }:
-
+{pkgs, ...}:
 # Fetch the user's name and full name from home/options.nix
-let inherit (import ../home/options.nix) userName userFullName;
-
+let
+  inherit (import ../home/options.nix) userName userFullName;
 in {
   # You can change the user name by editing home/options.nix
   users = {
@@ -10,9 +9,8 @@ in {
     users.${userName} = {
       isNormalUser = true;
       description = "${userFullName}";
-      extraGroups = [ "networkmanager" "wheel" ];
-      hashedPassword =
-        "$y$j9T$RESLq/fRruOfj/mdwU7MQ/$Hf7riy3m/QEwAmzxU8UBvU1NASKqshloGjhXripIlg6";
+      extraGroups = ["networkmanager" "wheel"];
+      hashedPassword = "$y$j9T$RESLq/fRruOfj/mdwU7MQ/$Hf7riy3m/QEwAmzxU8UBvU1NASKqshloGjhXripIlg6";
       shell = pkgs.nushell;
     };
   };
@@ -29,5 +27,5 @@ in {
 
   # This is required by Hyprlock. The package installed through home-manager will not be able to unlock the session
   # without this configuration. Vaxry added a fallback to 'su' though.
-  security.pam.services.hyprlock = { };
+  security.pam.services.hyprlock = {};
 }
