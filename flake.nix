@@ -16,20 +16,15 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprlock = {
       url = "github:hyprwm/hyprlock";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "hyprland";
     };
     hypridle = {
       url = "github:hyprwm/hypridle";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "hyprland";
     };
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    catppuccinifier = {
-      url = "github:lighttigerXIV/catppuccinifier";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -67,10 +62,9 @@
   };
 
   nixConfig = {
-    extra-substituters = ["https://hyprland.cachix.org" "https://isabelroses.cachix.org "];
+    extra-substituters = ["https://hyprland.cachix.org"];
     extra-trusted-public-keys = [
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-      "isabelroses.cachix.org-1:mXdV/CMcPDaiTmkQ7/4+MzChpOe6Cb97njKmBQQmLPM="
     ];
   };
 }
