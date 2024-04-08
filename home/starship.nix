@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{pkgs, ...}: {
   programs.starship = {
     enable = true;
     enableNushellIntegration = true;
@@ -34,7 +34,9 @@
 
         palette = "catppuccin_mocha";
       }
-      // builtins.fromTOML
-      (builtins.readFile "${inputs.catppuccin-starship}/palettes/mocha.toml");
+      // builtins.fromTOML (builtins.readFile (pkgs.fetchurl {
+        url = "https://raw.githubusercontent.com/catppuccin/starship/master/palettes/mocha.toml";
+        hash = "sha256-cSaZrSfbk97d2kV3q5dT924MgmUuY8eYIIU0PIygH5w=";
+      }));
   };
 }
