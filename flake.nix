@@ -38,9 +38,8 @@
     catppuccin,
     ...
   } @ inputs: let
-    inherit (import ./system/options.nix) hostName;
+    inherit (import ./system/options.nix) hostName system;
     inherit (import ./home/options.nix) userName;
-    system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     homeConfigurations."${userName}" = home-manager.lib.homeManagerConfiguration {

@@ -47,7 +47,7 @@
   #
   # However, I can not guarantee that the rest of this NixOS configuration will function properly in that case. It will not.
   # Required by flake.nix
-  system = "X86_64-linux";
+  system = "x86_64-linux";
 
   ####################################################
   # The 'fontName' variable below is used by apps like Waybar and Kitty to determine which font to use. It is *not* the actual font
