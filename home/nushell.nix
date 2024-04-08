@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  inherit (import ./options.nix) dotfilesDir;
+  inherit (import ./options.nix) dotfilesDir userName;
 in {
   programs = {
     direnv = {
@@ -125,7 +125,7 @@ in {
         	rm -fp $tmp
         }
 
-          source /home/0fie/.config/nushell/extra.nu
+          source /home/${userName}/.config/nushell/extra.nu
       '';
     };
   };
