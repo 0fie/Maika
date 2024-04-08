@@ -24,39 +24,21 @@
         };
       };
     };
-    bat = {
-      enable = true;
-      config = {theme = "Catppuccin-mocha";};
-      themes.Catppuccin-mocha = {
-        src = pkgs.fetchFromGitHub {
-          owner = "catppuccin";
-          repo = "bat";
-          rev = "ba4d16880d63e656acced2b7d4e034e4a93f74b1";
-          sha256 = "sha256-6WVKQErGdaqb++oaXnY3i6/GuH2FhTgK0v4TN4Y0Wbw=";
-        };
-        file = "Catppuccin-mocha.tmTheme";
-      };
-    };
     btop = {
       enable = true;
+      catppuccin.enable = true;
       settings = {
-        color_theme = "catppuccin_mocha";
         vim_keys = true;
         rounded_corners = true;
       };
     };
+
+    bat = {
+      enable = true;
+      catppuccin.enable = true;
+    };
   };
+
   # For Bat
   home.activation.buildBatCache = "${lib.getExe pkgs.bat} cache --build";
-
-  # For Btop
-  xdg.configFile."btop/themes/catppuccin_mocha.theme".text =
-    builtins.readFile
-    (pkgs.fetchFromGitHub {
-        owner = "catppuccin";
-        repo = "btop";
-        rev = "ecb8562bb6181bb9f2285c360bbafeb383249ec3";
-        sha256 = "sha256-ovVtupO5jWUw6cwA3xEzRe1juUB8ykfarMRVTglx3mk=";
-      }
-      + "/catppuccin_mocha.theme");
 }

@@ -1,4 +1,8 @@
-{inputs, ...}:
+{
+  inputs,
+  catppuccin,
+  ...
+}:
 # Fetches the user's name from home/options.nix
 # And then fetches the system's stateVersion from system/options.nix
 # HM's stateVersion should be in sync with the system's stateVersion to avoid mismatches and conflicts.
@@ -16,6 +20,7 @@ in {
     ./kitty.nix
     ./mako.nix
     ./nushell.nix
+    ./nix-settings.nix
     ./rofi.nix
     ./services.nix
     ./starship.nix
@@ -39,5 +44,6 @@ in {
   };
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
+  catppuccin.flavour = "mocha";
   programs.home-manager.enable = true;
 }

@@ -11,7 +11,7 @@
   #
   # Your home directory will then be /home/tom
   # Required by home/firefox.nix (for setting up user profile) and system/users.nix (to add the user to the system)
-  userName = "me";
+  userName = "0fie";
 
   ###########################################
   # The user's full name. Can be anything.

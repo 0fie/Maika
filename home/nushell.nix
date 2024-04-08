@@ -42,6 +42,7 @@ in {
 
         # Nix
         nrs = "sudo sh -c 'nixos-rebuild switch --flake ${dotfilesDir}/.# |& ${pkgs.nix-output-monitor}/bin/nom'";
+        hrs = "home-manager switch --flake ${dotfilesDir}";
         nlu = "nix flake lock --update-input";
 
         # Modern yuunix, uwu <3
@@ -124,7 +125,7 @@ in {
         	rm -fp $tmp
         }
 
-          source /home/me/.config/nushell/extra.nu
+          source /home/0fie/.config/nushell/extra.nu
       '';
     };
   };

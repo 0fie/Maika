@@ -5,7 +5,7 @@
 }: {
   # Additional packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    #charm-freeze
+#    charm-freeze
     jetbrains-toolbox
     git-extras # Provides useful commands like git-summary
     loupe # image viewer

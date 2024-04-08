@@ -13,6 +13,7 @@
 in {
   home.packages = [pkgs.xdg-utils];
   xdg = {
+    enable = true;
     userDirs = {
       enable = true;
       createDirectories = true;
