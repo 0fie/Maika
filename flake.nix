@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    catppuccin.url = "github:catppuccin/nix";
+
     mika.url = "github:0fie/Mika";
 
     nix-colors.url = "github:misterio77/nix-colors";
@@ -33,31 +35,26 @@
     self,
     nixpkgs,
     home-manager,
+    catppuccin,
     ...
   } @ inputs: let
-    inherit (import ./system/options.nix) hostName system;
+    inherit (import ./system/options.nix) hostName;
     inherit (import ./home/options.nix) userName;
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
   in {
-    nixosConfigurations = {
-      ${hostName} = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit system;
-          inherit inputs;
-        };
-        modules = [
-          ./system/configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              extraSpecialArgs = {inherit inputs userName;};
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              backupFileExtension = "backup";
-              users.${userName} = import ./home/home.nix;
-            };
-          }
-        ];
-      };
+    homeConfigurations."${userName}" = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      extraSpecialArgs = {inherit inputs;};
+      modules = [
+        catppuccin.homeManagerModules.catppuccin
+        ./home/home.nix
+      ];
+    };
+
+    nixosConfigurations."${hostName}" = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs system;};
+      modules = [catppuccin.homeManagerModules.catppuccin ./system/configuration.nix];
     };
   };
 

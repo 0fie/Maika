@@ -16,6 +16,21 @@
         "type": "github"
       }
     },
+    "catppuccin": {
+      "locked": {
+        "lastModified": 1712482981,
+        "narHash": "sha256-LJOOpTey9Y29C/TK4h9KP7v4HvqDL3mLyT9hSWCfFlI=",
+        "owner": "catppuccin",
+        "repo": "nix",
+        "rev": "4043beb6c792a40e9c513aa261f4ba10601a4457",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "nix",
+        "type": "github"
+      }
+    },
     "devshell": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -756,6 +771,7 @@
     },
     "root": {
       "inputs": {
+        "catppuccin": "catppuccin",
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
         "hypridle": "hypridle",
