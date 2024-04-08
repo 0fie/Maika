@@ -10,6 +10,7 @@
     git-extras # Provides useful commands like git-summary
     loupe # image viewer
     mpv-unwrapped # lightweight media player
+    nautilus # GUI file manager
     protonvpn-gui # at least it's open source
     soundwireserver # cast sound to Android phone.
     vokoscreen-ng # screen recorder (extremely buggy on Wayland)
