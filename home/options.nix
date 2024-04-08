@@ -1,4 +1,4 @@
-{
+rec {
   # User options.
 
   ##########################################
@@ -46,5 +46,5 @@
   #
   # This is not a critical or necessary option. It is only used for the 'nixos-rebuild switch' alias for convinience.
   # Required by home/nushell.nix
-  dotfilesDir = "/home/me/Projects/Maika";
+  dotfilesDir = "/home/${userName}/Projects/Maika";
 }
