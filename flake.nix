@@ -16,11 +16,11 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprlock = {
       url = "github:hyprwm/hyprlock";
-      inputs.nixpkgs.follows = "hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     hypridle = {
       url = "github:hyprwm/hypridle";
-      inputs.nixpkgs.follows = "hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     firefox-addons = {
