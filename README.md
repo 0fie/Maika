@@ -30,7 +30,7 @@
 </div>
 
 <p align="center">
-   <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/rice.png" width="800px" /> <br>
+   <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v1/rice.png" width="800px" /> <br>
 </p>
 <p align="center">
    Screenshot last updated <b>20 March</b>
@@ -44,22 +44,29 @@
    </summary>
    <p align="center">
       Kitty + Nushell + Starship + Cava
-      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/term.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Maika/blob/main/docs/images/V1/rice/term.png" width="800px" /> <br>
    </p>
 
    <p align="center">
       Hyprlock (lock screen)
-      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/lock.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/V1/lock.png" width="800px" /> <br>
    </p>
    <p align="center">
       App Launcher (rofi-wayland)
-      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/rofi.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/V1/rofi.png" width="800px" /> <br>
    </p>
    <p align="center">
       Helix Editor (left) and Yazi (right)
-      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/cli.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/V1/cli.png" width="800px" /> <br>
    </p>
 
+</details>
+
+<details>
+  <summary>Next version</summary>
+  <p align="center">
+    V2 (work in progress)
+    <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/V2/home.png" /> <br>
 </details>
 
 <details>
@@ -68,36 +75,39 @@
 </details>
 
 ### 📓 Components
-| Type                        | Program                                                  |
-| --------------------------- | :--------------------------------------------------------:
-| **Compositor**              | [Hyprland][Hyprland] |
-| **Lock screen**             | [Hyprlock][Hyprlock] |
-| **Idle Mgmt. Daemon**       | [Hypridle][Hypridle] |
-| **Wallpaper Setter**        | [Hyprpaper][Hyprpaper] |
-| **Text Editor**             | [Neovim][Neovim] |
-| **Shell**                   | [Nushell][Nushell] + [Starship][Starship] |
-| **Terminal Emulator**       | [Kitty][Kitty] |
-| **File Manager**            | [Yazi][Yazi] |
-| **Color Scheme**            | [Catppuccin][Catppuccin] |
-| **Screenshot Software**     | [Grimblast][Grimblast] |
-| **Bar**                     | [Waybar][Waybar] |
-| **Cursor**                  | [Bibata-Modern-Ice][Bibata-Modern-Ice] |
-| **Folder Icons**            | [catppuccin-papirus-folders][catppuccin-papirus-folders] |
-| **Image Viewer**            | [Loupe][Loupe] |
+
+| Type                    |                         Program                          |
+| ----------------------- | :------------------------------------------------------: |
+| **Compositor**          |                   [Hyprland][Hyprland]                   |
+| **Lock screen**         |                   [Hyprlock][Hyprlock]                   |
+| **Idle Mgmt. Daemon**   |                   [Hypridle][Hypridle]                   |
+| **Wallpaper Setter**    |                  [Hyprpaper][Hyprpaper]                  |
+| **Text Editor**         |                     [Neovim][Neovim]                     |
+| **Shell**               |        [Nushell][Nushell] + [Starship][Starship]         |
+| **Terminal Emulator**   |                      [Kitty][Kitty]                      |
+| **File Manager**        |                       [Yazi][Yazi]                       |
+| **Color Scheme**        |                 [Catppuccin][Catppuccin]                 |
+| **Screenshot Software** |                  [Grimblast][Grimblast]                  |
+| **Bar**                 |                     [Waybar][Waybar]                     |
+| **Cursor**              |          [Bibata-Modern-Ice][Bibata-Modern-Ice]          |
+| **Folder Icons**        | [catppuccin-papirus-folders][catppuccin-papirus-folders] |
+| **Image Viewer**        |                      [Loupe][Loupe]                      |
 
 <br>
 
 ### 📚 Directory Structure
-| File/Dir                   | What it does
-|----------------------------| :------------------------------------------------------:
-| [flake.nix](flake.nix) ❄️   | base of the configuration |
-| [home/](home/) 🏠️          | contains home-manager configs for the user, like themes |
-| [system/](system/) ⚙️       | contains system-level OS configs like file system & boot. |
-| [docs/](docs/) 📚️          | the documentation: explains how to do x, what option y does, etc. |
+
+| File/Dir                  |                           What it does                            |
+| ------------------------- | :---------------------------------------------------------------: |
+| [flake.nix](flake.nix) ❄️ |                     base of the configuration                     |
+| [home/](home/) 🏠️        |      contains home-manager configs for the user, like themes      |
+| [system/](system/) ⚙️     |     contains system-level OS configs like file system & boot.     |
+| [docs/](docs/) 📚️        | the documentation: explains how to do x, what option y does, etc. |
 
 <br>
 
 ### Why it looks like this?
+
 Simplicity. As a simple person with simple requirements, I sought to craft a beautiful and functional NixOS + Hyprland config to daily
 drive on my old Dell laptop, and this is it! It meets my needs perfectly, and there is nothing more to add to it. You will notice that
 the [home](home/) and [system](system/) directories do not contain any additional directories inside them. This was intentionally done
@@ -106,12 +116,14 @@ to avoid unnecessary complexity. You can open an [issue](https://github.com/0fie
 <br>
 
 ### How to Install?
+
 You should cherry pick the parts that you're interested in. For example, if you want to add my Hyprland config to your setup, you'd simply
 copy my [home/hyprland.nix](home]hyprland.nix) file into your dotfiles directory and then import it.
 
 <br>
 
 ### I got a lot of inspiration as well as actual code from the following sources:
+
 - [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell configs
 - [NotAShelf/Nyx](https://github.com/NotAShelf/Nyx) - dozens of snippets from their ultra-complex setup
 - [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - their Firefox declaration with addons
@@ -122,8 +134,8 @@ copy my [home/hyprland.nix](home]hyprland.nix) file into your dotfiles directory
 - [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Configs for Maxfetch, Starship, Kitty, Waybar & Hyprland window rules
 - [fufexan/dotfiles](https://github.com/fufexan/dotfiles) - Configs for Spicetify, Hypridle and more
 
-
 ### Other learning resources that have also been helpful
+
 - [NixOS and Flakes Book](https://nixos-and-flakes.thiscute.world)
 - [NixOS Discord](https://discord.com/invite/2HeKRM3)
 - [Zero to Nix](https://zero-to-nix.com)
@@ -132,9 +144,11 @@ copy my [home/hyprland.nix](home]hyprland.nix) file into your dotfiles directory
 - [IogaMaster's channel](https://www.youtube.com/@IogaMaster)
 
 ###### Special thanks to [NobbZ](https://github.com/NobbZ) for answering all my questions on Discord.
+
 <p align="center"><a href="https://github.com/0fie/Maika?tab=readme-ov-file#readme"><small>back to top</small></a></p>
 
 <!-- links -->
+
 [Hyprland]: https://github.com/hyprwm/Hyprland
 [Kitty]: https://github.com/kovidgoyal/kitty
 [Starship]: https://github.com/starship/starship
