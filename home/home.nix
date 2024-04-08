@@ -39,8 +39,7 @@ in {
     username = "${userName}";
     homeDirectory = "/home/${userName}";
     stateVersion = "${stateVersion}";
-
-    sessionVariables = {EDITOR = "nvim";};
+    sessionVariables.EDITOR = "nvim";
   };
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;

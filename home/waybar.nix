@@ -1,7 +1,7 @@
 {pkgs, ...}:
 # Fetch the fontName variable from system/options.nix to determine which font to use.
 let
-  scripts = import ./scripts.nix {inherit pkgs;};
+  inherit (import ./scripts.nix {inherit pkgs;}) waybarTemperatureScript;
   inherit (import ../system/options.nix) fontName;
 in {
   programs.waybar = {
@@ -51,7 +51,7 @@ in {
       };
 
       "custom/temperature" = {
-        exec = "${scripts.waybarTemperatureScript}/bin/script";
+        exec = "${waybarTemperatureScript}/bin/script";
         format = "{}°C";
         interval = 1;
       };

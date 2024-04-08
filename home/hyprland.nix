@@ -13,7 +13,7 @@ let
     preload = ${currentWallpaper}
     wallpaper = ,${currentWallpaper}
   '';
-  scripts = import ./scripts.nix {inherit pkgs;};
+  inherit (import ./scripts.nix {inherit pkgs;}) batteryNotificationScript rofiPowerMenuScript;
 in {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -147,12 +147,12 @@ in {
           "$mainMod,        j,   exec,   ${lib.getExe pkgs.jetbrains-toolbox}"
           "$mainMod,        k,   exec,   ${pkgs.keepassxc}/bin/keepassxc"
           "$mainMod,        l,   exec,   hyprlock" # Make sure you have Hyprlock installed. There's an official flake for it. See /flake.nix
-          "$mainMod,        p,   exec,   ${scripts.rofiPowerMenuScript}/bin/script"
+          "$mainMod,        p,   exec,   ${rofiPowerMenuScript}/bin/script"
           "$mainMod,        r,   exec,   ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
           "$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
           "$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
           "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
-          "$mainMod SHIFT,  b,   exec,   ${scripts.batteryNotificationScript}/bin/script"
+          "$mainMod SHIFT,  b,   exec,   ${batteryNotificationScript}/bin/script"
           ",            Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify --cursor copysave area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
           "SHIFT,       Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify copysave screen ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
 

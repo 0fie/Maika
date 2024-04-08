@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  scripts = import ./scripts.nix {inherit pkgs;};
+  inherit (import ./scripts.nix {inherit pkgs;}) suspendScript;
 in {
   services = {
     udiskie = {
@@ -30,7 +30,7 @@ in {
         }
         {
           timeout = 1200;
-          onTimeout = "${scripts.suspendScript}/bin/script";
+          onTimeout = "${suspendScript}/bin/script";
         }
       ];
     };
