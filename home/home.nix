@@ -15,7 +15,6 @@ in {
     ./hyprlock.nix
     ./kitty.nix
     ./mako.nix
-    ./nautilus.nix
     ./nushell.nix
     ./rofi.nix
     ./services.nix
