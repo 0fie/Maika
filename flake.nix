@@ -54,7 +54,7 @@
 
     nixosConfigurations."${hostName}" = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs system;};
-      modules = [catppuccin.homeManagerModules.catppuccin ./system/configuration.nix];
+      modules = [./system/configuration.nix];
     };
   };
 
