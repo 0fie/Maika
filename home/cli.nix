@@ -1,8 +1,4 @@
 {
-  pkgs,
-  lib,
-  ...
-}: {
   programs = {
     cava = {
       enable = true;
@@ -38,7 +34,4 @@
       catppuccin.enable = true;
     };
   };
-
-  # For Bat
-  home.activation.buildBatCache = "${lib.getExe pkgs.bat} cache --build";
 }
