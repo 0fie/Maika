@@ -44,20 +44,20 @@
    </summary>
    <p align="center">
       Kitty + Nushell + Starship + Cava
-      <img src="https://github.com/0fie/Maika/blob/main/docs/images/V1/rice/term.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v1/term.png" width="800px" /> <br>
    </p>
 
    <p align="center">
       Hyprlock (lock screen)
-      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/V1/lock.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v1/lock.png" width="800px" /> <br>
    </p>
    <p align="center">
       App Launcher (rofi-wayland)
-      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/V1/rofi.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v1/rofi.png" width="800px" /> <br>
    </p>
    <p align="center">
       Helix Editor (left) and Yazi (right)
-      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/V1/cli.png" width="800px" /> <br>
+      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v1/cli.png" width="800px" /> <br>
    </p>
 
 </details>
@@ -66,7 +66,7 @@
   <summary>Next version</summary>
   <p align="center">
     V2 (work in progress)
-    <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/V2/home.png" /> <br>
+    <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v2/home.png" /> <br>
 </details>
 
 <details>
