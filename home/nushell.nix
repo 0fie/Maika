@@ -124,9 +124,7 @@ in {
         	rm -fp $tmp
         }
 
-        if path::exists("/home/me/.config/nushell/extra.nu") {
           source /home/me/.config/nushell/extra.nu
-        }
       '';
     };
   };
