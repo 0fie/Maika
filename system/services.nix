@@ -24,11 +24,4 @@
       powerKeyLongPress = "reboot";
     };
   };
-
-  xdg.portal = with pkgs; {
-    # These enable basic Desktop capabilities like screen-sharing and 'drag and drop'.
-    enable = true;
-    extraPortals = [xdg-desktop-portal-gtk xdg-desktop-portal];
-    configPackages = [xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-desktop-portal];
-  };
 }

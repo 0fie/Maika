@@ -14,6 +14,12 @@ in {
   home.packages = [pkgs.xdg-utils];
   xdg = {
     enable = true;
+    portal = with pkgs; {
+      enable = true;
+      configPackages = [xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-desktop-portal];
+      extraPortals = [xdg-desktop-portal-gtk xdg-desktop-portal];
+      xdgOpenUsePortal = true;
+    };
     userDirs = {
       enable = true;
       createDirectories = true;
