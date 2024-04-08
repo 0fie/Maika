@@ -1,4 +1,9 @@
-### Even the simplest of NixOS systems needs some docs.
+#### Even the simplest of NixOS systems needs some docs.
 
-#### This is what we currently have:
-- [How to](./HOW-TO.md)
+These dotfiles will eventually become over-engineered and unnecessarily complex like others'. I'm writing these "docs/notes" so that I can
+revisit them when I forget something.
+
+##### This is what I currently have:
+
+- [How stuff works](./HOW.md)
+- [How to install the dotfiles](./INSTALL.md)
