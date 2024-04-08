@@ -65,7 +65,8 @@ in {
         "size 700 450,title:^(Volume Control)$"
         "size 700 450,title:^(Save As)$"
         "float,title:^(Library)$"
-        "float,title:^(Soundwire Server)$"
+        "size 700 450,title:^(Page Info)$"
+        "float,title:^(Page Info)$"
       ];
       windowrulev2 = [
         "float,class:^(pavucontrol)$"
@@ -74,6 +75,7 @@ in {
         "float,class:^(.protonvpn-app-wrapped)$"
         "float,class:^(.blueman-manager-wrapped)$"
         "float,class:^(dialog)$"
+        "float,class:^(SoundWireServer)$"
         "float,class:^(download)$"
         "float,class:^(notification)$"
         "float,class:^(nm-connection-editor)$"
