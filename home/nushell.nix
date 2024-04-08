@@ -41,7 +41,7 @@ in {
         nv = "nvim";
 
         # Nix
-        nrs = "sudo nixos-rebuild switch --flake ${dotfilesDir}/.#";
+        nrs = "sudo sh -c 'nixos-rebuild switch --flake ${dotfilesDir}/.# |& ${pkgs.nix-output-monitor}/bin/nom'";
         nlu = "nix flake lock --update-input";
 
         # Modern yuunix, uwu <3
