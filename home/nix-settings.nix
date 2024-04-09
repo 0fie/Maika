@@ -16,8 +16,13 @@
     # Pin the registry to avoid downloading and evaling a new nixpkgs version every time.
     # I can not verify whether this works as intended.
     registry = lib.mapAttrs (_: v: {flake = v;}) inputs;
-
-    settings.auto-optimise-store = true;
+    settings = {
+      auto-optimise-store = true;
+      extra-substituters = ["https://hyprland.cachix.org"];
+      extra-trusted-public-keys = [
+        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+      ];
+    };
     package = pkgs.nix;
 
     # Enable auto cleanup.
