@@ -517,16 +517,17 @@
         "pre-commit-hooks": "pre-commit-hooks_2"
       },
       "locked": {
-        "dirtyRev": "a39d96350cbc6a1aaaaf42595fe318ffb2ce7f24-dirty",
-        "dirtyShortRev": "a39d963-dirty",
-        "lastModified": 1712660998,
-        "narHash": "sha256-kSOC8qJIGAxdVJHwXg33XplWHN4CTwj9R/nfuqmxfy4=",
-        "type": "git",
-        "url": "file:///home/0fie/Projects/Mika"
+        "lastModified": 1712665478,
+        "narHash": "sha256-iXMkX3e773/wSK4qcYfMdLVE521EcnNXgApG8ay1XtM=",
+        "owner": "0fie",
+        "repo": "Mika",
+        "rev": "a71f9733ecf881e2c7d0c8f92eb8bb29d134313e",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/0fie/Projects/Mika"
+        "owner": "0fie",
+        "repo": "Mika",
+        "type": "github"
       }
     },
     "nix-colors": {
