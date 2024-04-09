@@ -14,7 +14,7 @@ font like so:
 ```nix
 home.packages = [pkgs.iosevka];
 
-# Or altenatively
+# Or alternatively
 fonts.packages = [pkgs.iosevka];
 ```
 
