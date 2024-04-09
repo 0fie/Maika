@@ -43,6 +43,7 @@ in {
         # Nix
         ns = "sudo sh -c 'nixos-rebuild switch --flake ${dotfilesDir}/.# |& ${pkgs.nix-output-monitor}/bin/nom'";
         hs = "home-manager switch --flake ${dotfilesDir}";
+        nd = "nix develop -c $env.SHELL";
         nlu = "nix flake lock --update-input";
 
         # Modern yuunix, uwu <3
