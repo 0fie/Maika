@@ -11,3 +11,5 @@ nix shell nixpkgs#home-manager nixpkgs#git
 nix run home-manager/master -- init --switch
 home-manager switch --impure --flake .
 ```
+
+None of this was tested.
