@@ -1,8 +1,8 @@
 #### How theming works?
 
 I use [Catppuccin](https://github.com/catppuccin) system-wide, from GRUB to Hyprland. To ensure that all apps follow this color scheme, I'm
-using [nix-colors](https://github.com/misterio77/nix-colors) and [catppuccin/nix](https://github.com/catppuccin/nix). Inspect
-[home/home.nix](../home/home.nix) to see how I used them. To change the theme used by GTK apps, see [home/gtk.nix](../home/gtk.nix).
+using [catppuccin/nix](https://github.com/catppuccin/nix). Inspect [home/home.nix](../home/home.nix) to see how I used it. To change the
+theme used by GTK apps, see [home/gtk.nix](../home/gtk.nix).
 
 #### How fonts work?
 
