@@ -6,4 +6,4 @@ revisit them when I forget something.
 ##### This is what I currently have:
 
 - [How stuff works](./HOW.md)
-- [How to install the dotfiles](./INSTALL.md)
+- [How to install](./INSTALL.md)
