@@ -31,7 +31,6 @@ in {
     inputs.hyprland.homeManagerModules.default
     inputs.hypridle.homeManagerModules.hypridle
     inputs.hyprlock.homeManagerModules.hyprlock
-    inputs.nix-colors.homeManagerModules.default
   ];
 
   # Info required by home-manager and some session variables.
@@ -42,7 +41,6 @@ in {
     sessionVariables.EDITOR = "nvim";
   };
 
-  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
   catppuccin.flavour = "mocha";
   programs.home-manager.enable = true;
 }
