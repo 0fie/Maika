@@ -118,31 +118,23 @@ to avoid unnecessary complexity. You can open an [issue](https://github.com/0fie
 ### How to Install?
 
 You should cherry-pick the parts that you're interested in. For example, if you want to add my Hyprland config to your setup, you'd simply
-copy my [home/hyprland.nix](./home/hyprland.nix) file into your dotfiles directory and then import it. There's also some
-[docs/](./docs/README.md) which explain how to install this entire home-manager config. But don't bother reading if you are not 0fie.
+copy my [home/hyprland.nix](./home/hyprland.nix) file into your dotfiles directory and then import it. There are also some
+[docs/](./docs/README.md) which explain how to install this entire home-manager config. But don't bother reading if you are not
+[0fie](https://github.com/0fie).
 
 <br>
 
 ### I got a lot of inspiration as well as actual code from the following sources:
 
+- [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Configs for Starship, Waybar & Hyprland window rules
 - [Aylur/dotfiles](https://github.com/Aylur/dotfiles) - Nushell configs
-- [NotAShelf/Nyx](https://github.com/NotAShelf/Nyx) - dozens of snippets from their ultra-complex setup
-- [Misterio77/nix-config](https://github.com/Misterio77/nix-config) - their Firefox declaration with addons
-- [rubyowo/dotfiles](https://github.com/rubyowo/dotfiles) - bat & cava configs
-- [My Linux For Work Dotfiles 2.7 - 2.8](https://gitlab.com/stephan-raabe/dotfiles) - Inspiration for hyprlock and hypridle
 - [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles/) - Catppuccin for SDDM
-- [prasanthrangan/hyprdots](https://github.com/prasanthrangan/hyprdots) - their Hyprland animations
-- [Frost-Phoenix/nixos-config](Frost-Phoenix/nixos-config) - Configs for Maxfetch, Starship, Kitty, Waybar & Hyprland window rules
-- [fufexan/dotfiles](https://github.com/fufexan/dotfiles) - Configs for Spicetify, Hypridle and more
 
 ### Other learning resources that have also been helpful
 
 - [NixOS and Flakes Book](https://nixos-and-flakes.thiscute.world)
-- [NixOS Discord](https://discord.com/invite/2HeKRM3)
 - [Zero to Nix](https://zero-to-nix.com)
 - [Vimjoyer's Nix playlist](https://www.youtube.com/playlist?list=PLko9chwSoP-15ZtZxu64k_CuTzXrFpxPE)
-- [Zaney's Blog](https://zaney.org/)
-- [IogaMaster's channel](https://www.youtube.com/@IogaMaster)
 
 ###### Special thanks to [NobbZ](https://github.com/NobbZ) for answering all my questions on Discord.
 
@@ -166,4 +158,3 @@ copy my [home/hyprland.nix](./home/hyprland.nix) file into your dotfiles directo
 [Hyprpaper]: https://github.com/hyprwm/hyprpaper
 [Bibata-Modern-Ice]: https://github.com/ful1e5/Bibata_Cursor
 [Loupe]: https://apps.gnome.org/Loupe/
-[vokoscreenNG]: https://github.com/vkohaupt/vokoscreenNG
