@@ -32,15 +32,10 @@
   ];
 
   xdg.configFile = {
-    #"yazi/theme.toml".text = builtins.readFile (pkgs.fetchurl {
-    #  url = "https://raw.githubusercontent.com/yazi-rs/themes/catppuccin-mocha.yazi/flavor.toml";
-    #  hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-    #});
-
-    #"yazi/plugins/glow.yazi".text = builtins.readFile (pkgs.fetchurl {
-    #  url = "https://raw.githubusercontent.com/Reledia/glow.yazi/init.lua";
-    #  hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-    #});
+    "yazi/theme.toml".text = builtins.readFile (pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/yazi-rs/flavors/main/catppuccin-mocha.yazi/flavor.toml";
+      hash = "sha256-T9uehViMJWU/mXYoKsdA1v7Z7R/Pg8svWogTUUqnaa0=";
+    });
 
     "yazi/plugins/smart-enter.yazi/init.lua".text = ''
       return {
