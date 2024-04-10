@@ -8,8 +8,20 @@
         show_hidden = false;
         sort_by = "alphabetical";
         sort_dir_first = true;
+        prepend_keymap = [
+          {
+            on = ["f" "g"];
+            run = "plugin fg";
+            desc = "Find file by content";
+          }
+          {
+            on = ["f" "f"];
+            run = "plugin fg --args='fzf'";
+            desc = "find file by file name";
+          }
+        ];
       };
-      headsup.disable_exec_warn = true;
+      headsup.disable_exec_warn = false;
       plugin.prepend_previewers = [
         {
           name = "*.md";
@@ -20,15 +32,16 @@
   };
 
   home.packages = with pkgs; [
-    exiftool
+    exiftool # To get exif data of files.
     fd
-    ffmpegthumbnailer
+    ffmpegthumbnailer # For thumbnails.
     file
-    glow
-    jq
+    fzf # For fg.yazi plugin.
+    glow # For previewing markdown files.
+    jq # For previewing JSON files.
     poppler
-    ripgrep
-    unar
+    ripgrep # For fg.yazi plugin.
+    unar # for previewing archive files.
   ];
 
   xdg.configFile = {
@@ -36,6 +49,12 @@
       url = "https://raw.githubusercontent.com/yazi-rs/flavors/main/catppuccin-mocha.yazi/flavor.toml";
       hash = "sha256-T9uehViMJWU/mXYoKsdA1v7Z7R/Pg8svWogTUUqnaa0=";
     });
+    "yazi/plugins/glow.yazi".source = pkgs.fetchFromGitHub {
+      owner = "Reledia";
+      repo = "glow.yazi";
+      rev = "54b34c2b337ab0933130a06f61038398efa9ce65";
+      hash = "sha256-YTe76i5pdw0GhzWGBU41FDAKy3PJR7aPQgn+dbXHPNg=";
+    };
 
     "yazi/plugins/smart-enter.yazi/init.lua".text = ''
       return {
