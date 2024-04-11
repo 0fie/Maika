@@ -4,7 +4,7 @@
       enable = true;
       device = "/dev/sda";
       timeoutStyle = "hidden";
-      catppuccin.enable = true;
+      #      catppuccin.enable = true;
     };
 
     kernel.sysctl = {

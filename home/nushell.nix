@@ -40,6 +40,10 @@ in {
         n = "${pkgs.nitch}/bin/nitch";
         nv = "nvim";
 
+        # Gleam
+        gr = "gleam run";
+        gt = "gleam test";
+
         # Nix
         ns = "sudo sh -c 'nixos-rebuild switch --flake ${dotfilesDir}/.# |& ${pkgs.nix-output-monitor}/bin/nom'";
         hs = "home-manager switch --flake ${dotfilesDir}";
@@ -48,11 +52,9 @@ in {
 
         # Modern yuunix, uwu <3
         cat = "${pkgs.bat}/bin/bat";
-        #        cp = "${pkgs.advcpmv}/bin/advcp -g"; # Shows progress bar.
         df = "${pkgs.duf}/bin/duf";
         find = "${pkgs.fd}/bin/fd";
         grep = "${pkgs.ripgrep}/bin/rg";
-        #        mv = "${pkgs.advcpmv}/bin/advmv -g"; # Also shows progress bar.
         tree = "${pkgs.eza}/bin/eza --git --icons --tree";
       };
 
