@@ -1,3 +1,4 @@
+{inputs,...}:
 # Fetches the stateVersion variable from our system's options.nix file.
 let
   inherit (import ./options.nix) stateVersion;
@@ -15,6 +16,7 @@ in {
     ./sound.nix
     ./sys.nix
     ./users.nix
+    inputs.catppuccin.nixosModules.catppuccin
   ];
 
   system.stateVersion = "${stateVersion}";
