@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   programs.yazi = {
     enable = true;
+    catppuccin.enable = true;
     package = pkgs.yazi-unwrapped;
     enableNushellIntegration = true;
     settings = {
@@ -45,10 +46,6 @@
   ];
 
   xdg.configFile = {
-    "yazi/theme.toml".text = builtins.readFile (pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/yazi-rs/flavors/main/catppuccin-mocha.yazi/flavor.toml";
-      hash = "sha256-T9uehViMJWU/mXYoKsdA1v7Z7R/Pg8svWogTUUqnaa0=";
-    });
     "yazi/plugins/glow.yazi".source = pkgs.fetchFromGitHub {
       owner = "Reledia";
       repo = "glow.yazi";

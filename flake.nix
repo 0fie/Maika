@@ -38,10 +38,7 @@
     homeConfigurations."${userName}" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = {inherit inputs;};
-      modules = [
-        catppuccin.homeManagerModules.catppuccin
-        ./home/home.nix
-      ];
+      modules = [./home/home.nix];
     };
 
     nixosConfigurations."${hostName}" = nixpkgs.lib.nixosSystem {

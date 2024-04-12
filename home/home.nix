@@ -1,6 +1,5 @@
 {
   inputs,
-  catppuccin,
   ...
 }:
 # Fetches the user's name from home/options.nix
@@ -28,6 +27,7 @@ in {
     ./waybar.nix
     ./xdg.nix
     ./yazi.nix
+    inputs.catppuccin.homeManagerModules.catppuccin
     inputs.hyprland.homeManagerModules.default
     inputs.hypridle.homeManagerModules.hypridle
     inputs.hyprlock.homeManagerModules.hyprlock
