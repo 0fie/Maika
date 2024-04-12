@@ -11,7 +11,7 @@
 
     catppuccin.url = "github:catppuccin/nix";
 
-    mika.url = "git+file:///home/0fie/Projects/Mika";
+    mika.url = "github:0fie/Mika";
 
     hyprland.url = "github:hyprwm/Hyprland";
     hyprlock = {
