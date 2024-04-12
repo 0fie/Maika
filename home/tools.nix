@@ -15,6 +15,6 @@
     soundwireserver # cast sound to Android phone.
     vokoscreen-ng # screen recorder (extremely buggy on Wayland)
 
-    inputs.mika.packages.default # my neovim flake.
+    inputs.mika.packages.${pkgs.system}.default # my neovim flake
   ];
 }
