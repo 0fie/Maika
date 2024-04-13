@@ -1,9 +1,8 @@
 {
-
   description = "0fie's ultra-simple NixOS Configuration.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -28,7 +27,6 @@
     self,
     nixpkgs,
     home-manager,
-    catppuccin,
     ...
   } @ inputs: let
     inherit (import ./system/options.nix) hostName system;
@@ -42,7 +40,7 @@
     };
 
     nixosConfigurations."${hostName}" = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs system;};
+      specialArgs = {inherit inputs;};
       modules = [./system/configuration.nix];
     };
   };
