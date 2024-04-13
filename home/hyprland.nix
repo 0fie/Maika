@@ -150,7 +150,6 @@ in {
           "$mainMod,        p,   exec,   ${rofiPowerMenuScript}/bin/script"
           "$mainMod,        r,   exec,   ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
           "$mainMod,        s,   exec,   ${pkgs.spotify}/bin/spotify"
-          "$mainMod,        v,   exec,   ${pkgs.vlc}/bin/vlc"
           "$mainMod,   return,   exec,   ${pkgs.kitty}/bin/kitty"
           "$mainMod SHIFT,  b,   exec,   ${batteryNotificationScript}/bin/script"
           ",            Print,   exec,   ${pkgs.grimblast}/bin/grimblast --notify --cursor copysave area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
@@ -224,7 +223,6 @@ in {
       ];
 
       exec-once = [
-        #        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "${pkgs.hyprpaper}/bin/hyprpaper -c ${hyprpaperConf}"
         "${pkgs.waybar}/bin/waybar"
 
