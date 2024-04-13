@@ -421,16 +421,17 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "dirtyRev": "5f6f43a77221649f13bfea040d4ff1cee798116b-dirty",
-        "dirtyShortRev": "5f6f43a-dirty",
-        "lastModified": 1712908416,
+        "lastModified": 1712911145,
         "narHash": "sha256-+gggWL/dvpG+pJeZCbGxjnaXQhBaXSFC6GXaDrPqgpc=",
-        "type": "git",
-        "url": "file:///home/0fie/Projects/Mika"
+        "owner": "0fie",
+        "repo": "Mika",
+        "rev": "50aa39fc232a14aa06a47ae66c69c1e1c8bddc36",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/0fie/Projects/Mika"
+        "owner": "0fie",
+        "repo": "Mika",
+        "type": "github"
       }
     },
     "nix-darwin": {
