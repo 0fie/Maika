@@ -12,7 +12,6 @@
     mpv-unwrapped # lightweight media player
     gnome.nautilus # GUI file manager
     protonvpn-gui # at least it's open source
-    soundwireserver # cast sound to Android phone.
     vokoscreen-ng # screen recorder (extremely buggy on Wayland)
 
     inputs.mika.packages.${pkgs.system}.default # my neovim flake
