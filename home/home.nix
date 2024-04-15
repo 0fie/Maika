@@ -41,6 +41,7 @@ in {
     sessionVariables.EDITOR = "nvim";
   };
 
+  news.display = "silent";
   catppuccin.flavour = "mocha";
   programs.home-manager.enable = true;
 }
