@@ -194,6 +194,21 @@ in {
             }
           ];
         }
+
+        {
+          name = "Image utilities";
+          toolbar = false;
+          bookmarks = [
+            {
+              name = "CloudConvert";
+              url = "https://cloudconvert.com";
+            }
+            {
+              name = "Upscale Media";
+              url = "https://upscale.media";
+            }
+          ];
+        }
       ];
     };
   };
