@@ -40,11 +40,11 @@ in {
         nv = "nvim";
 
         # Cargo
-        cr = "cargo run";
-        ct = "carg test";
-        cn = "argo new";
         cb = "cargo build";
+        cn = "cargo new";
+        cr = "cargo run";
         cs = "cargo search";
+        ct = "cargo test";
 
         # Nix
         ns = "sudo sh -c 'nixos-rebuild switch --flake ${dotfilesDir}/.# |& ${pkgs.nix-output-monitor}/bin/nom'";
