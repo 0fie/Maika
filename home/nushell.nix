@@ -22,6 +22,7 @@ in {
 
       shellAliases = let
         g = lib.getExe pkgs.git;
+        c = "cargo";
       in {
         # Git
         ga = "${g} add";
@@ -40,11 +41,11 @@ in {
         nv = "nvim";
 
         # Cargo
-        cb = "cargo build";
-        cn = "cargo new";
-        cr = "cargo run";
-        cs = "cargo search";
-        ct = "cargo test";
+        cb = "${c} build";
+        cn = "${c} new";
+        cr = "${c} run";
+        cs = "${c} search";
+        ct = "${c} test";
 
         # Nix
         ns = "sudo sh -c 'nixos-rebuild switch --flake ${dotfilesDir}/.# |& ${pkgs.nix-output-monitor}/bin/nom'";
