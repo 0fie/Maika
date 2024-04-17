@@ -416,6 +416,26 @@
         "type": "github"
       }
     },
+    "izrss": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1713273897,
+        "narHash": "sha256-FOe8IFcLYCYqcaBUxg8SRuCu/j2IhhEvaUSL34sSCYM=",
+        "owner": "isabelroses",
+        "repo": "izrss",
+        "rev": "1e009cc1b0c638ce3bd813d043b46f6d626513a0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "isabelroses",
+        "repo": "izrss",
+        "type": "github"
+      }
+    },
     "mika": {
       "inputs": {
         "nixpkgs": "nixpkgs_4",
@@ -600,6 +620,7 @@
         "hypridle": "hypridle",
         "hyprland": "hyprland",
         "hyprlock": "hyprlock",
+        "izrss": "izrss",
         "mika": "mika",
         "nixpkgs": "nixpkgs_5"
       }

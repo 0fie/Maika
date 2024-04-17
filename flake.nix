@@ -13,6 +13,11 @@
 
     mika.url = "github:0fie/Mika";
 
+    izrss = {
+      url = "github:isabelroses/izrss";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     hyprland.url = "github:hyprwm/Hyprland";
     hyprlock.url = "github:hyprwm/hyprlock";
     hypridle.url = "github:hyprwm/hypridle";

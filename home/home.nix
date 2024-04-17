@@ -14,6 +14,7 @@ in {
     ./gtk.nix
     ./hyprland.nix
     ./hyprlock.nix
+    ./izrss.nix
     ./kitty.nix
     ./mako.nix
     ./nushell.nix
@@ -29,6 +30,7 @@ in {
     inputs.hyprland.homeManagerModules.default
     inputs.hypridle.homeManagerModules.hypridle
     inputs.hyprlock.homeManagerModules.hyprlock
+    inputs.izrss.homeManagerModules.default
   ];
 
   # Info required by home-manager and some session variables.
