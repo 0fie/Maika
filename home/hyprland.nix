@@ -140,7 +140,7 @@ in {
         [
           # Launch apps
           "$mainMod,        b,   exec,   ${pkgs.firefox}/bin/firefox"
-          "$mainMod,        d,   exec,   ${pkgs.discord}/bin/discord"
+          "$mainMod,        d,   exec,   ${pkgs.vesktop}/bin/vesktop"
           "$mainMod,        e,   exec,   ${pkgs.emote}/bin/emote"
           "$mainMod,        f,   exec,   ${pkgs.gnome.nautilus}/bin/nautilus"
           "$mainMod,        i,   exec,   ${pkgs.loupe}/bin/loupe"
