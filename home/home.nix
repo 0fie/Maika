@@ -1,7 +1,4 @@
-{
-  inputs,
-  ...
-}:
+{inputs, ...}:
 # Fetches the user's name from home/options.nix
 # And then fetches the system's stateVersion from system/options.nix
 # HM's stateVersion should be in sync with the system's stateVersion to avoid mismatches and conflicts.
@@ -11,6 +8,7 @@ let
 in {
   imports = [
     ./cli.nix
+    ./files.nix
     ./firefox.nix
     ./git.nix
     ./gtk.nix
