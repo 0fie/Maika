@@ -3,15 +3,12 @@
   pkgs,
   ...
 }: let
+  browser = "firefox.desktop";
+  fileManager = "org.gnome.Nautilus.desktop";
   imageViewer = "org.gnome.Loupe.desktop";
   mediaPlayer = "mpv.desktop";
-  browser = "firefox.desktop";
-  docOpener = "libreoffice.desktop";
-  fileManager = "org.gnome.Nautilus.desktop";
-  torrentClient = "transmission-gtk.desktop";
   textEditor = "neovim.desktop";
 in {
-  home.packages = [pkgs.xdg-utils];
   xdg = {
     enable = true;
     portal = with pkgs; {
@@ -28,44 +25,51 @@ in {
       templates = "${config.home.homeDirectory}/.local/templates";
     };
 
-    mimeApps = rec {
+    # TODO: use 'map' to avoid unnecessary repetition.
+    mimeApps = let
+      br = browser;
+      fm = fileManager;
+      iv = imageViewer;
+      mp = mediaPlayer;
+      te = textEditor;
+    in rec {
       enable = true;
       associations.added = defaultApplications;
       defaultApplications = {
-        "application/pdf" = [docOpener];
-        "inode/directory" = [fileManager];
-        "x-scheme-handler/magnet" = torrentClient;
+        # Office documents.
+        "application/pdf" = [br];
 
-        # Web stuff
-        "text/html" = [browser];
-        "x-scheme-handler/http" = browser;
-        "x-scheme-handler/https" = browser;
-        "application/xhtml+xml" = browser;
+        "inode/directory" = [fm];
 
-        # Images
-        "image/jpeg" = imageViewer;
-        "image/avif" = imageViewer;
-        "image/gif" = imageViewer;
-        "image/jpg" = imageViewer;
-        "image/pjpeg" = imageViewer;
-        "image/png" = imageViewer;
-        "image/tiff" = imageViewer;
-        "image/webp" = imageViewer;
-        "image/x-bmp" = imageViewer;
-        "image/x-gray" = imageViewer;
-        "image/x-icb" = imageViewer;
-        "image/x-ico" = imageViewer;
-        "image/x-png" = imageViewer;
+        # Web stuff.
+        "application/xhtml+xml" = br;
+        "text/html" = [br];
+        "x-scheme-handler/http" = br;
+        "x-scheme-handler/https" = br;
 
-        # Text & Code
-        "text/english" = textEditor;
-        "text/plain" = textEditor;
-        "application/x-shellscript" = textEditor;
+        # Images.
+        "image/avif" = iv;
+        "image/gif" = iv;
+        "image/jpeg" = iv;
+        "image/jpg" = iv;
+        "image/pjpeg" = iv;
+        "image/png" = iv;
+        "image/tiff" = iv;
+        "image/webp" = iv;
+        "image/x-bmp" = iv;
+        "image/x-gray" = iv;
+        "image/x-icb" = iv;
+        "image/x-ico" = iv;
+        "image/x-png" = iv;
 
-        # Videos
-        "video/webm" = mediaPlayer;
-        "video/mp4" = mediaPlayer;
-        "video/mkv" = mediaPlayer;
+        # Plain text & code.
+        "application/x-shellscript" = te;
+        "text/plain" = te;
+
+        # Videos.
+        "video/mkv" = mp;
+        "video/mp4" = mp;
+        "video/webm" = mp;
       };
     };
   };
