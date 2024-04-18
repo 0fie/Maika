@@ -24,6 +24,13 @@ in {
         g = lib.getExe pkgs.git;
         c = "cargo";
       in {
+        # Cargo
+        cb = "${c} build";
+        cn = "${c} new";
+        cr = "${c} run";
+        cs = "${c} search";
+        ct = "${c} test";
+
         # Git
         ga = "${g} add";
         gc = "${g} commit";
@@ -39,13 +46,6 @@ in {
         ll = "ls -l";
         n = "${pkgs.nitch}/bin/nitch";
         nv = "nvim";
-
-        # Cargo
-        cb = "${c} build";
-        cn = "${c} new";
-        cr = "${c} run";
-        cs = "${c} search";
-        ct = "${c} test";
 
         # Nix
         ns = "sudo sh -c 'nixos-rebuild switch --flake ${dotfilesDir}/.# |& ${pkgs.nix-output-monitor}/bin/nom'";
@@ -116,7 +116,7 @@ in {
         completions = names:
           builtins.foldl' (prev: str: ''
             ${prev}
-            ${str}'') "" (map (name: completion name) names);
+            ${str}'') "" (map completion names);
       in ''
         $env.config = ${conf};
         ${completions ["git" "nix" "man" "cargo"]}
@@ -131,7 +131,7 @@ in {
         	rm -fp $tmp
         }
 
-          source /home/${userName}/.config/nushell/extra.nu
+        source /home/${userName}/.config/nushell/extra.nu
       '';
     };
   };
