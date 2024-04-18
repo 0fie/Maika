@@ -85,6 +85,7 @@
 | **Text Editor**         |                     [Neovim][Neovim]                     |
 | **Shell**               |        [Nushell][Nushell] + [Starship][Starship]         |
 | **Terminal Emulator**   |                      [Kitty][Kitty]                      |
+| **Font**                |                   [MonoLisa][MonoLisa]                   |
 | **File Manager**        |                       [Yazi][Yazi]                       |
 | **Color Scheme**        |                 [Catppuccin][Catppuccin]                 |
 | **Screenshot Software** |                  [Grimblast][Grimblast]                  |
@@ -150,7 +151,6 @@ copy my [home/hyprland.nix](./home/hyprland.nix) file into your dotfiles directo
 [Catppuccin]: https://github.com/catppuccin/catppuccin
 [catppuccin-papirus-folders]: https://github.com/catppuccin/papirus-folders
 [Nushell]: https://www.nushell.sh
-[rofi-wayland]: https://github.com/lbonn/rofi
 [Neovim]: https://neovim.io
 [Yazi]: https://github.com/sxyazi/yazi
 [Hypridle]: https://github.com/hyprwm/hypridle
@@ -158,3 +158,4 @@ copy my [home/hyprland.nix](./home/hyprland.nix) file into your dotfiles directo
 [Hyprpaper]: https://github.com/hyprwm/hyprpaper
 [Bibata-Modern-Ice]: https://github.com/ful1e5/Bibata_Cursor
 [Loupe]: https://apps.gnome.org/Loupe/
+[MonoLisa]: https://monolisa.dev
