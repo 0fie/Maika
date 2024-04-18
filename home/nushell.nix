@@ -26,6 +26,7 @@ in {
       in {
         # Cargo
         cb = "${c} build";
+        cc = "${c} check";
         cn = "${c} new";
         cr = "${c} run";
         cs = "${c} search";
