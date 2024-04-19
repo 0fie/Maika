@@ -19,20 +19,19 @@ in {
       modules-right = ["cpu" "custom/temperature" "pulseaudio" "tray"];
 
       clock = {
-        calendar = {
-          format = {today = "<span color='#b4befe'><b>{}</b></span>";};
-        };
+        calendar.format.today = "<span color='#b4befe'><b>{}</b></span>";
         format = " {:%H:%M}";
         tooltip = "true";
         tooltip-format = ''
           <big>{:%Y %B}</big>
-          <tt><small>{calendar}</small></tt>'';
+          <tt><small>{calendar}</small></tt>
+        '';
         format-alt = " {:%d/%m}";
       };
 
       "hyprland/workspaces" = {
         active-only = false;
-        disable-scroll = true;
+        disable-scroll = false;
         format = "{icon}";
         on-click = "activate";
         format-icons = {
@@ -93,7 +92,6 @@ in {
         background = "11111B";
         opacity = "0.98";
       };
-      # css
     in ''
       * {
           border: none;
