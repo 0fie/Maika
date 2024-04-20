@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs}: rec {
   gtk = {
     enable = true;
     theme = {
@@ -25,7 +21,7 @@
 
   # Symlink the `~/.config/gtk-4.0/` folder declaratively to theme GTK-4 apps as well.
   xdg.configFile = let
-    g = config.gtk.theme.package;
+    g = gtk.theme.package;
   in {
     "gtk-4.0/assets".source = "${g}/share/themes/${g}/gtk-4.0/assets";
     "gtk-4.0/gtk.css".source = "${g}/share/themes/${g}/gtk-4.0/gtk.css";
