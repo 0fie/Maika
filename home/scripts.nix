@@ -12,9 +12,9 @@
   batteryNotificationScript = pkgs.writeShellScriptBin "script" ''
     percentage=$(cat /sys/class/power_supply/BAT0/capacity)
     if [ $percentage -ge 100 ]; then
-      notify-send "Current battery: 100%" # My battery reports over 356% when full. It is broken.
+      ${pkgs.libnotify}/bin/notify-send "Battery Full" # My battery reports over 356% when full. It is broken.
     else
-      notify-send "Current battery: $percentage"
+      ${pkgs.libnotify}/bin/notify-send "Current battery: $percentage"
     fi
   '';
 
