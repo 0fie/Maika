@@ -15,13 +15,6 @@ in {
     };
   };
 
-  # Required by Nautilus. Does not work though.
-  # If you're reading this, please help me.
-  programs.nautilus-open-any-terminal = {
-    enable = true;
-    terminal = "kitty";
-  };
-
   # The line below enables crucial system components necessary for Hyprland to run properly.
   programs.hyprland.enable = true;
 

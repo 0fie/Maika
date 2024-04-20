@@ -1,20 +1,15 @@
-{pkgs, ...}: {
+{
   services = {
-    # Devmon monitors for new storage devices. Udisks2 allows apps like Nautilus to query and manipulate
-    # storage devices. Gnome-keyring enables apps to display an auth dialog when attempting to perform privileged operations,
-    # like mounting another partition.
-    devmon.enable = true;
+    devmon.enable = true; # Monitors for new storage devices.
     gvfs.enable = true;
-    udisks2.enable = true;
-
+    udisks2.enable = true; # allows apps to query and manipulate storage devices.
     gnome.gnome-keyring.enable = true;
     blueman.enable = true; # GUI Bluetooth manager.
 
-    # Trim SSD in the background, once every month.
-    # You can set this to "weekly";
+    # Trim SSD in the background, once every week.
     fstrim = {
       enable = true;
-      interval = "monthly";
+      interval = "weekly";
     };
 
     # I'm on a laptop. Adjust this to your liking.
