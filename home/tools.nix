@@ -12,6 +12,8 @@
     git-extras # Provides useful commands like git-summary
     loupe # image viewer
     mpv-unwrapped # lightweight media player
+    msbuild
+    mysql80
     nix-inspect # Interactive TUI for inspecting nix configs.
     nix-prefetch-scripts # utils for getting sha256 of URLs and git repos
     protonvpn-gui # at least it's open source
