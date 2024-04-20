@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs}:
 # Several scripts that will be used throughout the system.
 {
   # The Temperature module should "just work" on Waybar, but it does not. Maybe my machine is too old?
