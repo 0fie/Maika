@@ -1,22 +1,17 @@
 {pkgs, ...}:
 # In this file, we have hardware acceleration, bluetooth & tmpfs for /tmp
 {
-  nixpkgs.config.packageOverrides = pkgs: {
-    vaapiIntel = pkgs.vaapiIntel.override {enableHybridCodec = true;};
-  };
-
   hardware = {
     # Hardware acceleration.
     opengl = {
       enable = true;
       extraPackages = with pkgs; [
-        intel-media-driver
+        intel-vaapi-driver
         vaapiIntel
         vaapiVdpau
         libvdpau-va-gl
       ];
       driSupport = true;
-      driSupport32Bit = true;
     };
     enableRedistributableFirmware = true;
 
