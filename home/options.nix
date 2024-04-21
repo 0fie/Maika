@@ -1,8 +1,12 @@
 rec {
-  # User options.
+  # Welcome to the user's control center.
+  # This file contains variables that will be used to configure the user's home environment, such as the username.
+  # If you're attempting to install this entire home-manager configuration on your machine, make sure to edit this file first.
+  # Also check out system/options.nix for other options such as fonts. In future, such options will be moved from system to home-manager
+  # for convinience.
 
   ##########################################
-  # Below is the username for your user. Do not include special characters or capital letters.
+  # Below is the username for your user. Do not include special characters.
   # Suppose you're called Tom, you'd edit the line like so:
   #
   #...
@@ -37,14 +41,13 @@ rec {
   gitEmail = "151028199+0fie@users.noreply.github.com";
 
   ##########################################
-  # The variable below defines where these dotfiles are located on your machine. It is used by the 'nrs' alias in home/nushell.nix
+  # The variable below defines where these dotfiles are located on your machine. It is used by the 'hs' and 'ns' aliases in home/nushell.nix
   # Change it to the actual absolute path of these dotfiles. If they are in your Downloads folder, you'd edit the line like so:
   #
   #...
-  #   dotfilesDir = "home/username/Downloads/Dotfiles";
+  #   dotfilesDir = "home/username/Downloads/Maika";
   #...
   #
-  # This is not a critical or necessary option. It is only used for the 'nixos-rebuild switch' alias for convinience.
   # Required by home/nushell.nix
   dotfilesDir = "/home/${userName}/Projects/Maika";
 }

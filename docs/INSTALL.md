@@ -1,7 +1,7 @@
 #### How to install?
 
-My entire [home-manager](https://github.com/nix-community/home-manager) configuration can be installed on any machine running Nix. At least
-that's what I think. Assuming you're already using flakes, below are the commands to install it:
+This entire [home-manager](https://github.com/nix-community/home-manager) configuration can be installed on any machine running Nix. At least
+that's what I think. Assuming you're already using flakes, here are the commands to install it:
 
 ```nix
 bash -i
