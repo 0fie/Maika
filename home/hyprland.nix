@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}:
+{pkgs, ...}:
 # The wallpaper will be fetched from GitHub. I don't store my wallpapers locally.
 let
   currentWallpaper = pkgs.fetchurl {
@@ -28,7 +24,7 @@ in {
         gaps_out = 10;
         border_size = 2;
         "col.active_border" = "0x9399b2FF";
-        "col.inactive_border" = "0x00000000";
+        "col.inactive_border" = "0x4488a3EE";
       };
 
       input = {
