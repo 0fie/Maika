@@ -1,11 +1,9 @@
 <h1 align="center">
    <img src="https://github.com/0fie/Maika/assets/151028199/6da7fe65-6661-4bb6-b5bc-b72aa6d79a7a" width="100px" /> 
-   <br>
-      0fie's ultra-simple NixOS config 
-   <br>
-      <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px" /> <br>
-   <div align="center">
+   <br>0fie's ultra-simple NixOS config
+   <br><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px" /><br>
 
+   <div align="center">
    <div align="center">
       <p></p>
       <div align="center">
@@ -29,12 +27,8 @@
 <br>
 </div>
 
-<p align="center">
-   <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v1/rice.png" width="800px" /> <br>
-</p>
-<p align="center">
-   Screenshot last updated <b>20 March</b>
-</p>
+<p align="center"><img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v1/rice.png" width="800px" /><br></p>
+<p align="center">Screenshot last updated <b>21 April</b></p>
 
 ### 🖼️ Gallery
 
@@ -48,25 +42,14 @@
    </p>
 
    <p align="center">
-      Hyprlock (lock screen)
-      <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v1/lock.png" width="800px" /> <br>
-   </p>
-   <p align="center">
       App Launcher (rofi-wayland)
       <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v1/rofi.png" width="800px" /> <br>
    </p>
+
    <p align="center">
-      Helix Editor (left) and Yazi (right)
+      Neovim (left) and Yazi (right)
       <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v1/cli.png" width="800px" /> <br>
    </p>
-
-</details>
-
-<details>
-  <summary>Next version</summary>
-  <p align="center">
-    V2 (work in progress)
-    <img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v2/home.png" /> <br>
 </details>
 
 <details>
