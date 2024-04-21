@@ -37,13 +37,13 @@ in {
       associations.added = defaultApplications;
       defaultApplications = {
         # Office documents.
-        "application/pdf" = [br];
+        "application/pdf" = br;
 
-        "inode/directory" = [fm];
+        "inode/directory" = fm;
 
         # Web stuff.
         "application/xhtml+xml" = br;
-        "text/html" = [br];
+        "text/html" = br;
         "x-scheme-handler/http" = br;
         "x-scheme-handler/https" = br;
 
