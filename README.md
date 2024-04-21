@@ -87,6 +87,7 @@
 | **Terminal Emulator**   |                      [Kitty][Kitty]                      |
 | **Font**                |                   [MonoLisa][MonoLisa]                   |
 | **File Manager**        |                       [Yazi][Yazi]                       |
+| **RSS Reader**          |                      [Izrss][Izrss]                      |
 | **Color Scheme**        |                 [Catppuccin][Catppuccin]                 |
 | **Screenshot Software** |                  [Grimblast][Grimblast]                  |
 | **Bar**                 |                     [Waybar][Waybar]                     |
@@ -159,3 +160,4 @@ copy my [home/hyprland.nix](./home/hyprland.nix) file into your dotfiles directo
 [Bibata-Modern-Ice]: https://github.com/ful1e5/Bibata_Cursor
 [Loupe]: https://apps.gnome.org/Loupe/
 [MonoLisa]: https://monolisa.dev
+[Izrss]: https://github.com/isabelroses/izrss
