@@ -13,7 +13,6 @@ in {
     extraOptions = ''
       keep-outputs = true
       keep-derivations = true
-      tarball-ttl = 1000000000;
     '';
     # Pin the registry to avoid downloading and evaling a new nixpkgs version every time.
     # I can not verify whether this works as intended.
