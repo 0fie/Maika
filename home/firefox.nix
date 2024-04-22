@@ -209,6 +209,24 @@ in {
             }
           ];
         }
+        {
+          name = "🏴";
+          toolbar = false;
+          bookmarks = [
+            {
+              name = "Animeflix";
+              url = "https://animeflix.live";
+            }
+            {
+              name = "HiAnime";
+              url = "https://hianime.to";
+            }
+            {
+              name = "Anilab";
+              url = "https://anilab.to";
+            }
+          ];
+        }
       ];
     };
   };
