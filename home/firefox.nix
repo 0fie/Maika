@@ -225,6 +225,10 @@ in {
               name = "Anilab";
               url = "https://anilab.to";
             }
+            {
+              name = "Anitaku";
+              url = "https://anitaku.so";
+            }
           ];
         }
       ];
