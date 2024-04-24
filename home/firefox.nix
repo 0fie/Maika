@@ -229,6 +229,10 @@ in {
               name = "Anitaku";
               url = "https://anitaku.so";
             }
+            {
+              name = "Gogoanime";
+              url = "https://gogotaku.info/";
+            }
           ];
         }
       ];
