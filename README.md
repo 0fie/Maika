@@ -28,6 +28,5 @@
 </details>
 
 <br><br><br>
-<!--
-###### You can go to the []() commit to get the config files for the rice above. <br>Береги себя
--->
+
+###### You can go to [this commit](https://github.com/0fie/Maika/tree/d93a048fe8f69b9bdebd44c81748bbfff3223a03) to get the config files for the rice above. <br>Береги себя
