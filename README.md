@@ -1,6 +1,6 @@
 ###### You're too late, it's gone now. <br>This is what it looked like 👇
 
-<b><b><br>
+<br><br><br>
 
 <p align="center"><img src="https://github.com/0fie/Maika/blob/main/docs/images/rice/v1/rice.png" width="800px" /><br></p>
 <p align="center">Screenshot last updated <b>21 April</b></p>
