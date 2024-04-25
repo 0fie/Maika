@@ -12,5 +12,6 @@
     protonvpn-gui # at least it's open source
     spotify
     vesktop
+    vscode
   ];
 }
