@@ -11,16 +11,10 @@
 
     catppuccin.url = "github:catppuccin/nix";
 
-    mika.url = "github:0fie/Mika";
-
     izrss = {
       url = "github:isabelroses/izrss";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    hyprland.url = "github:hyprwm/Hyprland";
-    hyprlock.url = "github:hyprwm/hyprlock";
-    hypridle.url = "github:hyprwm/hypridle";
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";

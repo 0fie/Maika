@@ -14,12 +14,6 @@ in {
 
     nushell = {
       enable = true;
-      loginFile.text = ''
-        if (tty) == "/dev/tty1" {
-          exec Hyprland
-        }
-      '';
-
       shellAliases = let
         g = lib.getExe pkgs.git;
         c = "cargo";

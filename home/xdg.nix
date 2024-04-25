@@ -6,7 +6,7 @@
   browser = "firefox.desktop";
   fileManager = "org.gnome.Nautilus.desktop";
   imageViewer = "org.gnome.Loupe.desktop";
-  mediaPlayer = "mpv.desktop";
+  mediaPlayer = "haruna.desktop";
   textEditor = "neovim.desktop";
 in {
   xdg = {

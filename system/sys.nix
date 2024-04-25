@@ -1,32 +1,6 @@
-{pkgs, ...}:
-# In this file, we have hardware acceleration, bluetooth & tmpfs for /tmp
+# In this file, we have hardware acceleration and tmpfs for /tmp
 {
-  hardware = {
-    # Hardware acceleration.
-    # This is for my old Dell laptop from 2011, with the Sandybridge processor.
-    opengl = {
-      enable = true;
-      extraPackages = with pkgs; [
-        intel-vaapi-driver
-        vaapiIntel
-        vaapiVdpau
-        libvdpau-va-gl
-      ];
-      driSupport = true;
-    };
-    enableRedistributableFirmware = true;
-
-    # Enable & configure BT.
-    bluetooth = {
-      enable = true;
-      powerOnBoot = false;
-      settings.General = {
-        FastConnectable = true;
-        JustWorksRepairing = "always";
-        Experimental = true; # Battery info for Bluetooth devices
-      };
-    };
-  };
+  hardware.enableRedistributableFirmware = true;
 
   # Laptop's fan go brrrr.
   powerManagement = {

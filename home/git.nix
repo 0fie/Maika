@@ -1,4 +1,3 @@
-{config, ...}:
 # Fetch the user's Git email & username from home/options.nix
 let
   inherit (import ./options.nix) gitUserName gitEmail;
@@ -10,7 +9,6 @@ in {
     extraConfig = {
       init.defaultBranch = "main";
       color.ui = true;
-      core.editor = "${config.home.sessionVariables.EDITOR}";
       credential.helper = "store";
       github.user = gitUserName;
       push.autoSetupRemote = true;

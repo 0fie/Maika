@@ -12,24 +12,13 @@ in {
     ./firefox.nix
     ./git.nix
     ./gtk.nix
-    ./hyprland.nix
-    ./hyprlock.nix
     ./izrss.nix
-    ./kitty.nix
-    ./mako.nix
     ./nushell.nix
     ./nix-settings.nix
-    ./rofi.nix
-    ./services.nix
     ./starship.nix
     ./tools.nix
-    ./waybar.nix
     ./xdg.nix
-    ./yazi.nix
     inputs.catppuccin.homeManagerModules.catppuccin
-    inputs.hyprland.homeManagerModules.default
-    inputs.hypridle.homeManagerModules.hypridle
-    inputs.hyprlock.homeManagerModules.hyprlock
     inputs.izrss.homeManagerModules.default
   ];
 
@@ -38,7 +27,6 @@ in {
     username = "${userName}";
     homeDirectory = "/home/${userName}";
     stateVersion = "${stateVersion}";
-    sessionVariables.EDITOR = "nvim";
   };
 
   news.display = "silent";
