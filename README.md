@@ -28,5 +28,6 @@
 </details>
 
 <br><br><br>
-
-###### Go to the []() commit to get the config files for the rice above. <br>Береги себя
+<!--
+###### You can go to the []() commit to get the config files for the rice above. <br>Береги себя
+-->
